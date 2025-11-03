@@ -14,7 +14,7 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with 85% opacity */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-85"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-95"
         style={{ backgroundImage: `url(${heroVascularBg})` }}
       >
       </div>
