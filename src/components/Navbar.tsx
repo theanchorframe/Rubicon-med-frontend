@@ -41,7 +41,9 @@ const Navbar = () => {
         }`}
       >
         <div className="container mx-auto px-6 md:px-8">
-          <div className="flex items-center justify-between h-20">
+          <div className={`flex items-center justify-between transition-all duration-300 ${
+            isScrolled ? "h-20" : "h-28"
+          }`}>
             <div className="flex items-center gap-3">
               <img 
                 src={logo} 
