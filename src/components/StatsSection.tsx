@@ -57,7 +57,13 @@ const StatsSection = () => {
         >
           <Button
             size="lg"
-            className="shine-effect text-lg px-8 py-6 bg-background text-foreground hover:bg-background/90"
+            onClick={() => {
+              const formSection = document.getElementById("consultation-form");
+              if (formSection) {
+                formSection.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+            className="shine-effect text-xl px-12 py-8 h-auto bg-background text-foreground hover:bg-background/90"
           >
             Get Clarity On Your Path Forward
           </Button>

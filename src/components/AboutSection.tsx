@@ -24,7 +24,13 @@ const AboutSection = () => {
           </p>
           <Button
             size="lg"
-            className="shine-effect text-lg px-8 py-6 bg-primary hover:bg-primary/90"
+            onClick={() => {
+              const formSection = document.getElementById("consultation-form");
+              if (formSection) {
+                formSection.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+            className="shine-effect text-xl px-12 py-8 h-auto bg-primary hover:bg-primary/90"
           >
             Get Rob's Perspective
           </Button>

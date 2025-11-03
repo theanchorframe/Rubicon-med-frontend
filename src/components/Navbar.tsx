@@ -81,7 +81,16 @@ const Navbar = () => {
               >
                 FAQ
               </button>
-              <Button className="shine-effect bg-primary hover:bg-primary/90">
+              <Button 
+                className="shine-effect text-lg px-8 py-4 h-auto bg-primary hover:bg-primary/90"
+                onClick={() => {
+                  const formSection = document.getElementById("consultation-form");
+                  if (formSection) {
+                    formSection.scrollIntoView({ behavior: "smooth" });
+                  }
+                  setIsMobileMenuOpen(false);
+                }}
+              >
                 Request a Consult
               </Button>
             </div>
@@ -126,7 +135,16 @@ const Navbar = () => {
             >
               FAQ
             </button>
-            <Button className="w-full shine-effect bg-primary hover:bg-primary/90">
+            <Button 
+              className="w-full shine-effect text-lg px-8 py-4 h-auto bg-primary hover:bg-primary/90"
+              onClick={() => {
+                const formSection = document.getElementById("consultation-form");
+                if (formSection) {
+                  formSection.scrollIntoView({ behavior: "smooth" });
+                }
+                setIsMobileMenuOpen(false);
+              }}
+            >
               Request a Consult
             </Button>
           </div>

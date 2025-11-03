@@ -89,7 +89,7 @@ const FAQSection = () => {
           <Button 
             size="lg" 
             onClick={scrollToForm}
-            className="shine-effect text-lg px-8 py-6 bg-primary hover:bg-primary/90"
+            className="shine-effect text-xl px-12 py-8 h-auto bg-primary hover:bg-primary/90"
           >
             Align Product Decisions With Expert Clinical Opinion
           </Button>

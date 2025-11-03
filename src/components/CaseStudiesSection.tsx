@@ -64,7 +64,13 @@ const CaseStudiesSection = () => {
         >
           <Button
             size="xl"
-            className="shine-effect bg-primary hover:bg-primary/90 mb-8"
+            onClick={() => {
+              const formSection = document.getElementById("consultation-form");
+              if (formSection) {
+                formSection.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+            className="shine-effect text-xl px-12 py-8 h-auto bg-primary hover:bg-primary/90 mb-8"
           >
             Turn Your Launch Into the Next Case Study
           </Button>
@@ -113,7 +119,16 @@ const CaseStudiesSection = () => {
                 <p className="text-foreground leading-relaxed text-xl">
                   {study.description}
                 </p>
-                <Button size="lg" className="shine-effect bg-primary hover:bg-primary/90">
+                <Button 
+                  size="lg" 
+                  onClick={() => {
+                    const formSection = document.getElementById("consultation-form");
+                    if (formSection) {
+                      formSection.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                  className="shine-effect text-xl px-12 py-8 h-auto bg-primary hover:bg-primary/90"
+                >
                   {study.cta}
                 </Button>
               </div>

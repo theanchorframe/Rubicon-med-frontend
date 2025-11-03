@@ -31,7 +31,7 @@ const CTABanner = () => {
                     (popup as HTMLIFrameElement).style.display = 'block';
                   }
                 }}
-                className="shine-effect bg-navy text-navy-foreground hover:bg-navy/90"
+                className="shine-effect bg-navy text-navy-foreground hover:bg-navy/90 text-xl px-12 py-8 h-auto"
               >
                 Get the EPD Case Study
               </Button>

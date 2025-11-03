@@ -169,7 +169,7 @@ const ProcessSection = () => {
                   formSection.scrollIntoView({ behavior: "smooth" });
                 }
               }}
-              className="shine-effect text-lg px-8 py-6 bg-primary hover:bg-primary/90 w-full sm:w-auto"
+              className="shine-effect text-xl px-12 py-8 h-auto bg-primary hover:bg-primary/90 w-full sm:w-auto"
             >
               Schedule Free Consultation
             </Button>

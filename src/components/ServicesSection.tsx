@@ -79,7 +79,13 @@ const ServicesSection = () => {
         >
           <Button
             size="xl"
-            className="shine-effect bg-primary hover:bg-primary/90"
+            onClick={() => {
+              const formSection = document.getElementById("consultation-form");
+              if (formSection) {
+                formSection.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+            className="shine-effect text-xl px-12 py-8 h-auto bg-primary hover:bg-primary/90"
           >
             Ready to Validate Your Market Before You Commit?
           </Button>
