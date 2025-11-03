@@ -1,6 +1,4 @@
-import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import strategyImage from "@/assets/strategy-meeting.webp";
 
 const CTABanner = () => {
   return (
@@ -14,7 +12,7 @@ const CTABanner = () => {
           className="max-w-5xl mx-auto bg-accent rounded-2xl overflow-hidden grid md:grid-cols-2 gap-0"
         >
           <div className="p-6 md:p-8 lg:p-12 space-y-6">
-            <h3 className="text-[42px] md:text-[56px] font-bold text-accent-foreground leading-tight">
+            <h3 className="text-[35px] md:text-[47px] font-bold text-accent-foreground leading-tight">
               From Idea to Launch: $30M Co-dev + $5M NRE for a more effective and
               safer EPD
             </h3>
@@ -22,30 +20,24 @@ const CTABanner = () => {
               Learn how clinical proof, reimbursement insights, and advisory-board
               design sprints built an irresistible business case for market entry
             </p>
-            <div className="space-y-2">
-              <Button
-                size="lg"
-                onClick={() => {
-                  // Trigger the anchorframe popup
-                  const event = new CustomEvent('af-open-form', { 
-                    detail: { formId: 'VVGIyZfOQ8WRJA6ylwdl' } 
-                  });
-                  window.dispatchEvent(event);
-                }}
-                className="shine-effect bg-navy text-navy-foreground hover:bg-navy/90 text-xl px-12 py-8 h-auto"
-              >
-                Get the EPD Case Study
-              </Button>
-              <p className="text-accent-foreground/80 text-xs italic">
-                Instant Email Delivery*
-              </p>
-            </div>
           </div>
-          <div className="h-full min-h-[300px] rounded-2xl overflow-hidden">
-            <img
-              src={strategyImage}
-              alt="Strategy Meeting"
-              className="w-full h-full object-cover rounded-2xl"
+          <div className="h-full min-h-[490px] rounded-2xl overflow-hidden">
+            <iframe
+              src="https://link.anchorframe.com/widget/form/RSwk9c8PsfVO57gzIn2m"
+              style={{ width: "100%", height: "100%", border: "none", borderRadius: "10px" }}
+              id="inline-RSwk9c8PsfVO57gzIn2m" 
+              data-layout="{'id':'INLINE'}"
+              data-trigger-type="alwaysShow"
+              data-trigger-value=""
+              data-activation-type="alwaysActivated"
+              data-activation-value=""
+              data-deactivation-type="neverDeactivate"
+              data-deactivation-value=""
+              data-form-name="Case Study Popup"
+              data-height="490"
+              data-layout-iframe-id="inline-RSwk9c8PsfVO57gzIn2m"
+              data-form-id="RSwk9c8PsfVO57gzIn2m"
+              title="Case Study Popup"
             />
           </div>
         </motion.div>

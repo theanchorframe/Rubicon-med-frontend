@@ -27,7 +27,7 @@ const HeroSection = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2 }}
-                className="text-accent font-semibold text-sm sm:text-base tracking-wide uppercase"
+                className="text-white font-semibold text-sm sm:text-base tracking-wide uppercase"
               >
                 Trusted Advisor to the MedTech Field
               </motion.p>
