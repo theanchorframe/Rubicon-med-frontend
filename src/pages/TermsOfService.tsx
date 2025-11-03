@@ -10,7 +10,7 @@ const TermsOfService = () => {
       <header className="border-b border-border">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <Link to="/">
-            <img src={logo} alt="Rubicon Medical" className="h-10 w-auto" />
+            <img src={logo} alt="Rubicon Medical Marketing & Strategy Consultants Corp." className="h-10 w-auto" />
           </Link>
           <Link to="/">
             <Button variant="ghost" size="sm" className="gap-2">
@@ -30,14 +30,14 @@ const TermsOfService = () => {
           <section className="space-y-4">
             <h2 className="text-2xl font-semibold text-navy">Agreement to Terms</h2>
             <p className="text-foreground/80 leading-relaxed">
-              By accessing or using the services provided by Rubicon Medical, you agree to be bound by these Terms of Service. If you disagree with any part of these terms, you may not access our services.
+              By accessing or using the services provided by Rubicon Medical Marketing & Strategy Consultants Corp., you agree to be bound by these Terms of Service. If you disagree with any part of these terms, you may not access our services.
             </p>
           </section>
 
           <section className="space-y-4">
             <h2 className="text-2xl font-semibold text-navy">Services Description</h2>
             <p className="text-foreground/80 leading-relaxed">
-              Rubicon Medical provides strategic consulting services for medical technology companies, including but not limited to:
+              Rubicon Medical Marketing & Strategy Consultants Corp. provides strategic consulting services for medical technology companies, including but not limited to:
             </p>
             <ul className="list-disc pl-6 space-y-2 text-foreground/80">
               <li>Product strategy and positioning</li>
@@ -64,7 +64,7 @@ const TermsOfService = () => {
           <section className="space-y-4">
             <h2 className="text-2xl font-semibold text-navy">Intellectual Property</h2>
             <p className="text-foreground/80 leading-relaxed">
-              All content, materials, and intellectual property provided through our services remain the property of Rubicon Medical or our licensors. You may not reproduce, distribute, or create derivative works without our express written permission.
+              All content, materials, and intellectual property provided through our services remain the property of Rubicon Medical Marketing & Strategy Consultants Corp. or our licensors. You may not reproduce, distribute, or create derivative works without our express written permission.
             </p>
           </section>
 
@@ -78,7 +78,7 @@ const TermsOfService = () => {
           <section className="space-y-4">
             <h2 className="text-2xl font-semibold text-navy">Limitation of Liability</h2>
             <p className="text-foreground/80 leading-relaxed">
-              To the fullest extent permitted by law, Rubicon Medical shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or relating to your use of our services.
+              To the fullest extent permitted by law, Rubicon Medical Marketing & Strategy Consultants Corp. shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or relating to your use of our services.
             </p>
           </section>
 

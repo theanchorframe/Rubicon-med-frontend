@@ -10,7 +10,7 @@ const PrivacyPolicy = () => {
       <header className="border-b border-border">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <Link to="/">
-            <img src={logo} alt="Rubicon Medical" className="h-10 w-auto" />
+            <img src={logo} alt="Rubicon Medical Marketing & Strategy Consultants Corp." className="h-10 w-auto" />
           </Link>
           <Link to="/">
             <Button variant="ghost" size="sm" className="gap-2">
@@ -30,7 +30,7 @@ const PrivacyPolicy = () => {
           <section className="space-y-4">
             <h2 className="text-2xl font-semibold text-navy">Introduction</h2>
             <p className="text-foreground/80 leading-relaxed">
-              Rubicon Medical ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
+              Rubicon Medical Marketing & Strategy Consultants Corp. ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
             </p>
           </section>
 
