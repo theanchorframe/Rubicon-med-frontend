@@ -45,7 +45,7 @@ const HeroSection = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6 }}
-                className="text-lg sm:text-xl md:text-2xl text-white/90 leading-relaxed"
+                className="text-lg sm:text-xl md:text-2xl text-white leading-relaxed"
               >
                 We help MedTech companies leverage data, marketing research, and physician validation to create
                 disruptive products to enhance patient health. We help companies choose which markets to enter, what
