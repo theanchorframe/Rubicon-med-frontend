@@ -150,13 +150,9 @@ const ProcessSection = () => {
               </p>
             </div>
 
-            {/* Image with Badge */}
-            <motion.div
-              whileHover={{ scale: 1.02, rotate: 0.5 }}
-              transition={{ duration: 0.3 }}
-              className="relative"
-            >
-              <div className="glass-card p-4 transform rotate-1">
+            {/* Image */}
+            <div className="relative">
+              <div className="glass-card p-4">
                 <img
                   src={doctorImage}
                   alt="Robert Miraglia"
@@ -166,7 +162,7 @@ const ProcessSection = () => {
               <div className="absolute bottom-4 left-4 glass-card px-6 py-3 bg-primary/90 backdrop-blur-md">
                 <p className="text-white font-semibold">Trusted by MedTech Leaders</p>
               </div>
-            </motion.div>
+            </div>
 
             {/* Benefits */}
             <div className="space-y-4">
