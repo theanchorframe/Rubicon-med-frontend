@@ -106,8 +106,8 @@ const CaseStudiesSection = () => {
 
               {/* Text content - left aligned and starting at top */}
               <div className="space-y-6 md:w-1/2 text-left">
-                <p className="text-accent font-semibold italic text-[20px]">{study.tagline}</p>
-                <h3 className="text-[50px] font-bold text-navy leading-tight">
+                <p className="text-accent font-semibold italic text-xl">{study.tagline}</p>
+                <h3 className="text-4xl lg:text-5xl font-bold text-navy">
                   {study.title}
                 </h3>
                 <p className="text-foreground leading-relaxed text-xl">
