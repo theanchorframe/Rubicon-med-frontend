@@ -52,7 +52,7 @@ const CaseStudiesSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-background overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <Button
@@ -63,45 +63,49 @@ const CaseStudiesSection = () => {
           </Button>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto space-y-16">
           {caseStudies.map((study, index) => (
             <div
               key={index}
-              className="relative overflow-hidden rounded-lg group"
-              onMouseEnter={() => setHoveredCard(index)}
-              onMouseLeave={() => setHoveredCard(null)}
+              className={`flex flex-col ${
+                index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+              } gap-8 items-center`}
             >
-              <img
-                src={study.image}
-                alt={study.title}
-                className="w-full h-[400px] object-cover rounded-lg"
-              />
+              {/* Image with hover overlay */}
               <div
-                className={`absolute inset-x-0 bottom-0 bg-black/90 text-white p-6 transition-all duration-500 ${
-                  hoveredCard === index
-                    ? "translate-y-0 opacity-100"
-                    : "translate-y-full opacity-0"
-                }`}
+                className="relative overflow-hidden rounded-lg group md:w-1/2"
+                onMouseEnter={() => setHoveredCard(index)}
+                onMouseLeave={() => setHoveredCard(null)}
               >
-                <p className="text-sm leading-relaxed">{study.overlayText}</p>
+                <img
+                  src={study.image}
+                  alt={study.title}
+                  className="w-full h-[400px] object-cover rounded-lg"
+                />
+                <div
+                  className={`absolute inset-x-0 bottom-0 bg-black/90 text-white p-6 transition-all duration-500 ${
+                    hoveredCard === index
+                      ? "translate-y-0 opacity-100"
+                      : "translate-y-full opacity-0"
+                  }`}
+                >
+                  <p className="text-sm leading-relaxed">{study.overlayText}</p>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
 
-        <div className="grid md:grid-cols-2 gap-12 mt-16 max-w-6xl mx-auto">
-          {caseStudies.map((study, index) => (
-            <div key={index} className="space-y-4">
-              <p className="text-accent font-semibold italic">{study.tagline}</p>
-              <h3 className="text-2xl lg:text-3xl font-bold text-navy">
-                {study.title}
-              </h3>
-              <p className="text-foreground leading-relaxed">
-                {study.description}
-              </p>
-              <Button className="shine-effect bg-primary hover:bg-primary/90">
-                {study.cta}
-              </Button>
+              {/* Text content */}
+              <div className="space-y-4 md:w-1/2">
+                <p className="text-accent font-semibold italic">{study.tagline}</p>
+                <h3 className="text-2xl lg:text-3xl font-bold text-navy">
+                  {study.title}
+                </h3>
+                <p className="text-foreground leading-relaxed">
+                  {study.description}
+                </p>
+                <Button className="shine-effect bg-primary hover:bg-primary/90">
+                  {study.cta}
+                </Button>
+              </div>
             </div>
           ))}
         </div>
