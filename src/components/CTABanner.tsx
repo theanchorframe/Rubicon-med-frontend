@@ -26,10 +26,11 @@ const CTABanner = () => {
               <Button
                 size="lg"
                 onClick={() => {
-                  const popup = document.getElementById("popup-VVGIyZfOQ8WRJA6ylwdl");
-                  if (popup) {
-                    (popup as HTMLIFrameElement).style.display = 'block';
-                  }
+                  // Trigger the anchorframe popup
+                  const event = new CustomEvent('af-open-form', { 
+                    detail: { formId: 'VVGIyZfOQ8WRJA6ylwdl' } 
+                  });
+                  window.dispatchEvent(event);
                 }}
                 className="shine-effect bg-navy text-navy-foreground hover:bg-navy/90 text-xl px-12 py-8 h-auto"
               >
