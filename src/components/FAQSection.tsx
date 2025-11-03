@@ -1,9 +1,4 @@
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
@@ -12,27 +7,27 @@ const FAQSection = () => {
     {
       question: "What types of companies do you typically work with?",
       answer:
-        "I primarily work with medical device companies. This includes early-stage startups preparing for their first product launch as well as established global manufacturers looking to refine their commercial strategy. Whether you're entering the market or scaling an existing portfolio, I help teams find the clearest path forward and avoid costly missteps.",
+        "I primarily work with medical device companies. This includes early-stage startups preparing for their first product launch as well as established global manufacturers looking to refine their commercial strategy. Whether you’re entering the market or scaling an existing portfolio, I help teams find the clearest path forward and avoid costly missteps.",
     },
     {
       question: "What's your experience with launch planning and execution?",
       answer:
-        "I have led and advised on 40+ product launches across medical devices, pharmaceuticals, and managed healthcare. My experience spans everything from concept validation and KOL engagement to go-to-market strategy and commercial execution, with proven results including $30M+ in forecasted revenue and $1.5M in prevented wasted investment.",
+        "I’ve led or supported over 20 medical projects across product categories including vascular intervention, multiple pharmaceuticals, and diagnostics. I concentrate on the front end: defining the problem, selecting the right opportunities, and building the evidence story that unlocks adoption at launch.",
     },
     {
       question: "Do you only work with U.S.-based companies?",
       answer:
-        "No. While I have deep experience in U.S. markets, I work with companies globally. My approach to market research, product strategy, and clinical validation applies across regions, and I've successfully advised international teams on entering and expanding in multiple markets.",
+        "While I’m based in Long Island, New York, I’ve worked with teams across North America and Europe. As long as we’re aligned on goals and communication, I can support clients remotely or on-site for critical milestones like meeting with physicians, prototyping, or requirement gathering.",
     },
     {
       question: "What's your process like?",
       answer:
-        "My process is built on clinical proof, market evidence, and cross-functional alignment. I start by understanding your product, market, and stakeholders, then combine KOL interviews, segmentation analysis, and voice-of-customer research to build strategies that are both clinically sound and commercially viable. Every engagement is tailored to your specific needs and timeline.",
+        "Every engagement starts with a discovery phase to understand your goals, team structure, timelines, and where friction may be slowing you down. From there, I deliver a formal Statement of Work that defines a tailored scope, priorities, and milestones, along with a short set of upstream recommendations shaped in discovery for your team. I stay focused on speed, fit, and return on investment.",
     },
     {
       question: "How do we know this investment will pay off?",
       answer:
-        "The work I do is designed to reduce risk and maximize ROI. By validating your market before you commit resources, identifying the highest-value segments, and aligning your team around evidence-based strategy, you avoid expensive mistakes and focus investment where it will generate the most return. My clients have saved millions in wasted development costs and generated tens of millions in new revenue.",
+        "My work has helped clients avoid $10M+ in wasted spend and reduce time-to-launch by 30% or more. If you’re making decisions that affect regulatory risk, market share, or product adoption, the cost of misalignment is far greater than the cost of getting it right.",
     },
   ];
 
@@ -62,7 +57,11 @@ const FAQSection = () => {
             defaultValue="item-0"
           >
             {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="border-b border-navy-foreground/20 last:border-0">
+              <AccordionItem
+                key={index}
+                value={`item-${index}`}
+                className="border-b border-navy-foreground/20 last:border-0"
+              >
                 <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-navy-foreground/5">
                   <span className="font-semibold text-lg md:text-xl">{faq.question}</span>
                 </AccordionTrigger>
@@ -80,10 +79,7 @@ const FAQSection = () => {
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-          <Button
-            size="lg"
-            className="shine-effect text-lg px-8 py-6 bg-primary hover:bg-primary/90"
-          >
+          <Button size="lg" className="shine-effect text-lg px-8 py-6 bg-primary hover:bg-primary/90">
             Align Product Decisions With Expert Clinical Opinion
           </Button>
         </motion.div>
