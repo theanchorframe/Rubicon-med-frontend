@@ -106,11 +106,11 @@ const CaseStudiesSection = () => {
 
               {/* Text content - left aligned and starting at top */}
               <div className="space-y-6 md:w-1/2 text-left">
-                <p className="text-accent font-semibold italic text-lg">{study.tagline}</p>
-                <h3 className="text-3xl lg:text-4xl font-bold text-navy">
+                <p className="text-accent font-semibold italic text-xl">{study.tagline}</p>
+                <h3 className="text-4xl lg:text-5xl font-bold text-navy">
                   {study.title}
                 </h3>
-                <p className="text-foreground leading-relaxed text-lg">
+                <p className="text-foreground leading-relaxed text-xl">
                   {study.description}
                 </p>
                 <Button size="lg" className="shine-effect bg-primary hover:bg-primary/90">

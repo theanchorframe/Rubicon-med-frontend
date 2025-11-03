@@ -22,15 +22,17 @@ const CTABanner = () => {
               Learn how clinical proof, reimbursement insights, and advisory-board
               design sprints built an irresistible business case for market entry
             </p>
-            <Button
-              size="lg"
-              className="shine-effect bg-navy text-navy-foreground hover:bg-navy/90"
-            >
-              Get the EPD Case Study
-            </Button>
-            <p className="text-accent-foreground/80 text-xs italic">
-              Instant Email Delivery*
-            </p>
+            <div className="space-y-2">
+              <Button
+                size="lg"
+                className="shine-effect bg-navy text-navy-foreground hover:bg-navy/90"
+              >
+                Get the EPD Case Study
+              </Button>
+              <p className="text-accent-foreground/80 text-xs italic">
+                Instant Email Delivery*
+              </p>
+            </div>
           </div>
           <div className="h-full min-h-[300px] rounded-r-2xl overflow-hidden">
             <img

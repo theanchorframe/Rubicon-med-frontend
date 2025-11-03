@@ -43,7 +43,7 @@ const StatsSection = () => {
               viewport={{ once: true }}
               className="bg-navy-foreground/10 backdrop-blur-sm p-8 rounded-lg text-center border border-navy-foreground/20 hover:bg-navy-foreground/20 hover:scale-105 transition-all duration-300"
             >
-              <p className="text-5xl font-bold mb-4">{stat.number}</p>
+              <p className="text-6xl md:text-7xl font-bold mb-4">{stat.number}</p>
               <p className="text-navy-foreground/90">{stat.description}</p>
             </motion.div>
           ))}
