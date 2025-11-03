@@ -119,28 +119,20 @@ const ProcessSection = () => {
             {/* About Heading */}
             <div className="space-y-4">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
-                Meet <span className="text-primary">Robert Miraglia</span>
+                <span className="text-primary">Rob Miraglia</span>: Your Partner in MedTech Growth.
               </h2>
-              <p className="text-lg text-muted-foreground">
-                15+ Years of Clarity, Alignment, and Execution
-              </p>
             </div>
 
             {/* Description */}
             <div className="space-y-4">
               <p className="text-lg text-foreground leading-relaxed">
-                Robert Miraglia is a strategic product leader and launch advisor with
-                a proven track record across medical device, pharmaceutical, and
-                managed healthcare sectors. His rare combination of clinical insight,
-                qualitative and quantitative marketing research, portfolio strategy,
-                and commercial execution has earned him a reputation as the go-to
-                consultant when considering build-your-own products or purchasing
-                products from a partner
+                Rob is a dedicated and methodical Healthcare Leader known for crossing the gap between medical innovation and market reality. With over 40 years in the med tech, pharma, and diagnostic areas—including senior roles at companies like <span className="font-bold">Abbott, Medtronic, 3M, and Integer</span>—Rob brings deep cross-functional expertise to every challenge.
               </p>
               <p className="text-lg text-foreground leading-relaxed">
-                From negotiating <span className="font-bold">$1.5M</span> in vendor
-                savings to leading <span className="font-bold">80+</span> product
-                evaluations, Rob doesn't just advise, he engineers clarity at scale.
+                <span className="font-bold">His focus is clear:</span> to develop and execute <span className="font-bold">data-driven growth strategies</span> and <span className="font-bold">product development</span> that enhance patient health and achieve aggressive financial goals. Rob's consulting work centers on meticulous clinical, qualitative and quantitative marketing research, segmentation, and forecasting to identify new product opportunities, develop new products, and <span className="font-bold">optimize product portfolios.</span> He continues the journey towards commercialization with multiple rounds of open-ended qualitative <span className="font-bold">prototype and product evaluations</span> with quantitative scoring of ordinal data. As a proven leader and consultant, Rob provides the authoritative guidance needed to <span className="font-bold">cross every marketing and commercialization hurdle.</span> He works towards ensuring your product not only launches but dominates its market segment.
+              </p>
+              <p className="text-lg text-foreground leading-relaxed">
+                From negotiating <span className="font-bold">$1.5M</span> in vendor savings to leading <span className="font-bold">100+</span> product evaluations across several product areas, Rob doesn't just advise, he engineers clarity at scale.
               </p>
             </div>
 
