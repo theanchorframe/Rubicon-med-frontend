@@ -63,6 +63,12 @@ const FinalCTASection = () => {
               </div>
               <Button
                 size="lg"
+                onClick={() => {
+                  const formSection = document.getElementById("consultation-form");
+                  if (formSection) {
+                    formSection.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
                 className="shine-effect text-lg px-8 py-6 bg-primary hover:bg-primary/90"
               >
                 Schedule a FREE Consultation Call

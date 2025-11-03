@@ -1,15 +1,7 @@
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
 import heroVascularBg from "@/assets/hero-cardiac-catheterization.webp";
 
 const HeroSection = () => {
-  const scrollToProcess = () => {
-    const processSection = document.getElementById("process");
-    if (processSection) {
-      processSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with 85% opacity */}
@@ -23,57 +15,97 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 pt-32 pb-20 max-w-7xl">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center md:text-left md:max-w-2xl space-y-6"
-        >
-          <div className="space-y-4">
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2 }}
-              className="text-accent font-semibold text-sm sm:text-base tracking-wide uppercase"
-            >
-              Trusted Advisor to the MedTech Field
-            </motion.p>
-            
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight"
-            >
-              Advising MedTech leaders by leveraging data, marketing research, and physician validation.
-            </motion.h1>
-            
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.6 }}
-              className="text-lg sm:text-xl md:text-2xl text-white/90 leading-relaxed"
-            >
-              We help MedTech companies leverage data, marketing research, and physician validation to create disruptive products to enhance patient health. We help companies choose which markets to enter, what technology would be optimal, and the right dimensional attributes while keeping SKU complexity under control.
-            </motion.p>
-          </div>
-
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+          {/* Left Column - Text Content */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8 }}
-            className="flex justify-center md:justify-start"
+            transition={{ duration: 0.8 }}
+            className="text-center lg:text-left space-y-6"
           >
-            <Button
-              size="xl"
-              onClick={scrollToProcess}
-              className="shine-effect w-full sm:w-auto text-base sm:text-lg px-10 py-7 shadow-lg hover:shadow-xl transition-all bg-primary hover:bg-primary/90 text-white"
-            >
-              Schedule FREE consultation
-            </Button>
+            <div className="space-y-4">
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.2 }}
+                className="text-accent font-semibold text-sm sm:text-base tracking-wide uppercase"
+              >
+                Trusted Advisor to the MedTech Field
+              </motion.p>
+              
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight"
+              >
+                Advising MedTech leaders by leveraging data, marketing research, and physician validation.
+              </motion.h1>
+              
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.6 }}
+                className="text-lg sm:text-xl md:text-2xl text-white/90 leading-relaxed"
+              >
+                We help MedTech companies leverage data, marketing research, and physician validation to create disruptive products to enhance patient health. We help companies choose which markets to enter, what technology would be optimal, and the right dimensional attributes while keeping SKU complexity under control.
+              </motion.p>
+            </div>
           </motion.div>
-        </motion.div>
+
+          {/* Right Column - Form */}
+          <motion.div
+            id="consultation-form"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8, duration: 0.8 }}
+            className="w-full"
+          >
+            <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-2xl overflow-hidden" style={{ height: '1135px' }}>
+              <iframe
+                src="https://link.anchorframe.com/widget/form/jxrEwmyK9koADRveNp3T"
+                style={{ width: '100%', height: '100%', border: 'none' }}
+                id="inline-jxrEwmyK9koADRveNp3T" 
+                data-layout="{'id':'INLINE'}"
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name=" Rubicon Form"
+                data-height="1135"
+                data-layout-iframe-id="inline-jxrEwmyK9koADRveNp3T"
+                data-form-id="jxrEwmyK9koADRveNp3T"
+                title=" Rubicon Form"
+              />
+            </div>
+          </motion.div>
+        </div>
       </div>
+
+      {/* Form embed script */}
+      <script src="https://link.anchorframe.com/js/form_embed.js"></script>
+      
+      {/* Case Study Popup Form */}
+      <iframe
+        src="https://link.anchorframe.com/widget/form/VVGIyZfOQ8WRJA6ylwdl"
+        style={{ display: 'none', width: '100%', height: '100%', border: 'none', borderRadius: '4px' }}
+        id="popup-VVGIyZfOQ8WRJA6ylwdl" 
+        data-layout="{'id':'POPUP'}"
+        data-trigger-type="alwaysShow"
+        data-trigger-value=""
+        data-activation-type="alwaysActivated"
+        data-activation-value=""
+        data-deactivation-type="neverDeactivate"
+        data-deactivation-value=""
+        data-form-name="Case study Pop up"
+        data-height="485"
+        data-layout-iframe-id="popup-VVGIyZfOQ8WRJA6ylwdl"
+        data-form-id="VVGIyZfOQ8WRJA6ylwdl"
+        title="Case study Pop up"
+      />
+      <script src="https://link.anchorframe.com/js/form_embed.js"></script>
     </section>
   );
 };

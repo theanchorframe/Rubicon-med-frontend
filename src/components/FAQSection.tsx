@@ -31,8 +31,15 @@ const FAQSection = () => {
     },
   ];
 
+  const scrollToForm = () => {
+    const formSection = document.getElementById("consultation-form");
+    if (formSection) {
+      formSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <section id="faq" className="py-20 bg-background scroll-mt-20">
+    <section id="faq" className="py-24 md:py-32 bg-background scroll-mt-20">
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -62,10 +69,10 @@ const FAQSection = () => {
                 value={`item-${index}`}
                 className="border-b border-navy-foreground/20 last:border-0"
               >
-                <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-navy-foreground/5">
+                <AccordionTrigger className="px-8 py-6 text-left hover:no-underline hover:bg-navy-foreground/5">
                   <span className="font-semibold text-lg md:text-xl">{faq.question}</span>
                 </AccordionTrigger>
-                <AccordionContent className="px-6 pb-4 text-navy-foreground/90 text-base md:text-lg">
+                <AccordionContent className="px-8 pb-6 pt-2 text-navy-foreground/90 text-base md:text-lg leading-relaxed">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -77,9 +84,13 @@ const FAQSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
-          className="text-center mt-12"
+          className="text-center mt-16"
         >
-          <Button size="lg" className="shine-effect text-lg px-8 py-6 bg-primary hover:bg-primary/90">
+          <Button 
+            size="lg" 
+            onClick={scrollToForm}
+            className="shine-effect text-lg px-8 py-6 bg-primary hover:bg-primary/90"
+          >
             Align Product Decisions With Expert Clinical Opinion
           </Button>
         </motion.div>

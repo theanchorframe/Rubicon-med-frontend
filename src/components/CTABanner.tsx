@@ -25,6 +25,12 @@ const CTABanner = () => {
             <div className="space-y-2">
               <Button
                 size="lg"
+                onClick={() => {
+                  const popup = document.getElementById("popup-VVGIyZfOQ8WRJA6ylwdl");
+                  if (popup) {
+                    (popup as HTMLIFrameElement).style.display = 'block';
+                  }
+                }}
                 className="shine-effect bg-navy text-navy-foreground hover:bg-navy/90"
               >
                 Get the EPD Case Study
