@@ -12,14 +12,14 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with 20% opacity */}
+      {/* Background Image with 85% opacity */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-85"
         style={{ backgroundImage: `url(${heroVascularBg})` }}
       >
       </div>
       {/* Navy overlay for better text readability */}
-      <div className="absolute inset-0 bg-navy/80"></div>
+      <div className="absolute inset-0 bg-navy/30"></div>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 pt-32 pb-20 max-w-7xl">
