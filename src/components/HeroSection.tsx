@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import heroVascularBg from "@/assets/hero-vascular-bg-new.jpg";
+import heroVascularBg from "@/assets/hero-cardiac-catheterization.webp";
 
 const HeroSection = () => {
   const scrollToProcess = () => {
@@ -45,7 +45,7 @@ const HeroSection = () => {
               transition={{ delay: 0.4 }}
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight"
             >
-              Discover the perfect product for the ideal market, designed for the right patients
+              Advising MedTech leaders by leveraging data, marketing research, and physician validation.
             </motion.h1>
             
             <motion.p
@@ -54,7 +54,7 @@ const HeroSection = () => {
               transition={{ delay: 0.6 }}
               className="text-lg sm:text-xl md:text-2xl text-white/90 leading-relaxed"
             >
-              We help companies find clarity, create alignment, and accelerate time to value
+              We help MedTech companies leverage data, marketing research, and physician validation to create disruptive products to enhance patient health. We help companies choose which markets to enter, what technology would be optimal, and the right dimensional attributes while keeping SKU complexity under control.
             </motion.p>
           </div>
 
@@ -69,7 +69,7 @@ const HeroSection = () => {
               onClick={scrollToProcess}
               className="shine-effect w-full sm:w-auto text-base sm:text-lg px-10 py-7 shadow-lg hover:shadow-xl transition-all bg-primary hover:bg-primary/90 text-white"
             >
-              How the Process Works
+              Schedule FREE consultation
             </Button>
           </motion.div>
         </motion.div>
