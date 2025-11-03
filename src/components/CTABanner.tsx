@@ -34,7 +34,7 @@ const CTABanner = () => {
               </p>
             </div>
           </div>
-          <div className="h-full min-h-[250px] rounded-2xl overflow-hidden">
+          <div className="h-full min-h-[400px] rounded-2xl overflow-hidden">
             <img
               src={strategyImage}
               alt="Strategy Meeting"
