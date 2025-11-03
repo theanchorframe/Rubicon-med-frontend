@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import heroVascularBg from "@/assets/hero-vascular-network.jpg";
+import heroVascularBg from "@/assets/hero-vascular-hq.jpg";
 
 const HeroSection = () => {
   const scrollToProcess = () => {

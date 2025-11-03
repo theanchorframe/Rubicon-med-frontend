@@ -56,10 +56,15 @@ const ServicesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="glass-card p-6 md:p-8 space-y-4 border-2 border-navy/40 dark:border-navy/60 shadow-md hover:shadow-lg transition-shadow"
+              whileHover={{ 
+                y: -8, 
+                boxShadow: "0 20px 40px -12px rgba(0, 0, 0, 0.15)",
+                borderColor: "hsl(var(--primary))"
+              }}
+              className="glass-card p-6 md:p-8 space-y-4 border-2 border-navy/40 dark:border-navy/60 shadow-md transition-all duration-300 cursor-pointer group"
             >
-              <h3 className="text-xl font-bold text-navy">{service.title}</h3>
-              <p className="text-foreground/80 leading-relaxed">
+              <h3 className="text-xl font-bold text-navy group-hover:text-primary transition-colors duration-300">{service.title}</h3>
+              <p className="text-foreground/80 leading-relaxed group-hover:text-foreground transition-colors duration-300">
                 {service.description}
               </p>
             </motion.div>
