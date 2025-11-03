@@ -32,7 +32,7 @@ const FinalCTASection = () => {
                     formSection.scrollIntoView({ behavior: "smooth" });
                   }
                 }}
-                className="shine-effect text-xl px-12 py-8 h-auto bg-primary hover:bg-primary/90"
+                className="shine-effect text-lg sm:text-xl px-6 sm:px-12 py-6 sm:py-8 h-auto bg-primary hover:bg-primary/90 whitespace-normal text-center leading-tight max-w-full"
               >
                 Schedule a FREE Consultation Call
               </Button>
@@ -47,7 +47,7 @@ const FinalCTASection = () => {
               <img
                 src={cathLabImage}
                 alt="Catheterization lab procedure"
-                className="w-full max-w-md rounded-lg"
+                className="w-full max-w-2xl rounded-lg"
               />
             </motion.div>
           </div>
