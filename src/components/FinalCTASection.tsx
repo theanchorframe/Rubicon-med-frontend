@@ -29,7 +29,7 @@ const FinalCTASection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
-            className="text-4xl lg:text-5xl font-bold text-navy text-center mb-8"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-navy text-center mb-8 px-2"
           >
             Get Expert Eyes on Your Launch Before It's Too Late
           </motion.h2>

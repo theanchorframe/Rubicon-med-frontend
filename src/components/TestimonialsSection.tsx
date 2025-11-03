@@ -61,7 +61,7 @@ const TestimonialsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-4xl lg:text-5xl font-bold text-navy text-center mb-4"
+          className="text-3xl md:text-4xl lg:text-5xl font-bold text-navy text-center mb-4 px-2"
         >
           Rubicon Medical Marketing & Strategy — Proven Healthcare Consulting
           That Generates Revenue and Margin

@@ -66,7 +66,7 @@ const ProcessSection = () => {
           >
             {/* Heading */}
             <div className="space-y-4">
-              <h2 className="text-4xl lg:text-5xl font-bold text-foreground">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
                 Our <span className="text-primary">Deliverables</span>
               </h2>
               <p className="text-lg text-muted-foreground">
@@ -124,7 +124,7 @@ const ProcessSection = () => {
           >
             {/* About Heading */}
             <div className="space-y-4">
-              <h2 className="text-4xl lg:text-5xl font-bold text-foreground">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
                 Meet <span className="text-primary">Robert Miraglia</span>
               </h2>
               <p className="text-lg text-muted-foreground">

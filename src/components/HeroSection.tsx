@@ -28,7 +28,7 @@ const HeroSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3 }}
               viewport={{ once: true }}
-              className="text-4xl lg:text-5xl xl:text-6xl font-bold text-navy leading-tight"
+              className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-navy leading-tight"
             >
               MedTech Success: Discover the Perfect Product, for the Ideal
               Market, Designed for the Right Patients

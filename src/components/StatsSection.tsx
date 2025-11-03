@@ -29,7 +29,7 @@ const StatsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-4xl lg:text-5xl font-bold text-center mb-16"
+          className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-16 px-2"
         >
           Turning Product Strategy Into Tangible Success
         </motion.h2>
