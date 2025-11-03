@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import strategyImage from "@/assets/strategy-meeting.jpg";
+import strategyImage from "@/assets/strategy-meeting.webp";
 
 const CTABanner = () => {
   return (
@@ -14,11 +14,11 @@ const CTABanner = () => {
           className="max-w-5xl mx-auto bg-accent rounded-2xl overflow-hidden grid md:grid-cols-2 gap-0"
         >
           <div className="p-6 md:p-8 lg:p-12 space-y-6">
-            <h3 className="text-2xl md:text-3xl font-bold text-accent-foreground">
+            <h3 className="text-[42px] md:text-[56px] font-bold text-accent-foreground leading-tight">
               From Idea to Launch: $30M Co-dev + $5M NRE for a more effective and
               safer EPD
             </h3>
-            <p className="text-accent-foreground/90 text-sm">
+            <p className="text-accent-foreground/90 text-lg md:text-xl">
               Learn how clinical proof, reimbursement insights, and advisory-board
               design sprints built an irresistible business case for market entry
             </p>
@@ -34,11 +34,11 @@ const CTABanner = () => {
               </p>
             </div>
           </div>
-          <div className="h-full min-h-[300px] rounded-r-2xl overflow-hidden">
+          <div className="h-full min-h-[300px] rounded-2xl overflow-hidden">
             <img
               src={strategyImage}
               alt="Strategy Meeting"
-              className="w-full h-full object-cover rounded-r-2xl"
+              className="w-full h-full object-cover rounded-2xl"
             />
           </div>
         </motion.div>
