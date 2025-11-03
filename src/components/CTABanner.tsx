@@ -11,7 +11,7 @@ const CTABanner = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="max-w-5xl mx-auto bg-accent rounded-2xl overflow-hidden grid md:grid-cols-[1fr,1.5fr] gap-0"
+          className="max-w-5xl mx-auto bg-accent rounded-2xl overflow-hidden grid md:grid-cols-2 gap-0"
         >
           <div className="p-6 md:p-8 lg:p-12 space-y-6">
             <h3 className="text-[42px] md:text-[56px] font-bold text-accent-foreground leading-tight">
@@ -34,7 +34,7 @@ const CTABanner = () => {
               </p>
             </div>
           </div>
-          <div className="h-full min-h-[280px] rounded-2xl overflow-hidden">
+          <div className="h-full min-h-[300px] rounded-2xl overflow-hidden">
             <img
               src={strategyImage}
               alt="Strategy Meeting"
