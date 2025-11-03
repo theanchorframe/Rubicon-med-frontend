@@ -70,10 +70,10 @@ const Navbar = () => {
                 Services
               </button>
               <button
-                onClick={() => scrollToSection("case-studies")}
+                onClick={() => scrollToSection("case-study")}
                 className="nav-link text-foreground hover:text-primary transition-colors font-medium text-base"
               >
-                Case Studies
+                Case Study
               </button>
               <button
                 onClick={() => scrollToSection("testimonials")}
@@ -130,10 +130,10 @@ const Navbar = () => {
               Services
             </button>
             <button
-              onClick={() => scrollToSection("case-studies")}
+              onClick={() => scrollToSection("case-study")}
               className="nav-link block w-full text-left py-2 text-foreground hover:text-primary transition-colors font-medium text-base"
             >
-              Case Studies
+              Case Study
             </button>
             <button
               onClick={() => scrollToSection("testimonials")}
