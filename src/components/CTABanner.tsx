@@ -32,11 +32,11 @@ const CTABanner = () => {
               Instant Email Delivery*
             </p>
           </div>
-          <div className="h-full min-h-[300px]">
+          <div className="h-full min-h-[300px] rounded-r-2xl overflow-hidden">
             <img
               src={strategyImage}
               alt="Strategy Meeting"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover rounded-r-2xl"
             />
           </div>
         </motion.div>

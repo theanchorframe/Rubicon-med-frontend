@@ -6,15 +6,15 @@ const ProcessSection = () => {
   const processSteps = [{
     number: "01",
     title: "Discovery & Analysis",
-    description: "Deep dive into your product needs, market landscape, and physician validation requirements"
+    description: "Deep VOC with clinicians and buyers, competitive scan, market sizing, and clear acceptance criteria."
   }, {
     number: "02",
     title: "Strategic Planning",
-    description: "Develop data-driven strategies with KOL engagement and comprehensive market sizing"
+    description: "Commercial blueprint covering segmentation, positioning, pricing and access, KOL engagement, and evidence plan."
   }, {
     number: "03",
     title: "Execution & Launch",
-    description: "Guide implementation with continuous optimization and measurable results"
+    description: "Pilot, enable, and scale with playbooks, sales training, and performance loops for continuous optimization."
   }];
   const statistics = [{
     icon: Users,
@@ -33,7 +33,7 @@ const ProcessSection = () => {
     value: "10+",
     label: "Sized, segmented, and prioritized 10+ markets (TAM/SAM/SOM) to focus spend where revenue opportunity is highest"
   }];
-  const benefits = ["15+ years of proven MedTech expertise", "Clinical insight combined with commercial execution", "Track record of $1.5M+ in vendor savings", "Led 80+ successful product evaluations"];
+  const benefits = ["15+ years advancing MedTech from concept to adoption", "Clinical insight combined with rigorous commercial execution", "$1.5M+ in vendor savings negotiated", "80+ product evaluations and go/no-go decisions led"];
   return <section className="py-20 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
@@ -54,8 +54,11 @@ const ProcessSection = () => {
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
                 Our <span className="text-primary">Deliverables</span>
               </h2>
+              <h3 className="text-2xl md:text-3xl font-bold text-foreground">
+                Convert Clinical Insight into Market Traction
+              </h3>
               <p className="text-lg text-muted-foreground">
-                A streamlined process that combines clinical expertise with strategic execution to deliver measurable results
+                A three-step engagement that validates real-world need, aligns the commercial plan, and executes a launch that clinicians adopt.
               </p>
             </div>
 

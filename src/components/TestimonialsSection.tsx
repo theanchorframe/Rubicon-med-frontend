@@ -53,7 +53,7 @@ const TestimonialsSection = () => {
   return (
     <section
       id="testimonials"
-      className="py-20 bg-secondary scroll-mt-20"
+      className="py-20 bg-background scroll-mt-20"
     >
       <div className="container mx-auto px-4">
         <motion.h2
