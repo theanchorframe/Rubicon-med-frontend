@@ -1,5 +1,6 @@
 import { Star } from "lucide-react";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const TestimonialsSection = () => {
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
@@ -55,15 +56,25 @@ const TestimonialsSection = () => {
       className="py-20 bg-secondary scroll-mt-20"
     >
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl lg:text-5xl font-bold text-navy text-center mb-4">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-4xl lg:text-5xl font-bold text-navy text-center mb-4"
+        >
           Rubicon Medical Marketing & Strategy — Proven Healthcare Consulting
           That Generates Revenue and Margin
-        </h2>
+        </motion.h2>
         <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6 mt-12">
           {testimonials.map((testimonial, index) => (
-            <div
+            <motion.div
               key={index}
-              className="break-inside-avoid bg-card p-6 rounded-lg shadow-sm border border-border"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="break-inside-avoid glass-card p-6 shadow-sm"
             >
               <div className="flex gap-1 mb-4">
                 {[...Array(5)].map((_, i) => (
@@ -93,7 +104,7 @@ const TestimonialsSection = () => {
                   {testimonial.title}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

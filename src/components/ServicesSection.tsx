@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 const ServicesSection = () => {
   const services = [
@@ -37,31 +38,47 @@ const ServicesSection = () => {
   return (
     <section id="services" className="py-20 bg-background scroll-mt-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl lg:text-5xl font-bold text-navy text-center mb-4">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-4xl lg:text-5xl font-bold text-navy text-center mb-4"
+        >
           Strategic Product Intelligence That Shapes What You Build and How You
           Launch
-        </h2>
+        </motion.h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mt-12">
           {services.map((service, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-card p-8 rounded-lg border border-border space-y-4"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="glass-card p-8 space-y-4 border-2"
             >
               <h3 className="text-xl font-bold text-navy">{service.title}</h3>
               <p className="text-foreground/80 leading-relaxed">
                 {service.description}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
-        <div className="text-center mt-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          viewport={{ once: true }}
+          className="text-center mt-12"
+        >
           <Button
             size="lg"
             className="shine-effect text-lg px-8 py-6 bg-primary hover:bg-primary/90"
           >
             Ready to Validate Your Market Before You Commit?
           </Button>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

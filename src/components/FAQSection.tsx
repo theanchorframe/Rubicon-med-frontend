@@ -5,6 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 const FAQSection = () => {
   const faqs = [
@@ -38,10 +39,22 @@ const FAQSection = () => {
   return (
     <section id="faq" className="py-20 bg-secondary scroll-mt-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl lg:text-5xl font-bold text-navy text-center mb-4">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-4xl lg:text-5xl font-bold text-navy text-center mb-4"
+        >
           What Teams Like Yours Always Ask Before Saying Yes
-        </h2>
-        <div className="max-w-4xl mx-auto mt-12">
+        </motion.h2>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="max-w-4xl mx-auto mt-12"
+        >
           <Accordion
             type="single"
             collapsible
@@ -59,15 +72,21 @@ const FAQSection = () => {
               </AccordionItem>
             ))}
           </Accordion>
-        </div>
-        <div className="text-center mt-12">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          viewport={{ once: true }}
+          className="text-center mt-12"
+        >
           <Button
             size="lg"
             className="shine-effect text-lg px-8 py-6 bg-primary hover:bg-primary/90"
           >
             Align Product Decisions With Expert Clinical Opinion
           </Button>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 const StatsSection = () => {
   const stats = [
@@ -23,28 +24,44 @@ const StatsSection = () => {
   return (
     <section className="py-20 bg-navy text-navy-foreground">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl lg:text-5xl font-bold text-center mb-16">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-4xl lg:text-5xl font-bold text-center mb-16"
+        >
           Turning Product Strategy Into Tangible Success
-        </h2>
+        </motion.h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mb-12">
           {stats.map((stat, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-navy-foreground/10 backdrop-blur-sm p-8 rounded-lg text-center border border-navy-foreground/20"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="bg-navy-foreground/10 backdrop-blur-sm p-8 rounded-lg text-center border border-navy-foreground/20 hover:bg-navy-foreground/20 hover:scale-105 transition-all duration-300"
             >
               <p className="text-5xl font-bold mb-4">{stat.number}</p>
               <p className="text-navy-foreground/90">{stat.description}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
-        <div className="text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="text-center"
+        >
           <Button
             size="lg"
             className="shine-effect text-lg px-8 py-6 bg-background text-foreground hover:bg-background/90"
           >
             Get Clarity On Your Path Forward
           </Button>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

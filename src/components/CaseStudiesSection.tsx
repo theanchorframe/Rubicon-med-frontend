@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { motion } from "framer-motion";
 import meetingImage from "@/assets/meeting-presentation.jpg";
 import dataImage from "@/assets/data-analysis.jpg";
 import productImage from "@/assets/product-development.jpg";
@@ -54,19 +55,29 @@ const CaseStudiesSection = () => {
   return (
     <section className="py-20 bg-background overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
           <Button
             size="lg"
             className="shine-effect text-lg px-8 py-6 bg-primary hover:bg-primary/90 mb-8"
           >
             Turn Your Launch Into the Next Case Study
           </Button>
-        </div>
+        </motion.div>
 
         <div className="max-w-7xl mx-auto space-y-16">
           {caseStudies.map((study, index) => (
-            <div
+            <motion.div
               key={index}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
               className={`flex flex-col ${
                 index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
               } gap-8 items-center`}
@@ -106,7 +117,7 @@ const CaseStudiesSection = () => {
                   {study.cta}
                 </Button>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
