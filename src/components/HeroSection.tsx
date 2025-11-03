@@ -61,7 +61,7 @@ const HeroSection = () => {
             transition={{ delay: 0.8, duration: 0.8 }}
             className="w-full"
           >
-            <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-2xl overflow-hidden" style={{ height: '590px' }}>
+            <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-2xl overflow-hidden" style={{ height: '750px' }}>
               <iframe
                 src="https://link.anchorframe.com/widget/form/jxrEwmyK9koADRveNp3T"
                 style={{ width: '100%', height: '100%', border: 'none', borderRadius: '10px' }}
@@ -74,7 +74,7 @@ const HeroSection = () => {
                 data-deactivation-type="neverDeactivate"
                 data-deactivation-value=""
                 data-form-name=" Rubicon Form"
-                data-height="590"
+                data-height="750"
                 data-layout-iframe-id="inline-jxrEwmyK9koADRveNp3T"
                 data-form-id="jxrEwmyK9koADRveNp3T"
                 title=" Rubicon Form"
