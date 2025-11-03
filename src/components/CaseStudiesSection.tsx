@@ -70,7 +70,7 @@ const CaseStudiesSection = () => {
                 formSection.scrollIntoView({ behavior: "smooth" });
               }
             }}
-            className="shine-effect text-xl px-12 py-8 h-auto bg-primary hover:bg-primary/90 mb-8"
+            className="shine-effect text-lg sm:text-xl px-6 sm:px-12 py-6 sm:py-8 h-auto bg-primary hover:bg-primary/90 mb-8 whitespace-normal text-center leading-tight"
           >
             Turn Your Launch Into the Next Case Study
           </Button>
@@ -127,7 +127,7 @@ const CaseStudiesSection = () => {
                       formSection.scrollIntoView({ behavior: "smooth" });
                     }
                   }}
-                  className="shine-effect text-xl px-12 py-8 h-auto bg-primary hover:bg-primary/90"
+                  className="shine-effect text-lg sm:text-xl px-6 sm:px-12 py-6 sm:py-8 h-auto bg-primary hover:bg-primary/90 whitespace-normal text-center leading-tight"
                 >
                   {study.cta}
                 </Button>

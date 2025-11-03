@@ -85,7 +85,7 @@ const ServicesSection = () => {
                 formSection.scrollIntoView({ behavior: "smooth" });
               }
             }}
-            className="shine-effect text-xl px-12 py-8 h-auto bg-primary hover:bg-primary/90"
+            className="shine-effect text-lg sm:text-xl px-6 sm:px-12 py-6 sm:py-8 h-auto bg-primary hover:bg-primary/90 whitespace-normal text-center leading-tight"
           >
             Ready to Validate Your Market Before You Commit?
           </Button>
