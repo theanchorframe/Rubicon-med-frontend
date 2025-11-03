@@ -1,0 +1,134 @@
+import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.png";
+
+const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const offset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+      setIsMobileMenuOpen(false);
+    }
+  };
+
+  return (
+    <>
+      <nav
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled
+            ? "bg-background shadow-md"
+            : "bg-transparent"
+        }`}
+      >
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between h-20">
+            <div className="flex items-center gap-3">
+              <img src={logo} alt="Rubicon Medical" className="h-16" />
+              <div className="hidden md:block">
+                <h1 className="text-lg font-bold text-foreground leading-tight">
+                  Rubicon Medical Marketing &<br />Strategy Consultants
+                </h1>
+              </div>
+            </div>
+
+            <div className="hidden lg:flex items-center gap-6">
+              <button
+                onClick={() => scrollToSection("about")}
+                className="text-foreground hover:text-primary transition-colors font-medium"
+              >
+                About
+              </button>
+              <button
+                onClick={() => scrollToSection("testimonials")}
+                className="text-foreground hover:text-primary transition-colors font-medium"
+              >
+                Testimonials
+              </button>
+              <button
+                onClick={() => scrollToSection("services")}
+                className="text-foreground hover:text-primary transition-colors font-medium"
+              >
+                Services
+              </button>
+              <button
+                onClick={() => scrollToSection("faq")}
+                className="text-foreground hover:text-primary transition-colors font-medium"
+              >
+                FAQ
+              </button>
+              <Button className="shine-effect bg-primary hover:bg-primary/90">
+                Request a Consult
+              </Button>
+            </div>
+
+            <button
+              className="lg:hidden text-foreground"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Menu */}
+        <div
+          className={`lg:hidden bg-background border-t transition-all duration-300 ease-in-out overflow-hidden ${
+            isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          }`}
+        >
+          <div className="container mx-auto px-4 py-4 space-y-4">
+            <button
+              onClick={() => scrollToSection("about")}
+              className="block w-full text-left py-2 text-foreground hover:text-primary transition-colors font-medium"
+            >
+              About
+            </button>
+            <button
+              onClick={() => scrollToSection("testimonials")}
+              className="block w-full text-left py-2 text-foreground hover:text-primary transition-colors font-medium"
+            >
+              Testimonials
+            </button>
+            <button
+              onClick={() => scrollToSection("services")}
+              className="block w-full text-left py-2 text-foreground hover:text-primary transition-colors font-medium"
+            >
+              Services
+            </button>
+            <button
+              onClick={() => scrollToSection("faq")}
+              className="block w-full text-left py-2 text-foreground hover:text-primary transition-colors font-medium"
+            >
+              FAQ
+            </button>
+            <Button className="w-full shine-effect bg-primary hover:bg-primary/90">
+              Request a Consult
+            </Button>
+          </div>
+        </div>
+      </nav>
+    </>
+  );
+};
+
+export default Navbar;
