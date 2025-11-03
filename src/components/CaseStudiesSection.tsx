@@ -1,17 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import meetingImage from "@/assets/meeting-presentation.jpg";
-import dataImage from "@/assets/data-analysis.jpg";
-import productImage from "@/assets/product-development.jpg";
-import roundtableImage from "@/assets/clinical-roundtable.jpg";
+import dataAnalysisImage from "@/assets/data-analysis.webp";
+import consultationImage from "@/assets/medical-consultation.webp";
+import clinicalMeetingImage from "@/assets/clinical-meeting.webp";
+import caseStudyImage from "@/assets/case-study-banner.webp";
 
 const CaseStudiesSection = () => {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   const caseStudies = [
     {
-      image: meetingImage,
+      image: dataAnalysisImage,
       tagline: "DATA-DRIVEN, PHYSICIAN-READY",
       title: "Avoid 7-Figure Launch Misfires With Upstream Strategy That Aligns Teams",
       description:
@@ -21,7 +21,7 @@ const CaseStudiesSection = () => {
         "VoC and data modeling size real demand and barriers before you build. You drop low ROI bets and fund the moves with the strongest evidence.",
     },
     {
-      image: dataImage,
+      image: consultationImage,
       tagline: "CLINICALLY INFORMED. COMMERCIALLY PROVEN.",
       title: "Turn Clinical Insight Into Strategy That Wins Market Share",
       description:
@@ -31,7 +31,7 @@ const CaseStudiesSection = () => {
         "From KOL interviews and segmentation, Rob distills clinical insight into target segments, messaging, and claims that sales can use tomorrow to win faster and with proof.",
     },
     {
-      image: productImage,
+      image: clinicalMeetingImage,
       tagline: "BACKED BY 80+ PRODUCT and PROTYPE EVALUATIONS",
       title: "De-Risk Every Product Bet With Proven Market Insight",
       description:
@@ -41,7 +41,7 @@ const CaseStudiesSection = () => {
         "VoC and data modeling size real demand and barriers before you build. You drop low ROI bets and fund the moves with the strongest evidence.",
     },
     {
-      image: roundtableImage,
+      image: caseStudyImage,
       tagline: "CLINICIAN-LED, PATIENT-BACKED",
       title: "Align Teams Quickly with Patient and Clinician Roundtables",
       description:

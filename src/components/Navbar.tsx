@@ -1,10 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -23,44 +32,52 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background shadow-md">
+      <nav className={`fixed top-0 left-0 right-0 z-50 bg-background transition-all duration-300 ${
+        isScrolled ? "shadow-lg" : "shadow-md"
+      }`}>
         <div className="container mx-auto px-6 md:px-8">
-          <div className="flex items-center justify-between h-20">
+          <div className={`flex items-center justify-between transition-all duration-300 ${
+            isScrolled ? "h-20" : "h-24"
+          }`}>
             <div className="flex items-center gap-3">
               <img 
                 src={logo} 
                 alt="Rubicon Medical" 
-                className="h-16"
+                className={`transition-all duration-300 ${
+                  isScrolled ? "h-14" : "h-20"
+                }`}
               />
               <div>
-                <h1 className="font-bold text-foreground leading-tight text-sm md:text-base">
+                <h1 className={`font-bold text-foreground leading-tight transition-all duration-300 ${
+                  isScrolled ? "text-sm md:text-base" : "text-base md:text-lg"
+                }`}>
                   Rubicon Medical Marketing &<br />Strategy Consultants
                 </h1>
               </div>
             </div>
 
-            <div className="hidden lg:flex items-center gap-6">
+            <div className="hidden lg:flex items-center gap-8">
               <button
                 onClick={() => scrollToSection("about")}
-                className="text-foreground hover:text-primary transition-colors font-medium"
+                className="nav-link text-foreground hover:text-primary transition-colors font-medium text-base"
               >
                 About
               </button>
               <button
                 onClick={() => scrollToSection("testimonials")}
-                className="text-foreground hover:text-primary transition-colors font-medium"
+                className="nav-link text-foreground hover:text-primary transition-colors font-medium text-base"
               >
                 Testimonials
               </button>
               <button
                 onClick={() => scrollToSection("services")}
-                className="text-foreground hover:text-primary transition-colors font-medium"
+                className="nav-link text-foreground hover:text-primary transition-colors font-medium text-base"
               >
                 Services
               </button>
               <button
                 onClick={() => scrollToSection("faq")}
-                className="text-foreground hover:text-primary transition-colors font-medium"
+                className="nav-link text-foreground hover:text-primary transition-colors font-medium text-base"
               >
                 FAQ
               </button>
@@ -87,25 +104,25 @@ const Navbar = () => {
           <div className="container mx-auto px-4 py-4 space-y-4">
             <button
               onClick={() => scrollToSection("about")}
-              className="block w-full text-left py-2 text-foreground hover:text-primary transition-colors font-medium"
+              className="nav-link block w-full text-left py-2 text-foreground hover:text-primary transition-colors font-medium text-base"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection("testimonials")}
-              className="block w-full text-left py-2 text-foreground hover:text-primary transition-colors font-medium"
+              className="nav-link block w-full text-left py-2 text-foreground hover:text-primary transition-colors font-medium text-base"
             >
               Testimonials
             </button>
             <button
               onClick={() => scrollToSection("services")}
-              className="block w-full text-left py-2 text-foreground hover:text-primary transition-colors font-medium"
+              className="nav-link block w-full text-left py-2 text-foreground hover:text-primary transition-colors font-medium text-base"
             >
               Services
             </button>
             <button
               onClick={() => scrollToSection("faq")}
-              className="block w-full text-left py-2 text-foreground hover:text-primary transition-colors font-medium"
+              className="nav-link block w-full text-left py-2 text-foreground hover:text-primary transition-colors font-medium text-base"
             >
               FAQ
             </button>

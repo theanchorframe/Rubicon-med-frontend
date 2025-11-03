@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import heroVascularBg from "@/assets/hero-vascular-bg.jpg";
+import heroSurgeryBg from "@/assets/hero-surgery.webp";
 
 const HeroSection = () => {
   const scrollToProcess = () => {
@@ -15,7 +15,7 @@ const HeroSection = () => {
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroVascularBg})` }}
+        style={{ backgroundImage: `url(${heroSurgeryBg})` }}
       >
         {/* Overlay for better text readability */}
         <div className="absolute inset-0 bg-navy/70"></div>
