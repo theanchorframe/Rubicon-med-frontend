@@ -36,7 +36,7 @@ const HeroSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="text-4xl sm:text-5xl md:text-6xl font-bold text-accent leading-tight"
+                className="text-4xl sm:text-5xl md:text-6xl font-bold text-primary leading-tight"
               >
                 Advising MedTech leaders by leveraging data, marketing research, and physician validation.
               </motion.h1>
