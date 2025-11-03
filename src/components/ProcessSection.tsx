@@ -131,9 +131,6 @@ const ProcessSection = () => {
               <p className="text-lg text-foreground leading-relaxed">
                 <span className="font-bold">His focus is clear:</span> to develop and execute <span className="font-bold">data-driven growth strategies</span> and <span className="font-bold">product development</span> that enhance patient health and achieve aggressive financial goals. Rob's consulting work centers on meticulous clinical, qualitative and quantitative marketing research, segmentation, and forecasting to identify new product opportunities, develop new products, and <span className="font-bold">optimize product portfolios.</span> He continues the journey towards commercialization with multiple rounds of open-ended qualitative <span className="font-bold">prototype and product evaluations</span> with quantitative scoring of ordinal data. As a proven leader and consultant, Rob provides the authoritative guidance needed to <span className="font-bold">cross every marketing and commercialization hurdle.</span> He works towards ensuring your product not only launches but dominates its market segment.
               </p>
-              <p className="text-lg text-foreground leading-relaxed">
-                From negotiating <span className="font-bold">$1.5M</span> in vendor savings to leading <span className="font-bold">100+</span> product evaluations across several product areas, Rob doesn't just advise, he engineers clarity at scale.
-              </p>
             </div>
 
             {/* Image */}
