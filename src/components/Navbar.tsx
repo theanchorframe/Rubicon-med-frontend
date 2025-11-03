@@ -64,16 +64,22 @@ const Navbar = () => {
                 About
               </button>
               <button
-                onClick={() => scrollToSection("testimonials")}
-                className="nav-link text-foreground hover:text-primary transition-colors font-medium text-base"
-              >
-                Testimonials
-              </button>
-              <button
                 onClick={() => scrollToSection("services")}
                 className="nav-link text-foreground hover:text-primary transition-colors font-medium text-base"
               >
                 Services
+              </button>
+              <button
+                onClick={() => scrollToSection("case-studies")}
+                className="nav-link text-foreground hover:text-primary transition-colors font-medium text-base"
+              >
+                Case Studies
+              </button>
+              <button
+                onClick={() => scrollToSection("testimonials")}
+                className="nav-link text-foreground hover:text-primary transition-colors font-medium text-base"
+              >
+                Testimonials
               </button>
               <button
                 onClick={() => scrollToSection("faq")}
@@ -118,16 +124,22 @@ const Navbar = () => {
               About
             </button>
             <button
-              onClick={() => scrollToSection("testimonials")}
-              className="nav-link block w-full text-left py-2 text-foreground hover:text-primary transition-colors font-medium text-base"
-            >
-              Testimonials
-            </button>
-            <button
               onClick={() => scrollToSection("services")}
               className="nav-link block w-full text-left py-2 text-foreground hover:text-primary transition-colors font-medium text-base"
             >
               Services
+            </button>
+            <button
+              onClick={() => scrollToSection("case-studies")}
+              className="nav-link block w-full text-left py-2 text-foreground hover:text-primary transition-colors font-medium text-base"
+            >
+              Case Studies
+            </button>
+            <button
+              onClick={() => scrollToSection("testimonials")}
+              className="nav-link block w-full text-left py-2 text-foreground hover:text-primary transition-colors font-medium text-base"
+            >
+              Testimonials
             </button>
             <button
               onClick={() => scrollToSection("faq")}

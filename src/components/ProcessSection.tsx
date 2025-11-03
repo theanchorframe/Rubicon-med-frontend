@@ -34,7 +34,7 @@ const ProcessSection = () => {
     label: "Sized, segmented, and prioritized 10+ markets (TAM/SAM/SOM) to focus spend where revenue opportunity is highest"
   }];
   const benefits = ["15+ years advancing MedTech from concept to adoption", "Clinical insight combined with rigorous commercial execution", "$1.5M+ in vendor savings negotiated", "80+ product evaluations and go/no-go decisions led"];
-  return <section className="py-20 bg-background relative overflow-hidden">
+  return <section id="about" className="py-20 bg-background relative overflow-hidden scroll-mt-20">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left Column */}
