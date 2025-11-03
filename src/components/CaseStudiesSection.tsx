@@ -84,14 +84,14 @@ const CaseStudiesSection = () => {
             >
               {/* Image with hover overlay */}
               <div
-                className="relative overflow-hidden rounded-lg group md:w-1/2"
+                className="relative overflow-hidden group md:w-1/2 rounded-lg"
                 onMouseEnter={() => setHoveredCard(index)}
                 onMouseLeave={() => setHoveredCard(null)}
               >
                 <img
                   src={study.image}
                   alt={study.title}
-                  className="w-full h-[400px] object-cover rounded-lg"
+                  className="w-full h-[400px] object-cover"
                 />
                 <div
                   className={`absolute inset-x-0 bottom-0 bg-black/90 text-white p-6 transition-all duration-500 ${
