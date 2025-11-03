@@ -43,9 +43,17 @@ const Navbar = () => {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
             <div className="flex items-center gap-3">
-              <img src={logo} alt="Rubicon Medical" className="h-16" />
-              <div className="hidden md:block">
-                <h1 className="text-lg font-bold text-foreground leading-tight">
+              <img 
+                src={logo} 
+                alt="Rubicon Medical" 
+                className={`transition-all duration-300 ${
+                  isScrolled ? "h-12" : "h-20"
+                }`} 
+              />
+              <div>
+                <h1 className={`font-bold text-foreground leading-tight transition-all duration-300 ${
+                  isScrolled ? "text-sm md:text-base" : "text-base md:text-lg"
+                }`}>
                   Rubicon Medical Marketing &<br />Strategy Consultants
                 </h1>
               </div>
