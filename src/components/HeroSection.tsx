@@ -5,7 +5,7 @@ import doctorImage from "@/assets/doctor-tablet.png";
 const HeroSection = () => {
   return (
     <section className="min-h-screen flex items-center pt-20 bg-background">
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-6 py-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -28,7 +28,7 @@ const HeroSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3 }}
               viewport={{ once: true }}
-              className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-navy leading-tight"
+              className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-navy leading-tight break-words"
             >
               MedTech Success: Discover the Perfect Product, for the Ideal
               Market, Designed for the Right Patients
@@ -38,7 +38,7 @@ const HeroSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.4 }}
               viewport={{ once: true }}
-              className="text-lg text-foreground leading-relaxed"
+              className="text-base md:text-lg text-foreground leading-relaxed"
             >
               We help MedTech companies leverage data and physician validation
               to create disruptive products that enhance patient health, with
