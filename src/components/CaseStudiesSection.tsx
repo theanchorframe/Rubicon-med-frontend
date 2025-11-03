@@ -63,8 +63,8 @@ const CaseStudiesSection = () => {
           className="text-center mb-12"
         >
           <Button
-            size="lg"
-            className="shine-effect text-lg px-8 py-6 bg-primary hover:bg-primary/90 mb-8"
+            size="xl"
+            className="shine-effect bg-primary hover:bg-primary/90 mb-8"
           >
             Turn Your Launch Into the Next Case Study
           </Button>
@@ -80,7 +80,7 @@ const CaseStudiesSection = () => {
               viewport={{ once: true }}
               className={`flex flex-col ${
                 index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-              } gap-8 items-center`}
+              } gap-8 items-start`}
             >
               {/* Image with hover overlay */}
               <div
@@ -104,16 +104,16 @@ const CaseStudiesSection = () => {
                 </div>
               </div>
 
-              {/* Text content */}
-              <div className="space-y-4 md:w-1/2">
-                <p className="text-accent font-semibold italic">{study.tagline}</p>
-                <h3 className="text-2xl lg:text-3xl font-bold text-navy">
+              {/* Text content - left aligned and starting at top */}
+              <div className="space-y-6 md:w-1/2 text-left">
+                <p className="text-accent font-semibold italic text-lg">{study.tagline}</p>
+                <h3 className="text-3xl lg:text-4xl font-bold text-navy">
                   {study.title}
                 </h3>
-                <p className="text-foreground leading-relaxed">
+                <p className="text-foreground leading-relaxed text-lg">
                   {study.description}
                 </p>
-                <Button className="shine-effect bg-primary hover:bg-primary/90">
+                <Button size="lg" className="shine-effect bg-primary hover:bg-primary/90">
                   {study.cta}
                 </Button>
               </div>

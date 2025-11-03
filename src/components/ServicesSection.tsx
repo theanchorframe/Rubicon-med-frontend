@@ -43,7 +43,7 @@ const ServicesSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-4xl lg:text-5xl font-bold text-navy text-center mb-4 px-2"
+          className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy text-center mb-4 px-2"
         >
           Strategic Product Intelligence That Shapes What You Build and How You
           Launch
@@ -63,8 +63,8 @@ const ServicesSection = () => {
               }}
               className="glass-card p-6 md:p-8 space-y-4 border-2 border-navy/40 dark:border-navy/60 shadow-md transition-all duration-300 cursor-pointer group"
             >
-              <h3 className="text-xl font-bold text-navy group-hover:text-primary transition-colors duration-300">{service.title}</h3>
-              <p className="text-foreground/80 leading-relaxed group-hover:text-foreground transition-colors duration-300">
+              <h3 className="text-2xl font-bold text-navy group-hover:text-primary transition-colors duration-300">{service.title}</h3>
+              <p className="text-foreground/80 leading-relaxed text-lg group-hover:text-foreground transition-colors duration-300">
                 {service.description}
               </p>
             </motion.div>
@@ -78,8 +78,8 @@ const ServicesSection = () => {
           className="text-center mt-12"
         >
           <Button
-            size="lg"
-            className="shine-effect text-lg px-8 py-6 bg-primary hover:bg-primary/90"
+            size="xl"
+            className="shine-effect bg-primary hover:bg-primary/90"
           >
             Ready to Validate Your Market Before You Commit?
           </Button>
