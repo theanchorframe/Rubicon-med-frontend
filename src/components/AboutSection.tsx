@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import meetingImage from "@/assets/meeting-presentation.webp";
+import robMeetingImage from "@/assets/rob-meeting.webp";
 
 const AboutSection = () => {
   return (
@@ -10,7 +10,7 @@ const AboutSection = () => {
             {/* Image */}
             <div className="md:w-1/2">
               <img 
-                src={meetingImage} 
+                src={robMeetingImage} 
                 alt="Rob Miraglia presenting strategic insights" 
                 className="w-full aspect-[4/3] object-cover rounded-lg border-4 border-primary shadow-lg"
               />
