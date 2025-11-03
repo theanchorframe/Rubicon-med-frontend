@@ -52,14 +52,14 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center space-y-8 w-full"
+          className="text-center md:text-left md:max-w-2xl space-y-6"
         >
-          <div className="space-y-6">
+          <div className="space-y-4">
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="text-white font-semibold text-base sm:text-lg tracking-wide uppercase"
+              className="text-accent font-semibold text-sm sm:text-base tracking-wide uppercase"
             >
               Trusted Advisor to the MedTech Field
             </motion.p>
@@ -68,7 +68,8 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold leading-tight"
+              style={{ color: 'hsl(var(--tan))' }}
             >
               Discover the perfect product for the ideal market, designed for the right patients
             </motion.h1>
@@ -77,7 +78,8 @@ const HeroSection = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
-              className="text-lg sm:text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed"
+              className="text-base sm:text-lg md:text-xl leading-relaxed"
+              style={{ color: 'hsl(var(--tan))' }}
             >
               We help companies find clarity, create alignment, and accelerate time to value
             </motion.p>
@@ -87,12 +89,12 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 }}
-            className="flex justify-center"
+            className="flex justify-center md:justify-start"
           >
             <Button
               size="lg"
               onClick={scrollToProcess}
-              className="w-full sm:w-auto text-base sm:text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all bg-primary hover:bg-primary/90 text-white"
+              className="w-full sm:w-auto text-sm sm:text-base px-6 py-5 shadow-lg hover:shadow-xl transition-all bg-primary hover:bg-primary/90 text-white"
             >
               How the Process Works
             </Button>

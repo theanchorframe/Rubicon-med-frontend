@@ -1,9 +1,18 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 
 const TermsOfService = () => {
+  const navigate = useNavigate();
+
+  const handleBackToHome = () => {
+    navigate("/");
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, 100);
+  };
+
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -12,12 +21,10 @@ const TermsOfService = () => {
           <Link to="/">
             <img src={logo} alt="Rubicon Medical Marketing & Strategy Consultants Corp." className="h-10 w-auto" />
           </Link>
-          <Link to="/">
-            <Button variant="ghost" size="sm" className="gap-2">
-              <ArrowLeft size={16} />
-              Back to Home
-            </Button>
-          </Link>
+          <Button variant="ghost" size="sm" className="gap-2" onClick={handleBackToHome}>
+            <ArrowLeft size={16} />
+            Back to Home
+          </Button>
         </div>
       </header>
 
@@ -119,12 +126,10 @@ const TermsOfService = () => {
         </div>
 
         <div className="mt-12 pt-8 border-t border-border">
-          <Link to="/">
-            <Button variant="default" className="gap-2">
-              <ArrowLeft size={16} />
-              Return to Home
-            </Button>
-          </Link>
+          <Button variant="default" className="gap-2" onClick={handleBackToHome}>
+            <ArrowLeft size={16} />
+            Return to Home
+          </Button>
         </div>
       </main>
     </div>

@@ -1,20 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -33,29 +23,17 @@ const Navbar = () => {
 
   return (
     <>
-      <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled
-            ? "bg-background shadow-md"
-            : "bg-transparent"
-        }`}
-      >
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background shadow-md">
         <div className="container mx-auto px-6 md:px-8">
-          <div className={`flex items-center justify-between transition-all duration-300 ${
-            isScrolled ? "h-20" : "h-28"
-          }`}>
+          <div className="flex items-center justify-between h-20">
             <div className="flex items-center gap-3">
               <img 
                 src={logo} 
                 alt="Rubicon Medical" 
-                className={`transition-all duration-300 ${
-                  isScrolled ? "h-16" : "h-24"
-                }`}
+                className="h-16"
               />
               <div>
-                <h1 className={`font-bold text-foreground leading-tight transition-all duration-300 ${
-                  isScrolled ? "text-sm md:text-base" : "text-base md:text-lg"
-                }`}>
+                <h1 className="font-bold text-foreground leading-tight text-sm md:text-base">
                   Rubicon Medical Marketing &<br />Strategy Consultants
                 </h1>
               </div>
