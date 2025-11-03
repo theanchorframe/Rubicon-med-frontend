@@ -5,7 +5,7 @@ import doctorImage from "@/assets/doctor-tablet.png";
 const HeroSection = () => {
   return (
     <section className="min-h-screen flex items-center pt-20 bg-background overflow-x-hidden">
-      <div className="container mx-auto px-6 sm:px-8 md:px-12 py-16 max-w-7xl">
+      <div className="container mx-auto px-6 py-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
