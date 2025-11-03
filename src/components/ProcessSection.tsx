@@ -2,68 +2,53 @@ import { motion } from "framer-motion";
 import { Users, Wrench, CheckCircle, Clock, Check } from "@phosphor-icons/react";
 import { Button } from "@/components/ui/button";
 import doctorImage from "@/assets/doctor-tablet.png";
-
 const ProcessSection = () => {
-  const processSteps = [
-    {
-      number: "01",
-      title: "Discovery & Analysis",
-      description: "Deep dive into your product needs, market landscape, and physician validation requirements"
-    },
-    {
-      number: "02",
-      title: "Strategic Planning",
-      description: "Develop data-driven strategies with KOL engagement and comprehensive market sizing"
-    },
-    {
-      number: "03",
-      title: "Execution & Launch",
-      description: "Guide implementation with continuous optimization and measurable results"
-    }
-  ];
-
-  const statistics = [
-    {
-      icon: Users,
-      value: "25+",
-      label: "Engaged 25+ KOLs across specialties to validate needs and specifications across numerous product classes"
-    },
-    {
-      icon: Wrench,
-      value: "$30M",
-      label: "Conceived and launched a new platform with $30M in forecasted revenue plus $5M in NRE"
-    },
-    {
-      icon: CheckCircle,
-      value: "$1.5M",
-      label: "Saved $1.5M by preventing purchase of a non-viable device"
-    },
-    {
-      icon: Clock,
-      value: "10+",
-      label: "Sized, segmented, and prioritized 10+ markets (TAM/SAM/SOM) to focus spend where revenue opportunity is highest"
-    }
-  ];
-
-  const benefits = [
-    "15+ years of proven MedTech expertise",
-    "Clinical insight combined with commercial execution",
-    "Track record of $1.5M+ in vendor savings",
-    "Led 80+ successful product evaluations"
-  ];
-
-  return (
-    <section className="py-20 bg-background relative overflow-hidden">
+  const processSteps = [{
+    number: "01",
+    title: "Discovery & Analysis",
+    description: "Deep dive into your product needs, market landscape, and physician validation requirements"
+  }, {
+    number: "02",
+    title: "Strategic Planning",
+    description: "Develop data-driven strategies with KOL engagement and comprehensive market sizing"
+  }, {
+    number: "03",
+    title: "Execution & Launch",
+    description: "Guide implementation with continuous optimization and measurable results"
+  }];
+  const statistics = [{
+    icon: Users,
+    value: "25+",
+    label: "Engaged 25+ KOLs across specialties to validate needs and specifications across numerous product classes"
+  }, {
+    icon: Wrench,
+    value: "$30M",
+    label: "Conceived and launched a new platform with $30M in forecasted revenue plus $5M in NRE"
+  }, {
+    icon: CheckCircle,
+    value: "$1.5M",
+    label: "Saved $1.5M by preventing purchase of a non-viable device"
+  }, {
+    icon: Clock,
+    value: "10+",
+    label: "Sized, segmented, and prioritized 10+ markets (TAM/SAM/SOM) to focus spend where revenue opportunity is highest"
+  }];
+  const benefits = ["15+ years of proven MedTech expertise", "Clinical insight combined with commercial execution", "Track record of $1.5M+ in vendor savings", "Led 80+ successful product evaluations"];
+  return <section className="py-20 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left Column */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="space-y-12"
-          >
+          <motion.div initial={{
+          opacity: 0,
+          x: -50
+        }} whileInView={{
+          opacity: 1,
+          x: 0
+        }} transition={{
+          duration: 0.6
+        }} viewport={{
+          once: true
+        }} className="space-y-12">
             {/* Heading */}
             <div className="space-y-4">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
@@ -76,15 +61,18 @@ const ProcessSection = () => {
 
             {/* Process Steps */}
             <div className="space-y-6">
-              {processSteps.map((step, index) => (
-                <motion.div
-                  key={step.number}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.15 }}
-                  viewport={{ once: true }}
-                  className="flex gap-4 items-start"
-                >
+              {processSteps.map((step, index) => <motion.div key={step.number} initial={{
+              opacity: 0,
+              y: 20
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.5,
+              delay: index * 0.15
+            }} viewport={{
+              once: true
+            }} className="flex gap-4 items-start">
                   <div className="glass-card px-6 py-4 min-w-[80px]">
                     <span className="text-3xl font-bold text-primary">{step.number}</span>
                   </div>
@@ -92,36 +80,42 @@ const ProcessSection = () => {
                     <h3 className="text-xl font-bold text-foreground mb-2">{step.title}</h3>
                     <p className="text-muted-foreground">{step.description}</p>
                   </div>
-                </motion.div>
-              ))}
+                </motion.div>)}
             </div>
 
             {/* Statistics Grid */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="grid grid-cols-1 sm:grid-cols-2 gap-4"
-            >
-              {statistics.map((stat, index) => (
-                <div key={index} className="glass-card p-6 space-y-3 hover:scale-105 transition-transform duration-300">
+            <motion.div initial={{
+            opacity: 0,
+            y: 30
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.6,
+            delay: 0.3
+          }} viewport={{
+            once: true
+          }} className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {statistics.map((stat, index) => <div key={index} className="glass-card p-6 space-y-3 hover:scale-105 transition-transform duration-300">
                   <stat.icon className="text-primary" size={32} weight="duotone" />
                   <div className="text-3xl font-bold text-foreground">{stat.value}</div>
                   <p className="text-sm text-muted-foreground leading-relaxed">{stat.label}</p>
-                </div>
-              ))}
+                </div>)}
             </motion.div>
           </motion.div>
 
           {/* Right Column */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="space-y-8"
-          >
+          <motion.div initial={{
+          opacity: 0,
+          x: 50
+        }} whileInView={{
+          opacity: 1,
+          x: 0
+        }} transition={{
+          duration: 0.6
+        }} viewport={{
+          once: true
+        }} className="space-y-8">
             {/* About Heading */}
             <div className="space-y-4">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
@@ -152,49 +146,38 @@ const ProcessSection = () => {
 
             {/* Image */}
             <div className="relative">
-              <div className="glass-card p-4">
-                <img
-                  src={doctorImage}
-                  alt="Robert Miraglia"
-                  className="w-full rounded-lg"
-                />
-              </div>
-              <div className="absolute bottom-4 left-4 glass-card px-6 py-3 bg-primary/90 backdrop-blur-md">
-                <p className="text-white font-semibold">Trusted by MedTech Leaders</p>
-              </div>
+              
+              
             </div>
 
             {/* Benefits */}
             <div className="space-y-4">
-              {benefits.map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="flex gap-3 items-start"
-                >
+              {benefits.map((benefit, index) => <motion.div key={index} initial={{
+              opacity: 0,
+              x: 20
+            }} whileInView={{
+              opacity: 1,
+              x: 0
+            }} transition={{
+              duration: 0.4,
+              delay: index * 0.1
+            }} viewport={{
+              once: true
+            }} className="flex gap-3 items-start">
                   <div className="glass-card p-2 rounded-full bg-primary/10">
                     <Check className="text-primary" size={20} weight="bold" />
                   </div>
                   <p className="text-foreground text-lg pt-1">{benefit}</p>
-                </motion.div>
-              ))}
+                </motion.div>)}
             </div>
 
             {/* CTA Button */}
-            <Button
-              size="lg"
-              className="shine-effect text-lg px-8 py-6 bg-primary hover:bg-primary/90 w-full sm:w-auto"
-            >
+            <Button size="lg" className="shine-effect text-lg px-8 py-6 bg-primary hover:bg-primary/90 w-full sm:w-auto">
               Schedule Free Consultation
             </Button>
           </motion.div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ProcessSection;
