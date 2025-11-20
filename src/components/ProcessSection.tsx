@@ -1,20 +1,24 @@
 import { motion } from "framer-motion";
-import { Users, Wrench, CheckCircle, Clock, Check } from "@phosphor-icons/react";
+import { Users, Wrench, CheckCircle, Clock } from "@phosphor-icons/react";
 import { Button } from "@/components/ui/button";
 import doctorImage from "@/assets/doctor-tablet.png";
 const ProcessSection = () => {
   const processSteps = [{
-    number: "01",
+    number: "I",
     title: "Discovery & Analysis",
     description: "Deep VOC with clinicians and buyers, competitive scan, market sizing, and clear acceptance criteria."
   }, {
-    number: "02",
+    number: "D",
     title: "Strategic Planning",
     description: "Commercial blueprint covering segmentation, positioning, pricing and access, KOL engagement, and evidence plan."
   }, {
-    number: "03",
+    number: "E",
     title: "Execution & Launch",
     description: "Pilot, enable, and scale with playbooks, sales training, and performance loops for continuous optimization."
+  }, {
+    number: "A",
+    title: "Adoption & Optimization",
+    description: "Monitor performance, gather feedback, and refine strategies to ensure sustained market success."
   }];
   const statistics = [{
     icon: Users,
@@ -22,8 +26,8 @@ const ProcessSection = () => {
     label: "Engaged 25+ KOLs across specialties to validate needs and specifications across numerous product classes"
   }, {
     icon: Wrench,
-    value: "$30M",
-    label: "Conceived and launched a new platform with $30M in forecasted revenue plus $5M in NRE"
+    value: "+25",
+    label: "Years of experience"
   }, {
     icon: CheckCircle,
     value: "$1.5M",
@@ -141,7 +145,7 @@ const ProcessSection = () => {
 
             {/* Benefits */}
             <div className="space-y-4">
-              {benefits.map((benefit, index) => <motion.div key={index} initial={{
+            {benefits.map((benefit, index) => <motion.div key={index} initial={{
               opacity: 0,
               x: 20
             }} whileInView={{
@@ -153,9 +157,6 @@ const ProcessSection = () => {
             }} viewport={{
               once: true
             }} className="flex gap-3 items-start">
-                  <div className="glass-card p-2 rounded-full bg-primary/10">
-                    <Check className="text-primary" size={20} weight="bold" />
-                  </div>
                   <p className="text-foreground text-lg pt-1">{benefit}</p>
                 </motion.div>)}
             </div>
