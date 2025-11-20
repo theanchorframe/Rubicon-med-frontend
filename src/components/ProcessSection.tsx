@@ -102,11 +102,37 @@ const ProcessSection = () => {
             ))}
           </div>
 
+          {/* Meet Robert Miraglia Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="space-y-8"
+          >
+            {/* Heading */}
+            <div className="text-center space-y-4">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
+                Meet <span className="text-primary">Robert Miraglia</span>: Converting Clinical Insight into Market Traction
+              </h2>
+            </div>
+
+            {/* Bio Content */}
+            <div className="space-y-6 text-center max-w-5xl mx-auto">
+              <p className="text-lg text-foreground leading-relaxed">
+                Rob is a dedicated and methodical Healthcare Leader known for crossing the gap between medical innovation and market reality. With over 40 years in the med tech, pharma, and diagnostic areas—including senior roles at companies like Abbott, Medtronic, 3M, and Integer—Rob brings deep cross-functional expertise to every challenge.
+              </p>
+              <p className="text-lg text-foreground leading-relaxed">
+                His focus is clear: to develop and execute data-driven growth strategies and product development that enhance patient health and achieve aggressive financial goals. Rob&apos;s consulting work centers on meticulous clinical, qualitative and quantitative marketing research, segmentation, and forecasting to identify new product opportunities, develop new products, and optimize product portfolios. He continues the journey towards commercialization with multiple rounds of open-ended qualitative prototype and product evaluations with quantitative scoring of ordinal data. As a proven leader and consultant, Rob provides the authoritative guidance needed to cross every marketing and commercialization hurdle. He works towards ensuring your product not only launches but dominates its market segment.
+              </p>
+            </div>
+          </motion.div>
+
           {/* Statistics Grid - Full Width */}
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"
           >
@@ -123,7 +149,7 @@ const ProcessSection = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
             viewport={{ once: true }}
             className="space-y-8"
           >
@@ -164,32 +190,6 @@ const ProcessSection = () => {
                 {ideaContent[activeIdea].description}
               </p>
             </motion.div>
-          </motion.div>
-
-          {/* Meet Robert Miraglia Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            viewport={{ once: true }}
-            className="space-y-8 pt-8"
-          >
-            {/* Heading */}
-            <div className="text-center space-y-4">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
-                Meet <span className="text-primary">Robert Miraglia</span>: Converting Clinical Insight into Market Traction
-              </h2>
-            </div>
-
-            {/* Bio Content */}
-            <div className="glass-card p-8 md:p-12 space-y-6">
-              <p className="text-lg text-foreground leading-relaxed">
-                Rob is a dedicated and methodical Healthcare Leader known for crossing the gap between medical innovation and market reality. With over 40 years in the med tech, pharma, and diagnostic areas—including senior roles at companies like <span className="font-bold">Abbott, Medtronic, 3M, and Integer</span>—Rob brings deep cross-functional expertise to every challenge.
-              </p>
-              <p className="text-lg text-foreground leading-relaxed">
-                <span className="font-bold">His focus is clear:</span> to develop and execute <span className="font-bold">data-driven growth strategies</span> and <span className="font-bold">product development</span> that enhance patient health and achieve aggressive financial goals. Rob's consulting work centers on meticulous clinical, qualitative and quantitative marketing research, segmentation, and forecasting to identify new product opportunities, develop new products, and <span className="font-bold">optimize product portfolios.</span> He continues the journey towards commercialization with multiple rounds of open-ended qualitative <span className="font-bold">prototype and product evaluations</span> with quantitative scoring of ordinal data. As a proven leader and consultant, Rob provides the authoritative guidance needed to <span className="font-bold">cross every marketing and commercialization hurdle.</span> He works towards ensuring your product not only launches but dominates its market segment.
-              </p>
-            </div>
           </motion.div>
         </motion.div>
       </div>
