@@ -38,12 +38,8 @@ const HeroSection = () => {
                 transition={{ delay: 0.4 }}
                 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight"
                 style={{
-                  textShadow: `
-                    -10px -10px 0 #000, 10px -10px 0 #000, -10px 10px 0 #000, 10px 10px 0 #000,
-                    -10px 0 0 #000, 10px 0 0 #000, 0 -10px 0 #000, 0 10px 0 #000,
-                    -7px -7px 0 #000, 7px -7px 0 #000, -7px 7px 0 #000, 7px 7px 0 #000,
-                    -5px -5px 0 #000, 5px -5px 0 #000, -5px 5px 0 #000, 5px 5px 0 #000
-                  `
+                  WebkitTextStroke: '3px black',
+                  paintOrder: 'stroke fill'
                 }}
               >
                 Advising MedTech leaders by leveraging data, marketing research, and physician validation.
@@ -55,12 +51,8 @@ const HeroSection = () => {
                 transition={{ delay: 0.6 }}
                 className="text-lg sm:text-xl md:text-2xl text-white/60 leading-relaxed"
                 style={{
-                  textShadow: `
-                    -10px -10px 0 #000, 10px -10px 0 #000, -10px 10px 0 #000, 10px 10px 0 #000,
-                    -10px 0 0 #000, 10px 0 0 #000, 0 -10px 0 #000, 0 10px 0 #000,
-                    -7px -7px 0 #000, 7px -7px 0 #000, -7px 7px 0 #000, 7px 7px 0 #000,
-                    -5px -5px 0 #000, 5px -5px 0 #000, -5px 5px 0 #000, 5px 5px 0 #000
-                  `
+                  WebkitTextStroke: '3px black',
+                  paintOrder: 'stroke fill'
                 }}
               >
                 Rubicon helps MedTech companies leverage data, marketing research, and physician validation to create
