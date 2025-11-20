@@ -7,10 +7,10 @@ interface MobileBottomNavProps {
 const MobileBottomNav = ({ onOpenDialog }: MobileBottomNavProps) => {
   return (
     <div className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-background border-t border-border shadow-lg">
-      <div className="container mx-auto px-4 py-3">
+      <div className="container mx-auto px-3 py-2">
         <Button
           onClick={onOpenDialog}
-          className="w-full shine-effect text-lg px-8 py-6 h-auto bg-primary hover:bg-primary/90"
+          className="w-full shine-effect text-base px-6 py-3 h-auto bg-primary hover:bg-primary/90"
         >
           Request a Consultation
         </Button>
