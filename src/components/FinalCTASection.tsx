@@ -2,7 +2,11 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import cathLabImage from "@/assets/cath-lab.jpg";
 
-const FinalCTASection = () => {
+interface FinalCTASectionProps {
+  onOpenConsultationDialog: () => void;
+}
+
+const FinalCTASection = ({ onOpenConsultationDialog }: FinalCTASectionProps) => {
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
@@ -26,12 +30,7 @@ const FinalCTASection = () => {
               </p>
               <Button
                 size="lg"
-                onClick={() => {
-                  const formSection = document.getElementById("consultation-form");
-                  if (formSection) {
-                    formSection.scrollIntoView({ behavior: "smooth" });
-                  }
-                }}
+                onClick={onOpenConsultationDialog}
                 className="shine-effect text-lg sm:text-xl px-6 sm:px-12 py-6 sm:py-8 h-auto bg-primary hover:bg-primary/90 whitespace-normal text-center leading-tight max-w-full"
               >
                 Schedule a FREE Consultation Call
