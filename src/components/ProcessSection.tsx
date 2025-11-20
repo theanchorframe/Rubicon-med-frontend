@@ -71,48 +71,73 @@ const ProcessSection = () => {
           {/* Two Column Layout: Stats Left, Content Right */}
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Left Column - Statistics */}
-            <motion.div 
-              initial={{ opacity: 0, x: -30 }} 
-              whileInView={{ opacity: 1, x: 0 }} 
-              transition={{ duration: 0.6, delay: 0.3 }} 
-              viewport={{ once: true }}
-              className="space-y-6"
-            >
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+            <div className="space-y-6">
+              <motion.h2 
+                initial={{ opacity: 0, y: 20 }} 
+                whileInView={{ opacity: 1, y: 0 }} 
+                transition={{ duration: 0.6, delay: 0.2 }} 
+                viewport={{ once: true }}
+                className="text-5xl font-bold text-foreground"
+              >
                 Convert Clinical Insight into Market Traction
-              </h2>
+              </motion.h2>
               <div className="space-y-4">
                 {statistics.map((stat, index) => (
-                  <div key={index} className="glass-card p-6 space-y-3 hover:scale-105 transition-transform duration-300">
+                  <motion.div 
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }} 
+                    whileInView={{ opacity: 1, y: 0 }} 
+                    transition={{ duration: 0.5, delay: 0.3 + (index * 0.1) }} 
+                    viewport={{ once: true }}
+                    className="glass-card p-6 space-y-3 hover:scale-105 transition-transform duration-300"
+                  >
                     <stat.icon className="text-primary" size={32} weight="duotone" />
                     <div className="text-3xl font-bold text-foreground">{stat.value}</div>
                     <p className="text-sm text-muted-foreground leading-relaxed">{stat.label}</p>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
-            </motion.div>
+            </div>
 
             {/* Right Column - Bio Content */}
-            <motion.div 
-              initial={{ opacity: 0, x: 30 }} 
-              whileInView={{ opacity: 1, x: 0 }} 
-              transition={{ duration: 0.6, delay: 0.3 }} 
-              viewport={{ once: true }}
-              className="space-y-6"
-            >
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground">
-                Meet <span className="text-primary">Robert Miraglia</span>
-              </h2>
-              <p className="text-lg text-foreground leading-relaxed">
+            <div className="space-y-6">
+              <motion.h2 
+                initial={{ opacity: 0, y: 20 }} 
+                whileInView={{ opacity: 1, y: 0 }} 
+                transition={{ duration: 0.6, delay: 0.2 }} 
+                viewport={{ once: true }}
+                className="text-5xl font-bold text-foreground"
+              >
+                Rob Miraglia: Your Partner in MedTech Growth.
+              </motion.h2>
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }} 
+                whileInView={{ opacity: 1, y: 0 }} 
+                transition={{ duration: 0.5, delay: 0.3 }} 
+                viewport={{ once: true }}
+                className="text-lg text-foreground leading-relaxed"
+              >
                 Rob is a medical marketing and strategy consultant who sits at the intersection of clinical insight and commercial reality. He has spent more than 25 years in medtech, pharma, and diagnostics, including leadership roles at Abbott, Medtronic, 3M, and Integer, helping teams decide which ideas are worth funding and which ones are not.
-              </p>
-              <p className="text-lg text-foreground leading-relaxed">
+              </motion.p>
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }} 
+                whileInView={{ opacity: 1, y: 0 }} 
+                transition={{ duration: 0.5, delay: 0.4 }} 
+                viewport={{ once: true }}
+                className="text-lg text-foreground leading-relaxed"
+              >
                 His work focuses on one thing: turning clinical promise into growth. Rob partners with CEOs and clinical leaders to clarify the real-world problem, pressure test the value story with KOLs, and build a business case that stands up to finance, procurement, and clinicians. He has engaged over 25 specialty KOLs, sized and prioritized more than 10 markets, supported 40 plus product and market initiatives, and helped clients avoid at least 1.5 million dollars in non-viable investment.
-              </p>
-              <p className="text-lg text-foreground leading-relaxed">
+              </motion.p>
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }} 
+                whileInView={{ opacity: 1, y: 0 }} 
+                transition={{ duration: 0.5, delay: 0.5 }} 
+                viewport={{ once: true }}
+                className="text-lg text-foreground leading-relaxed"
+              >
                 When the stakes are high and missteps are expensive, Rob gives teams a clear path from idea to launch so they can commit resources with confidence.
-              </p>
-            </motion.div>
+              </motion.p>
+            </div>
           </div>
 
           {/* IDEA Interactive Section */}
