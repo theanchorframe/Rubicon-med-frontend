@@ -12,8 +12,8 @@ const CTABanner = () => {
           viewport={{ once: true }}
           className="max-w-7xl mx-auto space-y-3 lg:space-y-12"
         >
-          {/* Mobile Chart - Shows First on Mobile */}
-          <div className="md:hidden mb-3">
+          {/* Mobile & Tablet Chart - Shows First */}
+          <div className="lg:hidden mb-3">
             <StatsChart />
           </div>
 
@@ -24,7 +24,7 @@ const CTABanner = () => {
             </h3>
           </div>
 
-          {/* Two Column Layout - Desktop/Tablet */}
+          {/* Two Column Layout - Desktop Only */}
           <div className="grid lg:grid-cols-2 gap-3 lg:gap-12 items-start">
             {/* Left: Subheadline & Form */}
             <div className="space-y-3 md:space-y-6">
@@ -53,8 +53,8 @@ const CTABanner = () => {
               </div>
             </div>
 
-            {/* Right: Interactive Chart - Desktop/Tablet Only */}
-            <div className="hidden md:flex items-start justify-center mt-0 lg:mt-8">
+            {/* Right: Interactive Chart - Desktop Only */}
+            <div className="hidden lg:flex items-start justify-center mt-0 lg:mt-8">
               <StatsChart />
             </div>
           </div>
