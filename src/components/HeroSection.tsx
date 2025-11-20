@@ -29,7 +29,7 @@ const HeroSection = () => {
                 transition={{ delay: 0.2 }}
                 className="text-white/60 font-semibold text-sm sm:text-base tracking-wide uppercase"
                 style={{
-                  WebkitTextStroke: '3px black',
+                  WebkitTextStroke: '3px white',
                   paintOrder: 'stroke fill'
                 }}
               >
@@ -55,7 +55,7 @@ const HeroSection = () => {
                 transition={{ delay: 0.6 }}
                 className="text-lg sm:text-xl md:text-2xl text-white/60 leading-relaxed"
                 style={{
-                  WebkitTextStroke: '3px black',
+                  WebkitTextStroke: '3px white',
                   paintOrder: 'stroke fill'
                 }}
               >
