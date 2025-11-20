@@ -36,13 +36,8 @@ const HeroSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight"
-                style={{
-                  WebkitTextStroke: '6px hsl(215, 41%, 19%)',
-                  paintOrder: 'stroke fill',
-                  WebkitFontSmoothing: 'antialiased',
-                  MozOsxFontSmoothing: 'grayscale'
-                }}
+                className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight"
+                style={{ color: '#0080FF' }}
               >
                 Advising MedTech leaders by leveraging data, marketing research, and physician validation.
               </motion.h1>

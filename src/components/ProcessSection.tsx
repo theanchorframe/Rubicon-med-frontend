@@ -56,7 +56,7 @@ const ProcessSection = () => {
     label: "Sized, segmented, and prioritized 10+ markets (TAM/SAM/SOM) to focus spend where revenue opportunity is highest"
   }];
   return <section id="about" className="py-20 bg-background relative overflow-hidden scroll-mt-20">
-      <div className="container mx-auto px-4">
+      <div className="mx-auto px-5">
         <motion.div initial={{
         opacity: 0,
         y: 20
@@ -84,20 +84,20 @@ const ProcessSection = () => {
             {/* Heading */}
             <div className="text-center space-y-4">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
-                Meet <span className="text-primary">Robert Miraglia</span>: Converting Clinical Insight into Market Traction
+                Meet <span className="text-primary">Rob Miraglia</span>
               </h2>
-              <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
-                A four-step engagement that validates real-world need, aligns the commercial plan, and executes a launch that clinicians adopt.
-              </p>
             </div>
 
             {/* Bio Content */}
             <div className="space-y-6 text-center max-w-5xl mx-auto">
               <p className="text-lg text-foreground leading-relaxed">
-                Rob is a dedicated and methodical Healthcare Leader known for crossing the gap between medical innovation and market reality. With over 40 years in the med tech, pharma, and diagnostic areas—including senior roles at companies like Abbott, Medtronic, 3M, and Integer—Rob brings deep cross-functional expertise to every challenge.
+                Rob is a medical marketing and strategy consultant who sits at the intersection of clinical insight and commercial reality. He has spent more than 25 years in medtech, pharma, and diagnostics, including leadership roles at Abbott, Medtronic, 3M, and Integer, helping teams decide which ideas are worth funding and which ones are not.
               </p>
               <p className="text-lg text-foreground leading-relaxed">
-                His focus is clear: to develop and execute data-driven growth strategies and product development that enhance patient health and achieve aggressive financial goals. Rob&apos;s consulting work centers on meticulous clinical, qualitative and quantitative marketing research, segmentation, and forecasting to identify new product opportunities, develop new products, and optimize product portfolios. He continues the journey towards commercialization with multiple rounds of open-ended qualitative prototype and product evaluations with quantitative scoring of ordinal data. As a proven leader and consultant, Rob provides the authoritative guidance needed to cross every marketing and commercialization hurdle. He works towards ensuring your product not only launches but dominates its market segment.
+                His work focuses on one thing: turning clinical promise into growth. Rob partners with CEOs and clinical leaders to clarify the real-world problem, pressure test the value story with KOLs, and build a business case that stands up to finance, procurement, and clinicians. He has engaged over 25 specialty KOLs, sized and prioritized more than 10 markets, supported 40 plus product and market initiatives, and helped clients avoid at least 1.5 million dollars in non-viable investment.
+              </p>
+              <p className="text-lg text-foreground leading-relaxed">
+                When the stakes are high and missteps are expensive, Rob gives teams a clear path from idea to launch so they can commit resources with confidence.
               </p>
             </div>
           </motion.div>
