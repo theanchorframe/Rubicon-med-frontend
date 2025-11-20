@@ -20,7 +20,7 @@ const CTABanner = () => {
           </div>
 
           {/* Two Column Layout */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+          <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-start">
             {/* Left: Subheadline & Form */}
             <div className="space-y-6">
               <p className="text-primary/60 text-lg md:text-xl leading-relaxed">

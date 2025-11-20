@@ -36,7 +36,7 @@ export default function StatsChart() {
         onViewportEnter={() => setIsInView(true)}
         transition={{ duration: 0.6, ease: "easeOut" }}
         viewport={{ once: true, margin: "-100px" }}
-        className="relative w-full h-[400px] bg-gradient-to-br from-background/50 to-primary/5 rounded-2xl overflow-hidden border border-primary/20 shadow-lg lg:block hidden"
+        className="relative w-full h-[400px] bg-gradient-to-br from-background/50 to-primary/5 rounded-2xl overflow-hidden border border-primary/20 shadow-lg hidden md:block"
       >
         {/* Chart */}
         <ResponsiveContainer width="100%" height="100%">
@@ -93,7 +93,7 @@ export default function StatsChart() {
       </motion.div>
 
       {/* Mobile View */}
-      <div className="lg:hidden space-y-5">
+      <div className="md:hidden space-y-5">
         <motion.div 
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
