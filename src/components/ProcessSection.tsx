@@ -83,9 +83,9 @@ const ProcessSection = () => {
         }} className="space-y-8">
             {/* Heading */}
             <div className="text-center space-y-4">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
-                Meet <span className="text-primary">Rob Miraglia</span>
-              </h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
+              Meet <span className="text-primary font-bold">Robert Miraglia</span>: Converting Clinical Insight into Market Traction
+            </h2>
             </div>
 
             {/* Bio Content */}
