@@ -1,6 +1,10 @@
 import { Button } from "@/components/ui/button";
 
-const AboutSection = () => {
+interface AboutSectionProps {
+  onOpenConsultationDialog: () => void;
+}
+
+const AboutSection = ({ onOpenConsultationDialog }: AboutSectionProps) => {
   return (
     <section id="about" className="py-20 bg-background scroll-mt-20">
       <div className="container mx-auto px-4">
@@ -24,12 +28,7 @@ const AboutSection = () => {
           </p>
           <Button
             size="lg"
-            onClick={() => {
-              const formSection = document.getElementById("consultation-form");
-              if (formSection) {
-                formSection.scrollIntoView({ behavior: "smooth" });
-              }
-            }}
+            onClick={onOpenConsultationDialog}
             className="shine-effect text-xl px-12 py-8 h-auto bg-primary hover:bg-primary/90"
           >
             Get Rob's Perspective

@@ -1,7 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
-const ServicesSection = () => {
+interface ServicesSectionProps {
+  onOpenConsultationDialog: () => void;
+}
+
+const ServicesSection = ({ onOpenConsultationDialog }: ServicesSectionProps) => {
   const services = [
     {
       title: "Product Evaluation & Concept Vetting",
@@ -79,12 +83,7 @@ const ServicesSection = () => {
         >
           <Button
             size="xl"
-            onClick={() => {
-              const formSection = document.getElementById("consultation-form");
-              if (formSection) {
-                formSection.scrollIntoView({ behavior: "smooth" });
-              }
-            }}
+            onClick={onOpenConsultationDialog}
             className="shine-effect text-lg sm:text-xl px-6 sm:px-12 py-6 sm:py-8 h-auto bg-primary hover:bg-primary/90 whitespace-normal text-center leading-tight"
           >
             Ready to Validate Your Market Before You Commit?
