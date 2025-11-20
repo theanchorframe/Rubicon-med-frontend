@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ProcessSection from "@/components/ProcessSection";
@@ -9,11 +10,15 @@ import ServicesSection from "@/components/ServicesSection";
 import FAQSection from "@/components/FAQSection";
 import FinalCTASection from "@/components/FinalCTASection";
 import Footer from "@/components/Footer";
+import ConsultationDialog from "@/components/ConsultationDialog";
+import MobileBottomNav from "@/components/MobileBottomNav";
 
 const Index = () => {
+  const [isConsultationDialogOpen, setIsConsultationDialogOpen] = useState(false);
+
   return (
     <div className="min-h-screen">
-      <Navbar />
+      <Navbar onOpenConsultationDialog={() => setIsConsultationDialogOpen(true)} />
       <HeroSection />
       <ProcessSection />
       <ServicesSection />
@@ -22,8 +27,13 @@ const Index = () => {
       <CTABanner />
       <StatsSection />
       <FAQSection />
-      <FinalCTASection />
+      <FinalCTASection onOpenConsultationDialog={() => setIsConsultationDialogOpen(true)} />
       <Footer />
+      <ConsultationDialog 
+        open={isConsultationDialogOpen} 
+        onOpenChange={setIsConsultationDialogOpen} 
+      />
+      <MobileBottomNav onOpenDialog={() => setIsConsultationDialogOpen(true)} />
     </div>
   );
 };

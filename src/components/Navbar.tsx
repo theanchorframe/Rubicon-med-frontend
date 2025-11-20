@@ -3,7 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.png";
 
-const Navbar = () => {
+interface NavbarProps {
+  onOpenConsultationDialog: () => void;
+}
+
+const Navbar = ({ onOpenConsultationDialog }: NavbarProps) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -70,16 +74,16 @@ const Navbar = () => {
                 Services
               </button>
               <button
-                onClick={() => scrollToSection("case-study")}
-                className="nav-link text-foreground hover:text-primary transition-colors font-medium text-base"
-              >
-                Case Study
-              </button>
-              <button
                 onClick={() => scrollToSection("testimonials")}
                 className="nav-link text-foreground hover:text-primary transition-colors font-medium text-base"
               >
                 Testimonials
+              </button>
+              <button
+                onClick={() => scrollToSection("case-study")}
+                className="nav-link text-foreground hover:text-primary transition-colors font-medium text-base"
+              >
+                Case Study
               </button>
               <button
                 onClick={() => scrollToSection("faq")}
@@ -90,10 +94,7 @@ const Navbar = () => {
               <Button 
                 className="shine-effect text-lg px-8 py-4 h-auto bg-primary hover:bg-primary/90"
                 onClick={() => {
-                  const formSection = document.getElementById("consultation-form");
-                  if (formSection) {
-                    formSection.scrollIntoView({ behavior: "smooth" });
-                  }
+                  onOpenConsultationDialog();
                   setIsMobileMenuOpen(false);
                 }}
               >
@@ -130,16 +131,16 @@ const Navbar = () => {
               Services
             </button>
             <button
-              onClick={() => scrollToSection("case-study")}
-              className="nav-link block w-full text-left py-2 text-foreground hover:text-primary transition-colors font-medium text-base"
-            >
-              Case Study
-            </button>
-            <button
               onClick={() => scrollToSection("testimonials")}
               className="nav-link block w-full text-left py-2 text-foreground hover:text-primary transition-colors font-medium text-base"
             >
               Testimonials
+            </button>
+            <button
+              onClick={() => scrollToSection("case-study")}
+              className="nav-link block w-full text-left py-2 text-foreground hover:text-primary transition-colors font-medium text-base"
+            >
+              Case Study
             </button>
             <button
               onClick={() => scrollToSection("faq")}
@@ -150,10 +151,7 @@ const Navbar = () => {
             <Button 
               className="w-full shine-effect text-lg px-8 py-4 h-auto bg-primary hover:bg-primary/90"
               onClick={() => {
-                const formSection = document.getElementById("consultation-form");
-                if (formSection) {
-                  formSection.scrollIntoView({ behavior: "smooth" });
-                }
+                onOpenConsultationDialog();
                 setIsMobileMenuOpen(false);
               }}
             >
