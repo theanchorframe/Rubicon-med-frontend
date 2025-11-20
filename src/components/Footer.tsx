@@ -59,7 +59,7 @@ const Footer = () => {
             <h3 className="font-semibold mb-4">Connect</h3>
             <div className="space-y-2">
               <a 
-                href="https://www.linkedin.com/in/robhahn/" 
+                href="https://www.linkedin.com/in/robmiraglia/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-navy-foreground/80 hover:text-navy-foreground transition-colors"
