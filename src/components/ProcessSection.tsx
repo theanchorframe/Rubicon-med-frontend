@@ -68,13 +68,6 @@ const ProcessSection = () => {
       }} viewport={{
         once: true
       }} className="space-y-12 max-w-7xl mx-auto">
-          {/* Heading */}
-          <div className="text-center space-y-4 mb-12">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
-              Meet <span className="text-primary font-bold">Robert Miraglia</span>: Converting Clinical Insight into Market Traction
-            </h2>
-          </div>
-
           {/* Two Column Layout: Stats Left, Content Right */}
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Left Column - Statistics */}
@@ -83,15 +76,20 @@ const ProcessSection = () => {
               whileInView={{ opacity: 1, x: 0 }} 
               transition={{ duration: 0.6, delay: 0.3 }} 
               viewport={{ once: true }}
-              className="space-y-4"
+              className="space-y-6"
             >
-              {statistics.map((stat, index) => (
-                <div key={index} className="glass-card p-6 space-y-3 hover:scale-105 transition-transform duration-300">
-                  <stat.icon className="text-primary" size={32} weight="duotone" />
-                  <div className="text-3xl font-bold text-foreground">{stat.value}</div>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{stat.label}</p>
-                </div>
-              ))}
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+                Convert Clinical Insight into Market Traction
+              </h2>
+              <div className="space-y-4">
+                {statistics.map((stat, index) => (
+                  <div key={index} className="glass-card p-6 space-y-3 hover:scale-105 transition-transform duration-300">
+                    <stat.icon className="text-primary" size={32} weight="duotone" />
+                    <div className="text-3xl font-bold text-foreground">{stat.value}</div>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{stat.label}</p>
+                  </div>
+                ))}
+              </div>
             </motion.div>
 
             {/* Right Column - Bio Content */}
@@ -102,6 +100,9 @@ const ProcessSection = () => {
               viewport={{ once: true }}
               className="space-y-6"
             >
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+                Meet <span className="text-primary">Robert Miraglia</span>
+              </h2>
               <p className="text-lg text-foreground leading-relaxed">
                 Rob is a medical marketing and strategy consultant who sits at the intersection of clinical insight and commercial reality. He has spent more than 25 years in medtech, pharma, and diagnostics, including leadership roles at Abbott, Medtronic, 3M, and Integer, helping teams decide which ideas are worth funding and which ones are not.
               </p>
