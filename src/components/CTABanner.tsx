@@ -3,15 +3,20 @@ import StatsChart from "@/components/ui/stats-chart";
 
 const CTABanner = () => {
   return (
-    <section className="py-16 pb-4 bg-background scroll-mt-20" id="case-study">
+    <section className="py-12 pb-4 bg-background scroll-mt-20" id="case-study">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="max-w-7xl mx-auto space-y-8 lg:space-y-12"
+          className="max-w-7xl mx-auto space-y-3 lg:space-y-12"
         >
+          {/* Mobile Chart - Shows First on Mobile */}
+          <div className="md:hidden mb-3">
+            <StatsChart />
+          </div>
+
           {/* Centered Headline */}
           <div className="text-center">
             <h3 className="text-[32px] md:text-[42px] lg:text-[52px] font-extrabold text-primary/80 leading-tight max-w-5xl mx-auto">
@@ -19,10 +24,10 @@ const CTABanner = () => {
             </h3>
           </div>
 
-          {/* Two Column Layout */}
-          <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-start">
+          {/* Two Column Layout - Desktop/Tablet */}
+          <div className="grid lg:grid-cols-2 gap-3 lg:gap-12 items-start">
             {/* Left: Subheadline & Form */}
-            <div className="space-y-6">
+            <div className="space-y-3 md:space-y-6">
               <p className="text-primary/60 text-lg md:text-xl leading-relaxed">
                 Learn how clinical proof, reimbursement insights, and advisory-board
                 design sprints built an irresistible business case for market entry
@@ -48,8 +53,8 @@ const CTABanner = () => {
               </div>
             </div>
 
-            {/* Right: Interactive Chart */}
-            <div className="flex items-start justify-center mt-0 lg:mt-8">
+            {/* Right: Interactive Chart - Desktop/Tablet Only */}
+            <div className="hidden md:flex items-start justify-center mt-0 lg:mt-8">
               <StatsChart />
             </div>
           </div>
