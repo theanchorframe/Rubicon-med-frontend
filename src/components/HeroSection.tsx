@@ -27,11 +27,7 @@ const HeroSection = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2 }}
-                className="text-black font-semibold text-sm sm:text-base tracking-wide uppercase"
-                style={{
-                  WebkitTextStroke: '2px white',
-                  paintOrder: 'stroke fill'
-                }}
+                className="text-white font-semibold text-sm sm:text-base tracking-wide uppercase"
               >
                 Trusted Advisor to the MedTech Field
               </motion.p>
@@ -55,11 +51,7 @@ const HeroSection = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6 }}
-                className="text-lg sm:text-xl md:text-2xl text-black leading-relaxed font-semibold"
-                style={{
-                  WebkitTextStroke: '2px white',
-                  paintOrder: 'stroke fill'
-                }}
+                className="text-lg sm:text-xl md:text-2xl text-white leading-relaxed font-semibold"
               >
                 Rubicon helps MedTech companies leverage data, marketing research, and physician validation to create
                 disruptive products to enhance patient health. We help companies choose which markets to enter, what
