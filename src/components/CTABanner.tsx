@@ -3,7 +3,7 @@ import StatsChart from "@/components/ui/stats-chart";
 
 const CTABanner = () => {
   return (
-    <section className="py-16 pb-4 bg-gradient-to-b from-accent via-accent/80 to-background scroll-mt-20" id="case-study">
+    <section className="py-16 pb-4 bg-background scroll-mt-20" id="case-study">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
