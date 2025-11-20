@@ -43,10 +43,6 @@ const ProcessSection = () => {
     value: "25+",
     label: "Engaged 25+ KOLs across specialties to validate needs and specifications across numerous product classes"
   }, {
-    icon: Wrench,
-    value: "+25",
-    label: "Years of experience"
-  }, {
     icon: CheckCircle,
     value: "$1.5M",
     label: "Saved $1.5M by preventing purchase of a non-viable device"
