@@ -7,24 +7,19 @@ interface AboutSectionProps {
 const AboutSection = ({ onOpenConsultationDialog }: AboutSectionProps) => {
   return (
     <section id="about" className="py-20 bg-background scroll-mt-20">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
+      <div className="mx-auto px-5">
+        <div className="max-w-7xl mx-auto text-center space-y-8">
           <h2 className="text-4xl lg:text-5xl font-bold text-navy">
-            Meet Rob Miraglia – 15+ Years of Clarity, Alignment, and Execution
+            Meet Rob Miraglia
           </h2>
           <p className="text-lg text-foreground leading-relaxed">
-            Robert Miraglia is a strategic product leader and launch advisor with
-            a proven track record across medical device, pharmaceutical, and
-            managed healthcare sectors. His rare combination of clinical insight,
-            qualitative and quantitative marketing research, portfolio strategy,
-            and commercial execution has earned him a reputation as the go-to
-            consultant when considering build-your-own products or purchasing
-            products from a partner
+            Rob is a medical marketing and strategy consultant who sits at the intersection of clinical insight and commercial reality. He has spent more than 25 years in medtech, pharma, and diagnostics, including leadership roles at Abbott, Medtronic, 3M, and Integer, helping teams decide which ideas are worth funding and which ones are not.
           </p>
           <p className="text-lg text-foreground leading-relaxed">
-            From negotiating <span className="font-bold">$1.5M</span> in vendor
-            savings to leading <span className="font-bold">80+</span> product
-            evaluations, Rob doesn't just advise, he engineers clarity at scale.
+            His work focuses on one thing: turning clinical promise into growth. Rob partners with CEOs and clinical leaders to clarify the real-world problem, pressure test the value story with KOLs, and build a business case that stands up to finance, procurement, and clinicians. He has engaged over 25 specialty KOLs, sized and prioritized more than 10 markets, supported 40 plus product and market initiatives, and helped clients avoid at least 1.5 million dollars in non-viable investment.
+          </p>
+          <p className="text-lg text-foreground leading-relaxed">
+            When the stakes are high and missteps are expensive, Rob gives teams a clear path from idea to launch so they can commit resources with confidence.
           </p>
           <Button
             size="lg"
