@@ -6,21 +6,13 @@ import {
   ResponsiveContainer
 } from "recharts";
 import CountUp from "react-countup";
-import { motion, useMotionValue, animate } from "framer-motion";
-import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function StatsChart() {
   const [isInView, setIsInView] = useState(false);
-  const [animatedData, setAnimatedData] = useState([
-    { month: "Q1", value: 0 },
-    { month: "Q2", value: 0 },
-    { month: "Q3", value: 0 },
-    { month: "Q4", value: 0 },
-    { month: "Launch", value: 0 },
-    { month: "Post", value: 0 },
-  ]);
   
-  const finalData = [
+  const data = [
     { month: "Q1", value: 0 },
     { month: "Q2", value: 8 },
     { month: "Q3", value: 18 },
@@ -28,21 +20,6 @@ export default function StatsChart() {
     { month: "Launch", value: 30 },
     { month: "Post", value: 35 },
   ];
-
-  useEffect(() => {
-    if (isInView) {
-      // Animate each data point with a stagger
-      finalData.forEach((point, index) => {
-        setTimeout(() => {
-          setAnimatedData(prev => {
-            const newData = [...prev];
-            newData[index] = point;
-            return newData;
-          });
-        }, index * 150);
-      });
-    }
-  }, [isInView]);
 
   const stats = [
     { value: "$5M", label: "NRE Funding" },
@@ -63,7 +40,7 @@ export default function StatsChart() {
       >
         {/* Chart */}
         <ResponsiveContainer width="100%" height="100%">
-          <AreaChart data={animatedData}>
+          <AreaChart data={data}>
             <defs>
               <linearGradient id="primaryGradient" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="5%" stopColor="hsl(var(--primary))" stopOpacity={0.4} />
@@ -76,8 +53,6 @@ export default function StatsChart() {
               stroke="hsl(var(--primary))"
               strokeWidth={3}
               fill="url(#primaryGradient)"
-              animationDuration={800}
-              animationEasing="ease-out"
             />
           </AreaChart>
         </ResponsiveContainer>
@@ -86,11 +61,11 @@ export default function StatsChart() {
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
           className="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none"
         >
           <h3 className="text-6xl font-extrabold text-foreground drop-shadow-md">
-            {isInView && <><CountUp end={30} duration={2} delay={0.8} prefix="$" suffix="M" /></>}
+            {isInView && <><CountUp end={30} duration={2.5} prefix="$" suffix="M" /></>}
             {!isInView && "$30M"}
           </h3>
           <p className="text-muted-foreground font-semibold">Co-dev Investment</p>
@@ -100,7 +75,7 @@ export default function StatsChart() {
         <motion.div 
           initial={{ opacity: 0, x: 20 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.9 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
           className="absolute right-4 top-4 bg-card/95 backdrop-blur-sm rounded-xl shadow-lg p-4 flex flex-col gap-4 border border-primary/20"
         >
           {stats.map((stat, idx) => (
@@ -108,7 +83,7 @@ export default function StatsChart() {
               key={idx}
               initial={{ opacity: 0, x: 10 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.4, delay: 1 + idx * 0.1 }}
+              transition={{ duration: 0.4, delay: 0.6 + idx * 0.1 }}
             >
               <p className="text-xl font-bold text-foreground">{stat.value}</p>
               <p className="text-xs text-muted-foreground">{stat.label}</p>
@@ -128,7 +103,7 @@ export default function StatsChart() {
           className="relative w-full h-[300px] bg-gradient-to-br from-background/50 to-primary/5 rounded-2xl overflow-hidden border border-primary/20 shadow-lg"
         >
           <ResponsiveContainer width="100%" height="100%">
-            <AreaChart data={animatedData}>
+            <AreaChart data={data}>
               <defs>
                 <linearGradient id="primaryGradientMobile" x1="0" y1="0" x2="0" y2="1">
                   <stop offset="5%" stopColor="hsl(var(--primary))" stopOpacity={0.4} />
@@ -141,8 +116,6 @@ export default function StatsChart() {
                 stroke="hsl(var(--primary))"
                 strokeWidth={3}
                 fill="url(#primaryGradientMobile)"
-                animationDuration={800}
-                animationEasing="ease-out"
               />
             </AreaChart>
           </ResponsiveContainer>
@@ -150,11 +123,11 @@ export default function StatsChart() {
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.8 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
             className="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none"
           >
             <h3 className="text-5xl font-extrabold text-foreground drop-shadow-md">
-              {isInView && <><CountUp end={30} duration={2} delay={0.8} prefix="$" suffix="M" /></>}
+              {isInView && <><CountUp end={30} duration={2.5} prefix="$" suffix="M" /></>}
               {!isInView && "$30M"}
             </h3>
             <p className="text-muted-foreground font-semibold">Co-dev Investment</p>
