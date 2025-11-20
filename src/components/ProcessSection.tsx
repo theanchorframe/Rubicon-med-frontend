@@ -68,28 +68,40 @@ const ProcessSection = () => {
       }} viewport={{
         once: true
       }} className="space-y-12 max-w-7xl mx-auto">
-          {/* Meet Robert Miraglia Section */}
-          <motion.div initial={{
-          opacity: 0,
-          y: 30
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.6,
-          delay: 0.3
-        }} viewport={{
-          once: true
-        }} className="space-y-8">
-            {/* Heading */}
-            <div className="text-center space-y-4">
+          {/* Heading */}
+          <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
               Meet <span className="text-primary font-bold">Robert Miraglia</span>: Converting Clinical Insight into Market Traction
             </h2>
-            </div>
+          </div>
 
-            {/* Bio Content */}
-            <div className="space-y-6 text-center max-w-5xl mx-auto">
+          {/* Two Column Layout: Stats Left, Content Right */}
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+            {/* Left Column - Statistics */}
+            <motion.div 
+              initial={{ opacity: 0, x: -30 }} 
+              whileInView={{ opacity: 1, x: 0 }} 
+              transition={{ duration: 0.6, delay: 0.3 }} 
+              viewport={{ once: true }}
+              className="space-y-4"
+            >
+              {statistics.map((stat, index) => (
+                <div key={index} className="glass-card p-6 space-y-3 hover:scale-105 transition-transform duration-300">
+                  <stat.icon className="text-primary" size={32} weight="duotone" />
+                  <div className="text-3xl font-bold text-foreground">{stat.value}</div>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{stat.label}</p>
+                </div>
+              ))}
+            </motion.div>
+
+            {/* Right Column - Bio Content */}
+            <motion.div 
+              initial={{ opacity: 0, x: 30 }} 
+              whileInView={{ opacity: 1, x: 0 }} 
+              transition={{ duration: 0.6, delay: 0.3 }} 
+              viewport={{ once: true }}
+              className="space-y-6"
+            >
               <p className="text-lg text-foreground leading-relaxed">
                 Rob is a medical marketing and strategy consultant who sits at the intersection of clinical insight and commercial reality. He has spent more than 25 years in medtech, pharma, and diagnostics, including leadership roles at Abbott, Medtronic, 3M, and Integer, helping teams decide which ideas are worth funding and which ones are not.
               </p>
@@ -99,28 +111,8 @@ const ProcessSection = () => {
               <p className="text-lg text-foreground leading-relaxed">
                 When the stakes are high and missteps are expensive, Rob gives teams a clear path from idea to launch so they can commit resources with confidence.
               </p>
-            </div>
-          </motion.div>
-
-          {/* Statistics Grid - Full Width */}
-          <motion.div initial={{
-          opacity: 0,
-          y: 30
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.6,
-          delay: 0.4
-        }} viewport={{
-          once: true
-        }} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {statistics.map((stat, index) => <div key={index} className="glass-card p-6 space-y-3 hover:scale-105 transition-transform duration-300">
-                <stat.icon className="text-primary" size={32} weight="duotone" />
-                <div className="text-3xl font-bold text-foreground">{stat.value}</div>
-                <p className="text-sm text-muted-foreground leading-relaxed">{stat.label}</p>
-              </div>)}
-          </motion.div>
+            </motion.div>
+          </div>
 
           {/* IDEA Interactive Section */}
           <motion.div initial={{
