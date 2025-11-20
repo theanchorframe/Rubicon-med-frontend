@@ -2,7 +2,11 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
-const FAQSection = () => {
+interface FAQSectionProps {
+  onOpenConsultationDialog: () => void;
+}
+
+const FAQSection = ({ onOpenConsultationDialog }: FAQSectionProps) => {
   const faqs = [
     {
       question: "What types of companies do you typically work with?",
@@ -31,12 +35,6 @@ const FAQSection = () => {
     },
   ];
 
-  const scrollToForm = () => {
-    const formSection = document.getElementById("consultation-form");
-    if (formSection) {
-      formSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <section id="faq" className="py-24 md:py-32 bg-background scroll-mt-20">
@@ -88,7 +86,7 @@ const FAQSection = () => {
         >
           <Button 
             size="lg" 
-            onClick={scrollToForm}
+            onClick={onOpenConsultationDialog}
             className="shine-effect text-lg sm:text-xl px-6 sm:px-12 py-6 sm:py-8 h-auto bg-primary hover:bg-primary/90 whitespace-normal text-center leading-tight"
           >
             Align Product Decisions With Expert Clinical Opinion

@@ -21,12 +21,12 @@ const Index = () => {
       <Navbar onOpenConsultationDialog={() => setIsConsultationDialogOpen(true)} />
       <HeroSection />
       <ProcessSection />
-      <ServicesSection />
+      <ServicesSection onOpenConsultationDialog={() => setIsConsultationDialogOpen(true)} />
       <TestimonialsSection />
-      <CaseStudiesSection />
+      <CaseStudiesSection onOpenConsultationDialog={() => setIsConsultationDialogOpen(true)} />
       <CTABanner />
-      <StatsSection />
-      <FAQSection />
+      <StatsSection onOpenConsultationDialog={() => setIsConsultationDialogOpen(true)} />
+      <FAQSection onOpenConsultationDialog={() => setIsConsultationDialogOpen(true)} />
       <FinalCTASection onOpenConsultationDialog={() => setIsConsultationDialogOpen(true)} />
       <Footer />
       <ConsultationDialog 

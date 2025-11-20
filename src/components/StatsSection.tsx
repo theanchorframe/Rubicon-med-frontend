@@ -1,7 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
-const StatsSection = () => {
+interface StatsSectionProps {
+  onOpenConsultationDialog: () => void;
+}
+
+const StatsSection = ({ onOpenConsultationDialog }: StatsSectionProps) => {
   const stats = [
     {
       number: "$30M",
@@ -57,12 +61,7 @@ const StatsSection = () => {
         >
           <Button
             size="lg"
-            onClick={() => {
-              const formSection = document.getElementById("consultation-form");
-              if (formSection) {
-                formSection.scrollIntoView({ behavior: "smooth" });
-              }
-            }}
+            onClick={onOpenConsultationDialog}
             className="shine-effect text-lg sm:text-xl px-6 sm:px-12 py-6 sm:py-8 h-auto bg-background text-foreground hover:bg-background/90 whitespace-normal text-center leading-tight max-w-full"
           >
             Get Clarity On Your Path Forward

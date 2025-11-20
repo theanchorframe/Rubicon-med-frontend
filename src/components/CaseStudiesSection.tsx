@@ -6,7 +6,11 @@ import clinicalInsightImage from "@/assets/clinical-insight.webp";
 import deRiskImage from "@/assets/de-risk.webp";
 import alignTeamsImage from "@/assets/align-teams.webp";
 
-const CaseStudiesSection = () => {
+interface CaseStudiesSectionProps {
+  onOpenConsultationDialog: () => void;
+}
+
+const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProps) => {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   const caseStudies = [
@@ -64,12 +68,7 @@ const CaseStudiesSection = () => {
         >
           <Button
             size="xl"
-            onClick={() => {
-              const formSection = document.getElementById("consultation-form");
-              if (formSection) {
-                formSection.scrollIntoView({ behavior: "smooth" });
-              }
-            }}
+            onClick={onOpenConsultationDialog}
             className="shine-effect text-lg sm:text-xl px-6 sm:px-12 py-6 sm:py-8 h-auto bg-primary hover:bg-primary/90 mb-8 whitespace-normal text-center leading-tight"
           >
             Turn Your Launch Into the Next Case Study
@@ -121,12 +120,7 @@ const CaseStudiesSection = () => {
                 </p>
                 <Button 
                   size="lg" 
-                  onClick={() => {
-                    const formSection = document.getElementById("consultation-form");
-                    if (formSection) {
-                      formSection.scrollIntoView({ behavior: "smooth" });
-                    }
-                  }}
+                  onClick={onOpenConsultationDialog}
                   className="shine-effect text-lg sm:text-xl px-6 sm:px-12 py-6 sm:py-8 h-auto bg-primary hover:bg-primary/90 whitespace-normal text-center leading-tight"
                 >
                   {study.cta}
