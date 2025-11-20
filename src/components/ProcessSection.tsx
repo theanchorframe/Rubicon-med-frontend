@@ -68,21 +68,6 @@ const ProcessSection = () => {
       }} viewport={{
         once: true
       }} className="space-y-12 max-w-7xl mx-auto">
-          {/* Heading */}
-          <div className="space-y-4 text-center">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
-              Convert Clinical Insight into <span className="text-primary">Market Traction</span>
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
-              A four-step engagement that validates real-world need, aligns the commercial plan, and executes a launch that clinicians adopt.
-            </p>
-          </div>
-
-          {/* Process Steps */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {processSteps.map((step, index) => {})}
-          </div>
-
           {/* Meet Robert Miraglia Section */}
           <motion.div initial={{
           opacity: 0,
@@ -101,6 +86,9 @@ const ProcessSection = () => {
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
                 Meet <span className="text-primary">Robert Miraglia</span>: Converting Clinical Insight into Market Traction
               </h2>
+              <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
+                A four-step engagement that validates real-world need, aligns the commercial plan, and executes a launch that clinicians adopt.
+              </p>
             </div>
 
             {/* Bio Content */}
