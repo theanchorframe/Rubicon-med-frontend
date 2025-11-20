@@ -38,7 +38,7 @@ const HeroSection = () => {
                 transition={{ delay: 0.4 }}
                 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight"
                 style={{
-                  WebkitTextStroke: '6px black',
+                  WebkitTextStroke: '6px hsl(215, 41%, 19%)',
                   paintOrder: 'stroke fill',
                   WebkitFontSmoothing: 'antialiased',
                   MozOsxFontSmoothing: 'grayscale'
