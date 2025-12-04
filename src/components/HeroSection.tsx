@@ -39,7 +39,7 @@ const HeroSection = () => {
               transition={{ delay: 0.4 }}
               className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight w-full text-white"
             >
-              Stop betting <span className="text-[1.1em] underline decoration-[#0080FF]">R&D budgets</span> on hunches and make MedTech moves backed by <span className="text-[1.1em] underline decoration-[#0080FF]">real evidence</span>
+              Stop betting R&D budgets on hunches.<br />Make MedTech moves backed by <span className="text-[1.2em] underline decoration-white">real evidence</span>.
             </motion.h1>
 
             <motion.p
