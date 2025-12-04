@@ -43,7 +43,10 @@ const Navbar = ({ onOpenConsultationDialog }: NavbarProps) => {
           <div className={`flex items-center justify-between transition-all duration-300 ${
             isScrolled ? "h-20" : "h-24"
           }`}>
-            <div className="flex items-center gap-3">
+            <button 
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              className="flex items-center gap-3 cursor-pointer"
+            >
               <img 
                 src={logo} 
                 alt="Rubicon Medical" 
@@ -52,13 +55,13 @@ const Navbar = ({ onOpenConsultationDialog }: NavbarProps) => {
                 }`}
               />
               <div>
-                <h1 className={`font-bold text-foreground leading-tight transition-all duration-300 ${
+                <h1 className={`font-bold text-foreground leading-tight transition-all duration-300 text-left ${
                   isScrolled ? "text-sm md:text-base" : "text-base md:text-lg"
                 }`}>
                   Rubicon Medical Marketing &<br />Strategy Consultants
                 </h1>
               </div>
-            </div>
+            </button>
 
             <div className="hidden lg:flex items-center gap-8">
               <button
