@@ -18,7 +18,7 @@ const FAQSection = ({ onOpenConsultationDialog }: FAQSectionProps) => {
     {
       question: "What's your experience with launch planning and execution?",
       answer:
-        "I've led or supported over 20 medical projects across product categories including vascular intervention, multiple pharmaceuticals, and diagnostics. I concentrate on the front end: defining the problem, selecting the right opportunities, and building the evidence story that unlocks adoption at launch.",
+        "I've led or supported over 40 medical projects across product categories including vascular intervention, multiple pharmaceuticals, and diagnostics. I concentrate on the front end: defining the problem, selecting the right opportunities, and building the evidence story that unlocks adoption at launch.",
     },
     {
       question: "Do you only work with U.S.-based companies?",
