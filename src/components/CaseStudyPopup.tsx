@@ -84,10 +84,10 @@ const CaseStudyPopup = ({ onRequestCaseStudy }: CaseStudyPopupProps) => {
                 </p>
                 
                 {/* GHL Form */}
-                <div className="w-full min-h-[350px] rounded-lg overflow-hidden">
+                <div className="w-full min-h-[280px] rounded-lg overflow-hidden">
                   <iframe
                     src="https://link.anchorframe.com/widget/form/RSwk9c8PsfVO57gzIn2m"
-                    style={{ width: "100%", height: "350px", border: "none", borderRadius: "8px" }}
+                    style={{ width: "100%", height: "280px", border: "none", borderRadius: "8px" }}
                     id="popup-case-study-RSwk9c8PsfVO57gzIn2m" 
                     data-layout="{'id':'INLINE'}"
                     data-trigger-type="alwaysShow"
@@ -97,7 +97,7 @@ const CaseStudyPopup = ({ onRequestCaseStudy }: CaseStudyPopupProps) => {
                     data-deactivation-type="neverDeactivate"
                     data-deactivation-value=""
                     data-form-name="Case Study Popup"
-                    data-height="350"
+                    data-height="280"
                     data-layout-iframe-id="popup-case-study-RSwk9c8PsfVO57gzIn2m"
                     data-form-id="RSwk9c8PsfVO57gzIn2m"
                     title="Case Study Popup"
@@ -107,7 +107,7 @@ const CaseStudyPopup = ({ onRequestCaseStudy }: CaseStudyPopupProps) => {
                 <button
                   type="button"
                   onClick={handleDismiss}
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors -mt-2"
                 >
                   Maybe Later
                 </button>
