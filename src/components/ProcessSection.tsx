@@ -238,7 +238,7 @@ const ProcessSection = () => {
             {/* IDEA Section Header */}
             <div className="text-center space-y-4">
               <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-                The <span className="text-primary">IDEA</span> Process: From Gut Feel to Evidence-Backed Strategy
+                The <span className="text-primary text-[1.2em]">IDEA</span> Process: From Gut Feel to Evidence-Backed Strategy
               </h2>
               <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
                 A four-stage framework that aligns executives, maps the landscape, runs the right research, and hands you board-ready decisions grounded in real market evidence.
