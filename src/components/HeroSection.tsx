@@ -42,7 +42,7 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
               transition={{ delay: 0.4 }}
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.25rem] font-bold leading-tight text-white"
             >
-              Stop betting <span className="text-[1.1em] underline decoration-[#0080FF]">R&D budgets</span> on hunches.<br />Make MedTech moves backed by real evidence.
+              Stop betting <span className="text-[1.2em] underline decoration-[#0080FF]">R&D budgets</span> on hunches.<br />Make MedTech moves backed by <span className="text-[1.2em]">real evidence</span>.
             </motion.h1>
 
             <motion.p
