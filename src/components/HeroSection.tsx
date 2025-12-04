@@ -40,7 +40,7 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight text-white"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white"
             >
               Stop betting <span className="text-[1.1em] underline decoration-[#0080FF]">R&D budgets</span> on hunches.<br />Make MedTech moves backed by real evidence.
             </motion.h1>
@@ -64,9 +64,9 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
               <Button 
                 size="lg" 
                 onClick={onOpenConsultation}
-                className="text-lg px-8 py-6 bg-primary hover:bg-primary/90"
+                className="text-lg md:text-xl px-8 py-6 bg-primary hover:bg-primary/90"
               >
-                Request a Consultation
+                Click This Button to Request a Free Consultation
               </Button>
             </motion.div>
           </div>
