@@ -81,11 +81,11 @@ const CaseStudyPopup = ({ onRequestCaseStudy }: CaseStudyPopupProps) => {
             </div>
 
             {/* Content */}
-            <div className="p-6 md:p-8 space-y-4">
+            <div className="p-6 md:p-8 space-y-4 text-center md:text-left">
               <h3 className="text-2xl md:text-3xl font-bold text-navy">
                 Get Our Free Case Study
               </h3>
-              <p className="text-foreground leading-relaxed">
+              <p className="text-sm text-navy/80 leading-relaxed">
                 Discover how we helped a MedTech company avoid a 7-figure launch misfire and align their teams with data-driven strategy.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 pt-2">
