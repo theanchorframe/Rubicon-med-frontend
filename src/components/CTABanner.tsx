@@ -19,7 +19,7 @@ const CTABanner = () => {
 
           {/* Centered Headline */}
           <div className="text-center">
-            <h3 className="text-[32px] md:text-[42px] lg:text-[52px] font-extrabold text-primary/80 leading-tight max-w-5xl mx-auto">
+            <h3 className="text-4xl md:text-5xl font-bold text-foreground leading-tight max-w-5xl mx-auto">
               From Idea to Launch: $30M Co-dev + $5M NRE for a More Effective and Safer EPD
             </h3>
           </div>
@@ -28,7 +28,7 @@ const CTABanner = () => {
           <div className="grid lg:grid-cols-2 gap-3 lg:gap-12 items-start">
             {/* Left: Subheadline & Form */}
             <div className="space-y-3 md:space-y-6">
-              <p className="text-primary/60 text-lg md:text-xl leading-relaxed">
+              <p className="text-navy text-xl md:text-2xl font-medium leading-relaxed">
                 Learn how clinical proof, reimbursement insights, and advisory-board
                 design sprints built an irresistible business case for market entry
               </p>

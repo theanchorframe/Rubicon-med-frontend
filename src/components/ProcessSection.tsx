@@ -75,7 +75,7 @@ const ProcessSection = () => {
                 viewport={{ once: true }}
                 className="text-5xl font-bold text-foreground"
               >
-                Convert Clinical Insight into Market Traction
+                Convert Clinical Insight into <span className="text-primary">Market Traction</span>
               </motion.h2>
               <div className="space-y-4">
                 {statistics.map((stat, index) => (
@@ -104,7 +104,7 @@ const ProcessSection = () => {
                 viewport={{ once: true }}
                 className="text-5xl font-bold text-foreground"
               >
-                Rob Miraglia: Your Partner in MedTech Growth.
+                <span className="text-primary">Rob Miraglia</span>: Your Partner in MedTech Growth.
               </motion.h2>
               <motion.p 
                 initial={{ opacity: 0, y: 20 }} 
@@ -149,6 +149,16 @@ const ProcessSection = () => {
         }} viewport={{
           once: true
         }} className="space-y-8">
+            {/* IDEA Section Header */}
+            <div className="text-center space-y-4">
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+                The <span className="text-primary">IDEA</span> Process: From Gut Feel to Evidence-Backed Strategy
+              </h2>
+              <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+                A four-stage framework that aligns executives, maps the landscape, runs the right research, and hands you board-ready decisions grounded in real market evidence.
+              </p>
+            </div>
+            
             {/* IDEA Buttons */}
             <div className="flex gap-4 justify-center flex-wrap">
               {(["I", "D", "E", "A"] as const).map(letter => <button key={letter} onClick={() => setActiveIdea(letter)} className={`glass-card px-8 py-6 min-w-[100px] transition-all duration-300 hover:scale-105 ${activeIdea === letter ? "bg-primary/20 border-primary/40 shadow-lg" : "hover:bg-primary/10"}`}>
