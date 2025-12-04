@@ -85,7 +85,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
               viewport={{ once: true }}
               className={`flex flex-col ${
                 index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-              } gap-8 items-start`}
+              } gap-8 items-start ${index === 0 ? "bg-muted/50 rounded-xl p-6 md:p-8" : ""}`}
             >
               {/* Image with hover overlay */}
               <div
@@ -96,7 +96,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
                 <img
                   src={study.image}
                   alt={study.title}
-                  className="w-full h-[400px] object-cover"
+                  className={`w-full object-cover ${index === 0 ? "h-[500px]" : "h-[400px]"}`}
                 />
                 <div
                   className={`absolute inset-x-0 bottom-0 bg-black/90 text-white p-6 transition-all duration-500 ${
@@ -118,13 +118,15 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
                 <p className="text-foreground leading-relaxed text-xl">
                   {study.description}
                 </p>
-                <Button 
-                  size="lg" 
-                  onClick={onOpenConsultationDialog}
-                  className="shine-effect text-lg sm:text-xl px-6 sm:px-12 py-6 sm:py-8 h-auto bg-primary hover:bg-primary/90 whitespace-normal text-center leading-tight"
-                >
-                  {study.cta}
-                </Button>
+                {index !== 0 && (
+                  <Button 
+                    size="lg" 
+                    onClick={onOpenConsultationDialog}
+                    className="shine-effect text-lg sm:text-xl px-6 sm:px-12 py-6 sm:py-8 h-auto bg-primary hover:bg-primary/90 whitespace-normal text-center leading-tight"
+                  >
+                    {study.cta}
+                  </Button>
+                )}
               </div>
             </motion.div>
           ))}
