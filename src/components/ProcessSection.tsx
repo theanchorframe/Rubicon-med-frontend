@@ -235,26 +235,31 @@ const ProcessSection = () => {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            {/* Framework Label */}
-            <div className="text-center">
-              <span className="text-xs tracking-[0.2em] uppercase text-muted-foreground font-medium">
-                The IDEA Framework
-              </span>
+            {/* IDEA Section Header */}
+            <div className="text-center space-y-4">
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+                The <span className="text-primary">IDEA</span> Process: From Gut Feel to Evidence-Backed Strategy
+              </h2>
+              <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+                A four-stage framework that aligns executives, maps the landscape, runs the right research, and hands you board-ready decisions grounded in real market evidence.
+              </p>
             </div>
 
             {/* IDEA Buttons */}
-            <div className="flex gap-3 md:gap-4 justify-center overflow-x-auto pb-2 scrollbar-hide">
+            <div className="flex gap-4 justify-center flex-wrap">
               {(["I", "D", "E", "A"] as const).map((letter) => (
                 <button
                   key={letter}
                   onClick={() => setActiveIdea(letter)}
-                  className={`px-6 md:px-10 py-4 md:py-5 min-w-[70px] md:min-w-[100px] rounded-lg transition-all duration-300 flex-shrink-0 ${
+                  className={`glass-card px-8 py-6 min-w-[100px] transition-all duration-300 hover:scale-105 ${
                     activeIdea === letter
-                      ? "bg-primary text-primary-foreground shadow-lg shadow-primary/25 font-bold"
-                      : "border-2 border-primary/30 text-primary/60 hover:border-primary/60 hover:text-primary"
+                      ? "bg-primary/20 border-primary/40 shadow-lg"
+                      : "hover:bg-primary/10"
                   }`}
                 >
-                  <span className="text-2xl md:text-3xl">{letter}</span>
+                  <span className={`text-4xl font-bold ${activeIdea === letter ? "text-primary" : "text-primary/60"}`}>
+                    {letter}
+                  </span>
                 </button>
               ))}
             </div>
