@@ -40,7 +40,7 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight text-white"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.25rem] font-bold leading-tight text-white"
             >
               Stop betting <span className="text-[1.1em] underline decoration-[#0080FF]">R&D budgets</span> on hunches.<br />Make MedTech moves backed by real evidence.
             </motion.h1>
