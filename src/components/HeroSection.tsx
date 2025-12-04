@@ -47,7 +47,7 @@ const HeroSection = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
               className="text-lg sm:text-xl md:text-2xl leading-relaxed font-semibold w-full"
-              style={{ color: '#4FC3F7' }}
+              style={{ color: 'rgba(255,255,255,0.8)' }}
             >
               Rubicon combines data, marketing research, and physician insight so you know which markets to pursue, which technologies to back, and how to grow without exploding SKU complexity.
               </motion.p>
