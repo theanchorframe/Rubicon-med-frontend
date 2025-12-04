@@ -20,7 +20,7 @@ const CTABanner = () => {
           {/* Centered Headline */}
           <div className="text-center">
             <h3 className="text-4xl md:text-5xl font-bold text-foreground leading-tight max-w-5xl mx-auto">
-              From Idea to Launch: $30M Co-dev + $5M NRE for a More Effective and Safer EPD
+              From Idea to Launch: <span className="text-[1.2em]">$30M</span> Co-dev + <span className="text-[1.2em]">$5M</span> NRE for a More Effective and Safer EPD
             </h3>
           </div>
 
