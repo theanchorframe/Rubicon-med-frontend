@@ -28,9 +28,9 @@ const HeroSection = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
               className="font-semibold text-sm sm:text-base tracking-wide uppercase"
-              style={{ color: 'rgba(255,255,255,0.8)' }}
+              style={{ color: '#4FC3F7' }}
             >
-              Trusted Advisor to the MedTech Field
+              When your next MedTech bet cannot be a guess
             </motion.p>
 
             <motion.h1
@@ -39,7 +39,7 @@ const HeroSection = () => {
               transition={{ delay: 0.4 }}
               className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight w-full text-white"
             >
-              Advising MedTech leaders by leveraging data, marketing research, and physician validation.
+              Stop betting R&D budgets on hunches and make MedTech moves backed by real evidence
             </motion.h1>
 
             <motion.p
@@ -47,12 +47,9 @@ const HeroSection = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
               className="text-lg sm:text-xl md:text-2xl leading-relaxed font-semibold w-full"
-              style={{ color: 'rgba(255,255,255,0.8)' }}
+              style={{ color: '#4FC3F7' }}
             >
-                Rubicon helps MedTech companies leverage data, marketing research, and physician validation to create
-                disruptive products to enhance patient health. We help companies choose which markets to enter, what
-                technology would be optimal, and the right dimensional attributes while keeping SKU complexity under
-                control.
+              Rubicon combines data, marketing research, and physician insight so you know which markets to pursue, which technologies to back, and how to grow without exploding SKU complexity.
               </motion.p>
             </div>
           </motion.div>
