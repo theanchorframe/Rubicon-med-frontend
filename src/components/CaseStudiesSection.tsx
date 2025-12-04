@@ -57,7 +57,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
   ];
 
   return (
-    <section id="case-studies" className="py-20 bg-background overflow-hidden scroll-mt-20">
+    <section id="case-studies" className="pt-8 pb-20 bg-background overflow-hidden scroll-mt-20">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
