@@ -92,7 +92,7 @@ const CaseStudyPopup = ({ onRequestCaseStudy }: CaseStudyPopupProps) => {
                 <Button
                   size="lg"
                   onClick={handleGetCaseStudy}
-                  className="shine-effect bg-primary hover:bg-primary/90 text-lg px-8 py-6 h-auto"
+                  className="shine-effect bg-primary hover:bg-primary/90 text-xl px-8 py-6 h-auto"
                 >
                   Get the Case Study
                 </Button>
@@ -100,7 +100,7 @@ const CaseStudyPopup = ({ onRequestCaseStudy }: CaseStudyPopupProps) => {
                   variant="outline"
                   size="lg"
                   onClick={handleDismiss}
-                  className="text-lg px-8 py-6 h-auto"
+                  className="text-xl px-8 py-6 h-auto"
                 >
                   Maybe Later
                 </Button>
