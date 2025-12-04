@@ -7,6 +7,7 @@ const TestimonialsSection = () => {
 
   const testimonials = [
     {
+      headline: "Engaged Team Player & Subject Matter Expert",
       text: "Rob is a solid and detail-oriented product marketer. He excels at customer engagement and enjoys becoming a subject matter expert and resource on cross-functional project teams....",
       fullText:
         "Rob is a solid and detail-oriented product marketer. He excels at customer engagement and enjoys becoming a subject matter expert and resource on cross-functional project teams. He operates with a strong sense of ownership in his work and is well-liked by his peers. If you are looking for a hard-working, engaged marketer who is a good team player, I encourage you to consider Rob",
@@ -14,6 +15,7 @@ const TestimonialsSection = () => {
       title: "Global Marketing Leader, Medical Devices",
     },
     {
+      headline: "Deep Voice of Customer Insights",
       text: "Rob's is a strong contributor with deep insights which have helped us greatly. In working closely with him, I have witnessed how well he is able to draw valuable voice of customer...",
       fullText:
         "Rob's is a strong contributor with deep insights which have helped us greatly. In working closely with him, I have witnessed how well he is able to draw valuable voice of customer feedback from the marketplace; both online and in person. He is a natural in terms of getting people to open up and share details which are key in any new product development effort.",
@@ -21,6 +23,7 @@ const TestimonialsSection = () => {
       title: "R&D Executive",
     },
     {
+      headline: "Best-in-Class KOL Network Builder",
       text: "Rob played a key role in advancing market initiatives in his position as Senior Product Marketing Manager at Lake Region Medical. While reporting to me, Rob completed a...",
       fullText:
         "Rob played a key role in advancing market initiatives in his position as Senior Product Marketing Manager at Lake Region Medical. While reporting to me, Rob completed a strategic initiative to develop an expanded clinical advisor network within his market franchise. He effectively leveraged his strong clinical acumen and market insights to lead the recruitment, development, and management of a best-in-class clinical stakeholder network including many KOLs. He utilized outputs from this initiative to guide decision making and drive business opportunities within his area of market responsibility. Additionally, Rob possessed passion for innovation and integrity as it relates to being a strong advocate for the patient and customer.",
@@ -28,6 +31,7 @@ const TestimonialsSection = () => {
       title: "Director of Product Management at Integer Holdings Corporation",
     },
     {
+      headline: "Strategic Launch Excellence",
       text: "Equipping innovators in MedTech and Life Science to win the launch, accelerate adoption, and sustain advantage. Rob oversaw the launch of a strategic product for our company...",
       fullText:
         " Equipping innovators in MedTech and Life Science to win the launch, accelerate adoption, and sustain advantage. Rob oversaw the launch of a strategic product for our company. The product, a premium drug delivery technology for pain management, required Rob to work across the organization to 1) train 200+ sales professionals and 2) appropriately position the technology for rapid adoption across the targeted clinic base, 5,000 Physical Therapy clinics. Rob's efforts, combined with a motivated sales force, resulted in EMPI penetrating the target clinic goal within 10 months post launch, while also exceeding the sales and contribution goals for the product in year 1. Rob displayed great tactical discipline, teamwork, and a deep understanding of his market throughout the launch phase.",
@@ -35,6 +39,7 @@ const TestimonialsSection = () => {
       title: "MBA, MPH",
     },
     {
+      headline: "Sales & Marketing Asset for Growth",
       text: "Rob is an asset to any Sales and Marketing Team with the ability to assess a marketplace or industry in terms of competition, market stats and target groups to drive revenue....",
       fullText:
         "Rob is an asset to any Sales and Marketing Team with the ability to assess a marketplace or industry in terms of competition, market stats and target groups to drive revenue. Having sales management experience together with his knowledge of marketing is a great combination for many corporate growth scenarios.",
@@ -42,6 +47,7 @@ const TestimonialsSection = () => {
       title: "Consultant",
     },
     {
+      headline: "Collaborative Problem Solver",
       text: "Rob is very pleasant to work with. He's also very thorough in his approach, and always has the courage to ask the right questions. He was quick to understand the issues and problems...",
       fullText:
         "Rob is very pleasant to work with. He's also very thorough in his approach, and always has the courage to ask the right questions. He was quick to understand the issues and problems and was always willing to work together to resolve these. He was always willing to co-operate and help me out on Human factors issues on projects. I'd highly recommend Rob.",
@@ -76,7 +82,7 @@ const TestimonialsSection = () => {
               viewport={{ once: true }}
               className="break-inside-avoid glass-card p-6 shadow-sm"
             >
-              <div className="flex gap-1 mb-4">
+            <div className="flex gap-1 mb-2">
                 {[...Array(5)].map((_, i) => (
                   <Star
                     key={i}
@@ -85,6 +91,7 @@ const TestimonialsSection = () => {
                   />
                 ))}
               </div>
+              <h3 className="text-navy font-bold text-lg mb-3">"{testimonial.headline}"</h3>
               <p className="text-foreground/90 italic mb-4">
                 {expandedCard === index ? testimonial.fullText : testimonial.text}
               </p>
