@@ -28,7 +28,7 @@ const CTABanner = () => {
           <div className="grid lg:grid-cols-2 gap-3 lg:gap-12 items-start">
             {/* Left: Subheadline & Form */}
             <div className="space-y-3 md:space-y-6">
-              <p className="text-navy text-xl md:text-2xl font-medium leading-relaxed">
+              <p className="text-navy/80 text-lg md:text-xl font-medium leading-relaxed text-center lg:text-left">
                 Learn how clinical proof, reimbursement insights, and advisory-board
                 design sprints built an irresistible business case for market entry
               </p>
