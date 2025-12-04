@@ -23,31 +23,32 @@ const HeroSection = () => {
             className="text-center lg:text-left space-y-6"
           >
             <div className="space-y-4">
-              <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.2 }}
-                className="text-white font-semibold text-sm sm:text-base tracking-wide uppercase"
-              >
-                Trusted Advisor to the MedTech Field
-              </motion.p>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+              className="font-semibold text-sm sm:text-base tracking-wide uppercase"
+              style={{ color: '#4FC3F7' }}
+            >
+              Trusted Advisor to the MedTech Field
+            </motion.p>
 
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 }}
-                className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight w-full"
-                style={{ color: '#0080FF' }}
-              >
-                Advising MedTech leaders by leveraging data, marketing research, and physician validation.
-              </motion.h1>
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+              className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight w-full text-white"
+            >
+              Advising MedTech leaders by leveraging data, marketing research, and physician validation.
+            </motion.h1>
 
-              <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.6 }}
-                className="text-lg sm:text-xl md:text-2xl text-white leading-relaxed font-semibold w-full"
-              >
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.6 }}
+              className="text-lg sm:text-xl md:text-2xl leading-relaxed font-semibold w-full"
+              style={{ color: '#B3E5FC' }}
+            >
                 Rubicon helps MedTech companies leverage data, marketing research, and physician validation to create
                 disruptive products to enhance patient health. We help companies choose which markets to enter, what
                 technology would be optimal, and the right dimensional attributes while keeping SKU complexity under
