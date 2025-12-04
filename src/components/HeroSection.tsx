@@ -40,7 +40,7 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.25rem] font-bold leading-tight text-white"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white"
             >
               Stop betting <span className="text-[1.1em] underline decoration-[#0080FF]">R&D<br />budgets</span> on hunches.<br />Make MedTech moves backed by <span className="text-[1.1em]">real evidence</span>.
             </motion.h1>
@@ -70,10 +70,10 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
               </Button>
               
               <div className="text-center max-w-md">
-                <p className="text-white/90 text-sm sm:text-base italic">
+                <p className="text-white/90 text-base sm:text-lg md:text-xl italic font-semibold">
                   "Rob's is a strong contributor with deep insights which have helped us greatly."
                 </p>
-                <p className="text-white/70 text-xs sm:text-sm mt-1">
+                <p className="text-white/70 text-sm sm:text-base mt-1 font-semibold">
                   — Rick Kirchner, R&D Executive
                 </p>
               </div>
