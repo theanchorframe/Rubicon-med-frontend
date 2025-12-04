@@ -89,14 +89,14 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
             >
               {/* Image with hover overlay */}
               <div
-                className="relative overflow-hidden group md:w-1/2 rounded-lg"
+                className="relative overflow-hidden group w-full md:w-1/2 rounded-lg"
                 onMouseEnter={() => setHoveredCard(index)}
                 onMouseLeave={() => setHoveredCard(null)}
               >
                 <img
                   src={study.image}
                   alt={study.title}
-                  className={`w-full object-cover ${index === 0 ? "h-[500px]" : "h-[400px]"}`}
+                  className={`w-full object-cover ${index === 0 ? "h-auto md:h-[500px]" : "h-auto md:h-[400px]"}`}
                 />
                 <div
                   className={`absolute inset-x-0 bottom-0 bg-black/90 text-white p-6 transition-all duration-500 ${
@@ -110,7 +110,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
               </div>
 
               {/* Text content - left aligned and starting at top */}
-              <div className="space-y-6 md:w-1/2 text-left">
+              <div className="space-y-6 w-full md:w-1/2 text-left">
                 <p className="text-accent font-semibold italic text-xl">{study.tagline}</p>
                 <h3 className="text-4xl lg:text-5xl font-bold text-navy">
                   {study.title}
