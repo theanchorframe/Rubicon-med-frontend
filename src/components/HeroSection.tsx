@@ -59,7 +59,7 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
-              className="pt-4"
+              className="pt-4 flex flex-col items-center gap-4"
             >
               <Button 
                 size="lg" 
@@ -68,6 +68,15 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
               >
                 Click This Button to Request<br />a Free Consultation
               </Button>
+              
+              <div className="text-center max-w-md">
+                <p className="text-white/90 text-sm sm:text-base italic">
+                  "Rob's is a strong contributor with deep insights which have helped us greatly."
+                </p>
+                <p className="text-white/70 text-xs sm:text-sm mt-1">
+                  — Rick Kirchner, R&D Executive
+                </p>
+              </div>
             </motion.div>
           </div>
         </motion.div>
