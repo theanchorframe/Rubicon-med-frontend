@@ -18,7 +18,7 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
       <div className="absolute inset-0 bg-navy/30"></div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 pt-32 pb-20 max-w-4xl">
+      <div className="relative z-10 container mx-auto px-6 pt-32 pb-20 max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -40,7 +40,7 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight text-white"
             >
               Stop betting <span className="text-[1.1em] underline decoration-[#0080FF]">R&D budgets</span> on hunches.<br />Make MedTech moves backed by real evidence.
             </motion.h1>
