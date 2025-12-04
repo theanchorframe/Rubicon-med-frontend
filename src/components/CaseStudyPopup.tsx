@@ -1,9 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useNavigate } from "react-router-dom";
 import caseStudyBanner from "@/assets/case-study-banner.webp";
 
 interface CaseStudyPopupProps {
@@ -13,10 +10,6 @@ interface CaseStudyPopupProps {
 const CaseStudyPopup = ({ onRequestCaseStudy }: CaseStudyPopupProps) => {
   const [isVisible, setIsVisible] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const navigate = useNavigate();
 
   useEffect(() => {
     // Check if popup was already dismissed this session
@@ -39,18 +32,6 @@ const CaseStudyPopup = ({ onRequestCaseStudy }: CaseStudyPopupProps) => {
     sessionStorage.setItem("caseStudyPopupDismissed", "true");
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!name.trim() || !email.trim()) return;
-    
-    setIsSubmitting(true);
-    // Simulate submission - in production, this would send to your backend
-    setTimeout(() => {
-      handleDismiss();
-      navigate("/thank-you-case-study");
-    }, 500);
-  };
-
   if (isDismissed) return null;
 
   return (
@@ -68,13 +49,13 @@ const CaseStudyPopup = ({ onRequestCaseStudy }: CaseStudyPopupProps) => {
           />
           
           {/* Popup Container */}
-          <div className="fixed inset-0 z-50 flex items-center justify-center pointer-events-none">
+          <div className="fixed inset-0 z-50 flex items-center justify-center pointer-events-none p-4">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
-              className="w-[90%] max-w-lg bg-background rounded-xl shadow-2xl overflow-hidden pointer-events-auto relative"
+              className="w-[95%] max-w-lg bg-background rounded-xl shadow-2xl overflow-hidden pointer-events-auto relative max-h-[90vh] overflow-y-auto"
             >
               {/* Close button */}
               <button
@@ -85,7 +66,7 @@ const CaseStudyPopup = ({ onRequestCaseStudy }: CaseStudyPopupProps) => {
               </button>
 
               {/* Banner image */}
-              <div className="w-full h-40 md:h-48 overflow-hidden">
+              <div className="w-full h-32 md:h-40 overflow-hidden">
                 <img
                   src={caseStudyBanner}
                   alt="Case Study"
@@ -94,49 +75,42 @@ const CaseStudyPopup = ({ onRequestCaseStudy }: CaseStudyPopupProps) => {
               </div>
 
               {/* Content */}
-              <div className="p-6 md:p-8 space-y-4 text-center">
-                <h3 className="text-2xl md:text-3xl font-bold text-navy">
+              <div className="p-4 md:p-6 space-y-3 text-center">
+                <h3 className="text-xl md:text-2xl font-bold text-navy">
                   Get Our Free Case Study
                 </h3>
                 <p className="text-sm text-navy/80 leading-relaxed">
                   Discover how we helped a MedTech company avoid a 7-figure launch misfire and align their teams with data-driven strategy.
                 </p>
                 
-                <form onSubmit={handleSubmit} className="space-y-4 pt-2">
-                  <Input
-                    type="text"
-                    placeholder="Your Name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    className="h-12 text-base"
-                    required
+                {/* GHL Form */}
+                <div className="w-full min-h-[350px] rounded-lg overflow-hidden">
+                  <iframe
+                    src="https://link.anchorframe.com/widget/form/RSwk9c8PsfVO57gzIn2m"
+                    style={{ width: "100%", height: "350px", border: "none", borderRadius: "8px" }}
+                    id="popup-case-study-RSwk9c8PsfVO57gzIn2m" 
+                    data-layout="{'id':'INLINE'}"
+                    data-trigger-type="alwaysShow"
+                    data-trigger-value=""
+                    data-activation-type="alwaysActivated"
+                    data-activation-value=""
+                    data-deactivation-type="neverDeactivate"
+                    data-deactivation-value=""
+                    data-form-name="Case Study Popup"
+                    data-height="350"
+                    data-layout-iframe-id="popup-case-study-RSwk9c8PsfVO57gzIn2m"
+                    data-form-id="RSwk9c8PsfVO57gzIn2m"
+                    title="Case Study Popup"
                   />
-                  <Input
-                    type="email"
-                    placeholder="Email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="h-12 text-base"
-                    required
-                  />
-                  <div className="flex flex-col items-center gap-2">
-                    <Button
-                      type="submit"
-                      size="lg"
-                      disabled={isSubmitting}
-                      className="w-full shine-effect bg-primary hover:bg-primary/90 text-lg md:text-xl px-8 py-6 h-auto"
-                    >
-                      {isSubmitting ? "Submitting..." : "Get the Free EPD Case Study"}
-                    </Button>
-                    <button
-                      type="button"
-                      onClick={handleDismiss}
-                      className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      Maybe Later
-                    </button>
-                  </div>
-                </form>
+                </div>
+                
+                <button
+                  type="button"
+                  onClick={handleDismiss}
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Maybe Later
+                </button>
               </div>
             </motion.div>
           </div>
