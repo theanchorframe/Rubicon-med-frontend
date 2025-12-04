@@ -64,9 +64,9 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
               <Button 
                 size="lg" 
                 onClick={onOpenConsultation}
-                className="text-lg md:text-xl px-8 py-6 bg-primary hover:bg-primary/90"
+                className="text-base sm:text-lg md:text-xl lg:text-2xl px-6 sm:px-8 py-5 sm:py-6 bg-primary hover:bg-primary/90 whitespace-normal h-auto"
               >
-                Click This Button to Request a Free Consultation
+                Click This Button to Request<br />a Free Consultation
               </Button>
             </motion.div>
           </div>
