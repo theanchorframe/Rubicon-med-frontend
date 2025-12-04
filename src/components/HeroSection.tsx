@@ -27,7 +27,7 @@ const HeroSection = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="font-semibold text-sm sm:text-base tracking-wide uppercase"
+              className="font-bold text-sm sm:text-base tracking-wide uppercase"
               style={{ color: '#4FC3F7' }}
             >
               When your next MedTech bet cannot be a guess
