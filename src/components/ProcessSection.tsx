@@ -245,91 +245,106 @@ const ProcessSection = () => {
               </p>
             </div>
 
-            {/* IDEA Buttons */}
-            <div className="flex gap-4 justify-center flex-wrap">
-              {(["I", "D", "E", "A"] as const).map((letter) => (
-                <button
-                  key={letter}
-                  onClick={() => setActiveIdea(letter)}
-                  className={`glass-card px-8 py-6 min-w-[100px] transition-all duration-300 hover:scale-105 ${
-                    activeIdea === letter
-                      ? "bg-primary/20 border-primary/40 shadow-lg"
-                      : "hover:bg-primary/10"
-                  }`}
-                >
-                  <span className={`text-4xl font-bold ${activeIdea === letter ? "text-primary" : "text-primary/60"}`}>
-                    {letter}
-                  </span>
-                </button>
-              ))}
-            </div>
-
-            {/* Content Area */}
-            <div className="max-w-[900px] mx-auto">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={activeIdea}
-                  initial={{ opacity: 0, y: 15 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -15 }}
-                  transition={{ duration: 0.25 }}
-                  className="bg-secondary/50 rounded-xl p-6 md:p-10 space-y-6"
-                >
-                  {/* Title and Subtitle */}
-                  <div className="space-y-1">
-                    <h3 className="text-2xl md:text-3xl font-bold text-foreground">
-                      {ideaContent[activeIdea].title}
-                    </h3>
-                    <p className="text-muted-foreground font-light text-lg">
-                      {ideaContent[activeIdea].subtitle}
-                    </p>
-                  </div>
-
-                  {/* Summary */}
-                  <p className="text-lg md:text-xl text-foreground leading-relaxed border-l-4 border-primary pl-4">
-                    {ideaContent[activeIdea].summary}
-                  </p>
-
-                  {/* Sections with bullets */}
-                  <div className="space-y-6">
-                    {ideaContent[activeIdea].sections.map((section, sectionIndex) => (
-                      <div key={sectionIndex} className="space-y-3">
-                        {section.label && (
-                          <h4 className="text-sm font-semibold text-primary uppercase tracking-wide">
-                            {section.label}
-                          </h4>
-                        )}
-                        <ul className="space-y-2">
-                          {section.bullets.map((bullet, bulletIndex) => (
-                            <li
-                              key={bulletIndex}
-                              className="flex gap-3 text-foreground/90 leading-relaxed"
-                            >
-                              <span className="text-primary mt-1.5 flex-shrink-0">•</span>
-                              <span>{bullet}</span>
-                            </li>
-                          ))}
-                        </ul>
-                        {section.deliverable && (
-                          <p className="text-sm text-muted-foreground italic pl-4 border-l-2 border-muted">
-                            <span className="font-semibold not-italic">Deliverable:</span> {section.deliverable}
-                          </p>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Main Deliverable */}
-                  {ideaContent[activeIdea].deliverable && (
-                    <div className="pt-4 border-t border-border">
-                      <p className="text-foreground">
-                        <span className="font-bold text-primary">Deliverable:</span>{" "}
-                        {ideaContent[activeIdea].deliverable}
-                      </p>
+            {/* IDEA Accordion */}
+            <div className="max-w-3xl mx-auto flex flex-col gap-4">
+              {(["I", "D", "E", "A"] as const).map((letter, index) => (
+                <div key={letter} className="flex flex-col items-start w-full">
+                  <div
+                    className={`flex items-center justify-between w-full cursor-pointer bg-secondary border border-border p-4 md:p-5 rounded-lg hover:bg-secondary/80 transition-colors ${
+                      activeIdea === letter ? "bg-primary/10 border-primary/40" : ""
+                    }`}
+                    onClick={() => setActiveIdea(activeIdea === letter ? letter : letter)}
+                    onMouseEnter={() => setActiveIdea(letter)}
+                  >
+                    <div className="flex items-center gap-4">
+                      <span className={`text-3xl md:text-4xl font-bold ${activeIdea === letter ? "text-primary" : "text-primary/60"} transition-colors duration-300`}>
+                        {letter}
+                      </span>
+                      <span className="text-sm md:text-base font-medium text-foreground">
+                        {letter === "I" && "– Immerse in your reality"}
+                        {letter === "D" && "– Design the strategy"}
+                        {letter === "E" && "– Execute the evidence plan"}
+                        {letter === "A" && "– Advise on the decision"}
+                      </span>
                     </div>
-                  )}
-                </motion.div>
-              </AnimatePresence>
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className={`flex-shrink-0 ${activeIdea === letter ? "rotate-180" : ""} transition-all duration-500 ease-in-out`}
+                    >
+                      <path
+                        d="m4.5 7.2 3.793 3.793a1 1 0 0 0 1.414 0L13.5 7.2"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="text-foreground"
+                      />
+                    </svg>
+                  </div>
+                  <div
+                    className={`w-full text-sm md:text-base text-muted-foreground px-4 transition-all duration-500 ease-in-out overflow-hidden ${
+                      activeIdea === letter
+                        ? "opacity-100 max-h-[1500px] translate-y-0 pt-4 pb-2"
+                        : "opacity-0 max-h-0 -translate-y-2"
+                    }`}
+                  >
+                    <div className="bg-secondary/50 rounded-xl p-4 md:p-6 space-y-4">
+                      {/* Subtitle */}
+                      <p className="text-muted-foreground font-light text-base">
+                        {ideaContent[letter].subtitle}
+                      </p>
+
+                      {/* Summary */}
+                      <p className="text-base md:text-lg text-foreground leading-relaxed border-l-4 border-primary pl-4">
+                        {ideaContent[letter].summary}
+                      </p>
+
+                      {/* Sections with bullets */}
+                      <div className="space-y-4">
+                        {ideaContent[letter].sections.map((section, sectionIndex) => (
+                          <div key={sectionIndex} className="space-y-2">
+                            {section.label && (
+                              <h4 className="text-sm font-semibold text-primary uppercase tracking-wide">
+                                {section.label}
+                              </h4>
+                            )}
+                            <ul className="space-y-2">
+                              {section.bullets.map((bullet, bulletIndex) => (
+                                <li
+                                  key={bulletIndex}
+                                  className="flex gap-3 text-foreground/90 leading-relaxed text-sm md:text-base"
+                                >
+                                  <span className="text-primary mt-1 flex-shrink-0">•</span>
+                                  <span>{bullet}</span>
+                                </li>
+                              ))}
+                            </ul>
+                            {section.deliverable && (
+                              <p className="text-sm text-muted-foreground italic pl-4 border-l-2 border-muted">
+                                <span className="font-semibold not-italic">Deliverable:</span> {section.deliverable}
+                              </p>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+
+                      {/* Main Deliverable */}
+                      {ideaContent[letter].deliverable && (
+                        <div className="pt-4 border-t border-border">
+                          <p className="text-foreground text-sm md:text-base">
+                            <span className="font-bold text-primary">Deliverable:</span>{" "}
+                            {ideaContent[letter].deliverable}
+                          </p>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </motion.div>
         </motion.div>
