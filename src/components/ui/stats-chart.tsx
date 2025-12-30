@@ -23,9 +23,6 @@ export default function StatsChart() {
 
   const stats = [
     { value: "$5M", label: "NRE Funding" },
-    { value: "Accelerated", label: "Time to Market" },
-    { value: "97%+", label: "Clinical Success" },
-    { value: "3x", label: "ROI Projected" },
   ];
 
   return (
