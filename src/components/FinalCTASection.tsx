@@ -33,7 +33,7 @@ const FinalCTASection = ({ onOpenConsultationDialog }: FinalCTASectionProps) => 
                 onClick={onOpenConsultationDialog}
                 className="shine-effect text-lg sm:text-xl px-6 sm:px-12 py-6 sm:py-8 h-auto bg-primary hover:bg-primary/90 whitespace-normal text-center leading-tight max-w-full"
               >
-                Schedule a FREE Consultation Call
+                Schedule a Complimentary Consultation Call
               </Button>
             </motion.div>
             <motion.div
