@@ -1,11 +1,15 @@
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
+import { CaretLeft, CaretRight, X } from "@phosphor-icons/react";
 
 interface ServicesSectionProps {
   onOpenConsultationDialog: () => void;
 }
 
 const ServicesSection = ({ onOpenConsultationDialog }: ServicesSectionProps) => {
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+
   const services = [
     {
       title: "Product Evaluation & Concept Vetting",
@@ -39,6 +43,24 @@ const ServicesSection = ({ onOpenConsultationDialog }: ServicesSectionProps) => 
     },
   ];
 
+  const handlePrevious = () => {
+    if (selectedIndex !== null) {
+      setSelectedIndex(selectedIndex === 0 ? services.length - 1 : selectedIndex - 1);
+    }
+  };
+
+  const handleNext = () => {
+    if (selectedIndex !== null) {
+      setSelectedIndex(selectedIndex === services.length - 1 ? 0 : selectedIndex + 1);
+    }
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "ArrowLeft") handlePrevious();
+    if (e.key === "ArrowRight") handleNext();
+    if (e.key === "Escape") setSelectedIndex(null);
+  };
+
   return (
     <section id="services" className="py-20 bg-background scroll-mt-20">
       <div className="container mx-auto px-4">
@@ -65,6 +87,7 @@ const ServicesSection = ({ onOpenConsultationDialog }: ServicesSectionProps) => 
                 boxShadow: "0 20px 40px -12px rgba(0, 0, 0, 0.15)",
                 borderColor: "hsl(var(--primary))"
               }}
+              onClick={() => setSelectedIndex(index)}
               className="glass-card p-6 md:p-8 space-y-4 border-2 border-navy/40 dark:border-navy/60 shadow-md transition-all duration-300 cursor-pointer group"
             >
               <h3 className="text-2xl font-bold text-navy group-hover:text-primary transition-colors duration-300">{service.title}</h3>
@@ -90,6 +113,95 @@ const ServicesSection = ({ onOpenConsultationDialog }: ServicesSectionProps) => 
           </Button>
         </motion.div>
       </div>
+
+      {/* Service Popup Modal */}
+      <AnimatePresence>
+        {selectedIndex !== null && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4"
+            onClick={() => setSelectedIndex(null)}
+            onKeyDown={handleKeyDown}
+            tabIndex={0}
+          >
+            {/* Previous Arrow */}
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                handlePrevious();
+              }}
+              className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 p-3 rounded-full bg-background/90 hover:bg-background text-foreground shadow-lg transition-all duration-300 hover:scale-110 z-10"
+              aria-label="Previous service"
+            >
+              <CaretLeft size={28} weight="bold" />
+            </button>
+
+            {/* Content Card */}
+            <motion.div
+              key={selectedIndex}
+              initial={{ opacity: 0, scale: 0.9, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.9, y: 20 }}
+              transition={{ duration: 0.3 }}
+              onClick={(e) => e.stopPropagation()}
+              className="relative bg-background border-2 border-primary/30 rounded-2xl p-8 md:p-12 max-w-3xl w-full mx-12 shadow-2xl max-h-[80vh] overflow-y-auto"
+            >
+              {/* Close Button */}
+              <button
+                onClick={() => setSelectedIndex(null)}
+                className="absolute top-4 right-4 p-2 rounded-full hover:bg-secondary transition-colors duration-200"
+                aria-label="Close popup"
+              >
+                <X size={24} className="text-foreground" />
+              </button>
+
+              {/* Service Counter */}
+              <p className="text-sm text-muted-foreground mb-4">
+                {selectedIndex + 1} of {services.length}
+              </p>
+
+              {/* Service Content */}
+              <h3 className="text-3xl md:text-4xl font-bold text-primary mb-6">
+                {services[selectedIndex].title}
+              </h3>
+              <p className="text-lg md:text-xl text-foreground leading-relaxed">
+                {services[selectedIndex].description}
+              </p>
+
+              {/* Navigation Dots */}
+              <div className="flex justify-center gap-2 mt-8">
+                {services.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setSelectedIndex(index)}
+                    className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                      index === selectedIndex
+                        ? "bg-primary w-6"
+                        : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
+                    }`}
+                    aria-label={`Go to service ${index + 1}`}
+                  />
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Next Arrow */}
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                handleNext();
+              }}
+              className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 p-3 rounded-full bg-background/90 hover:bg-background text-foreground shadow-lg transition-all duration-300 hover:scale-110 z-10"
+              aria-label="Next service"
+            >
+              <CaretRight size={28} weight="bold" />
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };
