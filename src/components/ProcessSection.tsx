@@ -323,9 +323,12 @@ const ProcessSection = () => {
                               ))}
                             </ul>
                             {section.deliverable && (
-                              <p className="text-sm text-muted-foreground italic pl-4 border-l-2 border-muted">
-                                <span className="font-semibold not-italic">Deliverable:</span> {section.deliverable}
-                              </p>
+                              <div className="pt-2 border-t border-border mt-2">
+                                <p className="text-foreground text-sm md:text-base">
+                                  <span className="font-bold text-primary">Deliverable:</span>{" "}
+                                  {section.deliverable}
+                                </p>
+                              </div>
                             )}
                           </div>
                         ))}
