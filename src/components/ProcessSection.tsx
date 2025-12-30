@@ -17,7 +17,7 @@ interface IdeaContent {
 }
 
 const ProcessSection = () => {
-  const [activeIdea, setActiveIdea] = useState<IdeaLetter>("I");
+  const [activeIdea, setActiveIdea] = useState<IdeaLetter | null>(null);
 
   const ideaContent: Record<IdeaLetter, IdeaContent> = {
     I: {
@@ -253,14 +253,13 @@ const ProcessSection = () => {
                     className={`flex items-center justify-between w-full cursor-pointer bg-secondary border border-border p-4 md:p-5 rounded-lg hover:bg-secondary/80 transition-colors ${
                       activeIdea === letter ? "bg-primary/10 border-primary/40" : ""
                     }`}
-                    onClick={() => setActiveIdea(activeIdea === letter ? letter : letter)}
-                    onMouseEnter={() => setActiveIdea(letter)}
+                    onClick={() => setActiveIdea(activeIdea === letter ? null : letter)}
                   >
                     <div className="flex items-center gap-4">
                       <span className={`text-3xl md:text-4xl font-bold ${activeIdea === letter ? "text-primary" : "text-primary/60"} transition-colors duration-300`}>
                         {letter}
                       </span>
-                      <span className="text-sm md:text-base font-medium text-foreground">
+                      <span className="text-lg md:text-xl font-semibold text-foreground">
                         {letter === "I" && "– Immerse in your reality"}
                         {letter === "D" && "– Design the strategy"}
                         {letter === "E" && "– Execute the evidence plan"}
