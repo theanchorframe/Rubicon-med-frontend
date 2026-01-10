@@ -60,10 +60,9 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
               className="text-lg sm:text-xl md:text-2xl leading-relaxed font-semibold max-w-3xl mx-auto"
               style={{ color: "rgba(255,255,255,0.8)" }}
             >
-              Rubicon offers both fractional and traditional consulting services. We synthesize primary and secondary
-              market research data with physician interviews and surveys and the medical literature to inform decisions
-              on which markets to pursue, in which technologies you should invest, and how and to whom you should
-              launch, with estimated annual revenue and CAGRs.
+              Rubicon offers fractional and traditional consulting. We synthesize market research, physician interviews,
+              and medical literature to guide decisions on which markets to pursue, technologies to invest in, and
+              launch strategies, including estimated annual revenue and CAGRs.
             </motion.p>
 
             <motion.div
@@ -77,7 +76,7 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
                 onClick={onOpenConsultation}
                 className="shine-effect text-xl sm:text-xl md:text-2xl lg:text-2xl px-6 sm:px-8 py-5 sm:py-6 bg-primary hover:bg-primary/90 whitespace-normal h-auto"
               >
-                Click This Button to Request
+                Request
                 <br />a Complimentary Consultation
               </Button>
 
