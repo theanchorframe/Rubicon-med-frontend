@@ -17,9 +17,9 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
     {
       image: launchStrategyImage,
       tagline: "DATA-DRIVEN, PHYSICIAN-READY",
-      title: "Avoid 7-Figure Launch Misfires With Upstream Strategy That Aligns Teams",
+      title: "Mitigate Seven-Figure Capital Risks through Upstream Strategy and Cross-Functional Synchronicity",
       description:
-        "Rob identifies misalignment early across research, positioning, and stakeholder input so that your product launches with clarity, confidence, and cross-functional buy-in.",
+        "Identify and mitigate investment risk in potential product licensing and acquisitions. We perform rigorous due diligence to isolate assets that lack market scalability due to technical limitations in geometry, sizing, or procedural compatibility. By triangulating these findings with KOL inquiries, we prevent the acquisition of products that cannot achieve critical mass in the clinical environment.",
       cta: "Request a Complimentary Consultation",
       overlayText:
         "From Clinical Evidence to Enterprise Partnership: How rigorous literature scanning and expert validation built the strategic foundation for a high-yield co-development project.",
@@ -27,9 +27,9 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
     {
       image: clinicalInsightImage,
       tagline: "CLINICALLY INFORMED. COMMERCIALLY PROVEN.",
-      title: "Turn Clinical Insight Into Strategy That Wins Market Share",
+      title: "Crystallize Clinical Intelligence into High-Yield Commercial Strategies that Capture and Defend Market Share",
       description:
-        "Rob blends KOL interviews, segmentation, and evidence-based messaging so products land with speed, proof, and precision.",
+        "We synchronize expert insights, segmentation, and targeted positioning to drive quick adoption. We translate clinical evidence into optimized messaging, ensuring your product enters the market with a defensible competitive advantage and clinical alignment.",
       cta: "Request a Complimentary Consultation",
       overlayText:
         "From KOL interviews and segmentation, Rob distills clinical insight into target segments, messaging, and claims that sales can use tomorrow to win faster and with proof.",
