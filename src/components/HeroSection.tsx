@@ -48,7 +48,7 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
                 <br />
                 budgets
               </span>{" "}
-              on gut feel or cool tech.
+              on gut feel.
               <br />
               Make MedTech moves backed by <span className="text-[1.1em]">data</span>.
             </motion.h1>
