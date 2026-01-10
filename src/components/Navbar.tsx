@@ -71,6 +71,12 @@ const Navbar = ({ onOpenConsultationDialog }: NavbarProps) => {
                 About
               </button>
               <button
+                onClick={() => scrollToSection("process")}
+                className="nav-link text-foreground hover:text-primary transition-colors font-medium text-base"
+              >
+                Process
+              </button>
+              <button
                 onClick={() => scrollToSection("services")}
                 className="nav-link text-foreground hover:text-primary transition-colors font-medium text-base"
               >
@@ -126,6 +132,12 @@ const Navbar = ({ onOpenConsultationDialog }: NavbarProps) => {
               className="nav-link block w-full text-left py-2 text-foreground hover:text-primary transition-colors font-medium text-base"
             >
               About
+            </button>
+            <button
+              onClick={() => scrollToSection("process")}
+              className="nav-link block w-full text-left py-2 text-foreground hover:text-primary transition-colors font-medium text-base"
+            >
+              Process
             </button>
             <button
               onClick={() => scrollToSection("services")}
