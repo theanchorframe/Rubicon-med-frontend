@@ -61,34 +61,14 @@ const ProcessSection = () => {
       summary: "Run the work, talk to the right people, and turn raw data into usable insight.",
       sections: [
         {
-          label: "Internal + Qualitative",
           bullets: [
-            "Conduct qualitative meetings with internal stakeholders, starting with the executive sponsor if needed.",
-            "Clarify roles, expectations, and where collaboration with Rob adds the most value.",
-            "Test for alignment across clinical, marketing, and commercial teammates and identify gaps.",
+            "Validate Project Roadmap with Larger Team, Obtain Feedback, and Conduct Gap Analysis",
+            "Leverage Data Analytics to Codify Market Segmentation, Competitive Landscape, Growth, and Growth Drivers",
+            "Synthesize Clinical Intelligence by Distilling Procedural Nuances and Comparative Evidence to inform Discussion Guides, Surveys, and Other Research Instruments",
+            "Develop Discussion Guides (with scoring when appropriate) and Orchestrate Expert in-depth interviews (IDIs) to Extract Deep Domain Insights for Product Development",
+            "Validate qualitative research by deploying Quantitative Research Methods on a Larger Sample to Mitigate Risk",
+            "Collaborate with larger team for product development, finance, and marketing alignment",
           ],
-          deliverable: "Concise summary of internal meetings for the executive sponsor, with proposed refinements to the plan.",
-        },
-        {
-          label: "Data, Environment, Competition",
-          bullets: [
-            "Collect and analyze quantitative marketing data to understand segmentation and growth.",
-            "Quantify growth using approaches such as CAGR and regression, then pressure-test results.",
-            "Perform environmental scanning to explain why product or category growth is rising or falling.",
-            "Build competitive dossiers that show how alternatives are positioned and perceived today.",
-          ],
-          deliverable: "Summary of analysis highlighting key trends, risks, and opportunities.",
-        },
-        {
-          label: "Market Research: Physicians and Stakeholders",
-          bullets: [
-            "Run qualitative IDIs with physicians to deeply understand procedures and real-world workflows.",
-            "Identify which product attributes matter at each step of the procedure and in which context.",
-            "Surface product strengths, weaknesses, and explanations for segmentation patterns.",
-            "Conduct IDIs with other external stakeholders where appropriate.",
-            "Design and execute quantitative market research (surveys, scoring of IDIs, and related tools) to validate and size what the qualitative work revealed.",
-          ],
-          deliverable: "Marketing research report with a clear recap of the quantitative findings and what they mean for strategy.",
         },
       ],
       deliverable: "",
@@ -120,6 +100,18 @@ const ProcessSection = () => {
           bullets: [
             "Business briefs for the investment team.",
             "An investment case, go-to-market strategy, and market or patient models that support board and leadership decisions.",
+          ],
+        },
+        {
+          label: "Roadmap Briefing and Report:",
+          bullets: [
+            "Executive Summary",
+            "Competitive Landscape",
+            "Draft product specifications and product SWOT analysis",
+            "Forecasted Market Shares, Revenue, Units, ASPs, Margin, and Growth",
+            "Risk mitigation planning with additional market research, advisory board development, etc.",
+            "Suggested Targeting, Positioning, Value Proposition, Positioning Statement, Messaging, and Go-to-Market strategies",
+            "Next Steps and Questions",
           ],
         },
       ],

@@ -23,7 +23,7 @@ const FAQSection = ({ onOpenConsultationDialog }: FAQSectionProps) => {
     {
       question: "Do you only work with U.S.-based companies?",
       answer:
-        "While I'm based in Long Island, New York, I've worked with teams across North America and Europe. As long as we're aligned on goals and communication, I can support clients remotely or on-site for critical milestones like meeting with physicians, prototyping, or requirement gathering.",
+        "Geographic location is not a barrier to execution. While headquartered on Long Island, we have a proven track record of supporting international clients through hybrid engagement models. We prioritize on-site mobilization for critical workstreams such as requirement gathering, prototyping, and expert panels, ensuring that distance never compromises the fidelity of the strategic roadmap.",
     },
     {
       question: "What's your process like?",

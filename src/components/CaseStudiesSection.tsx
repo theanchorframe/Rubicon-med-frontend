@@ -22,7 +22,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
         "Rob identifies misalignment early across research, positioning, and stakeholder input so that your product launches with clarity, confidence, and cross-functional buy-in.",
       cta: "Request a Complimentary Consultation",
       overlayText:
-        "Discover how a product went from Ideation to co-development launch.",
+        "From Clinical Evidence to Enterprise Partnership: How rigorous literature scanning and expert validation built the strategic foundation for a high-yield co-development project.",
     },
     {
       image: clinicalInsightImage,
