@@ -31,7 +31,7 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
               className="font-bold text-sm sm:text-base tracking-wide uppercase"
-              style={{ color: '#4FC3F7' }}
+              style={{ color: "#4FC3F7" }}
             >
               When your next MedTech bet cannot be a guess
             </motion.p>
@@ -42,7 +42,15 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
               transition={{ delay: 0.4 }}
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white"
             >
-              Stop betting <span className="text-[1.1em] underline decoration-[#0080FF]">R&D<br />budgets</span> on hunches.<br />Make MedTech moves backed by <span className="text-[1.1em]">real evidence</span>.
+              Stop betting{" "}
+              <span className="text-[1.1em] underline decoration-[#0080FF]">
+                R&D
+                <br />
+                budgets
+              </span>{" "}
+              on gut feel or cool tech.
+              <br />
+              Make MedTech moves backed by <span className="text-[1.1em]">data</span>.
             </motion.h1>
 
             <motion.p
@@ -50,9 +58,12 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
               className="text-lg sm:text-xl md:text-2xl leading-relaxed font-semibold max-w-3xl mx-auto"
-              style={{ color: 'rgba(255,255,255,0.8)' }}
+              style={{ color: "rgba(255,255,255,0.8)" }}
             >
-              Rubicon combines data, marketing research, and physician insight so you know which markets to pursue, which technologies to back, and how to grow without exploding SKU complexity.
+              Rubicon offers both fractional and traditional consulting services. We synthesize primary and secondary
+              market research data with physician interviews and surveys and the medical literature to inform decisions
+              on which markets to pursue, in which technologies you should invest, and how and to whom you should
+              launch, with estimated annual revenue and CAGRs.
             </motion.p>
 
             <motion.div
@@ -61,21 +72,20 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
               transition={{ delay: 0.8 }}
               className="pt-4 flex flex-col items-center gap-4"
             >
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 onClick={onOpenConsultation}
                 className="shine-effect text-xl sm:text-xl md:text-2xl lg:text-2xl px-6 sm:px-8 py-5 sm:py-6 bg-primary hover:bg-primary/90 whitespace-normal h-auto"
               >
-                Click This Button to Request<br />a Complimentary Consultation
+                Click This Button to Request
+                <br />a Complimentary Consultation
               </Button>
-              
+
               <div className="text-center max-w-md">
                 <p className="text-white/90 text-base sm:text-lg md:text-xl italic font-semibold">
                   "Rob's is a strong contributor with deep insights which have helped us greatly."
                 </p>
-                <p className="text-white/70 text-sm sm:text-base mt-1 font-semibold">
-                  — Rick Kirchner, R&D Executive
-                </p>
+                <p className="text-white/70 text-sm sm:text-base mt-1 font-semibold">— Rick Kirchner, R&D Executive</p>
               </div>
             </motion.div>
           </div>
