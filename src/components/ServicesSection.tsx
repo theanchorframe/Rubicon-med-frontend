@@ -14,32 +14,32 @@ const ServicesSection = ({ onOpenConsultationDialog }: ServicesSectionProps) => 
     {
       title: "Product Evaluation & Concept Vetting",
       description:
-        "Identify and stop costly misfires before they drain budget or delay your launch. Our proven evaluation process blends technical, clinical, and regulatory checks with market sizing and patient coverage analysis so you invest only in concept built to win.",
+        "Our proven framework integrates multidimensional technical, clinical, and regulatory due diligence with rigorous market modeling. We synthesize competitive intelligence and growth drivers to ensure capital is deployed only into assets with a validated path to market leadership.",
     },
     {
       title: "Clinical & Market Research",
       description:
-        "Turn complex data into market clarity. We combine KOL interviews, clinician panels, and secondary research across medical literature, industry reports, and databases to translate evidence into actionable strategies that guide confident product decisions.",
+        "Drive confident product investment through clinical and market triangulation. We leverage expert consultations and comprehensive database analytics to distill complex evidence into an actionable roadmap – eliminating market ambiguity and securing your path to entry.",
     },
     {
       title: "KOL & Voice-of-Customer Programs",
       description:
-        "Accelerate adoption by building clinical credibility. From identifying and contracting Key Opinion Leaders to running compliant interviews, panels, and field trials, we capture the voice of physicians and patients to shape messaging that resonates and drives uptake.",
+        "Accelerate market adoption through clinical advocacy and expert mobilization. We manage the full-lifecycle engagement of Key Opinion Leaders—from strategic identification and contracting to the execution of IDIs, surveys, field trials, and clinician panels. By synthesizing the 'Voice of Customer' into evidence-based messaging, we ensure your value proposition resonates with providers and drives accelerated uptake.",
     },
     {
       title: "Commercial Strategy & Launch",
       description:
-        "Turn insight into adoption at scale. We craft go-to-market playbooks, sales enablement, and messaging rooted in evidence so your launch not only hits targets, but sustains momentum long after market entry.",
+        "Turn insight into adoption at scale. We craft go-to-market strategies and playbooks, sales enablement, and messaging rooted in evidence so your launch not only hits targets, but sustains momentum long after market entry.",
     },
     {
       title: "Upstream Portfolio Strategy & Road mapping",
       description:
-        "Prioritize the right bets and align your teams. Through segmentation, positioning, and product roadmaps, we cut through internal noise and keep R&D, marketing, and sales focused on products with the highest clinical and commercial return.",
+        "Optimize resource allocation and cross-functional alignment. By defining rigorous segmentation, targeting, and positioning (STP) frameworks alongside multi-year product roadmaps, we isolate high-potential opportunities. This allows R&D, Marketing, and Sales to concentrate resources on assets with the highest ROI.",
     },
     {
       title: "Pricing, Forecasting & Financial Modeling",
       description:
-        "Build a revenue story that holds up under scrutiny. Our financial modeling—from competitive ASPs to contribution goals—gives leadership and investors a roadmap backed by defendable numbers, not guesswork.",
+        "Enable executive decision-making with rigorous financial modeling. We translate market dynamics and value-based pricing into accurate revenue projections that hold up under institutional scrutiny. Our models provide the clarity needed to synchronize AOP targets with actual clinical and commercial scalability.",
     },
   ];
 
