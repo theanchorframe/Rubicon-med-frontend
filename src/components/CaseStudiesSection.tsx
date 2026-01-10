@@ -20,7 +20,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
       title: "Avoid 7-Figure Launch Misfires With Upstream Strategy That Aligns Teams",
       description:
         "Rob identifies misalignment early across research, positioning, and stakeholder input so that your product launches with clarity, confidence, and cross-functional buy-in.",
-      cta: "Book Your Clarity Call Now",
+      cta: "Request a Complimentary Consultation",
       overlayText:
         "VoC and data modeling size real demand and barriers before you build. You drop low ROI bets and fund the moves with the strongest evidence.",
     },
@@ -30,7 +30,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
       title: "Turn Clinical Insight Into Strategy That Wins Market Share",
       description:
         "Rob blends KOL interviews, segmentation, and evidence-based messaging so products land with speed, proof, and precision.",
-      cta: "Align Product Decisions With Proof",
+      cta: "Request a Complimentary Consultation",
       overlayText:
         "From KOL interviews and segmentation, Rob distills clinical insight into target segments, messaging, and claims that sales can use tomorrow to win faster and with proof.",
     },
@@ -40,7 +40,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
       title: "De-Risk Every Product Bet With Proven Market Insight",
       description:
         "Robert applies data-driven segmentation and VoC analysis so that your roadmap reflects real market demand, not assumptions.",
-      cta: "Find the Blind Spots in Your Launch Plan",
+      cta: "Request a Complimentary Consultation",
       overlayText:
         "VoC and data modeling size real demand and barriers before you build. You drop low ROI bets and fund the moves with the strongest evidence.",
     },
@@ -50,7 +50,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
       title: "Align Teams Quickly with Patient and Clinician Roundtables",
       description:
         "Too many opinions, not enough evidence? Patient and clinician sessions deliver the ranked action plan you can execute this quarter.",
-      cta: "Schedule Your First Panel",
+      cta: "Request a Complimentary Consultation",
       overlayText:
         "Patient and clinician roundtables bring clarity fast. Rob facilitates sessions that surface unmet needs, rank priorities, and deliver actionable insights your team can implement immediately.",
     },
@@ -71,7 +71,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
             onClick={onOpenConsultationDialog}
             className="shine-effect text-lg sm:text-xl px-6 sm:px-12 py-6 sm:py-8 h-auto bg-primary hover:bg-primary/90 mb-8 whitespace-normal text-center leading-tight"
           >
-            Turn Your Launch Into the Next Case Study
+            Request a Complimentary Consultation
           </Button>
         </motion.div>
 

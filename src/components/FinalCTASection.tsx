@@ -28,7 +28,7 @@ const FinalCTASection = ({ onOpenConsultationDialog }: FinalCTASectionProps) => 
               onClick={onOpenConsultationDialog}
               className="shine-effect text-lg sm:text-xl px-6 sm:px-12 py-6 sm:py-8 h-auto bg-primary hover:bg-primary/90 whitespace-normal text-center leading-tight max-w-full"
             >
-              Schedule a Complimentary Consultation
+              Request a Complimentary Consultation
             </Button>
             <p className="text-base md:text-lg text-muted-foreground italic">
               No prep needed. Bring the decision you're stuck on.

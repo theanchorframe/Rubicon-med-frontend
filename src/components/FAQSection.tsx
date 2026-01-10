@@ -115,7 +115,7 @@ const FAQSection = ({ onOpenConsultationDialog }: FAQSectionProps) => {
             onClick={onOpenConsultationDialog}
             className="shine-effect text-lg sm:text-xl px-6 sm:px-12 py-6 sm:py-8 h-auto bg-primary hover:bg-primary/90 whitespace-normal text-center leading-tight"
           >
-            Align Product Decisions With Expert Clinical Opinion
+            Request a Complimentary Consultation
           </Button>
         </motion.div>
       </div>
