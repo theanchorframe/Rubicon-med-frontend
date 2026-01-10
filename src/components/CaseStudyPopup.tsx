@@ -80,7 +80,7 @@ const CaseStudyPopup = ({ onRequestCaseStudy }: CaseStudyPopupProps) => {
                   Get Our Complimentary Case Study
                 </h3>
                 <p className="text-base md:text-lg text-navy/80 leading-relaxed">
-                  Discover how we helped a MedTech company avoid a 7-figure launch misfire and align their teams with data-driven strategy.
+                  Discover how a product went from Ideation to co-development launch.
                 </p>
                 
                 {/* GHL Form */}

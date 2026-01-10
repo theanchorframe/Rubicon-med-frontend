@@ -130,18 +130,18 @@ const ProcessSection = () => {
   const statistics = [
     {
       icon: Users,
-      value: "25+",
-      label: "Engaged 25+ KOLs across specialties to validate needs and specifications across numerous product classes",
+      value: "100+",
+      label: "Engaged 100+ KOLs across specialties to validate needs and specifications across numerous product classes",
     },
     {
       icon: CheckCircle,
-      value: "$1.5M",
-      label: "Saved $1.5M by preventing purchase of a non-viable device",
+      value: "$2M+",
+      label: "Helped companies avoid at least $2 million in non-viable investment",
     },
     {
       icon: Clock,
-      value: "10+",
-      label: "Sized, segmented, and prioritized 10+ markets (TAM/SAM/SOM) to focus spend where revenue opportunity is highest",
+      value: "20+",
+      label: "Evaluated over 20 markets to focus spend where the highest revenue is attainable",
     },
   ];
 
@@ -204,7 +204,7 @@ const ProcessSection = () => {
                 viewport={{ once: true }}
                 className="text-lg text-foreground leading-relaxed"
               >
-                Rob is a medical marketing and strategy consultant who sits at the intersection of clinical insight and commercial reality. He has spent more than 25 years in medtech, pharma, and diagnostics, including leadership roles at Abbott, Medtronic, 3M, and Integer, helping teams decide which ideas are worth funding and which ones are not.
+                Rob is a medical marketing and strategy consultant who sits at the intersection of clinical insight and commercial reality. He has spent more than 25 years in medtech, pharma, and diagnostics, including management roles at Abbott, Medtronic, 3M, and Integer, helping teams decide which ideas are worth funding.
               </motion.p>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -213,7 +213,7 @@ const ProcessSection = () => {
                 viewport={{ once: true }}
                 className="text-lg text-foreground leading-relaxed"
               >
-                His work focuses on one thing: turning clinical promise into growth. Rob partners with CEOs and clinical leaders to clarify the real-world problem, pressure test the value story with KOLs, and build a business case that stands up to finance, procurement, and clinicians. He has engaged over 25 specialty KOLs, sized and prioritized more than 10 markets, supported 40 plus product and market initiatives, and helped clients avoid at least 1.5 million dollars in non-viable investment.
+                His work focuses on one thing: turning clinical promise into growth. Rob partners with Executives and clinical leaders to clarify real-world problems, collaborate with R&D, and bring innovative products to market. He has engaged over 100 KOLs, evaluated over 20 markets, supported 40+ product and marketing initiatives, and helped companies avoid at least $2 million in non-viable investment.
               </motion.p>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -239,10 +239,10 @@ const ProcessSection = () => {
             {/* IDEA Section Header */}
             <div className="text-center space-y-4">
               <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-                The <span className="text-primary text-[1.2em]">IDEA</span> Process: From Gut Feel to Evidence-Backed Strategy
+                The <span className="text-primary text-[1.2em]">IDEA</span> Process
               </h2>
               <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-                A four-stage framework that aligns executives, maps the landscape, runs the right research, and hands you board-ready decisions grounded in real market evidence.
+                Our four-stage framework ensures strategic consensus, landscape transparency, and data-driven discovery to provide board-ready outcomes grounded in market reality.
               </p>
             </div>
 
