@@ -229,11 +229,12 @@ const ProcessSection = () => {
 
           {/* IDEA Framework Section */}
           <motion.div
+            id="process"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
-            className="space-y-8"
+            className="space-y-8 scroll-mt-24"
           >
             {/* IDEA Section Header */}
             <div className="text-center space-y-4">
