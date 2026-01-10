@@ -37,7 +37,7 @@ const MobileBottomNav = ({ onOpenDialog }: MobileBottomNavProps) => {
               onClick={onOpenDialog}
               className="w-full shine-effect text-base px-6 py-3 h-auto bg-primary hover:bg-primary/90"
             >
-              Request a Consultation
+              Request a Complimentary Consultation
             </Button>
           </div>
         </motion.div>
