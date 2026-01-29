@@ -26,31 +26,13 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
           className="text-center space-y-6"
         >
           <div className="space-y-4">
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2 }}
-              className="font-bold text-sm sm:text-base tracking-wide uppercase"
-              style={{ color: "#4FC3F7" }}
-            >
-              When your next MedTech bet cannot be a guess
-            </motion.p>
-
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white"
             >
-              Stop betting{" "}
-              <span className="text-[1.1em] underline decoration-[#0080FF]">
-                R&D
-                <br />
-                budgets
-              </span>{" "}
-              on gut feel.
-              <br />
-              Make MedTech moves backed by <span className="text-[1.1em]">data</span>.
+              Fueling patient outcomes and corporate growth through rigorous data and clinical insight.
             </motion.h1>
 
             <motion.p
@@ -60,9 +42,7 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
               className="text-lg sm:text-xl md:text-2xl leading-relaxed font-semibold max-w-3xl mx-auto"
               style={{ color: "rgba(255,255,255,0.8)" }}
             >
-              Rubicon offers fractional and traditional consulting. We synthesize market research, physician interviews,
-              and medical literature to guide decisions on which markets to pursue, technologies to invest in, and
-              launch strategies, including estimated annual revenue and CAGRs.
+              Rubicon delivers fractional and traditional consulting fueled by clinical and market insights. We provide the strategic roadmap—from product development and market segmentation to revenue forecasting and launch execution.
             </motion.p>
 
             <motion.div
@@ -76,7 +56,7 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
                 onClick={onOpenConsultation}
                 className="shine-effect text-xl sm:text-xl md:text-2xl lg:text-2xl px-6 sm:px-8 py-5 sm:py-6 bg-primary hover:bg-primary/90 whitespace-normal h-auto"
               >
-                Request a Complimentary Consultation
+                Click this Button to Request a Complimentary Consultation
               </Button>
 
               <div className="text-center max-w-md">

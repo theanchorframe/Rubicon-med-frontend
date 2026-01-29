@@ -20,7 +20,7 @@ const StatsSection = ({ onOpenConsultationDialog }: StatsSectionProps) => {
       description: "Projects delivered across MedTech & Pharma",
     },
     {
-      number: "$1.5M",
+      number: "$2M",
       description: "Prevented in wasted product investment",
     },
   ];

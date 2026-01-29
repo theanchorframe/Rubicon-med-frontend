@@ -17,7 +17,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
     {
       image: launchStrategyImage,
       tagline: "DATA-DRIVEN, PHYSICIAN-READY",
-      title: "Mitigate Seven-Figure Capital Risks through Upstream Strategy and Cross-Functional Synchronicity",
+      title: "Validate product licensing and acquisitions",
       description:
         "Identify and mitigate investment risk in potential product licensing and acquisitions. We perform rigorous due diligence to isolate assets that lack market scalability due to technical limitations in geometry, sizing, or procedural compatibility. By triangulating these findings with KOL inquiries, we prevent the acquisition of products that cannot achieve critical mass in the clinical environment.",
       cta: "Request a Complimentary Consultation",
@@ -27,7 +27,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
     {
       image: clinicalInsightImage,
       tagline: "CLINICALLY INFORMED. COMMERCIALLY PROVEN.",
-      title: "Crystallize Clinical Intelligence into High-Yield Commercial Strategies that Capture and Defend Market Share",
+      title: "Commercial Growth from Clinical and Market Insight",
       description:
         "We synchronize expert insights, segmentation, and targeted positioning to drive quick adoption. We translate clinical evidence into optimized messaging, ensuring your product enters the market with a defensible competitive advantage and clinical alignment.",
       cta: "Request a Complimentary Consultation",
@@ -37,22 +37,12 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
     {
       image: deRiskImage,
       tagline: "BACKED BY 80+ PRODUCT and PROTYPE EVALUATIONS",
-      title: "De-Risk Every Product Bet With Proven Market Insight",
+      title: "New Product Risk Mitigation",
       description:
-        "Robert applies data-driven segmentation and VoC analysis so that your roadmap reflects real market demand, not assumptions.",
+        "We apply data-driven segmentation and VoC analysis so that your roadmap reflects true market demand.",
       cta: "Request a Complimentary Consultation",
       overlayText:
         "VoC and data modeling size real demand and barriers before you build. You drop low ROI bets and fund the moves with the strongest evidence.",
-    },
-    {
-      image: alignTeamsImage,
-      tagline: "CLINICIAN-LED, PATIENT-BACKED",
-      title: "Align Teams Quickly with Patient and Clinician Roundtables",
-      description:
-        "Too many opinions, not enough evidence? Patient and clinician sessions deliver the ranked action plan you can execute this quarter.",
-      cta: "Request a Complimentary Consultation",
-      overlayText:
-        "Patient and clinician roundtables bring clarity fast. Rob facilitates sessions that surface unmet needs, rank priorities, and deliver actionable insights your team can implement immediately.",
     },
   ];
 
