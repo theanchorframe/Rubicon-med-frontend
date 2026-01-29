@@ -11,14 +11,14 @@ const FAQSection = ({ onOpenConsultationDialog }: FAQSectionProps) => {
 
   const faqs = [
     {
-      question: "What types of companies do you typically work with?",
+      question: "With what types of companies do you typically work?",
       answer:
-        "I primarily work with medical device companies. This includes early-stage startups preparing for their first product launch as well as established global manufacturers looking to refine their commercial strategy. Whether you're entering the market or scaling an existing portfolio, I help teams find the clearest path forward and avoid costly missteps.",
+        "We partner with medical device and pharmaceutical organizations across the entire growth spectrum. Our expertise spans from guiding early-stage startups through their inaugural product launches to supporting established global manufacturers in product development and strategic licensing or acquisitions.",
     },
     {
       question: "What's your experience with launch planning and execution?",
       answer:
-        "I've led or supported over 40 medical projects across product categories including vascular intervention, multiple pharmaceuticals, and diagnostics. I concentrate on the front end: defining the problem, selecting the right opportunities, and building the evidence story that unlocks adoption at launch.",
+        "With a legacy of orchestrating 40+ high-stakes launches across vascular intervention, pharmaceuticals, and diagnostics, Rob specializes in the critical 'Front-End of Innovation.' By applying a comprehensive launch framework, we identify high-value opportunities and architect the clinical evidence stories that drive adoption. We don't just plan; we equip and train your launch teams to ensure a seamless, high-ROI transition from R&D to global commercialization.",
     },
     {
       question: "Do you only work with U.S.-based companies?",
@@ -28,12 +28,12 @@ const FAQSection = ({ onOpenConsultationDialog }: FAQSectionProps) => {
     {
       question: "What's your process like?",
       answer:
-        "Every engagement starts with a discovery phase to understand your goals, team structure, timelines, and where friction may be slowing you down. From there, I deliver a formal Statement of Work that defines a tailored scope, priorities, and milestones, along with a short set of upstream recommendations shaped in discovery for your team. I stay focused on speed, fit, and return on investment.",
+        "Every engagement begins with a deep-dive into your real-world environment and project constraints. To guide the IDEA process, we deliver a Statement of Understanding and a Statement of Work—a clear-eyed blueprint that transforms high-level goals into a validated, executable plan for your device.",
     },
     {
       question: "How do we know this investment will pay off?",
       answer:
-        "My work has helped clients avoid $10M+ in wasted spend and reduce time-to-launch by 30% or more. If you're making decisions that affect regulatory risk, market share, or product adoption, the cost of misalignment is far greater than the cost of getting it right.",
+        "Our work has helped companies avoid $2M+ in wasted spend and helped bring >$10M in new product revenue. While innovation inherently carries uncertainty, our risk-mitigation frameworks provide the clinical and commercial confidence necessary for a successful launch.",
     },
   ];
 

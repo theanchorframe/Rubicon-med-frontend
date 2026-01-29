@@ -21,9 +21,9 @@ const ProcessSection = () => {
 
   const ideaContent: Record<IdeaLetter, IdeaContent> = {
     I: {
-      title: "I – Immerse in your reality",
-      subtitle: "(Initial Meeting / Discovery)",
-      summary: "Start with the world you actually operate in, not a generic template.",
+      title: "Immersion and Inquiry",
+      subtitle: "(Initial Meeting)",
+      summary: "Project Objective(s)",
       sections: [
         {
           bullets: [
@@ -36,10 +36,10 @@ const ProcessSection = () => {
           ],
         },
       ],
-      deliverable: "A clear initial picture of your real-world environment, goals, constraints, and working hypotheses to guide the rest of the IDEA process.",
+      deliverable: "Every engagement begins with a deep-dive into your real-world environment and project constraints. To guide the IDEA process, we deliver a Statement of Understanding and a Statement of Work—a clear-eyed blueprint that transforms high-level goals into a validated, executable plan for your product.",
     },
     D: {
-      title: "D – Design the strategy",
+      title: "Delineate Project Roadmap",
       subtitle: "(Define Plan and Strategy)",
       summary: "Define exactly what we will learn, where, when, and how.",
       sections: [
@@ -56,8 +56,8 @@ const ProcessSection = () => {
       deliverable: "A reviewed and finalized plan with the executive sponsor and core team that spells out what we need to know and how we will learn it.",
     },
     E: {
-      title: "E – Execute the evidence plan",
-      subtitle: "(Execute Plan: internal, external, and quantitative work)",
+      title: "Engage Full Team for Plan Execution",
+      subtitle: "(Team Kickoff)",
       summary: "Run the work, talk to the right people, and turn raw data into usable insight.",
       sections: [
         {
@@ -74,8 +74,8 @@ const ProcessSection = () => {
       deliverable: "",
     },
     A: {
-      title: "A – Advise on the decision",
-      subtitle: "(Advise / Concept, Targeting, Positioning, and Messaging)",
+      title: "Alignment and Action Plans",
+      subtitle: "(Next Steps)",
       summary: "Turn evidence into a concrete product, market, and messaging plan your team can act on.",
       sections: [
         {
@@ -196,7 +196,7 @@ const ProcessSection = () => {
                 viewport={{ once: true }}
                 className="text-lg text-foreground leading-relaxed"
               >
-                Rob is a medical marketing and strategy consultant who sits at the intersection of clinical insight and commercial reality. He has spent more than 25 years in medtech, pharma, and diagnostics, including management roles at Abbott, Medtronic, 3M, and Integer, helping teams decide which ideas are worth funding.
+                Rob turns clinical promise into commercial growth. With over 25 years of leadership at Abbott, Medtronic, Integer, and 3M, he helps teams validate high-stakes investments, develop products, and turn medical innovation into market growth.
               </motion.p>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -205,16 +205,7 @@ const ProcessSection = () => {
                 viewport={{ once: true }}
                 className="text-lg text-foreground leading-relaxed"
               >
-                His work focuses on one thing: turning clinical promise into growth. Rob partners with Executives and clinical leaders to clarify real-world problems, collaborate with R&D, and bring innovative products to market. He has engaged over 100 KOLs, evaluated over 20 markets, supported 40+ product and marketing initiatives, and helped companies avoid at least $2 million in non-viable investment.
-              </motion.p>
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                viewport={{ once: true }}
-                className="text-lg text-foreground leading-relaxed"
-              >
-                When the stakes are high and missteps are expensive, Rob gives teams a clear path from idea to launch so they can commit resources with confidence.
+                With expertise spanning 20+ markets and 100+ KOL engagements, Rob specializes in identifying high-growth opportunities. His strategic guidance ensures funding goes to the right ideas for commercial growth and risk mitigation.
               </motion.p>
             </div>
           </div>
@@ -253,10 +244,10 @@ const ProcessSection = () => {
                         {letter}
                       </span>
                       <span className="text-lg md:text-xl font-semibold text-foreground">
-                        {letter === "I" && "– Immerse in your reality"}
-                        {letter === "D" && "– Design the strategy"}
-                        {letter === "E" && "– Execute the evidence plan"}
-                        {letter === "A" && "– Advise on the decision"}
+                        {letter === "I" && "– Immersion and Inquiry"}
+                        {letter === "D" && "– Delineate Project Roadmap"}
+                        {letter === "E" && "– Engage Full Team for Plan Execution"}
+                        {letter === "A" && "– Alignment and Action Plans"}
                       </span>
                     </div>
                     <svg
