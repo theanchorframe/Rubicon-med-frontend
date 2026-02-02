@@ -56,7 +56,7 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
                 onClick={onOpenConsultation}
                 className="shine-effect text-xl sm:text-xl md:text-2xl lg:text-2xl px-6 sm:px-8 py-5 sm:py-6 bg-primary hover:bg-primary/90 whitespace-normal h-auto"
               >
-                Click this Button to Request a Complimentary Consultation
+                Request a Complimentary Consultation
               </Button>
 
               <div className="text-center max-w-md">
