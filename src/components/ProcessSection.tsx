@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { Users, CheckCircle, Clock } from "@phosphor-icons/react";
 import { useState } from "react";
+import robHeadshot from "@/assets/rob-miraglia-headshot.webp";
 
 type IdeaLetter = "I" | "D" | "E" | "A";
 
@@ -207,6 +208,19 @@ const ProcessSection = () => {
               >
                 With expertise spanning 20+ markets and 100+ KOL engagements, Rob specializes in identifying high-growth opportunities. His strategic guidance ensures funding goes to the right ideas for commercial growth and risk mitigation.
               </motion.p>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                viewport={{ once: true }}
+                className="flex justify-center pt-4"
+              >
+                <img 
+                  src={robHeadshot} 
+                  alt="Rob Miraglia" 
+                  className="w-64 h-auto rounded-lg shadow-lg"
+                />
+              </motion.div>
             </div>
           </div>
 
