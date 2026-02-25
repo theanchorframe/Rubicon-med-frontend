@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Users, CheckCircle, Clock } from "@phosphor-icons/react";
 import { useState } from "react";
 import robHeadshot from "@/assets/rob-miraglia-headshot.webp";
+import { useMounted } from "@/hooks/useMounted";
 
 type IdeaLetter = "I" | "D" | "E" | "A";
 
@@ -19,6 +20,7 @@ interface IdeaContent {
 
 const ProcessSection = () => {
   const [activeIdea, setActiveIdea] = useState<IdeaLetter | null>(null);
+  const mounted = useMounted();
 
   const ideaContent: Record<IdeaLetter, IdeaContent> = {
     I: {
@@ -142,7 +144,7 @@ const ProcessSection = () => {
     <section id="about" className="py-20 bg-background relative overflow-hidden scroll-mt-20">
       <div className="mx-auto px-5">
         <motion.div
-          initial={false}
+          initial={mounted ? { opacity: 0, y: 20 } : false}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
@@ -153,7 +155,7 @@ const ProcessSection = () => {
             {/* Left Column - Statistics */}
             <div className="space-y-6">
               <motion.h2
-                initial={false}
+                initial={mounted ? { opacity: 0, y: 20 } : false}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
@@ -165,7 +167,7 @@ const ProcessSection = () => {
                 {statistics.map((stat, index) => (
                   <motion.div
                     key={index}
-                    initial={false}
+                    initial={mounted ? { opacity: 0, y: 20 } : false}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
                     viewport={{ once: true }}
@@ -182,7 +184,7 @@ const ProcessSection = () => {
             {/* Right Column - Bio Content */}
             <div className="space-y-6">
               <motion.h2
-                initial={false}
+                initial={mounted ? { opacity: 0, y: 20 } : false}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
@@ -191,7 +193,7 @@ const ProcessSection = () => {
                 <span className="text-primary">Rob Miraglia</span>: Your Partner in MedTech Growth.
               </motion.h2>
               <motion.p
-                initial={false}
+                initial={mounted ? { opacity: 0, y: 20 } : false}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
                 viewport={{ once: true }}
@@ -200,7 +202,7 @@ const ProcessSection = () => {
                 Rob turns clinical promise into commercial growth. With over 25 years of leadership at Abbott, Medtronic, Integer, and 3M, he helps teams validate high-stakes investments, develop products, and turn medical innovation into market growth.
               </motion.p>
               <motion.p
-                initial={false}
+                initial={mounted ? { opacity: 0, y: 20 } : false}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
                 viewport={{ once: true }}
@@ -209,7 +211,7 @@ const ProcessSection = () => {
                 With expertise spanning 20+ markets and 100+ KOL engagements, Rob specializes in identifying high-growth opportunities. His strategic guidance ensures funding goes to the right ideas for commercial growth and risk mitigation.
               </motion.p>
               <motion.div
-                initial={false}
+                initial={mounted ? { opacity: 0, y: 20 } : false}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
                 viewport={{ once: true }}
@@ -227,7 +229,7 @@ const ProcessSection = () => {
           {/* IDEA Framework Section */}
           <motion.div
             id="process"
-            initial={false}
+            initial={mounted ? { opacity: 0, y: 30 } : false}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}

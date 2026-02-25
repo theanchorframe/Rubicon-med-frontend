@@ -1,11 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { useMounted } from "@/hooks/useMounted";
 
 interface StatsSectionProps {
   onOpenConsultationDialog: () => void;
 }
 
 const StatsSection = ({ onOpenConsultationDialog }: StatsSectionProps) => {
+  const mounted = useMounted();
   const stats = [
     {
       number: "$30M",
@@ -29,7 +31,7 @@ const StatsSection = ({ onOpenConsultationDialog }: StatsSectionProps) => {
     <section className="py-20 bg-navy text-navy-foreground">
       <div className="container mx-auto px-4">
         <motion.h2
-          initial={false}
+          initial={mounted ? { opacity: 0, y: 20 } : false}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
@@ -41,7 +43,7 @@ const StatsSection = ({ onOpenConsultationDialog }: StatsSectionProps) => {
           {stats.map((stat, index) => (
             <motion.div
               key={index}
-              initial={false}
+              initial={mounted ? { opacity: 0, scale: 0.8 } : false}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
@@ -53,7 +55,7 @@ const StatsSection = ({ onOpenConsultationDialog }: StatsSectionProps) => {
           ))}
         </div>
         <motion.div
-          initial={false}
+          initial={mounted ? { opacity: 0, y: 20 } : false}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}

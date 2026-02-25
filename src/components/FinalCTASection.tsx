@@ -1,17 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { useMounted } from "@/hooks/useMounted";
 
 interface FinalCTASectionProps {
   onOpenConsultationDialog: () => void;
 }
 
 const FinalCTASection = ({ onOpenConsultationDialog }: FinalCTASectionProps) => {
+  const mounted = useMounted();
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={false}
+            initial={mounted ? { opacity: 0, y: 30 } : false}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}

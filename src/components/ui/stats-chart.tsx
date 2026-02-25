@@ -8,9 +8,11 @@ import {
 import CountUp from "react-countup";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useMounted } from "@/hooks/useMounted";
 
 export default function StatsChart() {
   const [isInView, setIsInView] = useState(false);
+  const mounted = useMounted();
   
   const data = [
     { month: "Q1", value: 0 },
@@ -28,7 +30,7 @@ export default function StatsChart() {
   return (
     <>
       <motion.div 
-        initial={false}
+        initial={mounted ? { opacity: 0, scale: 0.9 } : false}
         whileInView={{ opacity: 1, scale: 1 }}
         onViewportEnter={() => setIsInView(true)}
         transition={{ duration: 0.6, ease: "easeOut" }}
@@ -56,7 +58,7 @@ export default function StatsChart() {
 
         {/* Overlay Hero Number */}
         <motion.div 
-          initial={false}
+          initial={mounted ? { opacity: 0, y: 20 } : false}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.3 }}
           className="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none"
@@ -70,7 +72,7 @@ export default function StatsChart() {
 
         {/* Side Stats - Desktop */}
         <motion.div 
-          initial={false}
+          initial={mounted ? { opacity: 0, x: 20 } : false}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.5 }}
           className="absolute right-4 top-4 bg-card/95 backdrop-blur-sm rounded-xl shadow-lg p-4 flex flex-col gap-4 border border-primary/20"
@@ -78,7 +80,7 @@ export default function StatsChart() {
           {stats.map((stat, idx) => (
             <motion.div 
               key={idx}
-              initial={false}
+              initial={mounted ? { opacity: 0, x: 10 } : false}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.4, delay: 0.6 + idx * 0.1 }}
             >
@@ -92,7 +94,7 @@ export default function StatsChart() {
       {/* Mobile View */}
       <div className="md:hidden space-y-5">
         <motion.div 
-          initial={false}
+          initial={mounted ? { opacity: 0, scale: 0.9 } : false}
           whileInView={{ opacity: 1, scale: 1 }}
           onViewportEnter={() => setIsInView(true)}
           transition={{ duration: 0.6, ease: "easeOut" }}
@@ -118,7 +120,7 @@ export default function StatsChart() {
           </ResponsiveContainer>
 
           <motion.div 
-            initial={false}
+            initial={mounted ? { opacity: 0, y: 20 } : false}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.3 }}
             className="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none"
@@ -133,7 +135,7 @@ export default function StatsChart() {
 
         {/* Mobile Stats - Below Chart */}
         <motion.div 
-          initial={false}
+          initial={mounted ? { opacity: 0, y: 20 } : false}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
@@ -142,7 +144,7 @@ export default function StatsChart() {
           {stats.map((stat, idx) => (
             <motion.div 
               key={idx}
-              initial={false}
+              initial={mounted ? { opacity: 0, scale: 0.9 } : false}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4, delay: 0.4 + idx * 0.1 }}
               viewport={{ once: true }}
