@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useMounted } from "@/hooks/useMounted";
 
 interface FAQSectionProps {
   onOpenConsultationDialog: () => void;
@@ -8,6 +9,7 @@ interface FAQSectionProps {
 
 const FAQSection = ({ onOpenConsultationDialog }: FAQSectionProps) => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const mounted = useMounted();
 
   const faqs = [
     {
@@ -41,7 +43,7 @@ const FAQSection = ({ onOpenConsultationDialog }: FAQSectionProps) => {
     <section id="faq" className="py-24 md:py-32 bg-background scroll-mt-20">
       <div className="container mx-auto px-4">
         <motion.div
-          initial={false}
+          initial={mounted ? { opacity: 0, y: 20 } : false}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
@@ -57,7 +59,7 @@ const FAQSection = ({ onOpenConsultationDialog }: FAQSectionProps) => {
         </motion.div>
 
         <motion.div
-          initial={false}
+          initial={mounted ? { opacity: 0, y: 30 } : false}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
@@ -104,7 +106,7 @@ const FAQSection = ({ onOpenConsultationDialog }: FAQSectionProps) => {
         </motion.div>
 
         <motion.div
-          initial={false}
+          initial={mounted ? { opacity: 0, y: 20 } : false}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}

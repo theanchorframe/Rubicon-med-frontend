@@ -1,43 +1,54 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import heroVascularBg from "@/assets/hero-cardiac-catheterization.webp";
+import { useMounted } from "@/hooks/useMounted";
 
 interface HeroSectionProps {
   onOpenConsultation: () => void;
 }
 
 const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
+  const mounted = useMounted();
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with 85% opacity */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-75"
         style={{ backgroundImage: `url(${heroVascularBg})` }}
       ></div>
-      {/* Navy overlay for better text readability */}
       <div className="absolute inset-0 bg-navy/30"></div>
 
-      {/* Content */}
       <div className="relative z-10 container mx-auto px-6 pt-32 pb-20 max-w-6xl">
         <motion.div
-          initial={false}
+          initial={mounted ? { opacity: 0, y: 20 } : false}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center space-y-6"
         >
           <div className="space-y-4">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white">
+            <motion.h1
+              initial={mounted ? { opacity: 0, y: 20 } : false}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white"
+            >
               Fueling patient outcomes and corporate growth through rigorous data and clinical insight.
-            </h1>
+            </motion.h1>
 
-            <p
+            <motion.p
+              initial={mounted ? { opacity: 0 } : false}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.6 }}
               className="text-lg sm:text-xl md:text-2xl leading-relaxed font-semibold max-w-3xl mx-auto"
               style={{ color: "rgba(255,255,255,0.8)" }}
             >
               Rubicon delivers fractional and traditional consulting fueled by clinical and market insights. We provide the strategic roadmap—from product development and market segmentation to revenue forecasting and launch execution.
-            </p>
+            </motion.p>
 
-            <div
+            <motion.div
+              initial={mounted ? { opacity: 0, y: 20 } : false}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8 }}
               className="pt-4 flex flex-col items-center gap-4"
             >
               <Button
@@ -54,7 +65,7 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
                 </p>
                 <p className="text-white/70 text-sm sm:text-base mt-1 font-semibold">— Rick Kirchner, R&D Executive</p>
               </div>
-            </div>
+            </motion.div>
           </div>
         </motion.div>
       </div>

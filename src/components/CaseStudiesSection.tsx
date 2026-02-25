@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { useMounted } from "@/hooks/useMounted";
 import launchStrategyImage from "@/assets/launch-strategy.webp";
 import clinicalInsightImage from "@/assets/clinical-insight.webp";
 import deRiskImage from "@/assets/de-risk.webp";
@@ -12,6 +13,7 @@ interface CaseStudiesSectionProps {
 
 const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProps) => {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  const mounted = useMounted();
 
   const caseStudies = [
     {
@@ -50,7 +52,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
     <section id="case-studies" className="pt-2 pb-20 bg-background overflow-hidden scroll-mt-20">
       <div className="container mx-auto px-4">
         <motion.div
-          initial={false}
+          initial={mounted ? { opacity: 0, y: 20 } : false}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
@@ -69,7 +71,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
           {caseStudies.map((study, index) => (
             <motion.div
               key={index}
-              initial={false}
+              initial={mounted ? { opacity: 0, y: 50 } : false}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
