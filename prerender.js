@@ -47,7 +47,7 @@ const staticRoutes = ["/", "/blog"];
   for (const url of allRoutes) {
     try {
       const appHtml = render(url);
-      const html = template.replace("", appHtml);
+      const html = template.replace('<div id="root"></div>', `<div id="root">${appHtml}</div>`);
 
       const filePath = `dist${url === "/" ? "/index" : url}.html`;
       const dir = path.dirname(toAbsolute(filePath));
