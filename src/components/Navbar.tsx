@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.png";
@@ -10,6 +11,8 @@ interface NavbarProps {
 const Navbar = ({ onOpenConsultationDialog }: NavbarProps) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -100,6 +103,12 @@ const Navbar = ({ onOpenConsultationDialog }: NavbarProps) => {
               >
                 FAQ
               </button>
+              <button
+                onClick={() => navigate("/blog")}
+                className={`nav-link text-foreground hover:text-primary transition-colors font-medium text-base ${location.pathname.startsWith("/blog") ? "text-primary" : ""}`}
+              >
+                Insights
+              </button>
               <Button 
                 className="shine-effect text-lg px-8 py-4 h-auto bg-primary hover:bg-primary/90"
                 onClick={() => {
@@ -162,6 +171,12 @@ const Navbar = ({ onOpenConsultationDialog }: NavbarProps) => {
               className="nav-link block w-full text-left py-2 text-foreground hover:text-primary transition-colors font-medium text-base"
             >
               FAQ
+            </button>
+            <button
+              onClick={() => { navigate("/blog"); setIsMobileMenuOpen(false); }}
+              className={`nav-link block w-full text-left py-2 text-foreground hover:text-primary transition-colors font-medium text-base ${location.pathname.startsWith("/blog") ? "text-primary" : ""}`}
+            >
+              Insights
             </button>
             <Button 
               className="w-full shine-effect text-lg px-8 py-4 h-auto bg-primary hover:bg-primary/90"
