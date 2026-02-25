@@ -65,7 +65,7 @@ const ServicesSection = ({ onOpenConsultationDialog }: ServicesSectionProps) => 
     <section id="services" className="py-20 bg-background scroll-mt-20">
       <div className="container mx-auto px-4">
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
@@ -78,7 +78,7 @@ const ServicesSection = ({ onOpenConsultationDialog }: ServicesSectionProps) => 
           {services.map((service, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
+              initial={false}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
@@ -98,7 +98,7 @@ const ServicesSection = ({ onOpenConsultationDialog }: ServicesSectionProps) => 
           ))}
         </div>
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}

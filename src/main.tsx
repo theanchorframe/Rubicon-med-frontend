@@ -13,7 +13,7 @@ const app = (
   </BrowserRouter>
 );
 
-if (rootElement.hasChildNodes()) {
+if (rootElement.innerHTML.trim().length > 0) {
   hydrateRoot(rootElement, app);
 } else {
   createRoot(rootElement).render(app);

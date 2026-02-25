@@ -26,7 +26,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen" suppressHydrationWarning>
+    <div className="min-h-screen">
       <Navbar onOpenConsultationDialog={() => setIsConsultationDialogOpen(true)} />
       <HeroSection onOpenConsultation={() => setIsConsultationDialogOpen(true)} />
       <ProcessSection />
