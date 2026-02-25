@@ -11,6 +11,7 @@ import FAQSection from "@/components/FAQSection";
 import FinalCTASection from "@/components/FinalCTASection";
 import Footer from "@/components/Footer";
 import ConsultationDialog from "@/components/ConsultationDialog";
+import ClientOnly from "@/components/ClientOnly";
 import MobileBottomNav from "@/components/MobileBottomNav";
 import CaseStudyPopup from "@/components/CaseStudyPopup";
 
@@ -18,7 +19,6 @@ const Index = () => {
   const [isConsultationDialogOpen, setIsConsultationDialogOpen] = useState(false);
 
   const openCaseStudyForm = () => {
-    // Trigger the case study popup form
     const popup = document.getElementById("popup-VVGIyZfOQ8WRJA6ylwdl") as HTMLIFrameElement;
     if (popup) {
       popup.style.display = "block";
@@ -26,7 +26,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" suppressHydrationWarning>
       <Navbar onOpenConsultationDialog={() => setIsConsultationDialogOpen(true)} />
       <HeroSection onOpenConsultation={() => setIsConsultationDialogOpen(true)} />
       <ProcessSection />
@@ -42,8 +42,10 @@ const Index = () => {
         open={isConsultationDialogOpen} 
         onOpenChange={setIsConsultationDialogOpen} 
       />
-      <MobileBottomNav onOpenDialog={() => setIsConsultationDialogOpen(true)} />
-      <CaseStudyPopup onRequestCaseStudy={openCaseStudyForm} />
+      <ClientOnly>
+        <MobileBottomNav onOpenDialog={() => setIsConsultationDialogOpen(true)} />
+        <CaseStudyPopup onRequestCaseStudy={openCaseStudyForm} />
+      </ClientOnly>
     </div>
   );
 };
