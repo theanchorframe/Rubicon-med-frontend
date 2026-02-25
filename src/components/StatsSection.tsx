@@ -29,7 +29,7 @@ const StatsSection = ({ onOpenConsultationDialog }: StatsSectionProps) => {
     <section className="py-20 bg-navy text-navy-foreground">
       <div className="container mx-auto px-4">
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
@@ -41,7 +41,7 @@ const StatsSection = ({ onOpenConsultationDialog }: StatsSectionProps) => {
           {stats.map((stat, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.8 }}
+              initial={false}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
@@ -53,7 +53,7 @@ const StatsSection = ({ onOpenConsultationDialog }: StatsSectionProps) => {
           ))}
         </div>
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}

@@ -142,7 +142,7 @@ const ProcessSection = () => {
     <section id="about" className="py-20 bg-background relative overflow-hidden scroll-mt-20">
       <div className="mx-auto px-5">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
@@ -153,7 +153,7 @@ const ProcessSection = () => {
             {/* Left Column - Statistics */}
             <div className="space-y-6">
               <motion.h2
-                initial={{ opacity: 0, y: 20 }}
+                initial={false}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
@@ -165,7 +165,7 @@ const ProcessSection = () => {
                 {statistics.map((stat, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={false}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
                     viewport={{ once: true }}
@@ -182,7 +182,7 @@ const ProcessSection = () => {
             {/* Right Column - Bio Content */}
             <div className="space-y-6">
               <motion.h2
-                initial={{ opacity: 0, y: 20 }}
+                initial={false}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
@@ -191,7 +191,7 @@ const ProcessSection = () => {
                 <span className="text-primary">Rob Miraglia</span>: Your Partner in MedTech Growth.
               </motion.h2>
               <motion.p
-                initial={{ opacity: 0, y: 20 }}
+                initial={false}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
                 viewport={{ once: true }}
@@ -200,7 +200,7 @@ const ProcessSection = () => {
                 Rob turns clinical promise into commercial growth. With over 25 years of leadership at Abbott, Medtronic, Integer, and 3M, he helps teams validate high-stakes investments, develop products, and turn medical innovation into market growth.
               </motion.p>
               <motion.p
-                initial={{ opacity: 0, y: 20 }}
+                initial={false}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
                 viewport={{ once: true }}
@@ -209,7 +209,7 @@ const ProcessSection = () => {
                 With expertise spanning 20+ markets and 100+ KOL engagements, Rob specializes in identifying high-growth opportunities. His strategic guidance ensures funding goes to the right ideas for commercial growth and risk mitigation.
               </motion.p>
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={false}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
                 viewport={{ once: true }}
@@ -227,7 +227,7 @@ const ProcessSection = () => {
           {/* IDEA Framework Section */}
           <motion.div
             id="process"
-            initial={{ opacity: 0, y: 30 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}

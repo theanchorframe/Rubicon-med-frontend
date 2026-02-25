@@ -11,7 +11,7 @@ const FinalCTASection = ({ onOpenConsultationDialog }: FinalCTASectionProps) => 
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}

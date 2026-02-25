@@ -6,7 +6,7 @@ const CTABanner = () => {
     <section className="py-12 pb-4 bg-background scroll-mt-20" id="case-study">
       <div className="container mx-auto px-4">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
