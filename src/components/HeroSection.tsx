@@ -42,7 +42,7 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
               className="text-lg sm:text-xl md:text-2xl leading-relaxed font-semibold max-w-3xl mx-auto"
               style={{ color: "rgba(255,255,255,0.8)" }}
             >
-              Rubicon delivers fractional and traditional consulting fueled by clinical and market insights. We provide the strategic roadmap—from product development and market segmentation to revenue forecasting and launch execution.
+              Rubicon delivers fractional and traditional consulting fueled by clinical and market insights. We provide the strategic roadmap, from product development and market segmentation to revenue forecasting and launch execution
             </motion.p>
 
             <motion.div
