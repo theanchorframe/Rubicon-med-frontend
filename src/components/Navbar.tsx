@@ -90,6 +90,12 @@ const Navbar = ({ onOpenConsultationDialog }: NavbarProps) => {
               <>
                 <div className="hidden lg:flex items-center gap-8">
                   <button
+                    onClick={handleLogoClick}
+                    className="nav-link text-foreground hover:text-primary transition-colors font-medium text-base"
+                  >
+                    Home
+                  </button>
+                  <button
                     onClick={() => navigate("/blog")}
                     className="nav-link text-foreground hover:text-primary transition-colors font-medium text-base"
                   >
