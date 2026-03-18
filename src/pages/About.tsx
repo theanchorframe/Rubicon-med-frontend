@@ -93,7 +93,7 @@ const About = () => {
               <p className="text-xl text-navy-foreground/85 leading-relaxed">
                 A marketing and strategy consultant who sits at the intersection of
                 clinical insight and commercial reality. He has spent more than 25
-                years in medtech, pharma, and diagnostics — including leadership roles
+                years in medtech, pharma, and diagnostics — including leadership and management roles
                 at <strong>Abbott, Medtronic, 3M, and Integer</strong> — helping teams
                 decide which ideas are worth funding and which ones are not.
               </p>
