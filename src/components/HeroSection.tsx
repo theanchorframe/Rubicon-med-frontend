@@ -30,9 +30,9 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
               initial={mounted ? { opacity: 0, y: 20 } : false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.8rem] font-bold leading-tight text-white"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.8rem] font-bold text-white" style={{ lineHeight: '1.3' }}
             >
-              Fueling positive patient outcomes and corporate growth through rigorous data and clinical insight.
+              Fueling positive patient outcomes and corporate growth through rigorous data and clinical insight
             </motion.h1>
 
             <motion.p
@@ -42,7 +42,7 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
               className="text-lg sm:text-xl md:text-2xl leading-relaxed font-semibold max-w-3xl mx-auto"
               style={{ color: "rgba(255,255,255,0.8)" }}
             >
-              Rubicon delivers fractional and traditional consulting fueled by clinical and market insights. We provide the strategic roadmap—from product development and market segmentation to revenue forecasting and launch execution.
+              Rubicon delivers fractional and traditional consulting fueled by clinical and market insights. We provide the strategic roadmap, from product development and market segmentation to revenue forecasting and launch execution
             </motion.p>
 
             <motion.div
