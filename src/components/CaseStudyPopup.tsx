@@ -1,42 +1,16 @@
-import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 import caseStudyBanner from "@/assets/case-study-banner.webp";
 
 interface CaseStudyPopupProps {
-  onRequestCaseStudy: () => void;
+  isOpen: boolean;
+  onClose: () => void;
 }
 
-const CaseStudyPopup = ({ onRequestCaseStudy }: CaseStudyPopupProps) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
-
-  useEffect(() => {
-    // Check if popup was already dismissed this session
-    const dismissed = sessionStorage.getItem("caseStudyPopupDismissed");
-    if (dismissed) {
-      setIsDismissed(true);
-      return;
-    }
-
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 20000); // 20 seconds
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  const handleDismiss = () => {
-    setIsVisible(false);
-    setIsDismissed(true);
-    sessionStorage.setItem("caseStudyPopupDismissed", "true");
-  };
-
-  if (isDismissed) return null;
-
+const CaseStudyPopup = ({ isOpen, onClose }: CaseStudyPopupProps) => {
   return (
     <AnimatePresence>
-      {isVisible && (
+      {isOpen && (
         <>
           {/* Backdrop */}
           <motion.div
@@ -45,7 +19,7 @@ const CaseStudyPopup = ({ onRequestCaseStudy }: CaseStudyPopupProps) => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
             className="fixed inset-0 bg-black/50 z-50"
-            onClick={handleDismiss}
+            onClick={onClose}
           />
           
           {/* Popup Container */}
@@ -59,7 +33,7 @@ const CaseStudyPopup = ({ onRequestCaseStudy }: CaseStudyPopupProps) => {
             >
               {/* Close button */}
               <button
-                onClick={handleDismiss}
+                onClick={onClose}
                 className="absolute top-3 right-3 z-10 p-2 rounded-full bg-background/80 hover:bg-background transition-colors"
               >
                 <X className="h-5 w-5 text-foreground" />
@@ -106,7 +80,7 @@ const CaseStudyPopup = ({ onRequestCaseStudy }: CaseStudyPopupProps) => {
                 
                 <button
                   type="button"
-                  onClick={handleDismiss}
+                  onClick={onClose}
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors -mt-2"
                 >
                   Maybe Later
