@@ -256,14 +256,21 @@ const ProcessSection = () => {
                     onClick={() => setActiveIdea(activeIdea === letter ? null : letter)}
                   >
                     <div className="flex items-center gap-4">
-                      <span className={`text-3xl md:text-4xl font-bold ${activeIdea === letter ? "text-primary" : "text-primary/60"} transition-colors duration-300`}>
-                        {letter}
-                      </span>
                       <span className="text-lg md:text-xl font-semibold text-foreground">
-                        {letter === "I" && "mmersion and inquiry"}
-                        {letter === "D" && "– Delineate Project Roadmap"}
-                        {letter === "E" && "– Engage Full Team for Plan Execution"}
-                        {letter === "A" && "– Alignment and Action Plans"}
+                        {letter === "I" && (
+                          <>
+                            <span className={`text-3xl md:text-4xl font-bold ${activeIdea === letter ? "text-primary" : "text-primary/60"} transition-colors duration-300`}>{letter}</span>
+                            <span>mmersion and inquiry</span>
+                          </>
+                        )}
+                        {letter !== "I" && (
+                          <>
+                            <span className={`text-3xl md:text-4xl font-bold ${activeIdea === letter ? "text-primary" : "text-primary/60"} transition-colors duration-300 mr-4`}>{letter}</span>
+                            {letter === "D" && "– Delineate Project Roadmap"}
+                            {letter === "E" && "– Engage Full Team for Plan Execution"}
+                            {letter === "A" && "– Alignment and Action Plans"}
+                          </>
+                        )}
                       </span>
                     </div>
                     <svg
