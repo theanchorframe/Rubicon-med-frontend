@@ -256,7 +256,7 @@ const ProcessSection = () => {
                     onClick={() => setActiveIdea(activeIdea === letter ? null : letter)}
                   >
                     <div className="flex items-center gap-4">
-                      <span className="text-3xl md:text-4xl font-bold text-foreground">
+                      <span className="text-3xl md:text-4xl font-normal text-foreground">
                         <span className={`text-3xl md:text-4xl font-bold ${activeIdea === letter ? "text-primary" : "text-primary/60"} transition-colors duration-300`}>{letter}</span>
                         {letter === "I" && <span>mmersion and inquiry</span>}
                         {letter === "D" && <span>elineate project roadmap</span>}
