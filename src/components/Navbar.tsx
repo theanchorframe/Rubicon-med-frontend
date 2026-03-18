@@ -90,6 +90,12 @@ const Navbar = ({ onOpenConsultationDialog }: NavbarProps) => {
               <>
                 <div className="hidden lg:flex items-center gap-8">
                   <button
+                    onClick={handleLogoClick}
+                    className="nav-link text-foreground hover:text-primary transition-colors font-medium text-base"
+                  >
+                    Home
+                  </button>
+                  <button
                     onClick={() => navigate("/blog")}
                     className="nav-link text-foreground hover:text-primary transition-colors font-medium text-base"
                   >
@@ -146,6 +152,12 @@ const Navbar = ({ onOpenConsultationDialog }: NavbarProps) => {
             }`}
           >
             <div className="container mx-auto px-4 py-4 space-y-4">
+              <button
+                onClick={() => { navigate("/"); setIsMobileMenuOpen(false); }}
+                className="nav-link block w-full text-left py-2 text-foreground hover:text-primary transition-colors font-medium text-base"
+              >
+                Home
+              </button>
               <button
                 onClick={() => { navigate("/blog"); setIsMobileMenuOpen(false); }}
                 className="nav-link block w-full text-left py-2 text-foreground hover:text-primary transition-colors font-medium text-base"
