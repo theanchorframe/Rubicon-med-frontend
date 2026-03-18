@@ -17,13 +17,7 @@ import CaseStudyPopup from "@/components/CaseStudyPopup";
 
 const Index = () => {
   const [isConsultationDialogOpen, setIsConsultationDialogOpen] = useState(false);
-
-  const openCaseStudyForm = () => {
-    const popup = document.getElementById("popup-VVGIyZfOQ8WRJA6ylwdl") as HTMLIFrameElement;
-    if (popup) {
-      popup.style.display = "block";
-    }
-  };
+  const [isCaseStudyPopupOpen, setIsCaseStudyPopupOpen] = useState(false);
 
   return (
     <div className="min-h-screen">
@@ -44,7 +38,7 @@ const Index = () => {
       />
       <ClientOnly>
         <MobileBottomNav onOpenDialog={() => setIsConsultationDialogOpen(true)} />
-        <CaseStudyPopup onRequestCaseStudy={openCaseStudyForm} />
+        <CaseStudyPopup isOpen={isCaseStudyPopupOpen} onClose={() => setIsCaseStudyPopupOpen(false)} />
       </ClientOnly>
     </div>
   );
