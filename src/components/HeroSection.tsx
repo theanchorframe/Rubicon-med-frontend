@@ -30,9 +30,9 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
               initial={mounted ? { opacity: 0, y: 20 } : false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-bold leading-tight text-white"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.8rem] font-bold leading-tight text-white"
             >
-              Fueling patient outcomes and corporate growth through rigorous data and clinical insight.
+              Fueling positive patient outcomes and corporate growth through rigorous data and clinical insight.
             </motion.h1>
 
             <motion.p
