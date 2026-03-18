@@ -260,7 +260,7 @@ const ProcessSection = () => {
                         {letter}
                       </span>
                       <span className="text-lg md:text-xl font-semibold text-foreground">
-                        {letter === "I" && "– Immersion and Inquiry"}
+                        {letter === "I" && "mmersion and inquiry"}
                         {letter === "D" && "– Delineate Project Roadmap"}
                         {letter === "E" && "– Engage Full Team for Plan Execution"}
                         {letter === "A" && "– Alignment and Action Plans"}
