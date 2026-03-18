@@ -96,7 +96,7 @@ const Navbar = ({ onOpenConsultationDialog }: NavbarProps) => {
                     Blog
                   </button>
                   <button
-                    onClick={() => handleNavClick("about")}
+                    onClick={() => navigate("/about")}
                     className="nav-link text-foreground hover:text-primary transition-colors font-medium text-base"
                   >
                     About
@@ -153,7 +153,7 @@ const Navbar = ({ onOpenConsultationDialog }: NavbarProps) => {
                 Blog
               </button>
               <button
-                onClick={() => handleNavClick("about")}
+                onClick={() => { navigate("/about"); setIsMobileMenuOpen(false); }}
                 className="nav-link block w-full text-left py-2 text-foreground hover:text-primary transition-colors font-medium text-base"
               >
                 About
