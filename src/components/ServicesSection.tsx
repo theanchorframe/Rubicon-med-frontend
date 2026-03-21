@@ -34,7 +34,7 @@ const ServicesSection = ({ onOpenConsultationDialog }: ServicesSectionProps) => 
     "Turn insight into adoption at scale. We craft go-to-market strategies and playbooks, sales enablement, and messaging rooted in evidence so your launch not only hits targets, but sustains momentum long after market entry."
   },
   {
-    title: "Upstream Portfolio Strategy & Road mapping",
+    title: "Upstream Portfolio Strategy & Roadmapping",
     description:
     "Optimize resource allocation and cross-functional alignment. By defining rigorous segmentation, targeting, and positioning (STP) frameworks alongside multi-year product roadmaps, we isolate high-potential opportunities. This allows R&D, Marketing, and Sales to concentrate resources on assets with the highest ROI."
   },
