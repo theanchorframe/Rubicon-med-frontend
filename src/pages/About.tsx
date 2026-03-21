@@ -190,12 +190,10 @@ const About = () => {
             className="text-center space-y-6"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-navy">
-              Let's Talk Strategy
+              Strategy Rooted in Evidence
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              When the stakes are high and missteps are expensive, Rob gives teams a
-              clear path from idea to launch so they can commit resources with
-              confidence.
+              Navigate high-stakes product decisions with a partner who understands the intersection of clinical reality and commercial success.
             </p>
           </motion.div>
 
