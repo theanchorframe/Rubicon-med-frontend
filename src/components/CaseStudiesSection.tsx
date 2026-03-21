@@ -18,7 +18,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
   const caseStudies = [
     {
       image: launchStrategyImage,
-      title: "Validate product licensing and acquisition plans,",
+      title: "Validate Product Licensing and Acquisition Plans",
       description:
         "Identify and mitigate investment risk in potential product licensing and acquisitions. We perform rigorous due diligence to isolate assets that lack market scalability due to technical limitations in geometry, sizing, or procedural compatibility. By triangulating these findings with KOL inquiries, we prevent the acquisition of products that cannot achieve critical mass in the clinical environment.",
       cta: "Request a Complimentary Consultation",
@@ -27,7 +27,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
     },
     {
       image: clinicalInsightImage,
-      title: "Commercial Growth from Clinical and Market Insight",
+      title: "Commercial Growth From Clinical and Market Insight",
       description:
         "We synchronize expert insights, segmentation, and targeted positioning to drive quick adoption. We translate clinical evidence into optimized messaging, ensuring your product enters the market with a defensible competitive advantage and clinical alignment.",
       cta: "Request a Complimentary Consultation",
@@ -48,21 +48,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
   return (
     <section id="case-studies" className="pt-2 pb-20 bg-background overflow-hidden scroll-mt-20">
       <div className="container mx-auto px-4">
-        <motion.div
-          initial={mounted ? { opacity: 0, y: 20 } : false}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
-          <Button
-            size="xl"
-            onClick={onOpenConsultationDialog}
-            className="shine-effect text-lg sm:text-xl px-6 sm:px-12 py-6 sm:py-8 h-auto bg-primary hover:bg-primary/90 mb-8 whitespace-normal text-center leading-tight"
-          >
-            Request a Complimentary Consultation
-          </Button>
-        </motion.div>
+        
 
         <div className="max-w-7xl mx-auto space-y-16">
           {caseStudies.map((study, index) => (
