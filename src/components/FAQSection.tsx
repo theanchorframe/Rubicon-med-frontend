@@ -98,10 +98,6 @@ const FAQSection = ({ onOpenConsultationDialog }: FAQSectionProps) => {
             </div>
           ))}
         </motion.div>
-
-        </motion.div>
-      </div>
-    </section>
       </div>
     </section>
   );
