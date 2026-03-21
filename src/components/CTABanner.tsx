@@ -28,31 +28,25 @@ const CTABanner = () => {
 
           {/* Two Column Layout - Desktop Only */}
           <div className="grid lg:grid-cols-2 gap-3 lg:gap-12 items-start">
-            {/* Left: Subheadline & Form */}
-            <div className="space-y-3 md:space-y-6">
-              <p className="text-navy/80 text-lg md:text-xl font-medium leading-relaxed text-center lg:text-left">
-                Learn how clinical proof, reimbursement insights, and advisory-board
-                design sprints built an irresistible business case for market entry
-              </p>
-              <div className="w-full min-h-[490px] rounded-2xl overflow-hidden bg-background/50 backdrop-blur-sm">
-                <iframe
-                  src="https://link.anchorframe.com/widget/form/RSwk9c8PsfVO57gzIn2m"
-                  style={{ width: "100%", height: "490px", border: "none", borderRadius: "10px" }}
-                  id="inline-RSwk9c8PsfVO57gzIn2m" 
-                  data-layout="{'id':'INLINE'}"
-                  data-trigger-type="alwaysShow"
-                  data-trigger-value=""
-                  data-activation-type="alwaysActivated"
-                  data-activation-value=""
-                  data-deactivation-type="neverDeactivate"
-                  data-deactivation-value=""
-                  data-form-name="Case Study Popup"
-                  data-height="490"
-                  data-layout-iframe-id="inline-RSwk9c8PsfVO57gzIn2m"
-                  data-form-id="RSwk9c8PsfVO57gzIn2m"
-                  title="Case Study Popup"
-                />
-              </div>
+            {/* Left: Form */}
+            <div className="w-full min-h-[490px] rounded-2xl overflow-hidden bg-background/50 backdrop-blur-sm">
+              <iframe
+                src="https://link.anchorframe.com/widget/form/RSwk9c8PsfVO57gzIn2m"
+                style={{ width: "100%", height: "490px", border: "none", borderRadius: "10px" }}
+                id="inline-RSwk9c8PsfVO57gzIn2m" 
+                data-layout="{'id':'INLINE'}"
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name="Case Study Popup"
+                data-height="490"
+                data-layout-iframe-id="inline-RSwk9c8PsfVO57gzIn2m"
+                data-form-id="RSwk9c8PsfVO57gzIn2m"
+                title="Case Study Popup"
+              />
             </div>
 
             {/* Right: Interactive Chart - Desktop Only */}

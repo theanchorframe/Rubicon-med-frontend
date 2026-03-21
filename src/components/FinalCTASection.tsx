@@ -19,7 +19,7 @@ const FinalCTASection = ({ onOpenConsultationDialog }: FinalCTASectionProps) => 
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-navy">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-navy">
               Let Rubicon Help You Map Your Next Crossing
             </h2>
             <Button

@@ -23,7 +23,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
         "Identify and mitigate investment risk in potential product licensing and acquisitions. We perform rigorous due diligence to isolate assets that lack market scalability due to technical limitations in geometry, sizing, or procedural compatibility. By triangulating these findings with KOL inquiries, we prevent the acquisition of products that cannot achieve critical mass in the clinical environment.",
       cta: "Request a Complimentary Consultation",
       overlayText:
-        "From Clinical Evidence to Enterprise Partnership: How rigorous literature scanning and expert validation built the strategic foundation for a high-yield co-development project.",
+        "Transform Literature into Leverage: The Strategic Path to Enterprise-Level Co-Development Partnerships.",
     },
     {
       image: clinicalInsightImage,
@@ -32,7 +32,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
         "We synchronize expert insights, segmentation, and targeted positioning to drive quick adoption. We translate clinical evidence into optimized messaging, ensuring your product enters the market with a defensible competitive advantage and clinical alignment.",
       cta: "Request a Complimentary Consultation",
       overlayText:
-        "From KOL interviews and segmentation, Rob distills clinical insight into target segments, messaging, and claims that sales can use tomorrow to win faster and with proof.",
+        "We bridge the gap between clinical complexity and commercial success by converting KOL insights into the segments and claims your sales team needs to win tomorrow.",
     },
     {
       image: deRiskImage,
@@ -41,7 +41,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
         "We apply data-driven segmentation and VoC analysis so that your roadmap reflects true market demand.",
       cta: "Request a Complimentary Consultation",
       overlayText:
-        "VoC and data modeling size real demand and barriers before you build. You drop low ROI bets and fund the moves with the strongest evidence.",
+        "Precision before investment. We use VoC and predictive modeling to quantify market demand and identify barriers before you break ground that allows you to cut low-ROI projects and invest in the winners.",
     },
   ];
 
@@ -60,7 +60,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
               viewport={{ once: true }}
               className={`flex flex-col ${
                 index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-              } gap-8 items-start ${index === 0 ? "bg-muted/50 rounded-xl p-6 md:p-8" : ""}`}
+              } gap-8 items-start`}
             >
               {/* Image with hover overlay */}
               <div
@@ -92,15 +92,13 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
                 <p className="text-foreground leading-relaxed text-xl">
                   {study.description}
                 </p>
-                {index !== 0 && (
-                  <Button 
-                    size="lg" 
-                    onClick={onOpenConsultationDialog}
-                    className="shine-effect text-lg sm:text-xl px-6 sm:px-12 py-6 sm:py-8 h-auto bg-primary hover:bg-primary/90 whitespace-normal text-center leading-tight"
-                  >
-                    {study.cta}
-                  </Button>
-                )}
+                <Button 
+                  size="lg" 
+                  onClick={onOpenConsultationDialog}
+                  className="shine-effect text-lg sm:text-xl px-6 sm:px-12 py-6 sm:py-8 h-auto bg-primary hover:bg-primary/90 whitespace-normal text-center leading-tight"
+                >
+                  {study.cta}
+                </Button>
               </div>
             </motion.div>
           ))}

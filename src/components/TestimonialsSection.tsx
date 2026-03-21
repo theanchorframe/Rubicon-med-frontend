@@ -14,7 +14,7 @@ const TestimonialsSection = () => {
       fullText:
         "Rob is a solid and detail-oriented product marketer. He excels at customer engagement and enjoys becoming a subject matter expert and resource on cross-functional project teams. He operates with a strong sense of ownership in his work and is well-liked by his peers. If you are looking for a hard-working, engaged marketer who is a good team player, I encourage you to consider Rob",
       author: "Joel Krueger",
-      title: "Global Marketing Leader, Medical Devices",
+      title: "MBA | Global Marketing Leader, Medical Devices",
     },
     {
       headline: "Strong contributor with deep insights",
@@ -46,7 +46,7 @@ const TestimonialsSection = () => {
       fullText:
         "Rob is an asset to any Sales and Marketing Team with the ability to assess a marketplace or industry in terms of competition, market stats and target groups to drive revenue. Having sales management experience together with his knowledge of marketing is a great combination for many corporate growth scenarios.",
       author: "Ann MacGregor",
-      title: "Consultant",
+      title: "MBA | Consultant",
     },
     {
       headline: "Always has the courage to ask the right questions",
@@ -54,7 +54,7 @@ const TestimonialsSection = () => {
       fullText:
         "Rob is very pleasant to work with. He's also very thorough in his approach, and always has the courage to ask the right questions. He was quick to understand the issues and problems and was always willing to work together to resolve these. He was always willing to co-operate and help me out on Human factors issues on projects. I'd highly recommend Rob.",
       author: "Rajeev Sahasrabudhe",
-      title: "MedTech Global R&D Leader | Patient Centric Innovation | R&D Strategy",
+      title: "MS, MBA | MedTech Global R&D Leader | Patient Centric Innovation | R&D Strategy",
     },
   ];
 
