@@ -18,7 +18,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
   const caseStudies = [
     {
       image: launchStrategyImage,
-      title: "Validate product licensing and acquisition plans,",
+      title: "Validate Product Licensing and Acquisition Plans",
       description:
         "Identify and mitigate investment risk in potential product licensing and acquisitions. We perform rigorous due diligence to isolate assets that lack market scalability due to technical limitations in geometry, sizing, or procedural compatibility. By triangulating these findings with KOL inquiries, we prevent the acquisition of products that cannot achieve critical mass in the clinical environment.",
       cta: "Request a Complimentary Consultation",
