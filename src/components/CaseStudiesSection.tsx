@@ -100,8 +100,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
 
               {/* Text content - left aligned and starting at top */}
               <div className="space-y-6 w-full md:w-1/2 text-left">
-                <p className="text-accent font-semibold italic text-xl">{study.tagline}</p>
-                <h3 className="text-4xl lg:text-5xl font-bold text-navy">
+                <h3 className="text-3xl lg:text-4xl font-bold text-navy">
                   {study.title}
                 </h3>
                 <p className="text-foreground leading-relaxed text-xl">
