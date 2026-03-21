@@ -46,7 +46,7 @@ const TestimonialsSection = () => {
       fullText:
         "Rob is an asset to any Sales and Marketing Team with the ability to assess a marketplace or industry in terms of competition, market stats and target groups to drive revenue. Having sales management experience together with his knowledge of marketing is a great combination for many corporate growth scenarios.",
       author: "Ann MacGregor",
-      title: "Consultant",
+      title: "MBA | Consultant",
     },
     {
       headline: "Always has the courage to ask the right questions",
