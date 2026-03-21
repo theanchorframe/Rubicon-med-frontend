@@ -28,7 +28,7 @@ const FAQSection = ({ onOpenConsultationDialog }: FAQSectionProps) => {
         "Geographic location is not a barrier to execution. While headquartered on Long Island, we have a proven track record of supporting international clients through hybrid engagement models. We prioritize on-site mobilization for critical workstreams such as requirement gathering, prototyping, and expert panels, ensuring that distance never compromises the fidelity of the strategic roadmap.",
     },
     {
-      question: "What's your process like?",
+      question: "What\"s your process like?",
       answer:
         "Every engagement begins with a deep-dive into your real-world environment and project constraints. To guide the IDEA process, we deliver a Statement of Understanding and a Statement of Work—a clear-eyed blueprint that transforms high-level goals into a validated, executable plan for your device.",
     },
