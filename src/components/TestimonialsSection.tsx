@@ -54,7 +54,7 @@ const TestimonialsSection = () => {
       fullText:
         "Rob is very pleasant to work with. He's also very thorough in his approach, and always has the courage to ask the right questions. He was quick to understand the issues and problems and was always willing to work together to resolve these. He was always willing to co-operate and help me out on Human factors issues on projects. I'd highly recommend Rob.",
       author: "Rajeev Sahasrabudhe",
-      title: "MedTech Global R&D Leader | Patient Centric Innovation | R&D Strategy",
+      title: "MS, MBA | MedTech Global R&D Leader | Patient Centric Innovation | R&D Strategy",
     },
   ];
 

@@ -29,11 +29,7 @@ const CTABanner = () => {
           {/* Two Column Layout - Desktop Only */}
           <div className="grid lg:grid-cols-2 gap-3 lg:gap-12 items-start">
             {/* Left: Subheadline & Form */}
-            <div className="space-y-3 md:space-y-6">
-              <p className="text-navy/80 text-lg md:text-xl font-medium leading-relaxed text-center lg:text-left">
-                Learn how clinical proof, reimbursement insights, and advisory-board
-                design sprints built an irresistible business case for market entry
-              </p>
+             <div className="w-full min-h-[490px] rounded-2xl overflow-hidden bg-background/50 backdrop-blur-sm">
               <div className="w-full min-h-[490px] rounded-2xl overflow-hidden bg-background/50 backdrop-blur-sm">
                 <iframe
                   src="https://link.anchorframe.com/widget/form/RSwk9c8PsfVO57gzIn2m"

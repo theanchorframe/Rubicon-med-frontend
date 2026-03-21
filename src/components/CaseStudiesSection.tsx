@@ -92,15 +92,13 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
                 <p className="text-foreground leading-relaxed text-xl">
                   {study.description}
                 </p>
-                {index !== 0 && (
-                  <Button 
-                    size="lg" 
-                    onClick={onOpenConsultationDialog}
-                    className="shine-effect text-lg sm:text-xl px-6 sm:px-12 py-6 sm:py-8 h-auto bg-primary hover:bg-primary/90 whitespace-normal text-center leading-tight"
-                  >
-                    {study.cta}
-                  </Button>
-                )}
+                <Button 
+                  size="lg" 
+                  onClick={onOpenConsultationDialog}
+                  className="shine-effect text-lg sm:text-xl px-6 sm:px-12 py-6 sm:py-8 h-auto bg-primary hover:bg-primary/90 whitespace-normal text-center leading-tight"
+                >
+                  {study.cta}
+                </Button>
               </div>
             </motion.div>
           ))}

@@ -99,21 +99,9 @@ const FAQSection = ({ onOpenConsultationDialog }: FAQSectionProps) => {
           ))}
         </motion.div>
 
-        <motion.div
-          initial={mounted ? { opacity: 0, y: 20 } : false}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
-        >
-          <Button
-            size="lg"
-            onClick={onOpenConsultationDialog}
-            className="shine-effect text-lg sm:text-xl px-6 sm:px-12 py-6 sm:py-8 h-auto bg-primary hover:bg-primary/90 whitespace-normal text-center leading-tight"
-          >
-            Request a Complimentary Consultation
-          </Button>
         </motion.div>
+      </div>
+    </section>
       </div>
     </section>
   );
