@@ -49,13 +49,7 @@ const FAQSection = ({ onOpenConsultationDialog }: FAQSectionProps) => {
           viewport={{ once: true }}
           className="flex flex-col items-center text-center"
         >
-          <p className="text-base font-medium text-primary">FAQ</p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-navy mt-2 px-2">
-            What Teams Like Yours Always Ask Before Saying Yes
-          </h2>
-          <p className="text-sm md:text-base text-muted-foreground mt-4 max-w-lg">
-            Proactively answering your questions to help you make confident decisions about working together.
-          </p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">FAQ</h2>
         </motion.div>
 
         <motion.div

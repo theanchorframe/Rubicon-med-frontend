@@ -20,11 +20,8 @@ const FinalCTASection = ({ onOpenConsultationDialog }: FinalCTASectionProps) => 
             className="space-y-8"
           >
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-navy">
-              Let Rubicon Tell You When to Cross
+              Let Rubicon Help You Map Your Next Crossing
             </h2>
-            <p className="text-xl md:text-2xl text-foreground leading-relaxed max-w-3xl mx-auto">
-              You do not need "more analysis." You need the decision that sticks. We turn evidence + alignment into a roadmap your team actually adopts.
-            </p>
             <Button
               size="lg"
               onClick={onOpenConsultationDialog}
@@ -32,9 +29,6 @@ const FinalCTASection = ({ onOpenConsultationDialog }: FinalCTASectionProps) => 
             >
               Request a Complimentary Consultation
             </Button>
-            <p className="text-base md:text-lg text-muted-foreground italic">
-              No prep needed. Bring the decision you're stuck on.
-            </p>
           </motion.div>
         </div>
       </div>

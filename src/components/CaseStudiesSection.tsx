@@ -48,21 +48,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
   return (
     <section id="case-studies" className="pt-2 pb-20 bg-background overflow-hidden scroll-mt-20">
       <div className="container mx-auto px-4">
-        <motion.div
-          initial={mounted ? { opacity: 0, y: 20 } : false}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
-          <Button
-            size="xl"
-            onClick={onOpenConsultationDialog}
-            className="shine-effect text-lg sm:text-xl px-6 sm:px-12 py-6 sm:py-8 h-auto bg-primary hover:bg-primary/90 mb-8 whitespace-normal text-center leading-tight"
-          >
-            Request a Complimentary Consultation
-          </Button>
-        </motion.div>
+        
 
         <div className="max-w-7xl mx-auto space-y-16">
           {caseStudies.map((study, index) => (
