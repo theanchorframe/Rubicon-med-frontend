@@ -204,14 +204,6 @@ const About = () => {
             viewport={{ once: true }}
             className="mt-10 bg-card rounded-2xl shadow-xl border border-border overflow-hidden"
           >
-            <div className="p-6 md:p-8 text-center space-y-2">
-              <h3 className="text-2xl font-bold text-navy">
-                Share the product decision you're wrestling with
-              </h3>
-              <p className="text-muted-foreground">
-                In a few lines, tell Rob where you need evidence, not opinions. He'll review and follow up with next steps if it's a good fit.
-              </p>
-            </div>
             <div className="px-4 pb-6 md:px-8 md:pb-8">
               <div className="w-full rounded-xl overflow-hidden" style={{ height: "550px" }}>
                 <iframe
