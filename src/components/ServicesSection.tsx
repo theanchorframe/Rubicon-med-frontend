@@ -71,7 +71,7 @@ const ServicesSection = ({ onOpenConsultationDialog }: ServicesSectionProps) => 
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy text-center mb-4 px-2"
+          className="text-3xl md:text-4xl lg:text-5xl font-bold text-navy text-center mb-4 px-2"
         >
           Strategic Product Intelligence That Shapes What You Build and How You
           Launch
