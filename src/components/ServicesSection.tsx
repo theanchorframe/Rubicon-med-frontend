@@ -71,10 +71,9 @@ const ServicesSection = ({ onOpenConsultationDialog }: ServicesSectionProps) => 
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-4xl lg:text-5xl font-bold text-navy text-center mb-4 px-2"
+          className="text-3xl md:text-4xl lg:text-5xl font-bold text-navy text-center mb-4 px-2 whitespace-nowrap"
         >
-          Strategic Product Intelligence That Shapes What You Build and How You
-          Launch
+          Strategic Product Intelligence Informs What to Build
         </motion.h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mt-12">
           {services.map((service, index) => (
