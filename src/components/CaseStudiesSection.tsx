@@ -60,7 +60,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
               viewport={{ once: true }}
               className={`flex flex-col ${
                 index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-              } gap-8 items-start ${index === 0 ? "bg-muted/50 rounded-xl p-6 md:p-8" : ""}`}
+              } gap-8 items-start`}
             >
               {/* Image with hover overlay */}
               <div
