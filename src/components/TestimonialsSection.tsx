@@ -14,7 +14,7 @@ const TestimonialsSection = () => {
       fullText:
         "Rob is a solid and detail-oriented product marketer. He excels at customer engagement and enjoys becoming a subject matter expert and resource on cross-functional project teams. He operates with a strong sense of ownership in his work and is well-liked by his peers. If you are looking for a hard-working, engaged marketer who is a good team player, I encourage you to consider Rob",
       author: "Joel Krueger",
-      title: "Global Marketing Leader, Medical Devices",
+      title: "MBA | Global Marketing Leader, Medical Devices",
     },
     {
       headline: "Strong contributor with deep insights",
