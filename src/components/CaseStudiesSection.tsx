@@ -18,8 +18,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
   const caseStudies = [
     {
       image: launchStrategyImage,
-      tagline: "DATA-DRIVEN, PHYSICIAN-READY",
-      title: "Validate product licensing and acquisitions",
+      title: "Validate product licensing and acquisition plans,",
       description:
         "Identify and mitigate investment risk in potential product licensing and acquisitions. We perform rigorous due diligence to isolate assets that lack market scalability due to technical limitations in geometry, sizing, or procedural compatibility. By triangulating these findings with KOL inquiries, we prevent the acquisition of products that cannot achieve critical mass in the clinical environment.",
       cta: "Request a Complimentary Consultation",
@@ -28,7 +27,6 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
     },
     {
       image: clinicalInsightImage,
-      tagline: "CLINICALLY INFORMED. COMMERCIALLY PROVEN.",
       title: "Commercial Growth from Clinical and Market Insight",
       description:
         "We synchronize expert insights, segmentation, and targeted positioning to drive quick adoption. We translate clinical evidence into optimized messaging, ensuring your product enters the market with a defensible competitive advantage and clinical alignment.",
@@ -38,8 +36,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
     },
     {
       image: deRiskImage,
-      tagline: "BACKED BY 80+ PRODUCT and PROTYPE EVALUATIONS",
-      title: "New Product Risk Mitigation",
+      title: "Product Risk Mitigation",
       description:
         "We apply data-driven segmentation and VoC analysis so that your roadmap reflects true market demand.",
       cta: "Request a Complimentary Consultation",
@@ -103,8 +100,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
 
               {/* Text content - left aligned and starting at top */}
               <div className="space-y-6 w-full md:w-1/2 text-left">
-                <p className="text-accent font-semibold italic text-xl">{study.tagline}</p>
-                <h3 className="text-4xl lg:text-5xl font-bold text-navy">
+                <h3 className="text-3xl lg:text-4xl font-bold text-navy">
                   {study.title}
                 </h3>
                 <p className="text-foreground leading-relaxed text-xl">
