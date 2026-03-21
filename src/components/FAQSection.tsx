@@ -18,7 +18,7 @@ const FAQSection = ({ onOpenConsultationDialog }: FAQSectionProps) => {
         "We partner with medical device and pharmaceutical organizations across the entire growth spectrum. Our expertise spans from guiding early-stage startups through their inaugural product launches to supporting established global manufacturers in product development and strategic licensing or acquisitions.",
     },
     {
-      question: "What's your experience with launch planning and execution?",
+      question: "What\"s your experience with launch planning and execution?",
       answer:
         "With a legacy of orchestrating 40+ high-stakes launches across vascular intervention, pharmaceuticals, and diagnostics, Rob specializes in the critical 'Front-End of Innovation.' By applying a comprehensive launch framework, we identify high-value opportunities and architect the clinical evidence stories that drive adoption. We don't just plan; we equip and train your launch teams to ensure a seamless, high-ROI transition from R&D to global commercialization.",
     },
