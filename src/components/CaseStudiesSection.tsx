@@ -27,7 +27,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
     },
     {
       image: clinicalInsightImage,
-      title: "Commercial Growth from Clinical and Market Insight",
+      title: "Commercial Growth From Clinical and Market Insight",
       description:
         "We synchronize expert insights, segmentation, and targeted positioning to drive quick adoption. We translate clinical evidence into optimized messaging, ensuring your product enters the market with a defensible competitive advantage and clinical alignment.",
       cta: "Request a Complimentary Consultation",
