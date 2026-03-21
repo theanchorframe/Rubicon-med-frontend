@@ -71,7 +71,7 @@ const ServicesSection = ({ onOpenConsultationDialog }: ServicesSectionProps) => 
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-2xl sm:text-3xl md:text-4xl font-bold text-navy text-center mb-4 px-2">Strategic Product Intelligence that Informs What to Build
+          className="text-3xl sm:text-4xl md:text-5xl font-bold text-navy text-center mb-4 px-2">Strategic Product Intelligence that Informs What to Build
 
 
         </motion.h2>
