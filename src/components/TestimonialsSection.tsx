@@ -69,10 +69,9 @@ const TestimonialsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-4xl lg:text-5xl font-bold text-navy text-center mb-4 px-2"
+          className="text-2xl md:text-3xl lg:text-4xl font-bold text-navy text-center mb-4 px-2"
         >
-          Rubicon Medical Marketing & Strategy — Proven Healthcare Consulting
-          That Generates Revenue and Margin
+          Proven Healthcare Consulting That Generates Revenue and Margin
         </motion.h2>
         <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6 mt-12">
           {testimonials.map((testimonial, index) => (
