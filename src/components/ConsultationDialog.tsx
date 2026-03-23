@@ -11,11 +11,8 @@ const ConsultationDialog = ({ open, onOpenChange }: ConsultationDialogProps) => 
       <DialogContent className="max-w-2xl max-h-[90vh] overflow-auto p-0">
         <DialogHeader className="px-6 pt-6 pb-2">
           <DialogTitle className="text-2xl font-bold text-foreground">
-            Share the product decision you're wrestling with
+            Where can Rubicon provide clarity for your next crossing?
           </DialogTitle>
-          <DialogDescription className="text-base text-muted-foreground">
-            In a few lines, tell Rob where you need evidence, not opinions. He'll review and follow up with next steps if it's a good fit.
-          </DialogDescription>
         </DialogHeader>
         <div
           className="bg-white rounded-b-xl overflow-hidden"
