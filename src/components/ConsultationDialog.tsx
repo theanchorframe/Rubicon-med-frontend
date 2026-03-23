@@ -11,7 +11,7 @@ const ConsultationDialog = ({ open, onOpenChange }: ConsultationDialogProps) => 
       <DialogContent className="max-w-2xl max-h-[90vh] overflow-auto p-0">
         <DialogHeader className="px-6 pt-6 pb-2">
           <DialogTitle className="text-3xl font-bold text-foreground text-center">
-            Where can Rubicon Provide Clarity for Your Next<br />Crossing?
+            Where can Rubicon Provide Clarity for<br />Your Next Crossing?
           </DialogTitle>
         </DialogHeader>
         <div
