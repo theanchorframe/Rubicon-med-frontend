@@ -65,11 +65,11 @@ const ProcessSection = () => {
       sections: [
         {
           bullets: [
-            "Validate Project Roadmap with Larger Team, Obtain Feedback, and Conduct Gap Analysis",
-            "Leverage Data Analytics to Codify Market Segmentation, Competitive Landscape, Growth, and Growth Drivers",
-            "Synthesize Clinical Intelligence by Distilling Procedural Nuances and Comparative Evidence to inform Discussion Guides, Surveys, and Other Research Instruments",
-            "Develop Discussion Guides (with scoring when appropriate) and Orchestrate Expert in-depth interviews (IDIs) to Extract Deep Domain Insights for Product Development",
-            "Validate qualitative research by deploying Quantitative Research Methods on a Larger Sample to Mitigate Risk",
+            "Validate project roadmap with larger team, obtain feedback, and conduct gap analysis",
+            "Leverage data analytics to codify market segmentation, competitive landscape, growth, and growth drivers",
+            "Synthesize clinical intelligence by distilling procedural nuances and comparative evidence to inform discussion guides, surveys, and other research instruments",
+            "Develop discussion guides (with scoring when appropriate) and orchestrate expert in-depth interviews (IDIs) to extract deep domain insights for product development",
+            "Validate qualitative research by deploying quantitative research methods on a larger sample to mitigate risk",
             "Collaborate with larger team for product development, finance, and marketing alignment",
           ],
         },
@@ -77,7 +77,7 @@ const ProcessSection = () => {
       deliverable: "",
     },
     A: {
-      title: "Action and Advice",
+      title: "Action and Advise",
       subtitle: "(Next Steps)",
       summary: "Execute on plan, report, and advise.",
       sections: [
@@ -261,7 +261,7 @@ const ProcessSection = () => {
                         {letter === "I" && <span>mmersion and inquiry</span>}
                         {letter === "D" && <span>elineate project roadmap</span>}
                         {letter === "E" && <span>ngage full team for plan execution</span>}
-                        {letter === "A" && <span>ction and advice</span>}
+                        {letter === "A" && <span>ction and advise</span>}
                       </span>
                     </div>
                     <svg
