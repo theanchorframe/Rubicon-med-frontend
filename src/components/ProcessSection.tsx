@@ -34,17 +34,17 @@ const ProcessSection = () => {
             "Understand the landscape: therapeutic area, competitive set, and current market dynamics.",
             "Map internal and external stakeholders, including KOLs, clinical users, and commercial teams.",
             "Learn pain points, unanswered questions, and where the team feels least certain today.",
-            "Clarify likely travel and touchpoints (conferences, KOL visits, client offices) that will matter.",
+            "Clarify likely travel and touchpoints (conferences, KOL visits, client offices).",
             "Capture initial thoughts on strategy and expected deliverables to test later against the data.",
           ],
         },
       ],
-      deliverable: "Every engagement begins with a deep-dive into your real-world environment and project constraints. To guide the IDEA process, we deliver a Statement of Understanding and a Statement of Work—a clear-eyed blueprint that transforms high-level goals into a validated, executable plan for your product.",
+      deliverable: "Every engagement begins with a deep-dive into your real-world environment and project constraints. To guide the IDEA process, we deliver a Statement of Understanding and a Statement of Work, a clear-eyed blueprint that transforms high-level goals into a validated, executable plan for your product.",
     },
     D: {
       title: "Delineate Project Roadmap",
       subtitle: "(Define Plan and Strategy)",
-      summary: "Define exactly what we will learn, where, when, and how.",
+      summary: "Build project roadmap and plan.",
       sections: [
         {
           bullets: [
@@ -296,7 +296,7 @@ const ProcessSection = () => {
                       </p>
 
                       {/* Summary */}
-                      <p className="text-base md:text-lg text-foreground leading-relaxed border-l-4 border-primary pl-4">
+                      <p className="text-base md:text-lg text-foreground leading-relaxed">
                         {ideaContent[letter].summary}
                       </p>
 
