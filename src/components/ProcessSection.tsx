@@ -77,9 +77,9 @@ const ProcessSection = () => {
       deliverable: "",
     },
     A: {
-      title: "Alignment and Action Plans",
+      title: "Action and Advice",
       subtitle: "(Next Steps)",
-      summary: "Turn evidence into a concrete product, market, and messaging plan your team can act on.",
+      summary: "Execute on plan, report, and advise.",
       sections: [
         {
           bullets: [
@@ -95,7 +95,7 @@ const ProcessSection = () => {
           bullets: [
             "Briefs for the creative team that inform campaigns and market development programs.",
             "Draft or refine the value proposition, tagline, and elevator pitch.",
-            "Messaging architecture and a simple user experience template to keep teams aligned.",
+            "Messaging architecture and a simple user experience template.",
           ],
         },
         {
@@ -261,7 +261,7 @@ const ProcessSection = () => {
                         {letter === "I" && <span>mmersion and inquiry</span>}
                         {letter === "D" && <span>elineate project roadmap</span>}
                         {letter === "E" && <span>ngage full team for plan execution</span>}
-                        {letter === "A" && <span>lignment and action plans</span>}
+                        {letter === "A" && <span>ction and advice</span>}
                       </span>
                     </div>
                     <svg
