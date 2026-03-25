@@ -10,7 +10,7 @@ interface CTABannerProps {
 const CTABanner = ({ onOpenCaseStudyPopup }: CTABannerProps) => {
   const mounted = useMounted();
   return (
-    <section className="py-12 pb-4 bg-background scroll-mt-20" id="case-study">
+    <section className="py-12 pb-20 bg-background scroll-mt-20" id="case-study">
       <div className="container mx-auto px-4">
         <motion.div
           initial={mounted ? { opacity: 0, y: 20 } : false}
