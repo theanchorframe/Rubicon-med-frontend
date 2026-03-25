@@ -148,7 +148,7 @@ const Navbar = ({ onOpenConsultationDialog }: NavbarProps) => {
         {!isBlogPage && (
           <div
             className={`lg:hidden bg-background border-t transition-all duration-300 ease-in-out overflow-hidden ${
-              isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+              isMobileMenuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
             }`}
           >
             <div className="container mx-auto px-4 py-4 space-y-4">
