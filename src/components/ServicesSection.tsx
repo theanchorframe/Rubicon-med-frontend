@@ -15,31 +15,37 @@ const ServicesSection = ({ onOpenConsultationDialog }: ServicesSectionProps) => 
   const services = [
   {
     title: "Product Evaluation & Concept Vetting",
+    outcomeLabel: "Reduce Investment Risk Before You Commit",
     description:
     "Our proven framework integrates multidimensional technical, clinical, and regulatory due diligence with rigorous market modeling. We synthesize competitive intelligence and growth drivers to ensure capital is deployed only into assets with a validated path to market leadership."
   },
   {
     title: "Clinical & Market Research",
+    outcomeLabel: "Make Confident Decisions With Evidence, Not Assumptions",
     description:
     "Drive confident product investment through clinical and market triangulation. We leverage expert consultations and comprehensive database analytics to distill complex evidence into an actionable roadmap – eliminating market ambiguity and securing your path to entry."
   },
   {
     title: "KOL & Voice-of-Customer Programs",
+    outcomeLabel: "Build Market Credibility Before You Launch",
     description:
     "Accelerate market adoption through clinical advocacy and expert mobilization. We manage the full-lifecycle engagement of Key Opinion Leaders—from strategic identification and contracting to the execution of IDIs, surveys, field trials, and clinician panels. By synthesizing the 'Voice of Customer' into evidence-based messaging, we ensure your value proposition resonates with providers and drives accelerated uptake."
   },
   {
     title: "Commercial Strategy & Launch",
+    outcomeLabel: "Enter the Market With Momentum That Lasts",
     description:
     "Turn insight into adoption at scale. We craft go-to-market strategies and playbooks, sales enablement, and messaging rooted in evidence so your launch not only hits targets, but sustains momentum long after market entry."
   },
   {
     title: "Upstream Portfolio Strategy & Roadmapping",
+    outcomeLabel: "Focus Resources on the Products With the Highest Return",
     description:
     "Optimize resource allocation and cross-functional alignment. By defining rigorous segmentation, targeting, and positioning (STP) frameworks alongside multi-year product roadmaps, we isolate high-potential opportunities. This allows R&D, Marketing, and Sales to concentrate resources on assets with the highest ROI."
   },
   {
     title: "Pricing, Forecasting & Financial Modeling",
+    outcomeLabel: "Defend Your Numbers at the Board Level",
     description:
     "Enable executive decision-making with rigorous financial modeling. We translate market dynamics and value-based pricing into accurate revenue projections that hold up under institutional scrutiny. Our models provide the clarity needed to synchronize AOP targets with actual clinical and commercial scalability."
   }];
@@ -91,6 +97,7 @@ const ServicesSection = ({ onOpenConsultationDialog }: ServicesSectionProps) => 
             onClick={() => setSelectedIndex(index)}
             className="glass-card p-6 md:p-8 space-y-4 border-2 border-navy/40 dark:border-navy/60 shadow-md transition-all duration-300 cursor-pointer group">
             
+              <p className="text-primary font-bold text-lg">{service.outcomeLabel}</p>
               <h3 className="text-2xl font-bold text-navy group-hover:text-primary transition-colors duration-300">{service.title}</h3>
               <p className="text-foreground/80 leading-relaxed text-lg group-hover:text-foreground transition-colors duration-300">
                 {service.description}
@@ -110,7 +117,7 @@ const ServicesSection = ({ onOpenConsultationDialog }: ServicesSectionProps) => 
             onClick={onOpenConsultationDialog}
             className="shine-effect text-lg sm:text-xl px-6 sm:px-12 py-6 sm:py-8 h-auto bg-primary hover:bg-primary/90 whitespace-normal text-center leading-tight">
             
-            Request a Complimentary Consultation
+            See How We Work
           </Button>
         </motion.div>
       </div>
@@ -165,6 +172,7 @@ const ServicesSection = ({ onOpenConsultationDialog }: ServicesSectionProps) => 
               </p>
 
               {/* Service Content */}
+              <p className="text-primary font-bold text-xl mb-2">{services[selectedIndex].outcomeLabel}</p>
               <h3 className="text-3xl md:text-4xl font-bold text-primary mb-6">
                 {services[selectedIndex].title}
               </h3>

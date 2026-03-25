@@ -13,10 +13,10 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-75"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroVascularBg})` }}>
       </div>
-      <div className="absolute inset-0 bg-navy/30"></div>
+      <div className="absolute inset-0" style={{ backgroundColor: 'rgba(0, 0, 0, 0.55)' }}></div>
 
       <div className="relative z-10 container mx-auto px-6 pt-32 pb-20 max-w-6xl">
         <motion.div
@@ -32,7 +32,7 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
               transition={{ delay: 0.4 }}
               className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.8rem] font-bold text-white" style={{ lineHeight: '1.3' }}>
               
-              Fueling positive patient outcomes and revenue growth through rigorous data and clinical insight
+              Turn Clinical Evidence Into Commercial Advantage
             </motion.h1>
 
             <motion.p
@@ -42,7 +42,7 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
               className="text-lg sm:text-xl md:text-2xl leading-relaxed font-semibold max-w-3xl mx-auto"
               style={{ color: "rgba(255,255,255,0.8)" }}>
               
-              Rubicon delivers fractional and traditional consulting using clinical and market insight. We provide the strategic roadmap from product development and market segmentation to forecasting and launch
+              Rubicon delivers board-ready market intelligence and go-to-market strategy for MedTech and Pharma teams who can't afford to get it wrong.
             </motion.p>
 
             <motion.div
@@ -58,13 +58,6 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
                 
                 Request a Complimentary Consultation
               </Button>
-
-              <div className="text-center max-w-md">
-                <p className="text-white/90 text-base sm:text-lg md:text-xl italic font-semibold">
-                  "Rob's is a strong contributor with deep insights which have helped us greatly."
-                </p>
-                <p className="text-white/70 text-sm sm:text-base mt-1 font-semibold">— Rick Kirchner, R&D Executive</p>
-              </div>
             </motion.div>
           </div>
         </motion.div>

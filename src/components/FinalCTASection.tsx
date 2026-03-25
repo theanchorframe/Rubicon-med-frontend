@@ -17,18 +17,23 @@ const FinalCTASection = ({ onOpenConsultationDialog }: FinalCTASectionProps) => 
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="space-y-8"
+            className="space-y-4"
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-navy">
-              Let Rubicon Help You Map Your Next Crossing
+              Ready to Validate Your Next Move?
             </h2>
-            <Button
-              size="lg"
-              onClick={onOpenConsultationDialog}
-              className="shine-effect text-lg sm:text-xl px-6 sm:px-12 py-6 sm:py-8 h-auto bg-primary hover:bg-primary/90 whitespace-normal text-center leading-tight max-w-full"
-            >
-              Request a Complimentary Consultation
-            </Button>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Join the MedTech and Pharma teams who've used Rubicon's insight to protect capital and accelerate market entry.
+            </p>
+            <div className="pt-4">
+              <Button
+                size="lg"
+                onClick={onOpenConsultationDialog}
+                className="shine-effect text-lg sm:text-xl px-6 sm:px-12 py-6 sm:py-8 h-auto bg-primary hover:bg-primary/90 whitespace-normal text-center leading-tight max-w-full"
+              >
+                Request a Complimentary Consultation
+              </Button>
+            </div>
           </motion.div>
         </div>
       </div>
