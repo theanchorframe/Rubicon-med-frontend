@@ -10,6 +10,10 @@ const StatsSection = ({ onOpenConsultationDialog }: StatsSectionProps) => {
   const mounted = useMounted();
   const stats = [
     {
+      number: "$2M",
+      description: "Prevented in wasted product investment",
+    },
+    {
       number: "$30M",
       description: "Forecasted revenue from new device launch",
     },
@@ -20,10 +24,6 @@ const StatsSection = ({ onOpenConsultationDialog }: StatsSectionProps) => {
     {
       number: "40+",
       description: "Projects delivered across MedTech & Pharma",
-    },
-    {
-      number: "$2M",
-      description: "Prevented in wasted product investment",
     },
   ];
 
@@ -50,7 +50,7 @@ const StatsSection = ({ onOpenConsultationDialog }: StatsSectionProps) => {
               className="bg-navy-foreground/10 backdrop-blur-sm p-8 rounded-lg text-center border border-navy-foreground/20 hover:bg-navy-foreground/20 hover:scale-105 transition-all duration-300"
             >
               <p className="text-6xl md:text-7xl font-bold mb-4">{stat.number}</p>
-              <p className="text-navy-foreground/90">{stat.description}</p>
+              <p className="text-lg font-semibold text-navy-foreground">{stat.description}</p>
             </motion.div>
           ))}
         </div>

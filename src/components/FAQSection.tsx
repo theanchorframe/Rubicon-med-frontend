@@ -13,27 +13,27 @@ const FAQSection = ({ onOpenConsultationDialog }: FAQSectionProps) => {
 
   const faqs = [
     {
-      question: "With what types of companies do you typically work?",
+      question: "How is Rubicon different from a traditional consulting firm?",
       answer:
         "We partner with medical device and pharmaceutical organizations across the entire growth spectrum. Our expertise spans from guiding early-stage startups through their inaugural product launches to supporting established global manufacturers in product development and strategic licensing or acquisitions.",
     },
     {
-      question: "What's your experience with launch planning and execution?",
+      question: "What does your experience with launch planning actually look like?",
       answer:
         "With a legacy of orchestrating 40+ high-stakes launches across vascular intervention, pharmaceuticals, and diagnostics, Rob specializes in the critical 'Front-End of Innovation.' By applying a comprehensive launch framework, we identify high-value opportunities and architect the clinical evidence stories that drive adoption. We don't just plan; we equip and train your launch teams to ensure a seamless, high-ROI transition from R&D to global commercialization.",
     },
     {
-      question: "Do you only work with U.S.-based companies?",
+      question: "Do you work with companies outside the US?",
       answer:
         "Geographic location is not a barrier to execution. While headquartered on Long Island, we have a proven track record of supporting international clients through hybrid engagement models. We prioritize on-site mobilization for critical workstreams such as requirement gathering, prototyping, and expert panels, ensuring that distance never compromises the fidelity of the strategic roadmap.",
     },
     {
-      question: "What's your process like?",
+      question: "What does an engagement with Rubicon actually look like, start to finish?",
       answer:
         "Every engagement begins with a deep-dive into your real-world environment and project constraints. To guide the IDEA process, we deliver a Statement of Understanding and a Statement of Work—a clear-eyed blueprint that transforms high-level goals into a validated, executable plan for your device.",
     },
     {
-      question: "How do we know this investment will pay off?",
+      question: "How do we know this investment will generate a return?",
       answer:
         "Our work has helped companies avoid $2M+ in wasted spend and helped bring >$10M in new product revenue. While innovation inherently carries uncertainty, our risk-mitigation frameworks provide the clinical and commercial confidence necessary for a successful launch.",
     },
@@ -49,7 +49,7 @@ const FAQSection = ({ onOpenConsultationDialog }: FAQSectionProps) => {
           viewport={{ once: true }}
           className="flex flex-col items-center text-center"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">FAQ</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">Questions Serious Buyers Ask Before Engaging</h2>
         </motion.div>
 
         <motion.div
