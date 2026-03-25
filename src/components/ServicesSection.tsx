@@ -77,7 +77,7 @@ const ServicesSection = ({ onOpenConsultationDialog }: ServicesSectionProps) => 
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-xl sm:text-2xl md:text-[2rem] lg:text-[2.5rem] font-bold text-navy text-center mb-4 px-2">Six Ways Rubicon Turns Clinical and Market Intelligence Into Defensible Commercial Decisions
+          className="text-2xl sm:text-3xl md:text-[2.5rem] lg:text-[3rem] font-bold text-navy text-center mb-4 px-2" style={{ lineHeight: '1.4' }}>Six Ways Rubicon Turns Clinical and Market Intelligence Into Defensible Commercial Decisions
 
 
         </motion.h2>
@@ -98,7 +98,7 @@ const ServicesSection = ({ onOpenConsultationDialog }: ServicesSectionProps) => 
             className="bg-background p-8 space-y-4 transition-all duration-300 cursor-pointer group"
             style={{ border: '1px solid #e2e8f0', boxShadow: '0 2px 12px rgba(0,0,0,0.08)' }}>
             
-              <h3 className="text-2xl font-bold text-navy group-hover:text-primary transition-colors duration-300">{service.title}</h3>
+              <h3 className="text-2xl font-bold text-primary group-hover:text-primary/80 transition-colors duration-300">{service.title}</h3>
               <p className="text-foreground/80 leading-relaxed text-lg group-hover:text-foreground transition-colors duration-300">
                 <span className="font-bold">{service.boldOpener}</span>{" "}{service.description}
               </p>
