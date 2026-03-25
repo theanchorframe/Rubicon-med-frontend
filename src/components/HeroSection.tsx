@@ -40,7 +40,7 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
               className="mx-auto"
-              style={{ color: "rgba(255,255,255,0.9)", fontSize: '1.2rem', lineHeight: '1.7', maxWidth: '700px' }}>
+              style={{ color: "rgba(255,255,255,0.9)", fontSize: '1.2rem', lineHeight: '1.7', maxWidth: '900px' }}>
               Rubicon equips VP Marketing, Sales, and R&D leaders with KOL-validated market intelligence, rigorous segmentation, and board-ready financial models — so every market entry decision is defensible, capital is protected, and launches land where the revenue actually is.
             </motion.p>
 
