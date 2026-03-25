@@ -32,10 +32,10 @@ const Blog = () => {
       <header className="bg-navy pt-32 pb-16">
         <div className="container mx-auto px-6 md:px-8 max-w-5xl text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-navy-foreground mb-4">
-            Latest Insights
+            Market Intelligence From 15+ Years Inside MedTech and Pharma
           </h1>
-          <p className="text-lg md:text-xl text-navy-foreground/80 max-w-2xl mx-auto">
-            Expert perspectives on MedTech market strategy, product launches, and clinical commercialization.
+          <p className="text-navy-foreground mx-auto" style={{ fontSize: '1.1rem', opacity: 0.85, maxWidth: '650px', lineHeight: '1.7' }}>
+            Practical perspectives on market validation, KOL engagement, product launch strategy, and commercial growth — written for MedTech and Pharma commercial teams who need intelligence they can actually use.
           </p>
         </div>
       </header>
