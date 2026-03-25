@@ -57,7 +57,7 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
                 Request a Complimentary Consultation
               </Button>
 
-              <p className="text-center" style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.85)', marginTop: '16px' }}>
+              <p className="text-center" style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.85)', marginTop: '16px' }}>
                 ✓ 100+ KOL Engagements Across Specialties&nbsp;&nbsp;|&nbsp;&nbsp;✓ $2M+ Protected From Non-Viable Investment&nbsp;&nbsp;|&nbsp;&nbsp;✓ 20+ Markets Evaluated for Commercial Potential
               </p>
             </motion.div>
