@@ -77,7 +77,7 @@ const ServicesSection = ({ onOpenConsultationDialog }: ServicesSectionProps) => 
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-2xl sm:text-3xl md:text-[2.5rem] lg:text-[3rem] font-bold text-navy text-center mb-4 px-2" style={{ lineHeight: '1.4' }}>Six Ways Rubicon Turns Clinical and Market Intelligence Into Defensible Commercial Decisions
+          className="text-2xl sm:text-3xl md:text-[2.5rem] lg:text-[3rem] font-bold text-navy text-center mb-4 px-2" style={{ lineHeight: '1.4' }}>Six Ways Rubicon Turns <span className="text-primary">Clinical and Market Intelligence</span> Into Defensible Commercial Decisions
 
 
         </motion.h2>
