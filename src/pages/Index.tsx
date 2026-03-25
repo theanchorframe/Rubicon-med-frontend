@@ -27,7 +27,7 @@ const Index = () => {
       <ServicesSection onOpenConsultationDialog={() => setIsConsultationDialogOpen(true)} />
       <TestimonialsSection />
       <CaseStudiesSection onOpenConsultationDialog={() => setIsConsultationDialogOpen(true)} />
-      <CTABanner />
+      <CTABanner onOpenCaseStudyPopup={() => setIsCaseStudyPopupOpen(true)} />
       <StatsSection onOpenConsultationDialog={() => setIsConsultationDialogOpen(true)} />
       <FAQSection onOpenConsultationDialog={() => setIsConsultationDialogOpen(true)} />
       <FinalCTASection onOpenConsultationDialog={() => setIsConsultationDialogOpen(true)} />
