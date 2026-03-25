@@ -22,7 +22,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
         "Identify and mitigate investment risk in potential product licensing and acquisitions. We perform rigorous due diligence to isolate assets that lack market scalability due to technical limitations in geometry, sizing, or procedural compatibility. By triangulating these findings with KOL inquiries, we prevent the acquisition of products that cannot achieve critical mass in the clinical environment.",
       cta: "Talk to Rob About Due Diligence",
       overlayText:
-        "Transform Literature into Leverage: The Strategic Path to Enterprise-Level Co-Development Partnerships.",
+        "Precision before investment. We use VoC and predictive modeling to quantify market demand and identify barriers before you break ground that allows you to cut low-ROI projects and invest in the winners.",
     },
     {
       image: clinicalInsightImage,
@@ -31,7 +31,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
         "We synchronize expert insights, segmentation, and targeted positioning to drive quick adoption. We translate clinical evidence into optimized messaging, ensuring your product enters the market with a defensible competitive advantage and clinical alignment.",
       cta: "Get Your Commercial Strategy Assessment",
       overlayText:
-        "We bridge the gap between clinical complexity and commercial success by converting KOL insights into the segments and claims your sales team needs to win tomorrow.",
+        "We convert KOL insights into the market segments and clinical claims your sales team needs to win — before your competitors find them first.",
     },
     {
       image: deRiskImage,
@@ -40,7 +40,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
         "Most product roadmaps are built on internal assumptions, not market reality. Rubicon applies data-driven segmentation and Voice of Customer analysis to ensure every product decision is grounded in what clinicians, patients, and payers will actually support — before development spend compounds the risk.",
       cta: "See How We Work",
       overlayText:
-        "Precision before investment. We use VoC and predictive modeling to quantify market demand and identify barriers before you break ground that allows you to cut low-ROI projects and invest in the winners.",
+        "Turn Clinical Evidence Into the Co-Development Partnerships That Fund Your Next Product.",
     },
   ];
 
