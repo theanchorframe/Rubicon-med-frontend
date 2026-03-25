@@ -30,8 +30,8 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
               initial={mounted ? { opacity: 0, y: 20 } : false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-3xl sm:text-4xl md:text-5xl font-bold text-white"
-              style={{ fontSize: 'clamp(2.2rem, 4vw, 3.5rem)', lineHeight: '1.3' }}>
+              className="font-bold text-white text-center"
+              style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)', lineHeight: '1.3' }}>
               Most MedTech Teams Get Market Strategy Wrong. Here's How the Right Intelligence Changes the Outcome.
             </motion.h1>
 
@@ -39,8 +39,8 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
               initial={mounted ? { opacity: 0 } : false}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
-              className="mx-auto font-medium"
-              style={{ color: "rgba(255,255,255,0.9)", fontSize: '1.2rem', lineHeight: '1.7', maxWidth: '900px' }}>
+              className="mx-auto font-medium text-center"
+              style={{ color: "rgba(255,255,255,0.9)", fontSize: 'clamp(1rem, 1.5vw, 1.2rem)', lineHeight: '1.7', maxWidth: '900px' }}>
               Rubicon equips <span className="font-semibold">VP Marketing, Sales, and R&D leaders</span> with KOL-validated market intelligence, rigorous segmentation, and board-ready financial models — so every market entry decision is defensible, capital is protected, and launches land where the revenue actually is.
             </motion.p>
 
@@ -57,9 +57,16 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
                 Request a Complimentary Consultation
               </Button>
 
-              <p className="text-center" style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.85)', marginTop: '16px' }}>
-                ✓ 100+ KOL Engagements Across Specialties&nbsp;&nbsp;|&nbsp;&nbsp;✓ $2M+ Protected From Non-Viable Investment&nbsp;&nbsp;|&nbsp;&nbsp;✓ 20+ Markets Evaluated for Commercial Potential
-              </p>
+              <div className="text-center md:flex md:justify-center md:gap-2" style={{ fontSize: 'clamp(0.85rem, 1.2vw, 1rem)', color: 'rgba(255,255,255,0.85)', marginTop: '16px' }}>
+                <p className="hidden md:flex md:items-center md:gap-2">
+                  ✓ 100+ KOL Engagements Across Specialties&nbsp;&nbsp;|&nbsp;&nbsp;✓ $2M+ Protected From Non-Viable Investment&nbsp;&nbsp;|&nbsp;&nbsp;✓ 20+ Markets Evaluated for Commercial Potential
+                </p>
+                <ul className="md:hidden space-y-1 list-none text-center">
+                  <li>✓ 100+ KOL Engagements Across Specialties</li>
+                  <li>✓ $2M+ Protected From Non-Viable Investment</li>
+                  <li>✓ 20+ Markets Evaluated for Commercial Potential</li>
+                </ul>
+              </div>
             </motion.div>
           </div>
         </motion.div>
