@@ -95,7 +95,7 @@ const ServicesSection = ({ onOpenConsultationDialog }: ServicesSectionProps) => 
               borderColor: "hsl(var(--primary))"
             }}
             onClick={() => setSelectedIndex(index)}
-            className="bg-background p-8 space-y-4 transition-all duration-300 cursor-pointer group"
+            className="bg-background p-8 space-y-4 rounded-xl transition-all duration-300 cursor-pointer group"
             style={{ border: '1px solid #e2e8f0', boxShadow: '0 2px 12px rgba(0,0,0,0.08)' }}>
             
               <h3 className="text-2xl font-bold text-primary group-hover:text-primary/80 transition-colors duration-300">{service.title}</h3>
