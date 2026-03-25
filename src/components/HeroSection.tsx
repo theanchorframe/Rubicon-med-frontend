@@ -39,9 +39,9 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
               initial={mounted ? { opacity: 0 } : false}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
-              className="mx-auto font-semibold"
+              className="mx-auto font-medium"
               style={{ color: "rgba(255,255,255,0.9)", fontSize: '1.2rem', lineHeight: '1.7', maxWidth: '900px' }}>
-              Rubicon equips <strong>VP Marketing, Sales, and R&D leaders</strong> with KOL-validated market intelligence, rigorous segmentation, and board-ready financial models — so every market entry decision is defensible, capital is protected, and launches land where the revenue actually is.
+              Rubicon equips <span className="font-semibold">VP Marketing, Sales, and R&D leaders</span> with KOL-validated market intelligence, rigorous segmentation, and board-ready financial models — so every market entry decision is defensible, capital is protected, and launches land where the revenue actually is.
             </motion.p>
 
             <motion.div
