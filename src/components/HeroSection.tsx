@@ -30,19 +30,19 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
               initial={mounted ? { opacity: 0, y: 20 } : false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.8rem] font-bold text-white" style={{ lineHeight: '1.3' }}>
-              
-              Turn Clinical Evidence Into Commercial Advantage
+              className="text-3xl sm:text-4xl md:text-5xl font-bold text-white"
+              style={{ fontSize: 'clamp(1.75rem, 4vw, 3.5rem)', lineHeight: '1.25' }}>
+              Most MedTech Teams Get Market Strategy Wrong.{" "}
+              <span className="block mt-2">Here's How the Right Intelligence Changes the Outcome.</span>
             </motion.h1>
 
             <motion.p
               initial={mounted ? { opacity: 0 } : false}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
-              className="text-lg sm:text-xl md:text-2xl leading-relaxed font-semibold max-w-3xl mx-auto"
-              style={{ color: "rgba(255,255,255,0.8)" }}>
-              
-              Rubicon delivers board-ready market intelligence and go-to-market strategy for MedTech and Pharma teams who can't afford to get it wrong.
+              className="mx-auto"
+              style={{ color: "rgba(255,255,255,0.9)", fontSize: '1.2rem', lineHeight: '1.7', maxWidth: '700px' }}>
+              Rubicon equips VP Marketing, Sales, and R&D leaders with KOL-validated market intelligence, rigorous segmentation, and board-ready financial models — so every market entry decision is defensible, capital is protected, and launches land where the revenue actually is.
             </motion.p>
 
             <motion.div
@@ -55,9 +55,12 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
                 size="lg"
                 onClick={onOpenConsultation}
                 className="shine-effect text-xl sm:text-xl md:text-2xl lg:text-2xl px-6 sm:px-8 py-5 sm:py-6 bg-primary hover:bg-primary/90 whitespace-normal h-auto">
-                
                 Request a Complimentary Consultation
               </Button>
+
+              <p className="text-center" style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.85)', marginTop: '16px' }}>
+                ✓ 100+ KOL Engagements Across Specialties&nbsp;&nbsp;|&nbsp;&nbsp;✓ $2M+ Protected From Non-Viable Investment&nbsp;&nbsp;|&nbsp;&nbsp;✓ 20+ Markets Evaluated for Commercial Potential
+              </p>
             </motion.div>
           </div>
         </motion.div>
