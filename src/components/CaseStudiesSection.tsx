@@ -20,25 +20,25 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
       title: "Protect Capital Before You Commit to a Deal",
       description:
         "Identify and mitigate investment risk in potential product licensing and acquisitions. We perform rigorous due diligence to isolate assets that lack market scalability due to technical limitations in geometry, sizing, or procedural compatibility. By triangulating these findings with KOL inquiries, we prevent the acquisition of products that cannot achieve critical mass in the clinical environment.",
-      cta: "Request a Complimentary Consultation",
+      cta: "Talk to Rob About Due Diligence",
       overlayText:
         "Transform Literature into Leverage: The Strategic Path to Enterprise-Level Co-Development Partnerships.",
     },
     {
       image: clinicalInsightImage,
-      title: "Commercial Growth From Clinical and Market Insight",
+      title: "Enter the Market With a Defensible Competitive Advantage — Not a Hope and a Plan",
       description:
         "We synchronize expert insights, segmentation, and targeted positioning to drive quick adoption. We translate clinical evidence into optimized messaging, ensuring your product enters the market with a defensible competitive advantage and clinical alignment.",
-      cta: "Request a Complimentary Consultation",
+      cta: "Get Your Commercial Strategy Assessment",
       overlayText:
         "We bridge the gap between clinical complexity and commercial success by converting KOL insights into the segments and claims your sales team needs to win tomorrow.",
     },
     {
       image: deRiskImage,
-      title: "Product Risk Mitigation",
+      title: "Build a Roadmap That Reflects What the Market Actually Demands",
       description:
-        "We apply data-driven segmentation and VoC analysis so that your roadmap reflects true market demand.",
-      cta: "Request a Complimentary Consultation",
+        "Most product roadmaps are built on internal assumptions, not market reality. Rubicon applies data-driven segmentation and Voice of Customer analysis to ensure every product decision is grounded in what clinicians, patients, and payers will actually support — before development spend compounds the risk.",
+      cta: "See How We Work",
       overlayText:
         "Precision before investment. We use VoC and predictive modeling to quantify market demand and identify barriers before you break ground that allows you to cut low-ROI projects and invest in the winners.",
     },
