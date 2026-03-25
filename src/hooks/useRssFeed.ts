@@ -8,6 +8,8 @@ export interface BlogPost {
   pubDate: string;
   author: string;
   link: string;
+  image: string;
+  category: string;
 }
 
 const RSS_FEED_URL =
@@ -42,6 +44,24 @@ function parseRssXml(xml: string): BlogPost[] {
       item.getElementsByTagNameNS("http://purl.org/rss/1.0/modules/content/", "encoded")[0]?.textContent || "";
     const description = item.querySelector("description")?.textContent || "";
     const pubDate = item.querySelector("pubDate")?.textContent || "";
+    const category = item.querySelector("category")?.textContent || "";
+    
+    // Try to extract image from enclosure, media:content, or content
+    let image = "";
+    const enclosure = item.querySelector("enclosure");
+    if (enclosure?.getAttribute("type")?.startsWith("image")) {
+      image = enclosure.getAttribute("url") || "";
+    }
+    if (!image) {
+      const mediaContent = item.getElementsByTagNameNS("http://search.yahoo.com/mrss/", "content")[0];
+      if (mediaContent) {
+        image = mediaContent.getAttribute("url") || "";
+      }
+    }
+    if (!image) {
+      const imgMatch = (contentEncoded || description).match(/<img[^>]+src=["']([^"']+)["']/);
+      if (imgMatch) image = imgMatch[1];
+    }
 
     const content = contentEncoded || description;
     const plainExcerpt = stripHtml(description || content).slice(0, 200);
@@ -55,6 +75,8 @@ function parseRssXml(xml: string): BlogPost[] {
       pubDate,
       author: "Rob Miraglia",
       link,
+      image,
+      category,
     });
   });
 
