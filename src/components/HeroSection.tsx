@@ -31,9 +31,8 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
               className="text-3xl sm:text-4xl md:text-5xl font-bold text-white"
-              style={{ fontSize: 'clamp(1.75rem, 4vw, 3.5rem)', lineHeight: '1.25' }}>
-              Most MedTech Teams Get Market Strategy Wrong.{" "}
-              <span className="block mt-2">Here's How the Right Intelligence Changes the Outcome.</span>
+              style={{ fontSize: 'clamp(1.75rem, 3.2vw, 2.8rem)', lineHeight: '1.3' }}>
+              Most MedTech Teams Get Market Strategy Wrong. Here's How the Right Intelligence Changes the Outcome.
             </motion.h1>
 
             <motion.p
