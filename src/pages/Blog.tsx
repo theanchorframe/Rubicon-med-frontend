@@ -59,26 +59,80 @@ const Blog = () => {
               <article
                 key={post.slug}
                 onClick={() => navigate(`/blog/${post.slug}`)}
-                className="bg-card rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6 cursor-pointer group flex flex-col"
+                className="bg-card rounded-lg shadow-md overflow-hidden cursor-pointer group flex flex-col"
+                style={{ transition: 'all 0.2s ease' }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-3px)';
+                  e.currentTarget.style.boxShadow = '0 8px 24px rgba(0,0,0,0.1)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = '';
+                }}
               >
-                <h2 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
-                  {post.title}
-                </h2>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-5 flex-1">
-                  {post.excerpt}
-                </p>
-                <div className="mt-auto">
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
-                    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-primary/10 text-primary">
-                      <User size={14} />
-                    </span>
-                    <span>{post.author}</span>
-                    <span className="mx-1">·</span>
-                    <time>{formatDate(post.pubDate)}</time>
+                {/* Featured Image */}
+                {post.image ? (
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="w-full object-cover"
+                    style={{ height: '200px', borderRadius: '8px 8px 0 0' }}
+                  />
+                ) : (
+                  <div
+                    className="w-full bg-muted flex items-center justify-center"
+                    style={{ height: '200px', borderRadius: '8px 8px 0 0' }}
+                  >
+                    <span className="text-muted-foreground text-sm">Featured Image</span>
                   </div>
-                  <span className="inline-flex items-center gap-1 text-primary font-semibold text-sm group-hover:gap-2 transition-all">
-                    Read More <ArrowRight size={16} />
-                  </span>
+                )}
+
+                <div className="p-6 flex flex-col flex-1">
+                  {/* Category Tag */}
+                  {post.category && (
+                    <span
+                      className="text-primary font-bold uppercase"
+                      style={{ fontSize: '0.75rem', letterSpacing: '0.05em' }}
+                    >
+                      {post.category}
+                    </span>
+                  )}
+
+                  {/* Title */}
+                  <h2
+                    className="font-bold text-navy group-hover:text-primary transition-colors"
+                    style={{ fontSize: '1.15rem', marginTop: '8px' }}
+                  >
+                    {post.title}
+                  </h2>
+
+                  {/* Description */}
+                  <p
+                    className="mb-5 flex-1"
+                    style={{ fontSize: '0.9rem', color: '#64748b', lineHeight: '1.6', marginTop: '8px' }}
+                  >
+                    {post.excerpt}
+                  </p>
+
+                  {/* Divider */}
+                  <div className="border-t border-border pt-4 mt-auto">
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
+                      <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-primary/10 text-primary">
+                        <User size={14} />
+                      </span>
+                      <span>{post.author}</span>
+                      <span className="mx-1">·</span>
+                      <time>{formatDate(post.pubDate)}</time>
+                    </div>
+                    <span
+                      className="inline-flex items-center gap-1 text-primary font-bold text-sm"
+                      style={{ transition: 'transform 0.2s ease' }}
+                      onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateX(4px)'; }}
+                      onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateX(0)'; }}
+                    >
+                      Read More <ArrowRight size={16} />
+                    </span>
+                  </div>
                 </div>
               </article>
             ))}
