@@ -31,9 +31,8 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
               className="text-3xl sm:text-4xl md:text-5xl font-bold text-white"
-              style={{ fontSize: 'clamp(1.75rem, 4vw, 3.5rem)', lineHeight: '1.25' }}>
-              Most MedTech Teams Get Market Strategy Wrong.{" "}
-              <span className="block mt-2">Here's How the Right Intelligence Changes the Outcome.</span>
+              style={{ fontSize: 'clamp(1.75rem, 3.2vw, 2.8rem)', lineHeight: '1.3' }}>
+              Most MedTech Teams Get Market Strategy Wrong. Here's How the Right Intelligence Changes the Outcome.
             </motion.h1>
 
             <motion.p
@@ -41,7 +40,7 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
               className="mx-auto"
-              style={{ color: "rgba(255,255,255,0.9)", fontSize: '1.2rem', lineHeight: '1.7', maxWidth: '700px' }}>
+              style={{ color: "rgba(255,255,255,0.9)", fontSize: '1.2rem', lineHeight: '1.7', maxWidth: '900px' }}>
               Rubicon equips VP Marketing, Sales, and R&D leaders with KOL-validated market intelligence, rigorous segmentation, and board-ready financial models — so every market entry decision is defensible, capital is protected, and launches land where the revenue actually is.
             </motion.p>
 
@@ -58,7 +57,7 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
                 Request a Complimentary Consultation
               </Button>
 
-              <p className="text-center" style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.85)', marginTop: '16px' }}>
+              <p className="text-center" style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.85)', marginTop: '16px' }}>
                 ✓ 100+ KOL Engagements Across Specialties&nbsp;&nbsp;|&nbsp;&nbsp;✓ $2M+ Protected From Non-Viable Investment&nbsp;&nbsp;|&nbsp;&nbsp;✓ 20+ Markets Evaluated for Commercial Potential
               </p>
             </motion.div>
