@@ -32,7 +32,7 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
               transition={{ delay: 0.4 }}
               className="font-bold text-white text-center"
               style={{ fontSize: 'clamp(1.875rem, 4vw, 3.5rem)', lineHeight: '1.3' }}>
-              Most MedTech Teams Get Market Strategy Wrong. Here's How the Right Intelligence Changes the Outcome.
+              Fueling Positive Patient Outcomes and Corporate Growth Through Rigorous Data and Clinical Insight
             </motion.h1>
 
             <motion.p
