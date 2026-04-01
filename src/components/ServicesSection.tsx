@@ -57,23 +57,7 @@ const ServicesSection = ({ onOpenConsultationDialog }: ServicesSectionProps) => 
   }];
 
 
-  const handlePrevious = () => {
-    if (selectedIndex !== null) {
-      setSelectedIndex(selectedIndex === 0 ? services.length - 1 : selectedIndex - 1);
-    }
-  };
 
-  const handleNext = () => {
-    if (selectedIndex !== null) {
-      setSelectedIndex(selectedIndex === services.length - 1 ? 0 : selectedIndex + 1);
-    }
-  };
-
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === "ArrowLeft") handlePrevious();
-    if (e.key === "ArrowRight") handleNext();
-    if (e.key === "Escape") setSelectedIndex(null);
-  };
 
   return (
     <section id="services" className="py-20 bg-background scroll-mt-20">
