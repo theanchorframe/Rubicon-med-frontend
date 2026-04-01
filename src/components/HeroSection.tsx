@@ -50,7 +50,7 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
             >
               Rubicon equips <span className="font-semibold">C-Suite, Marketing VP's, and R&D leaders</span> with
               KOL-validated market intelligence, rigorous segmentation, and board-ready financial models through
-              fractional and traditional consulting — so launches land where the revenue oportunity is.
+              fractional and traditional consulting.
             </motion.p>
 
             <motion.div
