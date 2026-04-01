@@ -29,7 +29,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
       title: "Enter the Market With a Defensible Competitive Advantage",
       description:
         "We identify your highest-value segments, translate clinical evidence into targeted positioning, and develop messaging that drives adoption and stands up to scrutiny.",
-      cta: "Get Your Commercial Strategy Assessment",
+      cta: "Request a Complimentary Consultation",
       overlayText:
         "We convert KOL insights into the market segments and clinical claims your sales team needs to win — before your competitors find them first.",
     },
