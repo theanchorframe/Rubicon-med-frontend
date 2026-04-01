@@ -20,7 +20,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
       title: "Protect Capital Before You Commit to a Deal",
       description:
         "Identify and mitigate investment risk before licensing or acquisition. We combine KOL insights with rigorous due diligence to prevent the acquisition of products that are non viable.",
-      cta: "Talk to Rob About Due Diligence",
+      cta: "Request a Complimentary Consultation",
       overlayText:
         "Precision before investment. We use VoC and predictive modeling to quantify market demand and identify barriers before you break ground that allows you to cut low-ROI projects and invest in the winners.",
     },
