@@ -19,7 +19,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
       image: launchStrategyImage,
       title: "Protect Capital Before You Commit to a Deal",
       description:
-        "Identify and mitigate investment risk before licensing or acquisition. We triangulate KOL insights with rigorous due diligence to prevent the acquisition of products that are not viable.",
+        "Identify and mitigate investment risk before licensing or acquisition. We triangulate KOL insights with rigorous due diligence to prevent the acquisition of products that are non viable.",
       cta: "Talk to Rob About Due Diligence",
       overlayText:
         "Precision before investment. We use VoC and predictive modeling to quantify market demand and identify barriers before you break ground that allows you to cut low-ROI projects and invest in the winners.",
@@ -39,16 +39,13 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
       description:
         "Most product roadmaps are built on internal assumptions, not market reality. Rubicon applies data-driven segmentation and Voice of Customer analysis to ensure every product decision is grounded in what clinicians, patients, and payers will actually support — before development spend compounds the risk.",
       cta: "See How We Work",
-      overlayText:
-        "Turn Clinical Evidence Into the Co-Development Partnerships That Fund Your Next Product.",
+      overlayText: "Turn Clinical Evidence Into the Co-Development Partnerships That Fund Your Next Product.",
     },
   ];
 
   return (
     <section id="case-studies" className="pt-2 pb-20 bg-background overflow-hidden scroll-mt-20">
       <div className="container mx-auto px-4">
-        
-
         <div className="max-w-7xl mx-auto space-y-16">
           {caseStudies.map((study, index) => (
             <motion.div
@@ -57,9 +54,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className={`flex flex-col ${
-                index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-              } gap-8 items-center`}
+              className={`flex flex-col ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} gap-8 items-center`}
             >
               {/* Image with hover overlay */}
               <div
@@ -67,16 +62,10 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
                 onMouseEnter={() => setHoveredCard(index)}
                 onMouseLeave={() => setHoveredCard(null)}
               >
-                <img
-                  src={study.image}
-                  alt={study.title}
-                  className="w-full object-cover h-auto md:h-[450px]"
-                />
+                <img src={study.image} alt={study.title} className="w-full object-cover h-auto md:h-[450px]" />
                 <div
                   className={`absolute inset-x-0 bottom-0 bg-black/90 text-white p-6 transition-all duration-500 ${
-                    hoveredCard === index
-                      ? "translate-y-0 opacity-100"
-                      : "translate-y-full opacity-0"
+                    hoveredCard === index ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
                   }`}
                 >
                   <p className="text-sm leading-relaxed">{study.overlayText}</p>
@@ -85,14 +74,10 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
 
               {/* Text content - vertically centered */}
               <div className="space-y-6 w-full md:w-1/2 text-left">
-                <h3 className="text-3xl lg:text-4xl font-bold text-navy">
-                  {study.title}
-                </h3>
-                <p className="text-foreground leading-relaxed text-xl">
-                  {study.description}
-                </p>
-                <Button 
-                  size="lg" 
+                <h3 className="text-3xl lg:text-4xl font-bold text-navy">{study.title}</h3>
+                <p className="text-foreground leading-relaxed text-xl">{study.description}</p>
+                <Button
+                  size="lg"
                   onClick={onOpenConsultationDialog}
                   className="shine-effect text-lg sm:text-xl px-6 sm:px-12 py-6 sm:py-8 h-auto bg-primary hover:bg-primary/90 whitespace-normal text-center leading-tight"
                 >
