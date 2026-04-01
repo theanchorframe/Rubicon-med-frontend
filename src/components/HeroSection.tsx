@@ -33,7 +33,7 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
               className="font-bold text-white text-center"
               style={{ fontSize: "clamp(1.875rem, 4vw, 3.5rem)", lineHeight: "1.3" }}
             >
-              Fueling Positive Patient Outcomes and Corporate Growth Through Rigorous Data and Clinical Insight
+              Fueling Positive Patient Outcomes and Revenue Growth.
             </motion.h1>
 
             <motion.p
