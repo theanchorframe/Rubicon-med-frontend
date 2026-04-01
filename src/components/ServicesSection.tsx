@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { CaretLeft, CaretRight, X } from "@phosphor-icons/react";
+import { ChevronDown } from "lucide-react";
 import { useMounted } from "@/hooks/useMounted";
 
 interface ServicesSectionProps {
@@ -9,8 +9,14 @@ interface ServicesSectionProps {
 }
 
 const ServicesSection = ({ onOpenConsultationDialog }: ServicesSectionProps) => {
-  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const [openItems, setOpenItems] = useState<number[]>([]);
   const mounted = useMounted();
+
+  const toggleItem = (index: number) => {
+    setOpenItems(prev => 
+      prev.includes(index) ? prev.filter(i => i !== index) : [...prev, index]
+    );
+  };
 
   const services = [
   {
