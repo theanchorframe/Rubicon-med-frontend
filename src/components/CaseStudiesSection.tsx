@@ -19,7 +19,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
       image: launchStrategyImage,
       title: "Protect Capital Before You Commit to a Deal",
       description:
-        "Identify and mitigate investment risk in potential product licensing and acquisitions. We perform rigorous due diligence to isolate assets that lack market scalability due to technical limitations in geometry, sizing, or procedural compatibility. By triangulating these findings with KOL inquiries, we prevent the acquisition of products that cannot achieve critical mass in the clinical environment.",
+        "Identify and mitigate investment risk before licensing or acquisition. We triangulate KOL insights with rigorous due diligence to prevent the acquisition of products that are not viable.",
       cta: "Talk to Rob About Due Diligence",
       overlayText:
         "Precision before investment. We use VoC and predictive modeling to quantify market demand and identify barriers before you break ground that allows you to cut low-ROI projects and invest in the winners.",
