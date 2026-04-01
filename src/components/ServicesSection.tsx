@@ -71,49 +71,37 @@ const ServicesSection = ({ onOpenConsultationDialog }: ServicesSectionProps) => 
 
 
         </motion.h2>
-        <div className="max-w-7xl mx-auto mt-12 columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
-          {services.map((service, index) => {
-            const isOpen = openItems.includes(index);
-            return (
-              <motion.div
-                key={index}
-                initial={mounted ? { opacity: 0, y: 30 } : false}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-background rounded-xl transition-all duration-300 break-inside-avoid"
-                style={{ border: '1px solid #e2e8f0', boxShadow: '0 2px 12px rgba(0,0,0,0.08)' }}>
-                
-                <button
-                  onClick={() => toggleItem(index)}
-                  className="w-full p-8 flex items-center justify-between text-left"
-                >
-                  <h3 className="text-2xl font-bold text-primary pr-4">{service.title}</h3>
-                  <ChevronDown 
-                    className={`h-6 w-6 shrink-0 text-primary transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} 
-                  />
-                </button>
-                
-                <AnimatePresence initial={false}>
-                  {isOpen && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3 }}
-                      className="overflow-hidden"
-                    >
-                      <div className="px-8 pb-8">
-                        <p className="text-foreground/80 leading-relaxed text-lg">
-                          <span className="font-bold">{service.boldOpener}</span>{" "}{service.description}
-                        </p>
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </motion.div>
-            );
-          })}
+        <div className="max-w-7xl mx-auto mt-12 flex flex-col lg:flex-row gap-8">
+          {/* Column 1 */}
+          <div className="flex-1 flex flex-col gap-8">
+            {[0, 3].map((index) => {
+              const service = services[index];
+              const isOpen = openItems.includes(index);
+              return (
+                <ServiceCard key={index} service={service} index={index} isOpen={isOpen} toggleItem={toggleItem} mounted={mounted} />
+              );
+            })}
+          </div>
+          {/* Column 2 */}
+          <div className="flex-1 flex flex-col gap-8">
+            {[1, 4].map((index) => {
+              const service = services[index];
+              const isOpen = openItems.includes(index);
+              return (
+                <ServiceCard key={index} service={service} index={index} isOpen={isOpen} toggleItem={toggleItem} mounted={mounted} />
+              );
+            })}
+          </div>
+          {/* Column 3 */}
+          <div className="flex-1 flex flex-col gap-8">
+            {[2, 5].map((index) => {
+              const service = services[index];
+              const isOpen = openItems.includes(index);
+              return (
+                <ServiceCard key={index} service={service} index={index} isOpen={isOpen} toggleItem={toggleItem} mounted={mounted} />
+              );
+            })}
+          </div>
         </div>
         <motion.div
           initial={mounted ? { opacity: 0, y: 20 } : false}
