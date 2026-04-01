@@ -8,6 +8,46 @@ interface ServicesSectionProps {
   onOpenConsultationDialog: () => void;
 }
 
+const ServiceCard = ({ service, index, isOpen, toggleItem, mounted }: { 
+  service: { title: string; boldOpener: string; description: string }; 
+  index: number; isOpen: boolean; toggleItem: (i: number) => void; mounted: boolean 
+}) => (
+  <motion.div
+    initial={mounted ? { opacity: 0, y: 30 } : false}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5, delay: (index % 3) * 0.1 }}
+    viewport={{ once: true }}
+    className="bg-background rounded-xl transition-all duration-300"
+    style={{ border: '1px solid #e2e8f0', boxShadow: '0 2px 12px rgba(0,0,0,0.08)' }}>
+    <button
+      onClick={() => toggleItem(index)}
+      className="w-full p-8 flex items-center justify-between text-left"
+    >
+      <h3 className="text-2xl font-bold text-primary pr-4">{service.title}</h3>
+      <ChevronDown 
+        className={`h-6 w-6 shrink-0 text-primary transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} 
+      />
+    </button>
+    <AnimatePresence initial={false}>
+      {isOpen && (
+        <motion.div
+          initial={{ height: 0, opacity: 0 }}
+          animate={{ height: "auto", opacity: 1 }}
+          exit={{ height: 0, opacity: 0 }}
+          transition={{ duration: 0.3 }}
+          className="overflow-hidden"
+        >
+          <div className="px-8 pb-8">
+            <p className="text-foreground/80 leading-relaxed text-lg">
+              <span className="font-bold">{service.boldOpener}</span>{" "}{service.description}
+            </p>
+          </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  </motion.div>
+);
+
 const ServicesSection = ({ onOpenConsultationDialog }: ServicesSectionProps) => {
   const [openItems, setOpenItems] = useState<number[]>([]);
   const mounted = useMounted();
