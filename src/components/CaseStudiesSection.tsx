@@ -37,7 +37,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
       image: deRiskImage,
       title: "Build a Roadmap That Reflects Actual Market Demands",
       description:
-        "Most product roadmaps are built on internal assumptions, not market reality. Rubicon applies data-driven segmentation and Voice of Customer analysis to ensure every product decision is grounded in what clinicians, patients, and payers will actually support — before development spend compounds the risk.",
+        "Many product roadmaps are built on assumptions, not market reality. Rubicon applies segmentation and Voice of Customer analysis to ensure every decision is grounded in what clinicians, patients, and payers will actually support.",
       cta: "Request a Complimentary Consultation",
       overlayText: "Turn Clinical Evidence Into the Co-Development Partnerships That Fund Your Next Product.",
     },
