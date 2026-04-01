@@ -49,9 +49,8 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
               }}
             >
               Rubicon equips <span className="font-semibold">C-Suite, Marketing VP's, and R&D leaders</span> with
-              KOL-validated market intelligence, rigorous segmentation, and board-ready financial models — so every
-              market entry decision is defensible, capital is protected, and launches land where the revenue actually
-              is.
+              KOL-validated market intelligence, rigorous segmentation, and board-ready financial models through
+              fractional and traditional consulting — so launches land where the revenue oportunity is.
             </motion.p>
 
             <motion.div
