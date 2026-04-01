@@ -28,7 +28,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
       image: clinicalInsightImage,
       title: "Enter the Market With a Defensible Competitive Advantage",
       description:
-        "We translate clinical evidence into targeted positioning and segmentation — so your product enters the market with messaging that drives adoption and stands up to scrutiny.",
+        "We identify your highest-value segments, translate clinical evidence into targeted positioning, and develop messaging that drives adoption and stands up to scrutiny.",
       cta: "Get Your Commercial Strategy Assessment",
       overlayText:
         "We convert KOL insights into the market segments and clinical claims your sales team needs to win — before your competitors find them first.",
