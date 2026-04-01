@@ -71,7 +71,7 @@ const ServicesSection = ({ onOpenConsultationDialog }: ServicesSectionProps) => 
 
 
         </motion.h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mt-12">
+        <div className="max-w-7xl mx-auto mt-12 columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
           {services.map((service, index) => {
             const isOpen = openItems.includes(index);
             return (
@@ -81,7 +81,7 @@ const ServicesSection = ({ onOpenConsultationDialog }: ServicesSectionProps) => 
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-background rounded-xl transition-all duration-300"
+                className="bg-background rounded-xl transition-all duration-300 break-inside-avoid"
                 style={{ border: '1px solid #e2e8f0', boxShadow: '0 2px 12px rgba(0,0,0,0.08)' }}>
                 
                 <button
