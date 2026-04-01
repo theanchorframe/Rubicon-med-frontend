@@ -20,7 +20,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
       title: "Protect Capital Before You Commit to a Deal",
       description:
         "Identify and mitigate investment risk before licensing or acquisition. We combine KOL insights with rigorous due diligence to prevent the acquisition of products that are non viable.",
-      cta: "Talk to Rob About Due Diligence",
+      cta: "Request a Complimentary Consultation",
       overlayText:
         "Precision before investment. We use VoC and predictive modeling to quantify market demand and identify barriers before you break ground that allows you to cut low-ROI projects and invest in the winners.",
     },
@@ -29,7 +29,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
       title: "Enter the Market With a Defensible Competitive Advantage",
       description:
         "We identify your highest-value segments, translate clinical evidence into targeted positioning, and develop messaging that drives adoption and stands up to scrutiny.",
-      cta: "Get Your Commercial Strategy Assessment",
+      cta: "Request a Complimentary Consultation",
       overlayText:
         "We convert KOL insights into the market segments and clinical claims your sales team needs to win — before your competitors find them first.",
     },
@@ -38,7 +38,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
       title: "Build a Roadmap That Reflects What the Market Actually Demands",
       description:
         "Most product roadmaps are built on internal assumptions, not market reality. Rubicon applies data-driven segmentation and Voice of Customer analysis to ensure every product decision is grounded in what clinicians, patients, and payers will actually support — before development spend compounds the risk.",
-      cta: "See How We Work",
+      cta: "Request a Complimentary Consultation",
       overlayText: "Turn Clinical Evidence Into the Co-Development Partnerships That Fund Your Next Product.",
     },
   ];
