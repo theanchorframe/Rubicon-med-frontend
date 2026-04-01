@@ -199,7 +199,7 @@ const ProcessSection = () => {
                 viewport={{ once: true }}
                 className="text-lg text-foreground leading-relaxed"
               >
-                Rob turns clinical promise into commercial growth. Rob turns clinical promise into commercial growth. With over 25 years of leadership and management at Abbott, Medtronic, Integer, and 3M, he helps teams validate high-stakes investments, develop products, and turn medical innovation into market growth., Medtronic, Integer, and 3M, he helps teams validate high-stakes investments, develop products, and turn medical innovation into market growth.
+                Rob turns clinical promise into commercial growth. With over 25 years of leadership and management at Abbott, Medtronic, Integer, and 3M, he helps teams validate high-stakes investments, develop products, and turn medical innovation into market growth.
               </motion.p>
               <motion.p
                 initial={mounted ? { opacity: 0, y: 20 } : false}
