@@ -49,7 +49,9 @@ const FAQSection = ({ onOpenConsultationDialog }: FAQSectionProps) => {
           viewport={{ once: true }}
           className="flex flex-col items-center text-center"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">Questions Serious Buyers Ask Before Engaging</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
+            Questions Leaders Ask Rubicon Before Engaging
+          </h2>
         </motion.div>
 
         <motion.div
@@ -65,9 +67,7 @@ const FAQSection = ({ onOpenConsultationDialog }: FAQSectionProps) => {
                 className="flex items-center justify-between w-full cursor-pointer bg-secondary border border-border p-4 md:p-5 rounded-lg hover:bg-secondary/80 transition-colors"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
-                <h3 className="text-sm md:text-base font-medium text-foreground text-left pr-4">
-                  {faq.question}
-                </h3>
+                <h3 className="text-sm md:text-base font-medium text-foreground text-left pr-4">{faq.question}</h3>
                 <svg
                   width="18"
                   height="18"
