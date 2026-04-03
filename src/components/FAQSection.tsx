@@ -15,7 +15,7 @@ const FAQSection = ({ onOpenConsultationDialog }: FAQSectionProps) => {
     {
       question: "At what stage should we engage Rubicon?",
       answer:
-        "<strong>Earlier than most companies do.</strong> Rubicon has worked with companies at the product ideation stage, using KOL research, market sizing, and competitive analysis to validate the concept before commitments are made. Rubicon has also been brought in during active launch planning when strategy needed sharper validation before go-to-market. If a market decision is on the table, the conversation is worth having.",
+        "<strong>Earlier the better.</strong> The team has worked with companies at the product ideation stage, using KOL research, market sizing, and competitive analysis to validate the concept before commitments are made. The team has also been brought in during active launch planning when strategy needed sharper validation before go-to-market. If a market decision is on the table, the conversation is worth having.",
     },
     {
       question: "What does your experience with launch planning actually look like?",
