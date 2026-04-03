@@ -9,7 +9,7 @@ import StatsSection from "@/components/StatsSection";
 import ServicesSection from "@/components/ServicesSection";
 import FAQSection from "@/components/FAQSection";
 import FinalCTASection from "@/components/FinalCTASection";
-
+import Footer from "@/components/Footer";
 import ConsultationDialog from "@/components/ConsultationDialog";
 import ClientOnly from "@/components/ClientOnly";
 import MobileBottomNav from "@/components/MobileBottomNav";
@@ -31,6 +31,7 @@ const Index = () => {
       <StatsSection onOpenConsultationDialog={() => setIsConsultationDialogOpen(true)} />
       <FAQSection onOpenConsultationDialog={() => setIsConsultationDialogOpen(true)} />
       <FinalCTASection onOpenConsultationDialog={() => setIsConsultationDialogOpen(true)} />
+      <Footer />
       <ConsultationDialog 
         open={isConsultationDialogOpen} 
         onOpenChange={setIsConsultationDialogOpen} 
