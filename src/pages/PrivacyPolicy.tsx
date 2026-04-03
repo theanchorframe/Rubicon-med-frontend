@@ -31,7 +31,7 @@ const PrivacyPolicy = () => {
       {/* Content */}
       <main className="container mx-auto px-6 py-12 max-w-4xl">
         <h1 className="text-4xl font-bold text-navy mb-2">Privacy Policy</h1>
-        <p className="text-muted-foreground mb-8">Last updated: January 2025</p>
+        <p className="text-muted-foreground mb-8">Last updated: January 2026</p>
 
         <div className="prose prose-slate max-w-none space-y-6">
           <section className="space-y-4">
