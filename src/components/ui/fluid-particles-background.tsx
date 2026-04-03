@@ -102,6 +102,7 @@ export const FluidParticlesBackground = ({
   particleCount = 2000,
   noiseIntensity = 0.003,
   particleSize = { min: 0.5, max: 2 },
+  speed = 0.0001,
   className,
 }: FluidParticlesBackgroundProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
