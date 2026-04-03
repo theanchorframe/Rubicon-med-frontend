@@ -8,6 +8,7 @@ interface FluidParticlesBackgroundProps {
   particleCount?: number;
   noiseIntensity?: number;
   particleSize?: { min: number; max: number };
+  speed?: number;
   className?: string;
 }
 
