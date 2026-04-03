@@ -9,17 +9,20 @@ interface FinalCTASectionProps {
 const FinalCTASection = ({ onOpenConsultationDialog }: FinalCTASectionProps) => {
   const mounted = useMounted();
   return (
-    <section className="py-20 bg-navy">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center">
+    <section className="py-28 md:py-36 bg-navy">
+      <div className="container mx-auto px-6 md:px-12">
+        <div className="max-w-5xl mx-auto text-center">
           <motion.div
             initial={mounted ? { opacity: 0, y: 30 } : false}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="space-y-6"
+            className="space-y-8"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+            <h2
+              className="font-bold text-white text-center"
+              style={{ fontSize: "clamp(1.875rem, 4vw, 3.5rem)", lineHeight: "1.3" }}
+            >
               Every Major Market Decision Is a Rubicon Moment.
             </h2>
             <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed" style={{ color: "rgba(255,255,255,0.85)" }}>
@@ -29,7 +32,7 @@ const FinalCTASection = ({ onOpenConsultationDialog }: FinalCTASectionProps) => 
               <Button
                 size="lg"
                 onClick={onOpenConsultationDialog}
-                className="shine-effect text-lg sm:text-xl px-6 sm:px-12 py-6 sm:py-8 h-auto bg-primary hover:bg-primary/90 whitespace-normal text-center leading-tight max-w-full"
+                className="shine-effect text-lg sm:text-xl px-6 sm:px-12 py-6 sm:py-8 h-auto bg-white text-navy hover:bg-white/90 whitespace-normal text-center leading-tight max-w-full font-bold"
               >
                 Request a Complimentary Consultation
               </Button>
