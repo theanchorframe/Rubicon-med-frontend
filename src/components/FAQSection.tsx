@@ -93,7 +93,7 @@ const FAQSection = ({ onOpenConsultationDialog }: FAQSectionProps) => {
                     : "opacity-0 max-h-0 -translate-y-2"
                 }`}
               >
-                {faq.answer}
+                <span dangerouslySetInnerHTML={{ __html: faq.answer }} />
               </div>
             </div>
           ))}
