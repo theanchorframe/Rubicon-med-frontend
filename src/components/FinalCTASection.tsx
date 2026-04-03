@@ -135,7 +135,7 @@ const FinalCTASection = ({ onOpenConsultationDialog }: FinalCTASectionProps) => 
 
           <div className="border-t border-navy-foreground/20 pt-8 text-center">
             <p className="text-sm text-navy-foreground/60">
-              Copyright © 2025 Rubicon Medical Marketing & Strategy Consultants Corp. All Rights Reserved.
+              Copyright © 2026 Rubicon Medical Marketing & Strategy Consultants Corp. All Rights Reserved.
             </p>
           </div>
         </div>
