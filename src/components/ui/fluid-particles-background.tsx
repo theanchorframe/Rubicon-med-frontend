@@ -155,7 +155,7 @@ export const FluidParticlesBackground = ({
         const n = noise.simplex3(
           particle.x * noiseIntensity,
           particle.y * noiseIntensity,
-          Date.now() * 0.0001,
+          Date.now() * speed,
         );
 
         const angle = n * Math.PI * 4;
