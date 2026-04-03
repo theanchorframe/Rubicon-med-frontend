@@ -28,6 +28,20 @@ const FinalCTASection = ({ onOpenConsultationDialog }: FinalCTASectionProps) => 
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
                 Join the MedTech and Pharma teams who've used Rubicon's insight to protect capital and accelerate market entry.
               </p>
+              <div className="space-y-2">
+                <div className="flex items-center gap-3">
+                  <span className="text-primary text-xl font-bold">✓</span>
+                  <span className="font-bold text-foreground" style={{ fontSize: "1.05rem" }}>100+ KOL Engagements Across Specialties</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="text-primary text-xl font-bold">✓</span>
+                  <span className="font-bold text-foreground" style={{ fontSize: "1.05rem" }}>$2M+ Protected From Non-Viable Investment</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="text-primary text-xl font-bold">✓</span>
+                  <span className="font-bold text-foreground" style={{ fontSize: "1.05rem" }}>20+ Markets Evaluated for Commercial Potential</span>
+                </div>
+              </div>
               <div>
                 <Button
                   size="lg"
