@@ -23,9 +23,9 @@ const FAQSection = ({ onOpenConsultationDialog }: FAQSectionProps) => {
         "With a legacy of orchestrating 40+ high-stakes launches across vascular intervention, pharmaceuticals, and diagnostics, Rob specializes in the critical 'Front-End of Innovation.' By applying a comprehensive launch framework, we identify high-value opportunities and architect the clinical evidence stories that drive adoption. We don't just plan; we equip and train your launch teams to ensure a seamless, high-ROI transition from R&D to global commercialization.",
     },
     {
-      question: "Do you work with companies outside the US?",
+      question: "Do you offer fractional engagements or only project-based work?",
       answer:
-        "Geographic location is not a barrier to execution. While headquartered on Long Island, we have a proven track record of supporting international clients through hybrid engagement models. We prioritize on-site mobilization for critical workstreams such as requirement gathering, prototyping, and expert panels, ensuring that distance never compromises the fidelity of the strategic roadmap.",
+        "For companies needing an embedded senior resource, Rob operates as a fractional partner — inside your team, driving decisions, without the full-time cost. For defined needs, Rubicon delivers project-based engagements: market assessments, KOL programs, launch planning, due diligence. Timelines flex from weeks to ongoing. The first conversation determines which model serves you best.",
     },
     {
       question: "What does an engagement with Rubicon actually look like, start to finish?",
