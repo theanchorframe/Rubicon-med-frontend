@@ -37,20 +37,6 @@ const FinalCTASection = ({ onOpenConsultationDialog }: FinalCTASectionProps) => 
                   Request a Complimentary Consultation
                 </Button>
               </div>
-              <div className="space-y-2 pt-2">
-                <div className="flex items-center gap-2 text-muted-foreground">
-                  <span className="text-primary font-bold">✓</span>
-                  <span style={{ fontSize: "0.95rem" }}>100+ KOL Engagements Across Specialties</span>
-                </div>
-                <div className="flex items-center gap-2 text-muted-foreground">
-                  <span className="text-primary font-bold">✓</span>
-                  <span style={{ fontSize: "0.95rem" }}>$2M+ Protected From Non-Viable Investment</span>
-                </div>
-                <div className="flex items-center gap-2 text-muted-foreground">
-                  <span className="text-primary font-bold">✓</span>
-                  <span style={{ fontSize: "0.95rem" }}>20+ Markets Evaluated for Commercial Potential</span>
-                </div>
-              </div>
             </motion.div>
 
             {/* Right side - Image */}
