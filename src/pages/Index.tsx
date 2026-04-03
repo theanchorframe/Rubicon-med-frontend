@@ -31,7 +31,6 @@ const Index = () => {
       <StatsSection onOpenConsultationDialog={() => setIsConsultationDialogOpen(true)} />
       <FAQSection onOpenConsultationDialog={() => setIsConsultationDialogOpen(true)} />
       <FinalCTASection onOpenConsultationDialog={() => setIsConsultationDialogOpen(true)} />
-      <Footer />
       <ConsultationDialog 
         open={isConsultationDialogOpen} 
         onOpenChange={setIsConsultationDialogOpen} 
