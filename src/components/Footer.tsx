@@ -16,7 +16,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Logo and Description */}
           <div className="space-y-4">
-            <img src={logo} alt="Rubicon Medical Marketing & Strategy Consultants Corp." className="h-12 w-auto" />
+            <img src={logo} alt="Rubicon Medical Marketing & Strategy Consultants Corp." className="h-20 w-auto" />
             <p className="text-sm text-navy-foreground/80">
               Expert MedTech consulting for product strategy and market success.
             </p>
