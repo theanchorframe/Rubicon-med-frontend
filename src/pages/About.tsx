@@ -205,7 +205,7 @@ const About = () => {
             className="mt-10 bg-card rounded-2xl shadow-xl border border-border overflow-hidden"
           >
             <div className="px-4 pb-6 md:px-8 md:pb-8">
-              <div className="w-full rounded-xl overflow-hidden" style={{ height: "550px" }}>
+              <div className="w-full rounded-xl overflow-hidden" style={{ height: "750px" }}>
                 <iframe
                   src="https://link.anchorframe.com/widget/form/jxrEwmyK9koADRveNp3T"
                   style={{ width: "100%", height: "100%", border: "none" }}
