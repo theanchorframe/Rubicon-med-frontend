@@ -186,7 +186,7 @@ export const FluidParticlesBackground = ({
       window.removeEventListener("resize", resizeCanvas);
       cancelAnimationFrame(animationId);
     };
-  }, [particleCount, noiseIntensity, particleSize]);
+  }, [particleCount, noiseIntensity, particleSize, speed]);
 
   return (
     <div className={cn("relative overflow-hidden", className)}>
