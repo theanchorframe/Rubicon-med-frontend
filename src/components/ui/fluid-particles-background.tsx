@@ -8,6 +8,7 @@ interface FluidParticlesBackgroundProps {
   particleCount?: number;
   noiseIntensity?: number;
   particleSize?: { min: number; max: number };
+  speed?: number;
   className?: string;
 }
 
@@ -101,6 +102,7 @@ export const FluidParticlesBackground = ({
   particleCount = 2000,
   noiseIntensity = 0.003,
   particleSize = { min: 0.5, max: 2 },
+  speed = 0.0001,
   className,
 }: FluidParticlesBackgroundProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -153,7 +155,7 @@ export const FluidParticlesBackground = ({
         const n = noise.simplex3(
           particle.x * noiseIntensity,
           particle.y * noiseIntensity,
-          Date.now() * 0.0001,
+          Date.now() * speed,
         );
 
         const angle = n * Math.PI * 4;
@@ -184,7 +186,7 @@ export const FluidParticlesBackground = ({
       window.removeEventListener("resize", resizeCanvas);
       cancelAnimationFrame(animationId);
     };
-  }, [particleCount, noiseIntensity, particleSize]);
+  }, [particleCount, noiseIntensity, particleSize, speed]);
 
   return (
     <div className={cn("relative overflow-hidden", className)}>
