@@ -9,7 +9,7 @@ interface FinalCTASectionProps {
 const FinalCTASection = ({ onOpenConsultationDialog }: FinalCTASectionProps) => {
   const mounted = useMounted();
   return (
-    <section className="pt-20 pb-28 md:pb-36 bg-navy">
+    <section className="pt-20 pb-28 md:pb-36 bg-navy rounded-[15px] shadow-[0_8px_30px_rgba(0,0,0,0.25)]">
       <div className="container mx-auto px-6 md:px-12">
         <div className="max-w-5xl mx-auto text-center">
           <motion.div

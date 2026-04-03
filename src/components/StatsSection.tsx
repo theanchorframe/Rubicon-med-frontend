@@ -28,7 +28,7 @@ const StatsSection = ({ onOpenConsultationDialog }: StatsSectionProps) => {
   ];
 
   return (
-    <section className="py-20 bg-navy text-navy-foreground">
+    <section className="py-20 bg-navy text-navy-foreground rounded-[15px] shadow-[0_8px_30px_rgba(0,0,0,0.25)] mx-0">
       <div className="container mx-auto px-4">
         <motion.h2
           initial={mounted ? { opacity: 0, y: 20 } : false}
