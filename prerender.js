@@ -12,7 +12,7 @@ const { render } = await import("./dist/server/entry-server.js");
 const GHL_RSS_URL =
   "https://rss-link.com/feed/0SrLbfkrz5jjCYFZSekh?blogId=xGZaTlixtX1nL58fVk37&limit=25&loadContent=true";
 
-const staticRoutes = ["/", "/blog"];
+const staticRoutes = ["/", "/blog", "/about", "/services"];
 
 (async () => {
   let dynamicRoutes = [];
