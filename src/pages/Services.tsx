@@ -298,8 +298,11 @@ const Services = () => {
               viewport={{ once: true }}
               className="space-y-6"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white">
-                The first conversation determines which engagement model serves you best
+              <h2
+                className="font-bold text-white"
+                style={{ fontSize: "clamp(1.875rem, 4vw, 3.5rem)", lineHeight: "1.3" }}
+              >
+                Ready to Know If Your Next Product Is Worth the Investment?
               </h2>
               <Button
                 size="lg"
