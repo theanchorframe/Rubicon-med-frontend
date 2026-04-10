@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ConsultationDialog from "@/components/ConsultationDialog";
 import CaseStudyPopup from "@/components/CaseStudyPopup";
-import CaseStudiesSection from "@/components/CaseStudiesSection";
+import CTABanner from "@/components/CTABanner";
 import ClientOnly from "@/components/ClientOnly";
 import { useMounted } from "@/hooks/useMounted";
 import { Search, BarChart3, Users, Rocket, Map, DollarSign, Check, ChevronDown } from "lucide-react";
@@ -285,21 +285,8 @@ const Services = () => {
           </div>
         </section>
 
-        {/* Case Studies from homepage */}
-        <div className="bg-background">
-          <div className="container mx-auto px-4 pt-8 pb-4">
-            <motion.h2
-              initial={mounted ? { opacity: 0, y: 20 } : false}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-3xl md:text-4xl font-bold text-navy text-center"
-            >
-              See These Services in Action
-            </motion.h2>
-          </div>
-          <CaseStudiesSection onOpenConsultationDialog={() => setIsConsultationDialogOpen(true)} />
-        </div>
+        {/* Case Study CTA with graph */}
+        <CTABanner onOpenCaseStudyPopup={() => setIsCaseStudyPopupOpen(true)} />
 
         {/* Bottom CTA */}
         <section className="py-20 bg-navy">
