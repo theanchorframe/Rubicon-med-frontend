@@ -16,7 +16,8 @@ const Navbar = ({ onOpenConsultationDialog }: NavbarProps) => {
 
   const isBlogPage = location.pathname.startsWith("/blog");
   const isAboutPage = location.pathname === "/about";
-  const isSubPage = isBlogPage || isAboutPage;
+  const isServicesPage = location.pathname === "/services";
+  const isSubPage = isBlogPage || isAboutPage || isServicesPage;
 
   useEffect(() => {
     const handleScroll = () => {
