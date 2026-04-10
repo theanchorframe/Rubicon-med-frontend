@@ -285,21 +285,8 @@ const Services = () => {
           </div>
         </section>
 
-        {/* Case Studies from homepage */}
-        <div className="bg-background">
-          <div className="container mx-auto px-4 pt-8 pb-4">
-            <motion.h2
-              initial={mounted ? { opacity: 0, y: 20 } : false}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-3xl md:text-4xl font-bold text-navy text-center"
-            >
-              See These Services in Action
-            </motion.h2>
-          </div>
-          <CaseStudiesSection onOpenConsultationDialog={() => setIsConsultationDialogOpen(true)} />
-        </div>
+        {/* Case Study CTA with graph */}
+        <CTABanner onOpenCaseStudyPopup={() => setIsCaseStudyPopupOpen(true)} />
 
         {/* Bottom CTA */}
         <section className="py-20 bg-navy">
