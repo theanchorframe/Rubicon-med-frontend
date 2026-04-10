@@ -20,22 +20,22 @@ const FAQSection = ({ onOpenConsultationDialog }: FAQSectionProps) => {
     {
       question: "What does your experience with launch planning actually look like?",
       answer:
-        "With a legacy of orchestrating 40+ high-stakes launches across vascular intervention, pharmaceuticals, and diagnostics, Rob specializes in the critical 'Front-End of Innovation.' By applying a comprehensive launch framework, we identify high-value opportunities and architect the clinical evidence stories that drive adoption. We don't just plan; we equip and train your launch teams to ensure a seamless, high-ROI transition from R&D to global commercialization.",
+        "With a legacy of orchestrating <strong>40+ high-stakes projects</strong> across vascular intervention, pharmaceuticals, and diagnostics, Rubicon specializes in the critical 'Front-End of Innovation.' By applying a comprehensive launch framework, we identify high-value opportunities and architect the clinical evidence stories that drive adoption. We don't just plan; we equip and train your launch teams to ensure a seamless, high-ROI transition from R&D to global commercialization.",
     },
     {
       question: "Do you offer fractional engagements or only project-based work?",
       answer:
-        "For companies needing an embedded senior resource, Rob operates as a fractional partner — inside your team, driving decisions, without the full-time cost. For defined needs, Rubicon delivers project-based engagements: market assessments, KOL programs, launch planning, due diligence. Timelines flex from weeks to ongoing. The first conversation determines which model serves you best.",
+        "<strong>For companies needing an embedded senior resource,</strong> Rubicon operates as a fractional partner — inside your team, driving decisions, without the full-time cost. For defined needs, Rubicon delivers project-based engagements: market assessments, KOL programs, launch planning, due diligence. Timelines flex from weeks to ongoing. The first conversation determines which model serves you best.",
     },
     {
       question: "What does an engagement with Rubicon actually look like, start to finish?",
       answer:
-        "Every engagement begins with a deep-dive into your real-world environment and project constraints. To guide the IDEA process, we deliver a Statement of Understanding and a Statement of Work—a clear-eyed blueprint that transforms high-level goals into a validated, executable plan for your device.",
+        "<strong>Every engagement begins with a deep-dive into your real-world environment and project constraints.</strong> To guide the IDEA process, Rubicon delivers a Statement of Understanding and a Statement of Work—a clear-eyed blueprint that transforms high-level goals into a validated, executable plan for your device.",
     },
     {
       question: "How do we know this investment will generate a return?",
       answer:
-        "Our work has helped companies avoid $2M+ in wasted spend and helped bring >$10M in new product revenue. While innovation inherently carries uncertainty, our risk-mitigation frameworks provide the clinical and commercial confidence necessary for a successful launch.",
+        "Our work has helped companies avoid <strong>$2M+</strong> in wasted spend and helped bring <strong>&gt;$10M</strong> in new product revenue. While innovation inherently carries uncertainty, our risk-mitigation frameworks provide the clinical and commercial confidence necessary for a successful launch.",
     },
   ];
 
