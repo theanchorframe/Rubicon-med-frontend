@@ -8,7 +8,7 @@ interface ConsultationDialogProps {
 const ConsultationDialog = ({ open, onOpenChange }: ConsultationDialogProps) => {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-2xl max-h-[90vh] overflow-auto p-0 mx-4 sm:mx-auto w-[calc(100%-2rem)] sm:w-full">
+      <DialogContent className="max-w-2xl max-h-[90vh] overflow-auto p-0 w-[92%] sm:w-full">
         <DialogHeader className="px-6 pt-6 pb-2">
           <DialogTitle className="text-3xl font-bold text-foreground text-center">
             Where can Rubicon Provide Clarity for<br />Your Next Crossing?
