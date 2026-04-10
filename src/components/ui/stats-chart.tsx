@@ -93,6 +93,29 @@ export default function StatsChart() {
 
       {/* Mobile View */}
       <div className="md:hidden space-y-5">
+        {/* Mobile Stats - Above Chart */}
+        <motion.div 
+          initial={mounted ? { opacity: 0, y: 20 } : false}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          viewport={{ once: true }}
+          className="grid grid-cols-2 gap-3"
+        >
+          {stats.map((stat, idx) => (
+            <motion.div 
+              key={idx}
+              initial={mounted ? { opacity: 0, scale: 0.9 } : false}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.4, delay: 0.2 + idx * 0.1 }}
+              viewport={{ once: true }}
+              className="bg-card/95 backdrop-blur-sm rounded-lg shadow-md p-4 border border-primary/20"
+            >
+              <p className="text-lg font-bold text-foreground">{stat.value}</p>
+              <p className="text-xs text-muted-foreground">{stat.label}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+
         <motion.div 
           initial={mounted ? { opacity: 0, scale: 0.9 } : false}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -131,29 +154,6 @@ export default function StatsChart() {
             </h3>
             <p className="text-muted-foreground font-semibold">Co-dev Investment</p>
           </motion.div>
-        </motion.div>
-
-        {/* Mobile Stats - Below Chart */}
-        <motion.div 
-          initial={mounted ? { opacity: 0, y: 20 } : false}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="grid grid-cols-2 gap-3"
-        >
-          {stats.map((stat, idx) => (
-            <motion.div 
-              key={idx}
-              initial={mounted ? { opacity: 0, scale: 0.9 } : false}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.4, delay: 0.4 + idx * 0.1 }}
-              viewport={{ once: true }}
-              className="bg-card/95 backdrop-blur-sm rounded-lg shadow-md p-4 border border-primary/20"
-            >
-              <p className="text-lg font-bold text-foreground">{stat.value}</p>
-              <p className="text-xs text-muted-foreground">{stat.label}</p>
-            </motion.div>
-          ))}
         </motion.div>
       </div>
     </>
