@@ -11,6 +11,7 @@ import ThankYouConsultation from "./pages/ThankYouConsultation";
 import ThankYouCaseStudy from "./pages/ThankYouCaseStudy";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
+import Services from "./pages/Services";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
