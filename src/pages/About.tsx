@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ConsultationDialog from "@/components/ConsultationDialog";
+import MobileBottomNav from "@/components/MobileBottomNav";
 import { useMounted } from "@/hooks/useMounted";
 import robHeadshot from "@/assets/rob-miraglia-headshot.webp";
 import {
@@ -234,6 +235,7 @@ const About = () => {
         open={isConsultationDialogOpen}
         onOpenChange={setIsConsultationDialogOpen}
       />
+      <MobileBottomNav onOpenDialog={() => setIsConsultationDialogOpen(true)} />
     </div>
   );
 };

@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import ConsultationDialog from "@/components/ConsultationDialog";
 import CaseStudyPopup from "@/components/CaseStudyPopup";
 import CTABanner from "@/components/CTABanner";
+import MobileBottomNav from "@/components/MobileBottomNav";
 import ClientOnly from "@/components/ClientOnly";
 import { useMounted } from "@/hooks/useMounted";
 import { Search, BarChart3, Users, Rocket, Map, DollarSign, Check, ChevronDown } from "lucide-react";
@@ -321,6 +322,7 @@ const Services = () => {
       <ClientOnly>
         <CaseStudyPopup isOpen={isCaseStudyPopupOpen} onClose={() => setIsCaseStudyPopupOpen(false)} />
       </ClientOnly>
+      <MobileBottomNav onOpenDialog={() => setIsConsultationDialogOpen(true)} />
     </div>
   );
 };
