@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ConsultationDialog from "@/components/ConsultationDialog";
 import CaseStudyPopup from "@/components/CaseStudyPopup";
-import CaseStudiesSection from "@/components/CaseStudiesSection";
+import CTABanner from "@/components/CTABanner";
 import ClientOnly from "@/components/ClientOnly";
 import { useMounted } from "@/hooks/useMounted";
 import { Search, BarChart3, Users, Rocket, Map, DollarSign, Check, ChevronDown } from "lucide-react";
