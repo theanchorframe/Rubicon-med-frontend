@@ -100,9 +100,10 @@ const About = () => {
               </p>
               <p className="text-lg text-navy-foreground/75 leading-relaxed">
                 His work focuses on one thing: turning clinical promise into growth.
-                Rob partners with CEOs and clinical leaders to clarify the real-world
-                problem, pressure test the value story with KOLs, and build a business
-                case that stands up to finance, procurement, and clinicians.
+                Rob partners with C-Suite, Marketing VP's, and R&D leaders to clarify
+                the real-world problem, pressure test the value story with KOLs, and
+                build a business case that stands up to finance, procurement, and
+                clinicians.
               </p>
             </motion.div>
 
