@@ -17,7 +17,7 @@ const servicesData = [
     icon: Search,
     hook: "Your capital only goes to products with a validated path to market leadership.",
     description:
-      "Our framework integrates multidimensional technical, clinical, and regulatory due diligence with rigorous market modeling. We synthesize competitive intelligence and growth drivers to ensure capital is deployed only into assets with a validated path.",
+      "Our framework integrates multidimensional technical and clinical due diligence with rigorous market modeling. We synthesize competitive intelligence and growth drivers to ensure capital is deployed only into assets with a validated path.",
     deliverables: [
       "Competitive landscape & database analysis",
       "Market modeling & segmentation",
