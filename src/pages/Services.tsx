@@ -68,7 +68,7 @@ const servicesData = [
       "Turn insight into adoption at scale. We craft go-to-market strategies and playbooks, sales enablement, and messaging rooted in evidence so your launch not only hits targets but sustains momentum long after market entry.",
     deliverables: [
       "Go-to-market strategy & playbooks",
-      "Sales enablement & training",
+      "Sales enablement, CRM optimization, and training",
       "Value proposition & elevator pitch development",
       "Messaging architecture & user experience templates",
       "Marketing plans & competitive dossiers",
