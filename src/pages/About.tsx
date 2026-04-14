@@ -23,7 +23,7 @@ const specializations = [
     stat: "40+",
     statLabel: "Projects Delivered",
     description:
-      "Rigorous due diligence integrating clinical, regulatory, and market modeling to validate investment decisions.",
+      "Rigorous due diligence integrating clinical, research and development, and market modeling to validate investment decisions.",
   },
   {
     icon: Users,
