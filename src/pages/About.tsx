@@ -23,15 +23,7 @@ const specializations = [
     stat: "40+",
     statLabel: "Projects Delivered",
     description:
-      "Rigorous due diligence integrating clinical, research and development, and market modeling to validate investment decisions.",
-  },
-  {
-    icon: Users,
-    title: "KOL & Voice-of-Customer Programs",
-    stat: "100+",
-    statLabel: "KOLs Engaged",
-    description:
-      "Full-lifecycle engagement from identification to clinician panels, synthesizing expert insights into actionable strategy.",
+      "Our proven framework integrates multidimensional technical, clinical, and research and development due diligence with rigorous market modeling to validate investment decisions.",
   },
   {
     icon: Target,
@@ -39,15 +31,15 @@ const specializations = [
     stat: "20+",
     statLabel: "Markets Sized",
     description:
-      "Evidence-based triangulation of expert consultations and database analytics to eliminate market ambiguity.",
+      "Drive confident product investment through clinical, research & development, and market triangulation. We leverage expert consultations and comprehensive database analytics to distill complex evidence into an actionable roadmap.",
   },
   {
-    icon: TrendUp,
-    title: "Pricing, Forecasting & Financial Modeling",
-    stat: "$30M",
-    statLabel: "Revenue Forecasted",
+    icon: Users,
+    title: "KOL & Voice-of-Customer Programs",
+    stat: "100+",
+    statLabel: "KOLs Engaged",
     description:
-      "Translating market dynamics into accurate revenue projections that synchronize AOP targets with clinical scalability.",
+      "Accelerate market adoption through clinical advocacy and expert mobilization. We manage KOL identification and contact, contracting to the execution of IDIs, surveys, field trials, and clinician panels.",
   },
   {
     icon: Briefcase,
@@ -55,15 +47,23 @@ const specializations = [
     stat: "$2M",
     statLabel: "Investment Protected",
     description:
-      "Go-to-market playbooks and sales enablement rooted in evidence for launches that sustain momentum.",
+      "Turn insight into adoption at scale. We craft go-to-market strategies and playbooks, sales enablement, and messaging rooted in evidence, so your launch sustains momentum long after market entry.",
   },
   {
     icon: Heartbeat,
-    title: "Upstream Portfolio Strategy",
+    title: "Upstream Portfolio Strategy & Roadmapping",
     stat: "25+",
     statLabel: "Years of Leadership",
     description:
-      "Defining STP frameworks and multi-year product roadmaps to isolate high-potential opportunities with the highest ROI.",
+      "Optimize resource allocation and cross-functional alignment by defining rigorous STP frameworks alongside multi-year product roadmaps to isolate high-potential opportunities with the highest ROI.",
+  },
+  {
+    icon: TrendUp,
+    title: "Pricing, Forecasting & Financial Modeling",
+    stat: "$30M",
+    statLabel: "Revenue Forecasted",
+    description:
+      "Translate market dynamics and value-based pricing into accurate revenue projections that hold up under institutional scrutiny and synchronize AOP targets with clinical scalability.",
   },
 ];
 
