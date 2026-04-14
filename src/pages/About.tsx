@@ -172,7 +172,13 @@ const About = () => {
                     {spec.title}
                   </h3>
                   <p className="text-foreground/75 leading-relaxed">
-                    {spec.description}
+                    {(() => {
+                      const dotIndex = spec.description.indexOf('. ');
+                      if (dotIndex === -1) return spec.description;
+                      const firstSentence = spec.description.slice(0, dotIndex + 1);
+                      const rest = spec.description.slice(dotIndex + 1);
+                      return <><strong>{firstSentence}</strong>{rest}</>;
+                    })()}
                   </p>
                 </motion.div>
               );
