@@ -20,7 +20,7 @@ const FAQSection = ({ onOpenConsultationDialog }: FAQSectionProps) => {
     {
       question: "What does your experience with launch planning actually look like?",
       answer:
-        "With a legacy of orchestrating <strong>40+ high-stakes projects</strong> across vascular intervention, pharmaceuticals, and diagnostics, Rubicon specializes in the critical 'Front-End of Innovation.' By applying a comprehensive launch framework, we identify high-value opportunities and architect the clinical evidence stories that drive adoption. We don't just plan; we equip and train your launch teams to ensure a seamless, high-ROI transition from R&D to global commercialization.",
+        "Although many of Rubicon's <strong>40+ high-stakes projects,</strong> across vascular intervention, pharmaceuticals, and diagnostics, is in the critical \"Front End of Innovation,\" we have also provided value by applying a comprehensive launch framework, which includes the GTM strategy with playbooks, sales and other internal stakeholder training, PR and advertising, competitive dossiers, etc.",
     },
     {
       question: "Do you offer fractional engagements or only project-based work?",
