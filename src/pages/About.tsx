@@ -23,7 +23,7 @@ const specializations = [
     stat: "40+",
     statLabel: "Projects Delivered",
     description:
-      "Our proven framework integrates multidimensional technical, clinical, and research and development due diligence with rigorous market modeling to validate investment decisions.",
+      "Your capital only goes to products with a validated path to market leadership. Our proven framework integrates multidimensional technical, clinical, and research and development due diligence with rigorous market modeling. We synthesize competitive intelligence and growth drivers to ensure capital is deployed only into assets with a validated path to market leadership.",
   },
   {
     icon: Target,
@@ -31,7 +31,7 @@ const specializations = [
     stat: "20+",
     statLabel: "Markets Sized",
     description:
-      "Drive confident product investment through clinical, research & development, and market triangulation. We leverage expert consultations and comprehensive database analytics to distill complex evidence into an actionable roadmap.",
+      "Every investment decision backed by evidence, not assumptions. Drive confident product investment through clinical, research & development, and market triangulation. We leverage expert consultations and comprehensive database analytics to distill complex evidence into an actionable roadmap – eliminating market ambiguity and securing your path to entry.",
   },
   {
     icon: Users,
@@ -39,7 +39,7 @@ const specializations = [
     stat: "100+",
     statLabel: "KOLs Engaged",
     description:
-      "Accelerate market adoption through clinical advocacy and expert mobilization. We manage KOL identification and contact, contracting to the execution of IDIs, surveys, field trials, and clinician panels.",
+      "Market credibility built before you spend a dollar on launch. Accelerate market adoption through clinical advocacy and expert mobilization. We manage KOL identification and contact, contracting to the execution of IDIs, surveys, field trials, and clinician panels. By synthesizing the 'Voice of Customer' into evidence-based messaging, we ensure your value proposition resonates with providers and drives accelerated uptake.",
   },
   {
     icon: Briefcase,
@@ -47,7 +47,7 @@ const specializations = [
     stat: "$2M",
     statLabel: "Investment Protected",
     description:
-      "Turn insight into adoption at scale. We craft go-to-market strategies and playbooks, sales enablement, and messaging rooted in evidence, so your launch sustains momentum long after market entry.",
+      "Market entry strategies that sustain momentum long after launch. Turn insight into adoption at scale. We craft go-to-market strategies and playbooks, sales enablement, and messaging rooted in evidence, so your launch not only hits targets, but sustains momentum long after market entry.",
   },
   {
     icon: Heartbeat,
@@ -55,7 +55,7 @@ const specializations = [
     stat: "25+",
     statLabel: "Years of Leadership",
     description:
-      "Optimize resource allocation and cross-functional alignment by defining rigorous STP frameworks alongside multi-year product roadmaps to isolate high-potential opportunities with the highest ROI.",
+      "Resources concentrated on the assets with the highest return. Optimize resource allocation and cross-functional alignment. By defining rigorous segmentation, targeting, and positioning (STP) frameworks alongside multi-year product roadmaps, we isolate high-potential opportunities. This allows R&D, Marketing, and Sales to concentrate resources on assets with the highest ROI.",
   },
   {
     icon: TrendUp,
@@ -63,7 +63,7 @@ const specializations = [
     stat: "$30M",
     statLabel: "Revenue Forecasted",
     description:
-      "Translate market dynamics and value-based pricing into accurate revenue projections that hold up under institutional scrutiny and synchronize AOP targets with clinical scalability.",
+      "Revenue projections that hold up under board-level scrutiny. Enable executive decision-making with rigorous financial modeling. We translate market dynamics and value-based pricing into accurate revenue projections that hold up under institutional scrutiny. Our models provide the clarity needed to synchronize AOP targets with actual clinical and commercial scalability.",
   },
 ];
 
