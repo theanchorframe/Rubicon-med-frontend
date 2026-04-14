@@ -35,7 +35,7 @@ const FAQSection = ({ onOpenConsultationDialog }: FAQSectionProps) => {
     {
       question: "How do we know this investment will generate a return?",
       answer:
-        "Our work has helped companies avoid <strong>$2M+</strong> in wasted spend and helped bring <strong>&gt;$10M</strong> in new product revenue. While innovation inherently carries uncertainty, our risk-mitigation frameworks provide the clinical and commercial confidence necessary for a successful launch.",
+        "Our work has helped companies avoid <strong>$2M+</strong> in wasted spend and helped bring <strong>&gt;$30M</strong> in new product revenue. While innovation inherently carries uncertainty, our risk-mitigation frameworks provide the clinical and commercial confidence necessary for a successful launch.",
     },
   ];
 
