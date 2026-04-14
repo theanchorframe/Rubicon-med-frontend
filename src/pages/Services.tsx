@@ -33,7 +33,7 @@ const servicesData = [
     icon: BarChart3,
     hook: "Every investment decision backed by evidence, not assumptions.",
     description:
-      "Drive confident product investment through R&D, clinical, and market triangulation. We leverage expert consultations and comprehensive database analytics to distill complex evidence into an actionable roadmap — eliminating market ambiguity and securing your path to entry.",
+      "Drive confident product investment through clinical, research & development, and market triangulation. We leverage expert consultations and comprehensive database analytics to distill complex evidence into an actionable roadmap — eliminating market ambiguity and securing your path to entry.",
     deliverables: [
       "Primary & secondary research with data analytics",
       "In-depth interviews (IDIs) with KOLs and practitioners",
@@ -49,7 +49,7 @@ const servicesData = [
     icon: Users,
     hook: "Market credibility built before you spend a dollar on launch.",
     description:
-      "Accelerate market adoption through clinical advocacy and expert mobilization. We manage the full-lifecycle engagement of Key Opinion Leaders — from strategic identification and contracting to the execution of IDIs, surveys, field trials, and clinician panels. By synthesizing the Voice of Customer into evidence-based messaging, we ensure your value proposition resonates with providers and drives accelerated uptake.",
+      "Accelerate market adoption through clinical advocacy and expert mobilization. We manage KOL identification and contact, contracting to the execution of IDIs, surveys, field trials, and clinician panels. By synthesizing the Voice of Customer into evidence-based messaging, we ensure your value proposition resonates with providers and drives accelerated uptake.",
     deliverables: [
       "KOL identification & contracting",
       "Honorarium negotiation & Sunshine Act tracking",
@@ -63,9 +63,9 @@ const servicesData = [
   {
     title: "Commercial Strategy & Launch",
     icon: Rocket,
-    hook: "Market entry strategies that sustain momentum long after launch day.",
+    hook: "Market entry strategies that sustain momentum long after launch.",
     description:
-      "Turn insight into adoption at scale. We craft go-to-market strategies and playbooks, sales enablement, and messaging rooted in evidence so your launch not only hits targets but sustains momentum long after market entry.",
+      "Turn insight into adoption at scale. We craft go-to-market strategies and playbooks, sales enablement, and messaging rooted in evidence, so your launch not only hits targets but sustains momentum long after market entry.",
     deliverables: [
       "Go-to-market strategy & playbooks",
       "Sales enablement, CRM optimization, and training",
