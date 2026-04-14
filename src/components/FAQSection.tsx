@@ -25,12 +25,12 @@ const FAQSection = ({ onOpenConsultationDialog }: FAQSectionProps) => {
     {
       question: "Do you offer fractional engagements or only project-based work?",
       answer:
-        "<strong>For companies needing an embedded senior resource,</strong> Rubicon operates as a fractional partner — inside your team, driving decisions, without the full-time cost. For defined needs, Rubicon delivers project-based engagements: market assessments, KOL programs, launch planning, due diligence. Timelines flex from weeks to ongoing. The first conversation determines which model serves you best.",
+        "<strong>For companies needing an embedded senior resource,</strong> Rubicon operates as a fractional partner — inside your team, driving decisions, without the full-time cost. For defined needs, Rubicon delivers project-based engagements: market assessments, KOL programs, launch planning, due diligence, etc. Timelines flex from weeks to ongoing. The first conversation determines which model serves you best.",
     },
     {
       question: "What does an engagement with Rubicon actually look like, start to finish?",
       answer:
-        "<strong>Every engagement begins with a deep-dive into your real-world environment and project constraints.</strong> To guide the IDEA process, Rubicon delivers a Statement of Understanding and a Statement of Work—a clear-eyed blueprint that transforms high-level goals into a validated, executable plan for your device.",
+        "<strong>Every engagement begins with a deep-dive into your real-world environment and project constraints.</strong> To guide the IDEA process, Rubicon delivers a Statement of Understanding and a Statement of Work—a clear-eyed blueprint that transforms high-level goals into a validated, executable plan for your device. At the end, you will have a final presentation and full concept report and presentation that links every recommendation back to the evidence gathered in the IDEA process.",
     },
     {
       question: "How do we know this investment will generate a return?",
