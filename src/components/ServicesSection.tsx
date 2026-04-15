@@ -75,7 +75,7 @@ const ServicesSection = ({ onOpenConsultationDialog }: ServicesSectionProps) => 
     title: "KOL & Voice-of-Customer Programs",
     boldOpener: "Market credibility built before you spend a dollar on launch.",
     description:
-    "Accelerate market adoption through clinical advocacy and expert mobilization. We manage KOL identification and contact, contracting to the execution of IDIs, surveys, field trials, and clinician panels. By synthesizing the 'Voice of Customer' into evidence-based messaging, we ensure your value proposition resonates with providers and drives accelerated uptake."
+    "Accelerate market adoption through clinical advocacy and expert mobilization. We manage KOL identification, contact, contracting, and payment for the execution of IDIs, surveys, field trials, and clinician panels. By synthesizing the 'Voice of Customer' into evidence-based messaging, we ensure your value proposition resonates with providers and drives accelerated uptake."
   },
   {
     title: "Commercial Strategy & Launch",
