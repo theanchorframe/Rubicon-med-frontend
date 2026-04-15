@@ -26,7 +26,7 @@ const FinalCTASection = ({ onOpenConsultationDialog }: FinalCTASectionProps) => 
               Every Major Market Decision Is a Rubicon Moment
             </h2>
             <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed" style={{ color: "rgba(255,255,255,0.85)" }}>
-              When Caesar crossed the Rubicon, there was no turning back. Your next market entry, acquisition, or product launch carries the same weight — capital at risk, timelines compressed, and the cost of a wrong move compounding fast. Rubicon ensures you cross with confidence, not assumption.
+              When Caesar crossed the Rubicon, there was no turning back. Your next market entry, acquisition, or product launch carries the same weight — capital at risk, timelines compressed, and the costs of a wrong move compounding fast. Rubicon ensures you cross with confidence, not assumption.
             </p>
             <div className="pt-4">
               <Button
