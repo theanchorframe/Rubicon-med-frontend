@@ -101,12 +101,12 @@ const servicesData = [
     deliverables: [
       "Market share projections with CAGR",
       "Competitive ASP analysis & pricing strategy",
-      "Volume and revenue forecasting with regression models",
+      "Volume and revenue forecasting with CAGR and regression models",
       "High, Medium, and Low financial scenarios",
       "C-suite presentation decks with executive summaries",
     ],
     proof:
-      "Saved a startup close to $10M by modeling that their urology product had only 3.4M available patients with strong existing pharmaceutical and thermotherapy competition.",
+      "Saved a startup close to $10M by modeling that their urology product had only 3.4M available patients with strong existing pharmaceutical and TUMT competition.",
   },
 ];
 
