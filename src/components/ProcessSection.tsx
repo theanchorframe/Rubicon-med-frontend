@@ -50,7 +50,7 @@ const ProcessSection = () => {
           bullets: [
             "Translate business questions into a focused learning plan and research strategy.",
             "Decide what we are going to do: qualitative, quantitative, environmental, and competitive workstreams.",
-            "Define where we will learn: conferences, KOLs, IDIs, internal teams, and other key settings.",
+            "Define where we will learn: conferences, KOL IDIs, internal teams, and other key settings.",
             "Align on when: timing of milestones and deliverables that match your internal decision calendar.",
             "Outline how we will execute to minimize disruption to busy clinical and commercial stakeholders.",
           ],
