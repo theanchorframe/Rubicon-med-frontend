@@ -296,7 +296,7 @@ const ProcessSection = () => {
                       </p>
 
                       {/* Summary */}
-                      <p className="text-base md:text-lg text-foreground leading-relaxed">
+                      <p className="text-base md:text-lg text-foreground leading-relaxed font-bold">
                         {ideaContent[letter].summary}
                       </p>
 
