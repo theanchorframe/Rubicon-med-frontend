@@ -19,7 +19,13 @@ const TermsOfService = () => {
       <header className="border-b border-border">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <Link to="/">
-            <img src={logo} alt="Rubicon Medical Marketing & Strategy Consultants Corp." className="h-16 w-auto" />
+            <img
+              src={logo}
+              alt="Rubicon Medical Marketing & Strategy Consultants Corp."
+              className="h-16 w-auto"
+              loading="lazy"
+              decoding="async"
+            />
           </Link>
           <Button variant="ghost" size="sm" className="gap-2" onClick={handleBackToHome}>
             <ArrowLeft size={16} />
