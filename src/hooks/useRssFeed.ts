@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { parseRssXml, RSS_FEED_URL } from "@/lib/blogFeed";
+import { parseRssXml, RSS_FEED_URL, type BlogPost } from "@/lib/blogFeed";
 
 export function useRssFeed() {
   const [posts, setPosts] = useState<BlogPost[]>([]);
