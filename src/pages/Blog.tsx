@@ -76,6 +76,8 @@ const Blog = () => {
                     src={post.image}
                     alt={post.title}
                     className="w-full object-cover"
+                    loading="lazy"
+                    decoding="async"
                     style={{ height: '200px', borderRadius: '8px 8px 0 0' }}
                   />
                 ) : (
