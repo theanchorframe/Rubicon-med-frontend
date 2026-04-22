@@ -49,7 +49,7 @@ const ThankYouCaseStudy = () => {
           </h1>
           
           <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
-            Thank you for your interest. Check your email for the EPD case study download link and insights into successful MedTech strategies.
+            Thank you for your interest. Check your email for the EPD case study download link and insights into successful MedTech strategies. Check spam if this is the first time reciving an email from Rubicon.
           </p>
           
           <Button
