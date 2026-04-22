@@ -18,7 +18,9 @@ export default defineConfig(({ mode, isSsrBuild }) => ({
             manualChunks: {
               react: ["react", "react-dom", "react-router-dom"],
               animation: ["framer-motion"],
-              ui: ["@radix-ui/react-dialog", "@radix-ui/react-toast", "@radix-ui/react-tooltip", "lucide-react"],
+              charts: ["recharts", "react-countup"],
+              icons: ["lucide-react", "@phosphor-icons/react"],
+              ui: ["@radix-ui/react-dialog", "@radix-ui/react-toast", "@radix-ui/react-tooltip"],
             },
           },
         },
