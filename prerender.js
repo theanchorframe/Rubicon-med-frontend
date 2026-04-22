@@ -96,9 +96,10 @@ function parseRssXml(xml) {
 function getMeta(route, posts) {
   const post = posts.find((entry) => route === `/blog/${entry.slug}`);
   if (post) {
+    const postDescription = post.excerpt || stripHtml(post.content).slice(0, 155);
     return {
       title: `${post.title} | Rubicon Medical`,
-      description: post.excerpt || stripHtml(post.content).slice(0, 155),
+      description: postDescription.length >= 50 ? postDescription : `Read ${post.title} from Rubicon Medical for MedTech strategy, market validation, and commercial growth insights.`,
       type: "article",
       image: post.image,
       publishedTime: post.pubDate,
