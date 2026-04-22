@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { Users, CheckCircle, Clock } from "@phosphor-icons/react";
 import { useState } from "react";
-import robHeadshot from "@/assets/rob-miraglia-headshot.webp";
+import robHeadshot from "@/assets/rob-miraglia-headshot-768.webp";
 import { useMounted } from "@/hooks/useMounted";
 
 type IdeaLetter = "I" | "D" | "E" | "A";
@@ -221,6 +221,10 @@ const ProcessSection = () => {
                   src={robHeadshot} 
                   alt="Rob Miraglia" 
                   className="w-64 h-auto rounded-lg shadow-lg"
+                  width={768}
+                  height={1025}
+                  loading="lazy"
+                  decoding="async"
                 />
               </motion.div>
             </div>
