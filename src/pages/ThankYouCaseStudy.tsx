@@ -45,11 +45,11 @@ const ThankYouCaseStudy = () => {
           </div>
           
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            Your Case Study is Ready!
+            Your EPD Case Study is Ready!
           </h1>
           
           <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
-            Thank you for your interest. Check your email for the case study download link and insights into successful MedTech strategies.
+            Thank you for your interest. Check your email for the EPD case study download link and insights into successful MedTech strategies.
           </p>
           
           <Button

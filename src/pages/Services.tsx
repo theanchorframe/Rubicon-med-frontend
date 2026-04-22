@@ -286,7 +286,7 @@ const Services = () => {
           </div>
         </section>
 
-        {/* Case Study CTA with graph */}
+        {/* EPD Case Study CTA with graph */}
         <CTABanner onOpenCaseStudyPopup={() => setIsCaseStudyPopupOpen(true)} />
 
         {/* Bottom CTA */}
