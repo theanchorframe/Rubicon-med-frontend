@@ -77,7 +77,7 @@ function parseRssXml(xml) {
     const link = readTag(item, "link");
     const contentEncoded = readTag(item, "content:encoded");
     const description = readTag(item, "description");
-    const content = contentEncoded || description;
+    const content = (contentEncoded || description).replace(/<img\b(?![^>]*\bloading=)([^>]*)>/gi, '<img loading="lazy" decoding="async"$1>');
     const plainExcerpt = stripHtml(description || content).slice(0, 200);
     return {
       title,
