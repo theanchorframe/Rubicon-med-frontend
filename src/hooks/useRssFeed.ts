@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { parseRssXml, RSS_FEED_URL, type BlogPost } from "@/lib/blogFeed";
+import { getPrerenderPosts } from "@/lib/prerenderData";
 
 export function useRssFeed() {
-  const [posts, setPosts] = useState<BlogPost[]>([]);
-  const [loading, setLoading] = useState(true);
+  const initialPosts = getPrerenderPosts();
+  const [posts, setPosts] = useState<BlogPost[]>(initialPosts);
+  const [loading, setLoading] = useState(initialPosts.length === 0);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
