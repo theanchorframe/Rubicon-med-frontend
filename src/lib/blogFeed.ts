@@ -36,6 +36,10 @@ export function stripHtml(html: string): string {
     .trim();
 }
 
+export function addLazyLoadingToImages(html: string): string {
+  return html.replace(/<img\b(?![^>]*\bloading=)([^>]*)>/gi, '<img loading="lazy" decoding="async"$1>');
+}
+
 function readTag(item: string, tag: string): string {
   const match = item.match(new RegExp(`<${tag}[^>]*>([\\s\\S]*?)<\\/${tag}>`, "i"));
   return match?.[1]?.replace(/^<!\[CDATA\[|\]\]>$/g, "").trim() || "";
@@ -47,7 +51,7 @@ export function parseRssXml(xml: string): BlogPost[] {
     const link = readTag(item, "link");
     const contentEncoded = readTag(item, "content:encoded");
     const description = readTag(item, "description");
-    const content = contentEncoded || description;
+    const content = addLazyLoadingToImages(contentEncoded || description);
     const plainExcerpt = stripHtml(description || content).slice(0, 200);
     const image =
       item.match(/<enclosure[^>]+type=["']image[^"']*["'][^>]+url=["']([^"']+)["']/i)?.[1] ||
