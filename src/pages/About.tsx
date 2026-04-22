@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import ConsultationDialog from "@/components/ConsultationDialog";
 import MobileBottomNav from "@/components/MobileBottomNav";
 import { useMounted } from "@/hooks/useMounted";
-import robHeadshot from "@/assets/rob-miraglia-headshot-768.webp";
+import robHeadshot from "@/assets/rob-miraglia-headshot.webp";
 import {
   ChartBar,
   Users,
@@ -119,9 +119,6 @@ const About = () => {
                   src={robHeadshot}
                   alt="Rob Miraglia — Rubicon Medical Marketing"
                   className="relative rounded-2xl shadow-2xl w-full max-w-sm object-cover"
-                  width={768}
-                  height={1025}
-                  decoding="async"
                 />
               </div>
             </motion.div>

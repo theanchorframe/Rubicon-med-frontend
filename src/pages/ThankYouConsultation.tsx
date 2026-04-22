@@ -2,7 +2,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, ArrowLeft, Lightbulb, PenTool, FlaskConical, Rocket } from "lucide-react";
 import Footer from "@/components/Footer";
-import consultationBanner from "@/assets/thank-you-consultation-banner-1200.webp";
+import consultationBanner from "@/assets/thank-you-consultation-banner.jpg";
 import logo from "@/assets/logo.png";
 
 const ThankYouConsultation = () => {
@@ -58,7 +58,7 @@ const ThankYouConsultation = () => {
       <header className="border-b border-border">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <Link to="/">
-            <img src={logo} alt="Rubicon Medical Marketing & Strategy Consultants Corp." className="h-16 w-auto" width={110} height={261} />
+            <img src={logo} alt="Rubicon Medical Marketing & Strategy Consultants Corp." className="h-16 w-auto" />
           </Link>
           <Button variant="ghost" size="sm" className="gap-2" onClick={handleBackToHome}>
             <ArrowLeft size={16} />

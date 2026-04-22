@@ -2,7 +2,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Download, ArrowLeft } from "lucide-react";
 import Footer from "@/components/Footer";
-import caseStudyBanner from "@/assets/thank-you-case-study-banner-1200.webp";
+import caseStudyBanner from "@/assets/thank-you-case-study-banner.jpg";
 import logo from "@/assets/logo.png";
 
 const ThankYouCaseStudy = () => {
@@ -21,7 +21,7 @@ const ThankYouCaseStudy = () => {
       <header className="border-b border-border">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <Link to="/">
-            <img src={logo} alt="Rubicon Medical Marketing & Strategy Consultants Corp." className="h-16 w-auto" width={110} height={261} />
+            <img src={logo} alt="Rubicon Medical Marketing & Strategy Consultants Corp." className="h-16 w-auto" />
           </Link>
           <Button variant="ghost" size="sm" className="gap-2" onClick={handleBackToHome}>
             <ArrowLeft size={16} />

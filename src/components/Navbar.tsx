@@ -69,8 +69,6 @@ const Navbar = ({ onOpenConsultationDialog }: NavbarProps) => {
                 className={`transition-all duration-300 ${
                   isScrolled ? "h-14" : "h-20"
                 }`}
-                width={110}
-                height={261}
               />
               <div>
                 <h1 className={`font-bold text-foreground leading-tight transition-all duration-300 text-left ${
