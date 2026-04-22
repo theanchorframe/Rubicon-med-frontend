@@ -134,26 +134,13 @@ function injectSeo(html, route, posts) {
 
 (async () => {
   let dynamicRoutes = [];
+  let posts = [];
 
   try {
     const response = await fetch(GHL_RSS_URL);
     const xmlText = await response.text();
-
-    // Extract the links to create routes for each blog post
-    const linkRegex = /<link>(.*?)<\/link>/g;
-    let match;
-    const links = [];
-
-    while ((match = linkRegex.exec(xmlText)) !== null) {
-      links.push(match[1]);
-    }
-
-    dynamicRoutes = links
-      .filter((link) => link.includes("/blog/") && !link.endsWith("/blog"))
-      .map((link) => {
-        const urlObj = new URL(link);
-        return urlObj.pathname;
-      });
+    posts = parseRssXml(xmlText);
+    dynamicRoutes = posts.filter((post) => post.slug).map((post) => `/blog/${post.slug}`);
 
     console.log("Dynamic routes found:", dynamicRoutes);
   } catch (error) {
@@ -164,8 +151,15 @@ function injectSeo(html, route, posts) {
 
   for (const url of allRoutes) {
     try {
-      const appHtml = render(url);
-      const html = template.replace('<div id="root"></div>', `<div id="root">${appHtml}</div>`);
+      const appHtml = render(url, posts);
+      const serializedPosts = JSON.stringify(posts).replace(/</g, "\\u003c");
+      const html = injectSeo(
+        template
+          .replace('<div id="root"></div>', `<div id="root">${appHtml}</div>`)
+          .replace("</body>", `<script>window.__BLOG_POSTS__=${serializedPosts}</script>\n  </body>`),
+        url,
+        posts
+      );
 
       const filePath = url === "/" ? "dist/index.html" : `dist${url}/index.html`;
       const dir = path.dirname(toAbsolute(filePath));
@@ -180,4 +174,11 @@ function injectSeo(html, route, posts) {
       console.error(`Failed to prerender ${url}:`, e);
     }
   }
+
+  const sitemapRoutes = allRoutes.map((route) => `${SITE_URL}${route === "/" ? "" : route}`);
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapRoutes
+    .map((loc) => `  <url><loc>${loc}</loc></url>`)
+    .join("\n")}\n</urlset>\n`;
+  fs.writeFileSync(toAbsolute("dist/sitemap.xml"), sitemap);
+  fs.writeFileSync(toAbsolute("dist/robots.txt"), `User-agent: *\nAllow: /\nSitemap: ${SITE_URL}/sitemap.xml\n`);
 })();
