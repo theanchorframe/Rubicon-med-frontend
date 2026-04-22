@@ -69,6 +69,8 @@ const Navbar = ({ onOpenConsultationDialog }: NavbarProps) => {
                 className={`transition-all duration-300 ${
                   isScrolled ? "h-14" : "h-20"
                 }`}
+                loading="lazy"
+                decoding="async"
               />
               <div>
                 <span className={`block font-bold text-foreground leading-tight transition-all duration-300 text-left ${

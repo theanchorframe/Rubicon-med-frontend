@@ -119,6 +119,8 @@ const About = () => {
                   src={robHeadshot}
                   alt="Rob Miraglia — Rubicon Medical Marketing"
                   className="relative rounded-2xl shadow-2xl w-full max-w-sm object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </motion.div>

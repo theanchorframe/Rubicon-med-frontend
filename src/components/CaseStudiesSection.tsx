@@ -62,7 +62,13 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
                 onMouseEnter={() => setHoveredCard(index)}
                 onMouseLeave={() => setHoveredCard(null)}
               >
-                <img src={study.image} alt={study.title} className="w-full object-cover h-auto md:h-[450px]" />
+                <img
+                  src={study.image}
+                  alt={study.title}
+                  className="w-full object-cover h-auto md:h-[450px]"
+                  loading="lazy"
+                  decoding="async"
+                />
                 <div
                   className={`absolute inset-x-0 bottom-0 bg-black/90 text-white p-6 transition-all duration-500 ${
                     hoveredCard === index ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"

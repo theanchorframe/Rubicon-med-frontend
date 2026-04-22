@@ -221,6 +221,8 @@ const ProcessSection = () => {
                   src={robHeadshot} 
                   alt="Rob Miraglia" 
                   className="w-64 h-auto rounded-lg shadow-lg"
+                  loading="lazy"
+                  decoding="async"
                 />
               </motion.div>
             </div>
