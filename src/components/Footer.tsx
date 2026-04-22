@@ -43,7 +43,7 @@ const Footer = () => {
               </li>
               <li>
                 <button onClick={() => scrollToSection("case-studies")} className="text-navy-foreground/80 hover:text-navy-foreground transition-colors">
-                  Case Studies
+                  EPD Case Studies
                 </button>
               </li>
               <li>

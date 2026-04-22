@@ -34,7 +34,7 @@ const CTABanner = ({ onOpenCaseStudyPopup }: CTABannerProps) => {
                 onClick={onOpenCaseStudyPopup}
                 className="shine-effect text-lg px-8 py-6 h-auto bg-primary hover:bg-primary/90"
               >
-                Get the Complimentary Case Study
+                Get the Complimentary EPD Case Study
               </Button>
             </div>
           </div>
@@ -54,7 +54,7 @@ const CTABanner = ({ onOpenCaseStudyPopup }: CTABannerProps) => {
                 onClick={onOpenCaseStudyPopup}
                 className="shine-effect text-xl px-12 py-8 h-auto bg-primary hover:bg-primary/90"
               >
-                Get the Complimentary Case Study
+                Get the Complimentary EPD Case Study
               </Button>
             </div>
 

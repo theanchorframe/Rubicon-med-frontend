@@ -43,15 +43,15 @@ const CaseStudyPopup = ({ isOpen, onClose }: CaseStudyPopupProps) => {
               <div className="w-full h-32 md:h-40 overflow-hidden">
                 <img
                   src={caseStudyBanner}
-                  alt="Case Study"
+                  alt="EPD Case Study"
                   className="w-full h-full object-cover"
                 />
               </div>
 
               {/* Content */}
               <div className="p-4 md:p-6 space-y-3 text-center">
-                <h3 className="text-2xl md:text-3xl font-bold text-navy">
-                  Get Our Complimentary Case Study
+                <h3 className="text-navy font-bold text-4xl">
+                  Get Our Complimentary EPD Case Study
                 </h3>
                 <p className="text-base md:text-lg text-navy/80 leading-relaxed">
                   Discover how a product went from Ideation to co-development launch.
@@ -70,11 +70,11 @@ const CaseStudyPopup = ({ isOpen, onClose }: CaseStudyPopupProps) => {
                     data-activation-value=""
                     data-deactivation-type="neverDeactivate"
                     data-deactivation-value=""
-                    data-form-name="Case Study Popup"
+                    data-form-name="EPD Case Study Popup"
                     data-height="280"
                     data-layout-iframe-id="popup-case-study-RSwk9c8PsfVO57gzIn2m"
                     data-form-id="RSwk9c8PsfVO57gzIn2m"
-                    title="Case Study Popup"
+                    title="EPD Case Study Popup"
                   />
                 </div>
                 
