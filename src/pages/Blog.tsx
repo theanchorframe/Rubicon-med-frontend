@@ -77,6 +77,10 @@ const Blog = () => {
                     alt={post.title}
                     className="w-full object-cover"
                     style={{ height: '200px', borderRadius: '8px 8px 0 0' }}
+                    width={320}
+                    height={200}
+                    loading="lazy"
+                    decoding="async"
                   />
                 ) : (
                   <div
