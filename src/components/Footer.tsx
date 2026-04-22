@@ -1,12 +1,32 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Linkedin } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const Footer = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const isBlogPage = location.pathname.startsWith("/blog");
+  const isAboutPage = location.pathname === "/about";
+  const isServicesPage = location.pathname === "/services";
+  const isSubPage = isBlogPage || isAboutPage || isServicesPage;
+
   const scrollToSection = (sectionId: string) => {
+    if (location.pathname !== "/") {
+      navigate("/", { state: { scrollTo: sectionId } });
+      return;
+    }
+
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleHomeClick = () => {
+    if (location.pathname === "/") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      navigate("/");
     }
   };
 
@@ -27,30 +47,39 @@ const Footer = () => {
             <h3 className="font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <button onClick={() => scrollToSection("process")} className="text-navy-foreground/80 hover:text-navy-foreground transition-colors">
-                  Our Process
+                <button onClick={handleHomeClick} className="text-navy-foreground/80 hover:text-navy-foreground transition-colors">
+                  Home
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollToSection("services")} className="text-navy-foreground/80 hover:text-navy-foreground transition-colors">
+                <button onClick={() => navigate("/blog")} className="text-navy-foreground/80 hover:text-navy-foreground transition-colors">
+                  Blog
+                </button>
+              </li>
+              <li>
+                <button onClick={() => navigate("/about")} className="text-navy-foreground/80 hover:text-navy-foreground transition-colors">
+                  About
+                </button>
+              </li>
+              <li>
+                <button onClick={() => navigate("/services")} className="text-navy-foreground/80 hover:text-navy-foreground transition-colors">
                   Services
                 </button>
               </li>
-              <li>
-                <button onClick={() => scrollToSection("testimonials")} className="text-navy-foreground/80 hover:text-navy-foreground transition-colors">
-                  Testimonials
-                </button>
-              </li>
-              <li>
-                <button onClick={() => scrollToSection("case-studies")} className="text-navy-foreground/80 hover:text-navy-foreground transition-colors">
-                  EPD Case Studies
-                </button>
-              </li>
-              <li>
-                <button onClick={() => scrollToSection("faq")} className="text-navy-foreground/80 hover:text-navy-foreground transition-colors">
-                  FAQ
-                </button>
-              </li>
+              {!isSubPage && (
+                <>
+                  <li>
+                    <button onClick={() => scrollToSection("case-study")} className="text-navy-foreground/80 hover:text-navy-foreground transition-colors">
+                      EPD Case Study
+                    </button>
+                  </li>
+                  <li>
+                    <button onClick={() => scrollToSection("faq")} className="text-navy-foreground/80 hover:text-navy-foreground transition-colors">
+                      FAQ
+                    </button>
+                  </li>
+                </>
+              )}
             </ul>
           </div>
 
