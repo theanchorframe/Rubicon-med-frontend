@@ -16,4 +16,15 @@ export default defineConfig(({ mode }) => ({
     },
     dedupe: ["react", "react-dom"],
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          react: ["react", "react-dom", "react-router-dom"],
+          motion: ["framer-motion"],
+          vendor: ["@tanstack/react-query", "lucide-react", "@phosphor-icons/react"],
+        },
+      },
+    },
+  },
 }));
