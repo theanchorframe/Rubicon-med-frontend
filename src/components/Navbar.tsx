@@ -71,11 +71,11 @@ const Navbar = ({ onOpenConsultationDialog }: NavbarProps) => {
                 }`}
               />
               <div>
-                <h1 className={`font-bold text-foreground leading-tight transition-all duration-300 text-left ${
+                <span className={`block font-bold text-foreground leading-tight transition-all duration-300 text-left ${
                   isScrolled ? "text-sm md:text-base" : "text-base md:text-lg"
                 }`}>
                   Rubicon Medical Marketing &<br />Strategy Consultants
-                </h1>
+                </span>
               </div>
             </button>
 

@@ -12,3 +12,5 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://image-to-web-form.lovable.app/sitemap.xml
