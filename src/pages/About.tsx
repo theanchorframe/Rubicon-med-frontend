@@ -106,6 +106,17 @@ const About = () => {
                 build a business case that stands up to finance, procurement, and
                 clinicians.
               </p>
+              <div className="pt-2">
+                <Button
+                  size="lg"
+                  onClick={() => {
+                    document.getElementById("about-contact")?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                  className="shine-effect text-xl px-12 py-8 h-auto bg-primary hover:bg-primary/90"
+                >
+                  Request a Complimentary Consultation
+                </Button>
+              </div>
             </motion.div>
 
             <motion.div
