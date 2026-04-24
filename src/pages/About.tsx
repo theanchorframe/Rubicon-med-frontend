@@ -106,6 +106,17 @@ const About = () => {
                 build a business case that stands up to finance, procurement, and
                 clinicians.
               </p>
+              <div className="pt-2">
+                <Button
+                  size="lg"
+                  onClick={() => {
+                    document.getElementById("about-contact")?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                  className="shine-effect text-xl px-12 py-8 h-auto bg-primary hover:bg-primary/90"
+                >
+                  Request a Complimentary Consultation
+                </Button>
+              </div>
             </motion.div>
 
             <motion.div
@@ -326,7 +337,7 @@ const About = () => {
       </section>
 
       {/* Contact / CTA Section */}
-      <section className="py-20 bg-secondary/50">
+      <section id="about-contact" className="py-20 bg-secondary/50 scroll-mt-20">
         <div className="container mx-auto px-6 max-w-4xl">
           <motion.div
             initial={mounted ? { opacity: 0, y: 20 } : false}
