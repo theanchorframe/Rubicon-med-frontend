@@ -15,7 +15,7 @@ import {
   Briefcase,
   Heartbeat,
 } from "@phosphor-icons/react";
-import { GraduationCap, Award, BadgeCheck } from "lucide-react";
+import { Sparkles } from "lucide-react";
 
 const specializations = [
   {
@@ -201,7 +201,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Education Section */}
+      {/* Academic Foundation */}
       <section className="py-20 bg-secondary/50">
         <div className="container mx-auto px-6 max-w-6xl">
           <motion.div
@@ -212,26 +212,33 @@ const About = () => {
             className="text-center mb-16 space-y-4"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-navy">
-              Education
+              Academic Foundation
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Academic foundation in business strategy and life sciences.
+              Business strategy meets life sciences — the training behind the thinking.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="relative grid md:grid-cols-2 gap-12 md:gap-16">
+            {/* Vertical center divider (desktop only) */}
+            <div
+              aria-hidden="true"
+              className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px -translate-x-1/2"
+              style={{ backgroundColor: "hsl(var(--primary) / 0.3)" }}
+            />
+
             {[
               {
-                degree: "Master of Business Administration (MBA)",
-                emphases: "Emphases in Marketing and Healthcare",
                 institution: "Carlson School of Management",
-                subInstitution: "University of Minnesota, Minneapolis, MN",
+                sub: "University of Minnesota · Minneapolis, MN",
+                degree: "Master of Business Administration (MBA)",
+                emphasis: "Emphases in Marketing and Healthcare",
               },
               {
-                degree: "Bachelor of Science (BS), Psychology",
-                emphases: "Pre-Med Concentration",
                 institution: "Brooklyn College",
-                subInstitution: "City University of New York, Brooklyn, NY",
+                sub: "City University of New York · Brooklyn, NY",
+                degree: "Bachelor of Science, Psychology",
+                emphasis: "Pre-Med Concentration",
               },
             ].map((edu, index) => (
               <motion.div
@@ -240,26 +247,24 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="group bg-card border-2 border-border hover:border-primary/50 rounded-xl p-8 space-y-4 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+                className="relative pl-6"
               >
-                <div className="p-3 inline-flex rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
-                  <GraduationCap size={28} />
-                </div>
-                <div className="space-y-2">
-                  <h3 className="text-xl font-bold text-navy">{edu.degree}</h3>
-                  <p className="text-foreground/75">{edu.emphases}</p>
-                </div>
-                <div className="space-y-1 pt-2 border-t border-border">
-                  <p className="font-bold text-navy">{edu.institution}</p>
-                  <p className="text-sm text-muted-foreground">{edu.subInstitution}</p>
-                </div>
+                <div className="absolute left-0 top-1 w-[3px] h-[60px] bg-primary rounded-full" />
+                <h3 className="text-2xl font-bold text-navy leading-tight">
+                  {edu.institution}
+                </h3>
+                <p className="text-sm text-muted-foreground mt-1">{edu.sub}</p>
+                <p className="text-base text-navy font-medium mt-4">{edu.degree}</p>
+                <p className="text-sm italic text-muted-foreground mt-1">
+                  {edu.emphasis}
+                </p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Certifications & Affiliations */}
+      {/* Credentials & Affiliations */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6 max-w-6xl">
           <motion.div
@@ -267,71 +272,71 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mb-16 space-y-4"
+            className="text-center mb-12 space-y-4"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-navy">
-              Certifications & Professional Affiliations
+              Credentials & Affiliations
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Continuous learning at the frontier of healthcare and AI.
+              Continuous learning at the intersection of medicine, commercialization, and AI.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* AI in Healthcare Certifications */}
-            <motion.div
-              initial={mounted ? { opacity: 0, y: 30 } : false}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="bg-card border-2 border-border rounded-xl p-8 space-y-6"
-            >
-              <h3 className="text-xl font-bold text-navy">
-                AI in Healthcare Certifications
-              </h3>
-              <ul className="space-y-4">
-                {[
-                  "Foundation and Potential of AI in Healthcare — University of Colorado",
-                  "The Data to Decision Path — AI Infusion in Healthcare — University of Colorado",
-                  "AI Agents in Healthcare and Capstone — University of Colorado",
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <div className="flex-shrink-0 p-2 rounded-md bg-primary/10 text-primary">
-                      <Award size={18} />
-                    </div>
-                    <p className="text-foreground/80 leading-relaxed pt-1">{item}</p>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
+          {/* AI Callout */}
+          <motion.div
+            initial={mounted ? { opacity: 0, y: 20 } : false}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="bg-primary/10 border-l-4 border-primary rounded-lg p-6 mb-8"
+          >
+            <p className="text-foreground leading-relaxed">
+              <span className="font-semibold text-navy">Currently focused on:</span>{" "}
+              The application of AI in healthcare commercialization — three University of Colorado certifications completed in 2025.
+            </p>
+          </motion.div>
 
-            {/* Industry Credentials & Affiliations */}
-            <motion.div
-              initial={mounted ? { opacity: 0, y: 30 } : false}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="bg-card border-2 border-border rounded-xl p-8 space-y-6"
-            >
-              <h3 className="text-xl font-bold text-navy">
-                Industry Credentials & Affiliations
-              </h3>
-              <ul className="space-y-4">
-                {[
-                  "3M Six Sigma Black Belt — DMAIC & DFSS (New Product Development)",
-                  "Medical Industry Leadership Institute (MILI) — Charter Member",
-                  "Medical Alley — Member",
-                  "Glen Cove Animal Rescue — Volunteer",
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <div className="flex-shrink-0 p-2 rounded-md bg-primary/10 text-primary">
-                      <BadgeCheck size={18} />
-                    </div>
-                    <p className="text-foreground/80 leading-relaxed pt-1">{item}</p>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
+          {/* AI Certification Pills */}
+          <div className="flex flex-wrap gap-4 mb-10">
+            {[
+              "Foundation & Potential of AI in Healthcare",
+              "Data to Decision Path — AI Infusion in Healthcare",
+              "AI Agents in Healthcare & Capstone",
+            ].map((cert, i) => (
+              <motion.div
+                key={i}
+                initial={mounted ? { opacity: 0, y: 20 } : false}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: i * 0.1 }}
+                viewport={{ once: true }}
+                className="flex items-center gap-3 bg-card border border-border rounded-full pl-4 pr-5 py-3 flex-1 min-w-[260px]"
+              >
+                <div className="flex-shrink-0 text-primary">
+                  <Sparkles size={18} />
+                </div>
+                <div className="min-w-0">
+                  <p className="text-[15px] font-bold text-navy leading-tight">{cert}</p>
+                  <p className="text-[13px] text-muted-foreground mt-0.5">
+                    University of Colorado
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="border-t border-border pt-8">
+            <p className="text-xs uppercase tracking-wider text-muted-foreground font-semibold mb-3">
+              Industry Credentials
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              3M Six Sigma Black Belt (DMAIC & DFSS)
+              <span className="mx-2 text-primary">·</span>
+              Medical Industry Leadership Institute — Charter Member
+              <span className="mx-2 text-primary">·</span>
+              Medical Alley Member
+              <span className="mx-2 text-primary">·</span>
+              Glen Cove Animal Rescue — Volunteer
+            </p>
           </div>
         </div>
       </section>
