@@ -337,7 +337,7 @@ const About = () => {
       </section>
 
       {/* Contact / CTA Section */}
-      <section className="py-20 bg-secondary/50">
+      <section id="about-contact" className="py-20 bg-secondary/50 scroll-mt-20">
         <div className="container mx-auto px-6 max-w-4xl">
           <motion.div
             initial={mounted ? { opacity: 0, y: 20 } : false}
