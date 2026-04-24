@@ -15,6 +15,7 @@ import {
   Briefcase,
   Heartbeat,
 } from "@phosphor-icons/react";
+import { GraduationCap, Award, BadgeCheck } from "lucide-react";
 
 const specializations = [
   {
@@ -185,6 +186,141 @@ const About = () => {
                 </motion.div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Education Section */}
+      <section className="py-20 bg-secondary/50">
+        <div className="container mx-auto px-6 max-w-6xl">
+          <motion.div
+            initial={mounted ? { opacity: 0, y: 20 } : false}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-16 space-y-4"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-navy">
+              Education
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Academic foundation in business strategy and life sciences.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {[
+              {
+                degree: "Master of Business Administration (MBA)",
+                emphases: "Emphases in Marketing and Healthcare",
+                institution: "Carlson School of Management",
+                subInstitution: "University of Minnesota, Minneapolis, MN",
+              },
+              {
+                degree: "Bachelor of Science (BS), Psychology",
+                emphases: "Pre-Med Concentration",
+                institution: "Brooklyn College",
+                subInstitution: "City University of New York, Brooklyn, NY",
+              },
+            ].map((edu, index) => (
+              <motion.div
+                key={index}
+                initial={mounted ? { opacity: 0, y: 30 } : false}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group bg-card border-2 border-border hover:border-primary/50 rounded-xl p-8 space-y-4 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+              >
+                <div className="p-3 inline-flex rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+                  <GraduationCap size={28} />
+                </div>
+                <div className="space-y-2">
+                  <h3 className="text-xl font-bold text-navy">{edu.degree}</h3>
+                  <p className="text-foreground/75">{edu.emphases}</p>
+                </div>
+                <div className="space-y-1 pt-2 border-t border-border">
+                  <p className="font-bold text-navy">{edu.institution}</p>
+                  <p className="text-sm text-muted-foreground">{edu.subInstitution}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications & Affiliations */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-6 max-w-6xl">
+          <motion.div
+            initial={mounted ? { opacity: 0, y: 20 } : false}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-16 space-y-4"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-navy">
+              Certifications & Professional Affiliations
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Continuous learning at the frontier of healthcare and AI.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* AI in Healthcare Certifications */}
+            <motion.div
+              initial={mounted ? { opacity: 0, y: 30 } : false}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="bg-card border-2 border-border rounded-xl p-8 space-y-6"
+            >
+              <h3 className="text-xl font-bold text-navy">
+                AI in Healthcare Certifications
+              </h3>
+              <ul className="space-y-4">
+                {[
+                  "Foundation and Potential of AI in Healthcare — University of Colorado",
+                  "The Data to Decision Path — AI Infusion in Healthcare — University of Colorado",
+                  "AI Agents in Healthcare and Capstone — University of Colorado",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <div className="flex-shrink-0 p-2 rounded-md bg-primary/10 text-primary">
+                      <Award size={18} />
+                    </div>
+                    <p className="text-foreground/80 leading-relaxed pt-1">{item}</p>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
+            {/* Industry Credentials & Affiliations */}
+            <motion.div
+              initial={mounted ? { opacity: 0, y: 30 } : false}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="bg-card border-2 border-border rounded-xl p-8 space-y-6"
+            >
+              <h3 className="text-xl font-bold text-navy">
+                Industry Credentials & Affiliations
+              </h3>
+              <ul className="space-y-4">
+                {[
+                  "3M Six Sigma Black Belt — DMAIC & DFSS (New Product Development)",
+                  "Medical Industry Leadership Institute (MILI) — Charter Member",
+                  "Medical Alley — Member",
+                  "Glen Cove Animal Rescue — Volunteer",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <div className="flex-shrink-0 p-2 rounded-md bg-primary/10 text-primary">
+                      <BadgeCheck size={18} />
+                    </div>
+                    <p className="text-foreground/80 leading-relaxed pt-1">{item}</p>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
           </div>
         </div>
       </section>
