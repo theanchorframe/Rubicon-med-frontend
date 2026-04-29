@@ -1,5 +1,5 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Linkedin } from "lucide-react";
+import { Linkedin, Mail } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const Footer = () => {
@@ -101,6 +101,13 @@ const Footer = () => {
               >
                 <Linkedin size={20} />
                 <span>Rob's LinkedIn</span>
+              </a>
+              <a
+                href="mailto:rob@rubiconmed.us?subject=Rubicon%20Consultation%20Inquiry"
+                className="flex items-center gap-2 text-sm text-navy-foreground/80 hover:text-navy-foreground transition-colors"
+              >
+                <Mail size={20} />
+                <span>rob@rubiconmed.us</span>
               </a>
             </div>
           </div>
