@@ -159,7 +159,7 @@ const ProcessSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="text-5xl font-bold text-foreground"
+                className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground"
               >
                 Convert Clinical Insight into <span className="text-primary">Market Traction</span>
               </motion.h2>
