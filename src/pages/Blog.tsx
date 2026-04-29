@@ -53,6 +53,15 @@ const Blog = () => {
               </div>
             ))}
           </div>
+        ) : posts.length === 0 ? (
+          <div className="bg-card rounded-lg shadow-md py-20 px-6 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">
+              Coming Soon
+            </h2>
+            <p className="text-muted-foreground max-w-xl mx-auto" style={{ fontSize: '1.05rem', lineHeight: '1.7' }}>
+              New perspectives on market validation, KOL strategy, and commercial growth are on the way. Check back shortly.
+            </p>
+          </div>
         ) : (
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {posts.map((post) => (
