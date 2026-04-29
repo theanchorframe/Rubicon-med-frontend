@@ -282,20 +282,6 @@ const About = () => {
             </p>
           </motion.div>
 
-          {/* AI Callout */}
-          <motion.div
-            initial={mounted ? { opacity: 0, y: 20 } : false}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="bg-primary/10 border-l-4 border-primary rounded-lg p-6 mb-8"
-          >
-            <p className="text-foreground leading-relaxed">
-              <span className="font-semibold text-navy">Currently focused on:</span>{" "}
-              The application of AI in healthcare commercialization — three University of Colorado certifications completed in 2025.
-            </p>
-          </motion.div>
-
           {/* AI Certification Pills */}
           <div className="flex flex-wrap gap-4 mb-10">
             {[
