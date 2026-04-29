@@ -334,8 +334,6 @@ const About = () => {
               Medical Industry Leadership Institute — Charter Member
               <span className="mx-2 text-primary">·</span>
               Medical Alley Member
-              <span className="mx-2 text-primary">·</span>
-              Glen Cove Animal Rescue — Volunteer
             </p>
           </div>
         </div>
