@@ -159,7 +159,7 @@ const ProcessSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground"
+                className="sm:text-4xl lg:text-5xl font-bold text-foreground text-4xl"
               >
                 Convert Clinical Insight into <span className="text-primary">Market Traction</span>
               </motion.h2>
@@ -188,7 +188,7 @@ const ProcessSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="text-5xl font-bold text-foreground"
+                className="font-bold text-foreground text-4xl"
               >
                 <span className="text-primary">Rob Miraglia</span>: Your Partner in MedTech Growth.
               </motion.h2>
