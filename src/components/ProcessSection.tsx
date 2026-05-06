@@ -30,38 +30,38 @@ const ProcessSection = () => {
       sections: [
         {
           bullets: [
-            "Meet with the executive sponsor to align on goals, constraints, and how success will be measured.",
-            "Understand the landscape: therapeutic area, competitive set, and current market dynamics.",
-            "Map internal and external stakeholders, including KOLs, clinical users, and commercial teams.",
-            "Learn pain points, unanswered questions, and where the team feels least certain today.",
-            "Clarify likely travel and touchpoints (conferences, KOL visits, client offices).",
-            "Capture initial thoughts on strategy and expected deliverables to test later against the data.",
+            "Meet with the executive sponsor to align on goals, constraints, and how success will be measured",
+            "Understand the landscape: therapeutic area, competitive set, and current market dynamics",
+            "Map internal and external stakeholders, including KOLs, clinical users, and commercial teams",
+            "Learn pain points, unanswered questions, and where the team feels least certain today",
+            "Clarify likely travel and touchpoints (conferences, KOL visits, client offices)",
+            "Capture initial thoughts on strategy and expected deliverables to test later against the data",
           ],
         },
       ],
-      deliverable: "Every engagement begins with a deep-dive into your real-world environment and project constraints. To guide the IDEA process, we deliver a Statement of Understanding and a Statement of Work, a clear-eyed blueprint that transforms high-level goals into a validated, executable plan for your product.",
+      deliverable: "Every engagement begins with a deep-dive into your real-world environment and project constraints To guide the IDEA process, we deliver a Statement of Understanding and a Statement of Work, a clear-eyed blueprint that transforms high-level goals into a validated, executable plan for your product",
     },
     D: {
       title: "Delineate Project Roadmap",
       subtitle: "(Define Plan and Strategy)",
-      summary: "Build project roadmap and plan.",
+      summary: "Build project roadmap and plan",
       sections: [
         {
           bullets: [
-            "Translate business questions into a focused learning plan and research strategy.",
-            "Decide what we are going to do: qualitative, quantitative, environmental, and competitive workstreams.",
-            "Define where we will learn: conferences, KOL IDIs, internal teams, and other key settings.",
-            "Align on when: timing of milestones and deliverables that match your internal decision calendar.",
-            "Outline how we will execute to minimize disruption to busy clinical and commercial stakeholders.",
+            "Translate business questions into a focused learning plan and research strategy",
+            "Decide what we are going to do: qualitative, quantitative, environmental, and competitive workstreams",
+            "Define where we will learn: conferences, KOL IDIs, internal teams, and other key settings",
+            "Align on when: timing of milestones and deliverables that match your internal decision calendar",
+            "Outline how we will execute to minimize disruption to busy clinical and commercial stakeholders",
           ],
         },
       ],
-      deliverable: "A reviewed and finalized plan with the executive sponsor and core team that spells out what we need to know and how we will learn it.",
+      deliverable: "A reviewed and finalized plan with the executive sponsor and core team that spells out what we need to know and how we will learn it",
     },
     E: {
       title: "Engage Full Team for Plan Execution",
       subtitle: "(Team Kickoff)",
-      summary: "Run the work, talk to the right people, and turn raw data into usable insight.",
+      summary: "Run the work, talk to the right people, and turn raw data into usable insight",
       sections: [
         {
           bullets: [
@@ -79,30 +79,30 @@ const ProcessSection = () => {
     A: {
       title: "Action and Advise",
       subtitle: "(Next Steps)",
-      summary: "Execute on plan, report, and advise.",
+      summary: "Execute on plan, report, and advise",
       sections: [
         {
           bullets: [
-            "Translate research into clear product requirements in collaboration with the executive sponsor.",
-            "Work with R&D and other stakeholders to suggest high-level or detailed product specifications.",
-            "Identify any additional market research or advisory board needs to de-risk remaining questions.",
-            "Outline recommended targeting and positioning strategies based on the evidence gathered.",
-            "Draft initial concepts for messaging and work with downstream marketing if desired.",
+            "Translate research into clear product requirements in collaboration with the executive sponsor",
+            "Work with R&D and other stakeholders to suggest high-level or detailed product specifications",
+            "Identify any additional market research or advisory board needs to de-risk remaining questions",
+            "Outline recommended targeting and positioning strategies based on the evidence gathered",
+            "Draft initial concepts for messaging and work with downstream marketing if desired",
           ],
         },
         {
           label: "Marketing and creative deliverables can include:",
           bullets: [
-            "Briefs for the creative team that inform campaigns and market development programs.",
-            "Draft or refine the value proposition, tagline, and elevator pitch.",
-            "Messaging architecture and a simple user experience template.",
+            "Briefs for the creative team that inform campaigns and market development programs",
+            "Draft or refine the value proposition, tagline, and elevator pitch",
+            "Messaging architecture and a simple user experience template",
           ],
         },
         {
           label: "Business and investment deliverables can include:",
           bullets: [
-            "Business briefs for the investment team.",
-            "An investment case, go-to-market strategy, and market or patient models that support board and leadership decisions.",
+            "Business briefs for the investment team",
+            "An investment case, go-to-market strategy, and market or patient models that support board and leadership decisions",
           ],
         },
         {
@@ -112,13 +112,13 @@ const ProcessSection = () => {
             "Competitive Landscape",
             "Draft product specifications and product SWOT analysis",
             "Forecasted Market Shares, Revenue, Units, ASPs, Margin, and Growth",
-            "Risk mitigation planning with additional market research, advisory board development, etc.",
+            "Risk mitigation planning with additional market research, advisory board development, etc",
             "Suggested Targeting, Positioning, Value Proposition, Positioning Statement, Messaging, and Go-to-Market strategies",
             "Next Steps and Questions",
           ],
         },
       ],
-      deliverable: "A full concept report and presentation that links every recommendation back to the evidence gathered in the IDEA process.",
+      deliverable: "A full concept report and presentation that links every recommendation back to the evidence gathered in the IDEA process",
     },
   };
 
