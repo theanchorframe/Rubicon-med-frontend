@@ -134,9 +134,9 @@ const Services = () => {
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 whitespace-normal"
             style={{ lineHeight: "1.2" }}
           >
-            <span className="block">Validate early. Launch with confidence. Expert</span>
-            <span className="block">MedTech strategy backed by market and clinical</span>
-            <span className="block">intelligence</span>
+            <span className="block">Validate early. Launch with confidence.</span>
+            <span className="block">Expert MedTech strategy backed by market</span>
+            <span className="block">and clinical intelligence</span>
           </motion.h1>
           <motion.p
             initial={mounted ? { opacity: 0, y: 20 } : false}
