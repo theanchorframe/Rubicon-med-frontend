@@ -56,7 +56,7 @@ const specializations = [
     stat: "25+",
     statLabel: "Years of Leadership",
     description:
-      "Resources concentrated on the assets with the highest return. Optimize resource allocation and cross-functional alignment. By defining rigorous segmentation, targeting, and positioning (STP) frameworks alongside multi-year product roadmaps, we isolate high-potential opportunities. This allows R&D, Marketing, and Sales to concentrate resources on assets with the highest ROI.",
+      "Resources concentrated on the assets with the highest return. Optimize resource allocation and cross-functional alignment. By defining rigorous segmentation, targeting, and positioning (STP) frameworks alongside multi-year product roadmaps, we isolate high-potential opportunities. This allows R&D, Marketing, and Sales to concentrate resources on assets with the highest potential ROI.",
   },
   {
     icon: TrendUp,

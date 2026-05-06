@@ -81,7 +81,7 @@ const servicesData = [
     icon: Map,
     hook: "Concentrate resources on the assets with the highest return.",
     description:
-      "Optimize resource allocation and cross-functional alignment. By defining rigorous segmentation, targeting, and positioning frameworks alongside multi-year product roadmaps, we isolate high-potential opportunities. This allows R&D, Marketing, and Sales to concentrate resources on assets with the highest ROI.",
+      "Optimize resource allocation and cross-functional alignment. By defining rigorous segmentation, targeting, and positioning frameworks alongside multi-year product roadmaps, we isolate high-potential opportunities. This allows R&D, Marketing, and Sales to concentrate resources on assets with the highest potential ROI.",
     deliverables: [
       "Product, portfolio & strategy roadmaps",
       "Pipeline planning from ideation to planned retirement",
