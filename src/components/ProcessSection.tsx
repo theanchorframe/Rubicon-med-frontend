@@ -317,7 +317,7 @@ const ProcessSection = () => {
                                   key={bulletIndex}
                                   className="flex gap-3 text-foreground/90 leading-relaxed text-sm md:text-base"
                                 >
-                                  <span className="text-primary mt-1 flex-shrink-0">•</span>
+                                  <span className="text-primary flex-shrink-0 leading-relaxed text-sm md:text-base">•</span>
                                   <span>{bullet}</span>
                                 </li>
                               ))}
