@@ -61,37 +61,37 @@ const ServicesSection = ({ onOpenConsultationDialog }: ServicesSectionProps) => 
   const services = [
   {
     title: "Product Evaluation & Concept Vetting",
-    boldOpener: "Your capital only goes to products with a validated path to market leadership.",
+    boldOpener: "Your capital only goes to products with a validated path to market leadership",
     description:
     "Our proven framework integrates multidimensional technical, clinical, and research and development due diligence with rigorous market modeling. We synthesize competitive intelligence and growth drivers to ensure capital is deployed only into assets with a validated path to market leadership."
   },
   {
     title: "Clinical & Market Research",
-    boldOpener: "Every investment decision backed by evidence, not assumptions.",
+    boldOpener: "Every investment decision backed by evidence, not assumptions",
     description:
     "Drive confident product investment through clinical, research & development, and market triangulation. We leverage expert consultations and comprehensive database analytics to distill complex evidence into an actionable roadmap – eliminating market ambiguity and securing your path to success."
   },
   {
     title: "KOL & other VoC Programs",
-    boldOpener: "Market credibility built before you spend a dollar on launch.",
+    boldOpener: "Market credibility built before you spend a dollar on launch",
     description:
     "Accelerate market adoption through clinical advocacy. We manage KOL identification, contact, contracting, payment and Sunshine Act collaboration for the execution of IDIs, surveys, field trials, and clinician panels. By synthesizing the 'VoC' into evidence-based messaging, we ensure your value proposition resonates with providers and drives uptake."
   },
   {
     title: "Commercial Strategy & Launch",
-    boldOpener: "Market entry strategies that sustain momentum long after launch.",
+    boldOpener: "Market entry strategies that sustain momentum long after launch",
     description:
     "Turn insight into adoption at scale. We craft go-to-market strategies and playbooks, sales enablement, and messaging rooted in evidence, so your launch not only hits targets, but sustains momentum long after market entry."
   },
   {
     title: "Upstream Portfolio Strategy & Roadmapping",
-    boldOpener: "Resources concentrated on the assets with the highest return.",
+    boldOpener: "Resources concentrated on the assets with the highest potential return",
     description:
     "Optimize resource allocation and cross-functional alignment. By defining rigorous segmentation, targeting, and positioning (STP) frameworks alongside multi-year product roadmaps, we isolate high-potential opportunities. This allows R&D, Marketing, and Sales to concentrate resources on assets with the highest potential ROI."
   },
   {
     title: "Pricing, Forecasting & Financial Modeling",
-    boldOpener: "Revenue projections that hold up under board-level scrutiny.",
+    boldOpener: "Revenue projections that hold up under board-level scrutiny",
     description:
     "Enable executive decision-making with rigorous financial modeling. We translate market dynamics and value-based pricing into accurate revenue projections that hold up under institutional scrutiny. Our models provide the clarity needed to synchronize AOP targets with actual clinical and commercial scalability."
   }];
