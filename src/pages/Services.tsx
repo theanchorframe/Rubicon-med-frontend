@@ -134,11 +134,11 @@ const Services = () => {
             className="text-4xl md:text-5xl lg:text-[3.5rem] font-bold text-white mb-6"
             style={{ lineHeight: "1.2" }}
           >
-            Validate early. Launch with confidence.
+            Validate early. Launch with confidence. Expert
             <br />
-            Expert MedTech strategy backed by
+            MedTech strategy backed by market and clinical
             <br />
-            market and clinical intelligence
+            intelligence
           </motion.h1>
           <motion.p
             initial={mounted ? { opacity: 0, y: 20 } : false}
