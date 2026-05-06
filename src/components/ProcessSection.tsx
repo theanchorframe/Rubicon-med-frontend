@@ -39,7 +39,7 @@ const ProcessSection = () => {
           ],
         },
       ],
-      deliverable: "Every engagement begins with a deep-dive into your real-world environment and project constraints, and to guide the IDEA process, we deliver a Statement of Understanding and a Statement of Work, a clear-eyed blueprint that transforms high-level goals into a validated, executable plan for your project",
+      deliverable: "Every engagement begins with a deep-dive into your real-world environment and project constraints, and to guide the IDEA process, we deliver a Statement of Understanding and a Statement of Work, a clear-eyed blueprint that transforms high-level goals into a validated, executable plan for your project.",
     },
     D: {
       title: "Delineate Project Roadmap",
@@ -56,7 +56,7 @@ const ProcessSection = () => {
           ],
         },
       ],
-      deliverable: "A reviewed and finalized plan with the executive sponsor and core team that spells out what we need to know and how we will learn it",
+      deliverable: "A reviewed and finalized plan with the executive sponsor and core team that spells out what we need to know and how we will learn it.",
     },
     E: {
       title: "Engage Full Team for Plan Execution",
@@ -118,7 +118,7 @@ const ProcessSection = () => {
           ],
         },
       ],
-      deliverable: "A full concept report and presentation that links every recommendation back to the evidence gathered in the IDEA process",
+      deliverable: "A full concept report and presentation that links every recommendation back to the evidence gathered in the IDEA process.",
     },
   };
 
