@@ -19,7 +19,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
       image: launchStrategyImage,
       title: "Precision Before Investment: The Rubicon Model",
       description:
-        "In the high-stakes environment of MedTech development, the most expensive mistake companies make is funding a product that the market doesn't want, the clinical data don't support or the geometries and construction are insufficient. We serve as the strategic \"gate\" between an idea and a multi-million dollar investment",
+        "In the high-stakes environment of MedTech development, the most expensive mistake companies make is funding a product that the market doesn't want, the clinical data don't support, or the geometries and construction are insufficient. We serve as the strategic \"gate\" between an idea and a multi-million dollar investment",
       cta: "Request a Complimentary Consultation",
       overlayText:
         "Precision before investment. We use VoC and predictive modeling to quantify market demand and identify barriers, allowing you to cut low-ROI projects and invest in only winners.",
