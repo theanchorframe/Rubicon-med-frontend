@@ -53,11 +53,12 @@ const TermsOfService = () => {
               Rubicon Medical Marketing & Strategy Consultants Corp. provides strategic consulting services for medical technology companies, including but not limited to:
             </p>
             <ul className="list-disc pl-6 space-y-2 text-foreground/80">
-              <li>Product development and strategy through launch</li>
+              <li>Product strategy and development</li>
               <li>Market research and validation</li>
               <li>Go-to-market planning</li>
               <li>Clinical evidence strategy</li>
               <li>Commercial launch support</li>
+              <li>Deep data analytics with AI support</li>
             </ul>
           </section>
 
