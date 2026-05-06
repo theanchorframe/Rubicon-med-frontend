@@ -32,7 +32,7 @@ const specializations = [
     stat: "20+",
     statLabel: "Markets Sized",
     description:
-      "Every investment decision backed by evidence, not assumptions. Drive confident product investment through clinical, research & development, and market triangulation. We leverage expert consultations and comprehensive database analytics to distill complex evidence into an actionable roadmap – eliminating market ambiguity and securing your path to entry.",
+      "Every investment decision backed by evidence, not assumptions. Drive confident product investment through clinical, research & development, and market triangulation. We leverage expert consultations and comprehensive database analytics to distill complex evidence into an actionable roadmap – eliminating market ambiguity and securing your path to success.",
   },
   {
     icon: Users,
