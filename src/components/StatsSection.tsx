@@ -23,7 +23,7 @@ const StatsSection = ({ onOpenConsultationDialog }: StatsSectionProps) => {
     },
     {
       number: "40+",
-      description: "Projects delivered across MedTech & Pharma",
+      description: "Projects delivered across MedTech",
     },
   ];
 
