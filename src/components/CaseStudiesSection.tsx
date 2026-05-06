@@ -17,9 +17,9 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
   const caseStudies = [
     {
       image: launchStrategyImage,
-      title: "Protect Capital Before You Commit to a Deal",
+      title: "Precision Before Investment: The Rubicon Model",
       description:
-        "Identify and mitigate investment risk before licensing or acquisition. We combine KOL insights with rigorous due diligence to prevent the acquisition of products that are non viable.",
+        "In the high-stakes environment of MedTech development, the most expensive mistake companies make is funding a product that the market doesn't want, the clinical data don't support or the geometries and construction are insufficient. We serve as the strategic \"gate\" between an idea and a multi-million dollar investment",
       cta: "Request a Complimentary Consultation",
       overlayText:
         "Precision before investment. We use VoC and predictive modeling to quantify market demand and identify barriers, allowing you to cut low-ROI projects and invest in only winners.",
