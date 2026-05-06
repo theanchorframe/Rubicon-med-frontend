@@ -15,7 +15,7 @@ const servicesData = [
   {
     title: "Product Evaluation & Concept Vetting",
     icon: Search,
-    hook: "Your capital only goes to products with a validated path to market leadership.",
+    hook: "Your capital only goes to products with a validated path to market leadership",
     description:
       "Our framework integrates multidimensional technical and clinical due diligence with rigorous market modeling. We synthesize competitive intelligence and growth drivers to ensure capital is deployed only into assets with a validated path.",
     deliverables: [
@@ -31,7 +31,7 @@ const servicesData = [
   {
     title: "Clinical & Market Research",
     icon: BarChart3,
-    hook: "Every investment decision backed by evidence, not assumptions.",
+    hook: "Every investment decision backed by evidence, not assumptions",
     description:
       "Drive confident product investment through clinical, research & development, and market triangulation. We leverage expert consultations and comprehensive database analytics to distill complex evidence into an actionable roadmap — eliminating market ambiguity and securing your path to success.",
     deliverables: [
@@ -47,7 +47,7 @@ const servicesData = [
   {
     title: "KOL & other VoC Programs",
     icon: Users,
-    hook: "Market credibility built before you spend a dollar on launch.",
+    hook: "Market credibility built before you spend a dollar on launch",
     description:
       "Accelerate market adoption through clinical advocacy. We manage KOL identification, contact, contracting, payment and Sunshine Act collaboration for the execution of IDIs, surveys, field trials, and clinician panels. By synthesizing the VoC into evidence-based messaging, we ensure your value proposition resonates with providers and drives uptake.",
     deliverables: [
@@ -63,7 +63,7 @@ const servicesData = [
   {
     title: "Commercial Strategy & Launch",
     icon: Rocket,
-    hook: "Market entry strategies that sustain momentum long after launch.",
+    hook: "Market entry strategies that sustain momentum long after launch",
     description:
       "Turn insight into adoption at scale. We craft go-to-market strategies and playbooks, sales enablement, and messaging rooted in evidence, so your launch not only hits targets but sustains momentum long after market entry.",
     deliverables: [
@@ -79,7 +79,7 @@ const servicesData = [
   {
     title: "Upstream Portfolio Strategy & Roadmapping",
     icon: Map,
-    hook: "Concentrate resources on the assets with the highest return.",
+    hook: "Concentrate resources on the assets with the highest potential return",
     description:
       "Optimize resource allocation and cross-functional alignment. By defining rigorous segmentation, targeting, and positioning frameworks alongside multi-year product roadmaps, we isolate high-potential opportunities. This allows R&D, Marketing, and Sales to concentrate resources on assets with the highest potential ROI.",
     deliverables: [
@@ -95,7 +95,7 @@ const servicesData = [
   {
     title: "Pricing, Forecasting & Financial Modeling",
     icon: DollarSign,
-    hook: "Revenue projections that hold up under board-level scrutiny.",
+    hook: "Revenue projections that hold up under board-level scrutiny",
     description:
       "Enable executive decision-making with rigorous financial modeling. We translate market dynamics and value-based pricing into accurate revenue projections that hold up under institutional scrutiny. Our models provide the clarity needed to synchronize AOP targets with actual clinical and commercial scalability.",
     deliverables: [
