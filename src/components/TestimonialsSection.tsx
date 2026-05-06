@@ -69,7 +69,7 @@ const TestimonialsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-4xl lg:text-[2.75rem] xl:text-5xl font-bold text-navy text-center mb-4 px-2 max-w-6xl mx-auto leading-tight"
+          className="text-3xl md:text-4xl lg:text-[2.75rem] xl:text-5xl font-bold text-navy text-center mb-4 px-2 max-w-6xl mx-auto leading-tight line-clamp-2"
         >
           The Track Record Behind Rubicon: What Industry Leaders Say About Working With Rob Miraglia
         </motion.h2>
