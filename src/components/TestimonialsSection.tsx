@@ -69,9 +69,9 @@ const TestimonialsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-4xl lg:text-5xl font-bold text-navy text-center mb-4 px-2"
+          className="text-2xl md:text-3xl lg:text-4xl font-bold text-navy text-center mb-4 px-2 max-w-5xl mx-auto"
         >
-          What MedTech Leaders Say After Working With Rubicon
+          The Track Record Behind Rubicon: What Industry Leaders Say About Working With Rob Miraglia
         </motion.h2>
         <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6 mt-12">
           {testimonials.map((testimonial, index) => (
