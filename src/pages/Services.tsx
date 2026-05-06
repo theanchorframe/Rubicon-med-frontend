@@ -33,7 +33,7 @@ const servicesData = [
     icon: BarChart3,
     hook: "Every investment decision backed by evidence, not assumptions.",
     description:
-      "Drive confident product investment through clinical, research & development, and market triangulation. We leverage expert consultations and comprehensive database analytics to distill complex evidence into an actionable roadmap — eliminating market ambiguity and securing your path to entry.",
+      "Drive confident product investment through clinical, research & development, and market triangulation. We leverage expert consultations and comprehensive database analytics to distill complex evidence into an actionable roadmap — eliminating market ambiguity and securing your path to success.",
     deliverables: [
       "Primary & secondary research with data analytics",
       "In-depth interviews (IDIs) with KOLs and practitioners",

@@ -69,7 +69,7 @@ const ServicesSection = ({ onOpenConsultationDialog }: ServicesSectionProps) => 
     title: "Clinical & Market Research",
     boldOpener: "Every investment decision backed by evidence, not assumptions.",
     description:
-    "Drive confident product investment through clinical, research & development, and market triangulation. We leverage expert consultations and comprehensive database analytics to distill complex evidence into an actionable roadmap – eliminating market ambiguity and securing your path to entry."
+    "Drive confident product investment through clinical, research & development, and market triangulation. We leverage expert consultations and comprehensive database analytics to distill complex evidence into an actionable roadmap – eliminating market ambiguity and securing your path to success."
   },
   {
     title: "KOL & Voice-of-Customer Programs",

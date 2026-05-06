@@ -30,7 +30,7 @@ const ProcessSection = () => {
       sections: [
         {
           bullets: [
-            "Meet with the executive sponsor to align on goals, constraints, and how success will be measured",
+            "Meet with the executive sponsor to align on goals, constraints, and how success will be measured.",
             "Understand the landscape: therapeutic area, competitive set, and current market dynamics",
             "Map internal and external stakeholders, including KOLs, clinical users, and commercial teams",
             "Learn pain points, unanswered questions, and where the team feels least certain today",
@@ -39,7 +39,7 @@ const ProcessSection = () => {
           ],
         },
       ],
-      deliverable: "Every engagement begins with a deep-dive into your real-world environment and project constraints, and to guide the IDEA process, we deliver a Statement of Understanding and a Statement of Work, a clear-eyed blueprint that transforms high-level goals into a validated, executable plan for your product",
+      deliverable: "Every engagement begins with a deep-dive into your real-world environment and project constraints, and to guide the IDEA process, we deliver a Statement of Understanding and a Statement of Work, a clear-eyed blueprint that transforms high-level goals into a validated, executable plan for your project",
     },
     D: {
       title: "Delineate Project Roadmap",
@@ -49,7 +49,7 @@ const ProcessSection = () => {
         {
           bullets: [
             "Translate business questions into a focused learning plan and research strategy",
-            "Decide what we are going to do: qualitative, quantitative, environmental, and competitive workstreams",
+            "Plan for qualitative, quantitative, environmental, and or competitive research and analysis, etc",
             "Define where we will learn: conferences, KOL IDIs, internal teams, and other key settings",
             "Align on when: timing of milestones and deliverables that match your internal decision calendar",
             "Outline how we will execute to minimize disruption to busy clinical and commercial stakeholders",
@@ -91,15 +91,15 @@ const ProcessSection = () => {
           ],
         },
         {
-          label: "Marketing and creative deliverables can include:",
+          label: "Marketing and creative deliverables may include:",
           bullets: [
             "Briefs for the creative team that inform campaigns and market development programs",
             "Draft or refine the value proposition, tagline, and elevator pitch",
-            "Messaging architecture and a simple user experience template",
+            "Create messaging architecture and a simple user experience template by segment",
           ],
         },
         {
-          label: "Business and investment deliverables can include:",
+          label: "Business and investment deliverables may include:",
           bullets: [
             "Business briefs for the investment team",
             "An investment case, go-to-market strategy, and market or patient models that support board and leadership decisions",
@@ -317,7 +317,7 @@ const ProcessSection = () => {
                                   key={bulletIndex}
                                   className="flex gap-3 text-foreground/90 leading-relaxed text-sm md:text-base"
                                 >
-                                  <span className="text-primary mt-1 flex-shrink-0">•</span>
+                                  <span className="text-primary flex-shrink-0 leading-relaxed text-sm md:text-base">•</span>
                                   <span>{bullet}</span>
                                 </li>
                               ))}
