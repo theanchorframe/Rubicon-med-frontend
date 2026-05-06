@@ -45,11 +45,11 @@ const servicesData = [
       "Segmentation and targeting project propelled a 24% increase in market adoption by Nurse Practitioners after identifying them as the largest per-person revenue generators.",
   },
   {
-    title: "KOL & Voice-of-Customer Programs",
+    title: "KOL & other VoC Programs",
     icon: Users,
     hook: "Market credibility built before you spend a dollar on launch.",
     description:
-      "Accelerate market adoption through clinical advocacy and expert mobilization. We manage KOL identification, contact, contracting, and payment for the execution of IDIs, surveys, field trials, and clinician panels. By synthesizing the Voice of Customer into evidence-based messaging, we ensure your value proposition resonates with providers and drives accelerated uptake.",
+      "Accelerate market adoption through clinical advocacy. We manage KOL identification, contact, contracting, payment and Sunshine Act collaboration for the execution of IDIs, surveys, field trials, and clinician panels. By synthesizing the VoC into evidence-based messaging, we ensure your value proposition resonates with providers and drives uptake.",
     deliverables: [
       "KOL identification & contracting",
       "Honorarium negotiation & Sunshine Act tracking",

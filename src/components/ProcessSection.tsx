@@ -49,7 +49,7 @@ const ProcessSection = () => {
         {
           bullets: [
             "Translate business questions into a focused learning plan and research strategy",
-            "Plan for qualitative, quantitative, environmental, and or competitive research and analysis, etc",
+            "Plan for qualitative, quantitative, environmental, and or competitive research and analysis",
             "Define where we will learn: conferences, KOL IDIs, internal teams, and other key settings",
             "Align on when: timing of milestones and deliverables that match your internal decision calendar",
             "Outline how we will execute to minimize disruption to busy clinical and commercial stakeholders",

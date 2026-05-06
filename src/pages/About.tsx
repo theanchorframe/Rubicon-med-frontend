@@ -36,11 +36,11 @@ const specializations = [
   },
   {
     icon: Users,
-    title: "KOL & Voice-of-Customer Programs",
+    title: "KOL & other VoC Programs",
     stat: "100+",
     statLabel: "KOLs Engaged",
     description:
-      "Market credibility built before you spend a dollar on launch. Accelerate market adoption through clinical advocacy and expert mobilization. We manage KOL identification, contact, contracting, and payment for the execution of IDIs, surveys, field trials, and clinician panels. By synthesizing the 'Voice of Customer' into evidence-based messaging, we ensure your value proposition resonates with providers and drives accelerated uptake.",
+      "Market credibility built before you spend a dollar on launch. Accelerate market adoption through clinical advocacy. We manage KOL identification, contact, contracting, payment and Sunshine Act collaboration for the execution of IDIs, surveys, field trials, and clinician panels. By synthesizing the 'VoC' into evidence-based messaging, we ensure your value proposition resonates with providers and drives uptake.",
   },
   {
     icon: Briefcase,
