@@ -39,7 +39,7 @@ const ProcessSection = () => {
           ],
         },
       ],
-      deliverable: "Every engagement begins with a deep-dive into your real-world environment and project constraints To guide the IDEA process, we deliver a Statement of Understanding and a Statement of Work, a clear-eyed blueprint that transforms high-level goals into a validated, executable plan for your product",
+      deliverable: "Every engagement begins with a deep-dive into your real-world environment and project constraints, and to guide the IDEA process, we deliver a Statement of Understanding and a Statement of Work, a clear-eyed blueprint that transforms high-level goals into a validated, executable plan for your product",
     },
     D: {
       title: "Delineate Project Roadmap",
