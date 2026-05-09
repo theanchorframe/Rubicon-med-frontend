@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useMounted } from "@/hooks/useMounted";
@@ -36,7 +35,6 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
       title: "Build a Roadmap That Reflects Actual Market Demands",
       description:
         "Many product roadmaps are built on assumptions, not market reality. Rubicon applies Voice of Customer analysis to ensure every development decision is grounded in what clinicians, patients, and payers will support.",
-      cta: "Request a Complimentary Consultation",
       overlayText: "Turn Clinical Evidence Into the Co-Development Partnerships That Fund Your Next Product.",
     },
   ];
@@ -80,15 +78,6 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
               <div className="space-y-6 w-full md:w-1/2 text-left">
                 <h3 className="text-3xl lg:text-4xl font-bold text-navy">{study.title}</h3>
                 <p className="text-foreground leading-relaxed text-xl">{study.description}</p>
-                {study.cta && (
-                  <Button
-                    size="lg"
-                    onClick={onOpenConsultationDialog}
-                    className="shine-effect text-lg sm:text-xl px-6 sm:px-12 py-6 sm:py-8 h-auto bg-primary hover:bg-primary/90 whitespace-normal text-center leading-tight"
-                  >
-                    {study.cta}
-                  </Button>
-                )}
               </div>
             </motion.div>
           ))}
