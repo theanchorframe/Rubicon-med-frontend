@@ -26,7 +26,7 @@ const servicesData = [
       "Business opportunity analysis (BOA)",
     ],
     proof:
-      "Saved a client approximately $1.5M after developing a Business Opportunity Analysis recommending against a scoring balloon due to obsolete technology and SKU limitations.",
+      "Saved approximately $1.5M after developing a Business Opportunity Analysis recommending against a scoring balloon due to obsolete technology and SKU limitations.",
   },
   {
     title: "Clinical & Market Research",
