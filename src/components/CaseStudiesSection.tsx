@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useMounted } from "@/hooks/useMounted";
@@ -79,15 +78,6 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
               <div className="space-y-6 w-full md:w-1/2 text-left">
                 <h3 className="text-3xl lg:text-4xl font-bold text-navy">{study.title}</h3>
                 <p className="text-foreground leading-relaxed text-xl">{study.description}</p>
-                {study.cta && (
-                  <Button
-                    size="lg"
-                    onClick={onOpenConsultationDialog}
-                    className="shine-effect text-lg sm:text-xl px-6 sm:px-12 py-6 sm:py-8 h-auto bg-primary hover:bg-primary/90 whitespace-normal text-center leading-tight"
-                  >
-                    {study.cta}
-                  </Button>
-                )}
               </div>
             </motion.div>
           ))}
