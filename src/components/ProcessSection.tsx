@@ -33,7 +33,7 @@ const ProcessSection = () => {
             "Meet with the executive sponsor to align on goals, constraints, and how success will be measured.",
             "Understand the landscape: therapeutic area, competitive set, and current market dynamics",
             "Map internal and external stakeholders, including KOLs, clinical users, and commercial teams",
-            "Learn pain points, unanswered questions, and where the team feels least certain today",
+            "Learn pain points, unanswered questions, and where your team feels least certain today",
             "Clarify likely travel and touchpoints (conferences, KOL visits, client offices)",
             "Capture initial thoughts on strategy and expected deliverables to test later against the data",
           ],
@@ -56,7 +56,7 @@ const ProcessSection = () => {
           ],
         },
       ],
-      deliverable: "A reviewed and finalized plan with the executive sponsor and core team that spells out what we need to know and how we will learn it.",
+      deliverable: "A reviewed and finalized plan with the executive sponsor and your core team that spells out what we need to know and how we will learn it.",
     },
     E: {
       title: "Engage Full Team for Plan Execution",
