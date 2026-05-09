@@ -59,14 +59,6 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
               transition={{ delay: 0.8 }}
               className="pt-4 flex flex-col items-center gap-4"
             >
-              <Button
-                size="lg"
-                onClick={onOpenConsultation}
-                className="shine-effect text-xl sm:text-xl md:text-2xl lg:text-2xl px-6 sm:px-8 py-5 sm:py-6 bg-primary hover:bg-primary/90 whitespace-normal h-auto"
-              >
-                Request a Complimentary Consultation
-              </Button>
-
               <div
                 className="text-center md:flex md:justify-center md:gap-2"
                 style={{ fontSize: "clamp(0.85rem, 1.2vw, 1rem)", color: "rgba(255,255,255,0.85)", marginTop: "16px" }}
