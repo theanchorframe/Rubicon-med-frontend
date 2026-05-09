@@ -39,7 +39,7 @@ const ServiceCard = ({ service, index, isOpen, toggleItem, mounted }: {
         >
           <div className="px-8 pb-8">
             <p className="text-foreground/80 leading-relaxed text-lg">
-              <span className="font-bold">{service.boldOpener}</span>{" "}{service.description}
+              <span className="font-bold block mb-2">{service.boldOpener}</span>{service.description}
             </p>
           </div>
         </motion.div>
