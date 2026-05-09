@@ -20,7 +20,6 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
       title: "Precision Before Investment: The Rubicon Model",
       description:
         "In the high-stakes environment of MedTech development, the most expensive mistake companies make is funding a product that the market doesn't want, the clinical data don't support, or the geometries and construction are insufficient. We serve as the strategic \"gate\" between an idea and a multi-million dollar investment",
-      cta: "Request a Complimentary Consultation",
       overlayText:
         "Precision before investment. We use VoC and predictive modeling to quantify market demand and identify barriers, allowing you to cut low-ROI projects and invest in only winners.",
     },
@@ -29,7 +28,6 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
       title: "Enter the Market With a Defensible Competitive Advantage",
       description:
         "We identify your highest-value segments, translate clinical evidence into targeted positioning, and develop messaging that drives adoption and stands up to scrutiny.",
-      cta: "Request a Complimentary Consultation",
       overlayText:
         "We convert KOL insights into the market segments and clinical claims your sales team needs to win — before your competitors find them first.",
     },
@@ -82,13 +80,15 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
               <div className="space-y-6 w-full md:w-1/2 text-left">
                 <h3 className="text-3xl lg:text-4xl font-bold text-navy">{study.title}</h3>
                 <p className="text-foreground leading-relaxed text-xl">{study.description}</p>
-                <Button
-                  size="lg"
-                  onClick={onOpenConsultationDialog}
-                  className="shine-effect text-lg sm:text-xl px-6 sm:px-12 py-6 sm:py-8 h-auto bg-primary hover:bg-primary/90 whitespace-normal text-center leading-tight"
-                >
-                  {study.cta}
-                </Button>
+                {study.cta && (
+                  <Button
+                    size="lg"
+                    onClick={onOpenConsultationDialog}
+                    className="shine-effect text-lg sm:text-xl px-6 sm:px-12 py-6 sm:py-8 h-auto bg-primary hover:bg-primary/90 whitespace-normal text-center leading-tight"
+                  >
+                    {study.cta}
+                  </Button>
+                )}
               </div>
             </motion.div>
           ))}
