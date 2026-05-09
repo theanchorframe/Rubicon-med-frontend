@@ -61,7 +61,7 @@ const ServicesSection = ({ onOpenConsultationDialog }: ServicesSectionProps) => 
   const services = [
   {
     title: "Product Evaluation & Concept Vetting",
-    boldOpener: "Your capital only goes to products with a validated path to market leadership",
+    boldOpener: "Your capital only goes to products with a validated path to market leadership.",
     description:
     "Our proven framework integrates multidimensional technical, clinical, and research and development due diligence with rigorous market modeling. We synthesize competitive intelligence and growth drivers to ensure capital is deployed only into assets with a validated path to market leadership."
   },
