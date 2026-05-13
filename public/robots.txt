@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://image-to-web-form.lovable.app/sitemap.xml
+Sitemap: https://rubiconmed.us/sitemap.xml
