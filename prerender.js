@@ -7,7 +7,7 @@ const toAbsolute = (p) => path.resolve(__dirname, p);
 
 const template = fs.readFileSync(toAbsolute("dist/index.html"), "utf-8");
 const { render } = await import("./dist/server/entry-server.js");
-const SITE_URL = "https://image-to-web-form.lovable.app";
+const SITE_URL = "https://rubiconmed.us";
 
 // 1. Drop your GHL RSS URL right here:
 const GHL_RSS_URL =
