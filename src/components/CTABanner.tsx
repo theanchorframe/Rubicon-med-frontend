@@ -32,7 +32,7 @@ const CTABanner = ({ onOpenCaseStudyPopup }: CTABannerProps) => {
               <Button
                 size="lg"
                 onClick={onOpenCaseStudyPopup}
-                className="shine-effect text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 h-auto bg-primary hover:bg-primary/90 max-w-full whitespace-normal text-center"
+                className="shine-effect text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 h-auto bg-[#003B6F] text-white hover:bg-[#003B6F]/90 max-w-full whitespace-normal text-center"
               >
                 Get the Complimentary EPD Case Study
               </Button>
