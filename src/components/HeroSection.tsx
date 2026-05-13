@@ -62,7 +62,7 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
               <Button
                 size="lg"
                 onClick={onOpenConsultation}
-                className="bg-primary text-primary-foreground hover:bg-primary/90"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 max-w-full whitespace-normal text-center leading-tight h-auto px-6 py-4 sm:px-8"
               >
                 Request a Complimentary Consultation
               </Button>
