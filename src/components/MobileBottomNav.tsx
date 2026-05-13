@@ -35,7 +35,7 @@ const MobileBottomNav = ({ onOpenDialog }: MobileBottomNavProps) => {
           <div className="container mx-auto px-3 py-2">
             <Button
               onClick={onOpenDialog}
-              className="w-full shine-effect text-base px-6 py-3 h-auto bg-[#003B6F] text-white hover:bg-[#003B6F]/90"
+              className="w-full shine-effect text-base px-6 py-3 h-auto bg-[#118AB2] text-white hover:bg-[#118AB2]/90"
             >
               Request a Complimentary Consultation
             </Button>

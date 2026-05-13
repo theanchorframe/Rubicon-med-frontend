@@ -153,7 +153,7 @@ const ServicesSection = ({ onOpenConsultationDialog }: ServicesSectionProps) => 
           <Button
             size="xl"
             onClick={onOpenConsultationDialog}
-            className="shine-effect text-lg sm:text-xl px-6 sm:px-12 py-6 sm:py-8 h-auto bg-[#003B6F] text-white hover:bg-[#003B6F]/90 whitespace-normal text-center leading-tight">
+            className="shine-effect text-lg sm:text-xl px-6 sm:px-12 py-6 sm:py-8 h-auto bg-[#118AB2] text-white hover:bg-[#118AB2]/90 whitespace-normal text-center leading-tight">
             
             Request a Complimentary Consultation
           </Button>
