@@ -23,9 +23,9 @@ const Index = () => {
     <div className="min-h-screen">
       <Navbar onOpenConsultationDialog={() => setIsConsultationDialogOpen(true)} />
       <HeroSection onOpenConsultation={() => setIsConsultationDialogOpen(true)} />
+      <TestimonialsSection />
       <ProcessSection />
       <ServicesSection onOpenConsultationDialog={() => setIsConsultationDialogOpen(true)} />
-      <TestimonialsSection />
       <CaseStudiesSection onOpenConsultationDialog={() => setIsConsultationDialogOpen(true)} />
       <CTABanner onOpenCaseStudyPopup={() => setIsCaseStudyPopupOpen(true)} />
       <StatsSection onOpenConsultationDialog={() => setIsConsultationDialogOpen(true)} />
