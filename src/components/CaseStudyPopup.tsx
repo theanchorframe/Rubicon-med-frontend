@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
-import caseStudyBanner from "@/assets/case-study-banner.webp";
+import caseStudyBanner from "@/assets/epd-case-study.webp";
 
 interface CaseStudyPopupProps {
   isOpen: boolean;
@@ -40,11 +40,11 @@ const CaseStudyPopup = ({ isOpen, onClose }: CaseStudyPopupProps) => {
               </button>
 
               {/* Banner image */}
-              <div className="w-full h-32 md:h-40 overflow-hidden">
+              <div className="w-full h-40 md:h-48 overflow-hidden bg-background flex items-center justify-center">
                 <img
                   src={caseStudyBanner}
                   alt="EPD Case Study"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
 
