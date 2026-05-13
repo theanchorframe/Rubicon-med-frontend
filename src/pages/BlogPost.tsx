@@ -55,6 +55,23 @@ const BlogPost = () => {
           </div>
         ) : (
           <article>
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "BlogPosting",
+                  headline: post.title,
+                  datePublished: post.pubDate,
+                  author: { "@type": "Person", name: post.author },
+                  publisher: {
+                    "@type": "Organization",
+                    name: "Rubicon Medical Marketing & Strategy Consultants",
+                  },
+                  mainEntityOfPage: `https://rubiconmed.us/blog/${post.slug}`,
+                }),
+              }}
+            />
             <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4 leading-tight">
               {post.title}
             </h1>

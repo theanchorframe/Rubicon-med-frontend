@@ -99,6 +99,23 @@ const FAQSection = ({ onOpenConsultationDialog }: FAQSectionProps) => {
           ))}
         </motion.div>
       </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map((f) => ({
+              "@type": "Question",
+              name: f.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: f.answer.replace(/<[^>]+>/g, ""),
+              },
+            })),
+          }),
+        }}
+      />
     </section>
   );
 };
