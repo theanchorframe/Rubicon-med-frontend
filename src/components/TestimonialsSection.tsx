@@ -5,6 +5,7 @@ import { useMounted } from "@/hooks/useMounted";
 
 const TestimonialsSection = () => {
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
+  const [showAllMobile, setShowAllMobile] = useState(false);
   const mounted = useMounted();
 
   const testimonials = [
@@ -81,7 +82,9 @@ const TestimonialsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="break-inside-avoid glass-card p-6 shadow-sm"
+              className={`break-inside-avoid glass-card p-6 shadow-sm ${
+                !showAllMobile && index >= 3 ? "hidden md:block" : ""
+              }`}
             >
             <div className="flex gap-1 mb-2">
                 {[...Array(5)].map((_, i) => (
@@ -114,6 +117,14 @@ const TestimonialsSection = () => {
               </div>
             </motion.div>
           ))}
+        </div>
+        <div className="mt-8 flex justify-center md:hidden">
+          <button
+            onClick={() => setShowAllMobile((v) => !v)}
+            className="px-6 py-3 rounded-lg bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors"
+          >
+            {showAllMobile ? "Show less" : "Show more reviews"}
+          </button>
         </div>
       </div>
     </section>
