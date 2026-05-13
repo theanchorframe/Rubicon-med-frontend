@@ -29,7 +29,7 @@ const AboutSection = ({ onOpenConsultationDialog }: AboutSectionProps) => {
           <Button
             size="lg"
             onClick={onOpenConsultationDialog}
-            className="shine-effect text-xl px-12 py-8 h-auto bg-primary hover:bg-primary/90"
+            className="shine-effect text-xl px-12 py-8 h-auto bg-[#98c1d9] text-navy hover:bg-[#98c1d9]/90"
           >
             Request a Complimentary Consultation
           </Button>
