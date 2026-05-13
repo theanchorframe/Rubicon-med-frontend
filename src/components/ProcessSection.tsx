@@ -1,28 +1,12 @@
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { Users, CheckCircle, Clock } from "@phosphor-icons/react";
-import { useState } from "react";
 import robHeadshot from "@/assets/rob-miraglia-headshot.webp";
 import { useMounted } from "@/hooks/useMounted";
 
-type IdeaLetter = "I" | "D" | "E" | "A";
-
-interface IdeaContent {
-  title: string;
-  subtitle: string;
-  summary: string;
-  sections: {
-    label?: string;
-    bullets: string[];
-    deliverable?: string;
-  }[];
-  deliverable: string;
-}
-
 const ProcessSection = () => {
-  const [activeIdea, setActiveIdea] = useState<IdeaLetter | null>(null);
   const mounted = useMounted();
 
-  const ideaContent: Record<IdeaLetter, IdeaContent> = {
+  const _unused_ideaContent_removed = {
     I: {
       title: "Immersion and Inquiry",
       subtitle: "(Initial Meeting)",
