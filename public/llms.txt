@@ -1,0 +1,17 @@
+# Rubicon Med
+
+> Strategic Roadmapping and due diligence advisory for medical device, diagnostics, and digital health companies.
+
+Rubicon Med partners with executives and investors on technical, clinical, and R&D due diligence and product Roadmapping. Our IDEA framework helps teams de-risk decisions, validate competitive advantage, and build defensible plans before major investments.
+
+## Pages
+
+- [Home](/): Overview of Rubicon Med's advisory services and IDEA Roadmapping framework.
+- [About](/about): Leadership bio for Rob Miraglia and the firm's approach.
+- [Services](/services): Due diligence, Roadmapping, and advisory engagement models.
+- [Blog](/blog): Articles on medical device strategy, due diligence, and Roadmapping.
+
+## Optional
+
+- [Privacy Policy](/privacy-policy): How we handle visitor data.
+- [Terms of Service](/terms-of-service): Site terms.
