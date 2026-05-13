@@ -56,6 +56,21 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
             <motion.div
               initial={mounted ? { opacity: 0, y: 20 } : false}
               animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.7 }}
+              className="pt-2 flex justify-center"
+            >
+              <Button
+                size="lg"
+                onClick={onOpenConsultation}
+                className="bg-primary text-primary-foreground hover:bg-primary/90"
+              >
+                Request a Complimentary Consultation
+              </Button>
+            </motion.div>
+
+            <motion.div
+              initial={mounted ? { opacity: 0, y: 20 } : false}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
               className="pt-4 flex flex-col items-center gap-4"
             >
