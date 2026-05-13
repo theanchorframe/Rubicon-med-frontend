@@ -2,6 +2,7 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ProcessSection from "@/components/ProcessSection";
+import IdeaProcessSection from "@/components/IdeaProcessSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import CaseStudiesSection from "@/components/CaseStudiesSection";
 import CTABanner from "@/components/CTABanner";
@@ -23,8 +24,9 @@ const Index = () => {
     <div className="min-h-screen">
       <Navbar onOpenConsultationDialog={() => setIsConsultationDialogOpen(true)} />
       <HeroSection onOpenConsultation={() => setIsConsultationDialogOpen(true)} />
-      <TestimonialsSection />
       <ProcessSection />
+      <TestimonialsSection />
+      <IdeaProcessSection />
       <ServicesSection onOpenConsultationDialog={() => setIsConsultationDialogOpen(true)} />
       <CaseStudiesSection onOpenConsultationDialog={() => setIsConsultationDialogOpen(true)} />
       <CTABanner onOpenCaseStudyPopup={() => setIsCaseStudyPopupOpen(true)} />
