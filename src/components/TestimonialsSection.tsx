@@ -27,9 +27,9 @@ const TestimonialsSection = () => {
     },
     {
       headline: "A Natural at Drawing Out the Voice of Customer Intelligence That Drives New Product Development",
-      text: "Rob's is a strong contributor with deep insights which have helped us greatly. In working closely with him, I have witnessed how well he is able to draw valuable voice of customer...",
+      text: "Rob is a strong contributor with deep insights which have helped us greatly. In working closely with him, I have witnessed how well he is able to draw valuable voice of customer...",
       fullText:
-        "Rob's is a strong contributor with deep insights which have helped us greatly. In working closely with him, I have witnessed how well he is able to draw valuable voice of customer feedback from the marketplace; both online and in person. He is a natural in terms of getting people to open up and share details which are key in any new product development effort.",
+        "Rob is a strong contributor with deep insights which have helped us greatly. In working closely with him, I have witnessed how well he is able to draw valuable voice of customer feedback from the marketplace; both online and in person. He is a natural in terms of getting people to open up and share details which are key in any new product development effort.",
       author: "Rick Kirchner",
       title: "R&D Executive",
     },
