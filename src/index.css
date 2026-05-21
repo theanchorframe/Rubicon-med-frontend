@@ -8,6 +8,20 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
+    /* Prevent horizontal overflow on small viewports */
+  }
+
+  html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  body {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  :root {
     --background: 0 0% 100%;
     --foreground: 215 28% 17%;
 

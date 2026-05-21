@@ -35,11 +35,11 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Logo and Description */}
-          <div className="space-y-4">
+          <div className="space-y-4 flex flex-col items-center text-center">
             <img
               src={logo}
               alt="Rubicon Medical Marketing & Strategy Consultants Corp."
-              className="h-20 w-auto"
+              className="h-20 w-auto mx-auto"
               loading="lazy"
               decoding="async"
             />
