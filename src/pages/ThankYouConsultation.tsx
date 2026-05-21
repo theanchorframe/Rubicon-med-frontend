@@ -57,7 +57,7 @@ const ThankYouConsultation = () => {
       {/* Simple Header */}
       <header className="border-b border-border">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-          <Link to="/">
+          <Link to="/" className="flex items-center gap-3">
             <img
               src={logo}
               alt="Rubicon Medical Marketing & Strategy Consultants Corp."
@@ -65,6 +65,9 @@ const ThankYouConsultation = () => {
               loading="lazy"
               decoding="async"
             />
+            <span className="font-bold text-primary leading-tight text-sm sm:text-base md:text-lg text-left">
+              Rubicon Medical Marketing &<br />Strategy Consultants
+            </span>
           </Link>
           <Button variant="ghost" size="sm" className="gap-2" onClick={handleBackToHome}>
             <ArrowLeft size={16} />
@@ -84,7 +87,7 @@ const ThankYouConsultation = () => {
 
         <div className="relative z-10 container mx-auto px-6 text-center max-w-4xl">
           <div className="flex justify-center mb-6">
-            <CheckCircle className="w-20 h-20 text-accent" />
+            <CheckCircle className="w-20 h-20 text-primary" />
           </div>
           
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
@@ -111,7 +114,7 @@ const ThankYouConsultation = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">What Happens Next?</h2>
             <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
-              Your journey with Rubicon follows our proven <span className="font-bold text-accent">IDEA</span> framework—a systematic approach that transforms gut feel into evidence-backed strategy.
+              Your journey with Rubicon follows our proven <span className="font-bold text-primary">IDEA</span> framework—a systematic approach that transforms gut feel into evidence-backed strategy.
             </p>
           </div>
 
@@ -119,15 +122,15 @@ const ThankYouConsultation = () => {
             {ideaSteps.map((step, index) => (
               <div
                 key={index}
-                className="bg-accent/5 border border-accent/20 rounded-lg p-6 hover:bg-accent/10 transition-colors"
+                className="bg-primary/5 border border-primary/20 rounded-lg p-6 hover:bg-primary/10 transition-colors"
               >
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-accent rounded-lg flex items-center justify-center text-white font-bold text-xl">
+                  <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-xl">
                     {step.letter}
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
-                      <step.icon className="w-5 h-5 text-accent" />
+                      <step.icon className="w-5 h-5 text-primary" />
                       <h3 className="font-semibold text-navy text-lg">{step.title}</h3>
                     </div>
                     <p className="text-foreground/80 leading-relaxed">
