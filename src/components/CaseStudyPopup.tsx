@@ -50,7 +50,7 @@ const CaseStudyPopup = ({ isOpen, onClose }: CaseStudyPopupProps) => {
 
               {/* Content */}
               <div className="p-4 md:p-6 space-y-3 text-center">
-                <h3 className="text-navy font-bold text-4xl">
+                <h3 className="text-navy font-bold text-2xl md:text-3xl">
                   Get Our Complimentary EPD Case Study
                 </h3>
                 <p className="text-base md:text-lg text-navy/80 leading-relaxed">
