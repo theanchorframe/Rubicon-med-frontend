@@ -17,8 +17,8 @@ const staticRoutes = ["/", "/blog", "/about", "/services", "/privacy-policy", "/
 
 const routeMeta = {
   "/": {
-    title: "MedTech Product Launch Experts | Rubicon Medical",
-    description: "MedTech consulting for product strategy, launch planning, market validation, KOL research, forecasting, and commercial growth.",
+    title: "Rubicon Medical | MedTech Marketing & Strategy",
+    description: "MedTech marketing and strategy consulting: market validation, KOL research, roadmapping, forecasting, and commercial growth.",
     type: "website",
   },
   "/blog": {
