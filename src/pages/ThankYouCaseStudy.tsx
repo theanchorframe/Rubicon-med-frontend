@@ -20,7 +20,7 @@ const ThankYouCaseStudy = () => {
       {/* Simple Header */}
       <header className="border-b border-border">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-          <Link to="/">
+          <Link to="/" className="flex items-center gap-3">
             <img
               src={logo}
               alt="Rubicon Medical Marketing & Strategy Consultants Corp."
@@ -28,6 +28,9 @@ const ThankYouCaseStudy = () => {
               loading="lazy"
               decoding="async"
             />
+            <span className="font-bold text-primary leading-tight text-sm sm:text-base md:text-lg text-left">
+              Rubicon Medical Marketing &<br />Strategy Consultants
+            </span>
           </Link>
           <Button variant="ghost" size="sm" className="gap-2" onClick={handleBackToHome}>
             <ArrowLeft size={16} />
