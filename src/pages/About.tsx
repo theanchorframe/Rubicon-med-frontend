@@ -112,7 +112,7 @@ const About = () => {
                   onClick={() => {
                     document.getElementById("about-contact")?.scrollIntoView({ behavior: "smooth" });
                   }}
-                  className="shine-effect text-xl px-12 py-8 h-auto bg-primary hover:bg-primary/90"
+                  className="shine-effect text-base sm:text-xl px-6 sm:px-12 py-5 sm:py-8 h-auto bg-primary hover:bg-primary/90 whitespace-normal max-w-full"
                 >
                   Request a Complimentary Consultation
                 </Button>
@@ -295,7 +295,7 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: i * 0.1 }}
                 viewport={{ once: true }}
-                className="flex items-center gap-3 bg-card border border-border rounded-full pl-4 pr-5 py-3 flex-1 min-w-[260px]"
+                className="flex items-center gap-3 bg-card border border-border rounded-full pl-4 pr-5 py-3 flex-1 min-w-0 sm:min-w-[260px] w-full"
               >
                 <div className="flex-shrink-0 text-primary">
                   <Sparkles size={18} />
