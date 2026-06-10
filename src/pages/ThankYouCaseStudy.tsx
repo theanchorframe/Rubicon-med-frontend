@@ -1,6 +1,6 @@
 import { useNavigate, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Download, ArrowLeft } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import Footer from "@/components/Footer";
 import caseStudyBanner from "@/assets/thank-you-case-study-banner.jpg";
 import logo from "@/assets/logo.png";
@@ -46,10 +46,6 @@ const ThankYouCaseStudy = () => {
         </div>
 
         <div className="relative z-10 container mx-auto px-6 text-center max-w-4xl">
-          <div className="flex justify-center mb-6">
-            <Download className="w-20 h-20 text-accent" />
-          </div>
-          
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
             Your EPD Case Study is Ready!
           </h1>
