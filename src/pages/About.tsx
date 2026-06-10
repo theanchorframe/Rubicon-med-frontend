@@ -112,7 +112,7 @@ const About = () => {
                   onClick={() => {
                     document.getElementById("about-contact")?.scrollIntoView({ behavior: "smooth" });
                   }}
-                  className="shine-effect text-xl px-12 py-8 h-auto bg-primary hover:bg-primary/90"
+                  className="shine-effect text-base sm:text-xl px-6 sm:px-12 py-5 sm:py-8 h-auto bg-primary hover:bg-primary/90 whitespace-normal max-w-full"
                 >
                   Request a Complimentary Consultation
                 </Button>
