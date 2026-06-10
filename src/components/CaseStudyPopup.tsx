@@ -54,7 +54,7 @@ const CaseStudyPopup = ({ isOpen, onClose }: CaseStudyPopupProps) => {
                   Get Our Complimentary EPD Case Study
                 </h3>
                 <p className="text-base md:text-lg text-navy/80 leading-relaxed">
-                  Discover how a product went from Ideation to co-development launch.
+                  How one MedTech team unlocked $35M in co-development funding.
                 </p>
                 
                 {/* GHL Form */}
