@@ -1,12 +1,15 @@
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, ArrowLeft, Lightbulb, PenTool, FlaskConical, Rocket } from "lucide-react";
+import { CheckCircle, Lightbulb, PenTool, FlaskConical, Rocket } from "lucide-react";
 import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
+import ConsultationDialog from "@/components/ConsultationDialog";
 import consultationBanner from "@/assets/thank-you-consultation-banner.jpg";
-import logo from "@/assets/logo.png";
+import { useState } from "react";
 
 const ThankYouConsultation = () => {
   const navigate = useNavigate();
+  const [isConsultationDialogOpen, setIsConsultationDialogOpen] = useState(false);
 
   const handleBackToHome = () => {
     navigate("/");
@@ -54,35 +57,10 @@ const ThankYouConsultation = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Simple Header */}
-      <header className="border-b border-border">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-3">
-            <img
-              src={logo}
-              alt="Rubicon Medical Marketing & Strategy Consultants Corp."
-              className="h-16 w-auto"
-              loading="lazy"
-              decoding="async"
-            />
-            <div>
-              <span className="block font-bold text-primary leading-[1.05] text-sm sm:text-base md:text-lg text-left">
-                Rubicon Medical Marketing & Strategy Consultants
-              </span>
-              <span className="block text-primary/80 text-[10px] sm:text-xs md:text-sm text-center tracking-widest">
-                Know your evidence. Know your clinician. Know your market.
-              </span>
-            </div>
-          </Link>
-          <Button variant="ghost" size="sm" className="gap-2" onClick={handleBackToHome}>
-            <ArrowLeft size={16} />
-            Back to Home
-          </Button>
-        </div>
-      </header>
+      <Navbar onOpenConsultationDialog={() => setIsConsultationDialogOpen(true)} />
       
       {/* Hero Banner */}
-      <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden pt-32">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${consultationBanner})` }}
@@ -172,6 +150,10 @@ const ThankYouConsultation = () => {
       </section>
 
       <Footer />
+      <ConsultationDialog
+        open={isConsultationDialogOpen}
+        onOpenChange={setIsConsultationDialogOpen}
+      />
     </div>
   );
 };
