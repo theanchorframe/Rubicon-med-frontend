@@ -78,7 +78,7 @@ const Navbar = ({ onOpenConsultationDialog }: NavbarProps) => {
                 }`}>
                   Rubicon Medical Marketing & Strategy Consultants
                 </span>
-                <span className={`block text-foreground/80 italic transition-all duration-300 text-left ${
+                <span className={`block text-foreground/80 italic transition-all duration-300 text-center ${
                   isScrolled ? "text-xs md:text-sm" : "text-sm md:text-base"
                 }`}>
                   Know your clinician. Know your market.
