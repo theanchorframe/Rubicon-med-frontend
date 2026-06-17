@@ -95,7 +95,7 @@ const TestimonialsSection = () => {
                   />
                 ))}
               </div>
-              <h3 className="text-navy font-bold text-lg mb-3">{testimonial.headline}</h3>
+              <h3 className={`text-navy font-bold text-lg mb-3 ${index === 2 ? "bg-yellow-300" : ""}`}>{testimonial.headline}</h3>
               <p className="text-foreground/90 italic mb-4">
                 {expandedCard === index ? testimonial.fullText : testimonial.text}
               </p>
