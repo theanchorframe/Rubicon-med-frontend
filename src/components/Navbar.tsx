@@ -88,7 +88,7 @@ const Navbar = ({ onOpenConsultationDialog }: NavbarProps) => {
 
             {isSubPage ? (
               /* Simplified navbar for blog/about pages - only page links */
-              <div className="hidden lg:flex items-center gap-8">
+              <div className="hidden lg:flex items-center gap-4 ml-8">
                 <button onClick={handleLogoClick} className="nav-link text-foreground hover:text-primary transition-colors font-medium text-base">Home</button>
                 <button onClick={() => navigate("/blog")} className="nav-link text-foreground hover:text-primary transition-colors font-medium text-base">Blog</button>
                 <button onClick={() => navigate("/about")} className="nav-link text-foreground hover:text-primary transition-colors font-medium text-base">About</button>
@@ -97,7 +97,7 @@ const Navbar = ({ onOpenConsultationDialog }: NavbarProps) => {
               </div>
             ) : (
               <>
-                <div className="hidden lg:flex items-center gap-8">
+                <div className="hidden lg:flex items-center gap-4 ml-8">
                   <button onClick={handleLogoClick} className="nav-link text-foreground hover:text-primary transition-colors font-medium text-base">Home</button>
                   <button onClick={() => navigate("/blog")} className="nav-link text-foreground hover:text-primary transition-colors font-medium text-base">Blog</button>
                   <button onClick={() => navigate("/about")} className="nav-link text-foreground hover:text-primary transition-colors font-medium text-base">About</button>
