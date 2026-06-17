@@ -1,10 +1,14 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo.png";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import ConsultationDialog from "@/components/ConsultationDialog";
+import { useState } from "react";
 
 const PrivacyPolicy = () => {
   const navigate = useNavigate();
+  const [isConsultationDialogOpen, setIsConsultationDialogOpen] = useState(false);
 
   const handleBackToHome = () => {
     navigate("/");
@@ -15,24 +19,7 @@ const PrivacyPolicy = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b border-border">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-          <Link to="/">
-            <img
-              src={logo}
-              alt="Rubicon Medical Marketing & Strategy Consultants Corp."
-              className="h-16 w-auto"
-              loading="lazy"
-              decoding="async"
-            />
-          </Link>
-          <Button variant="ghost" size="sm" className="gap-2" onClick={handleBackToHome}>
-            <ArrowLeft size={16} />
-            Back to Home
-          </Button>
-        </div>
-      </header>
+      <Navbar onOpenConsultationDialog={() => setIsConsultationDialogOpen(true)} />
 
       <header className="bg-navy pt-32 pb-20">
         <div className="container mx-auto px-6 max-w-4xl">
@@ -131,6 +118,12 @@ const PrivacyPolicy = () => {
           </Button>
         </div>
       </main>
+
+      <Footer />
+      <ConsultationDialog
+        open={isConsultationDialogOpen}
+        onOpenChange={setIsConsultationDialogOpen}
+      />
     </div>
   );
 };
