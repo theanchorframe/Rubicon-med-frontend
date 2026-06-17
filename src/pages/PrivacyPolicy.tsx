@@ -34,9 +34,19 @@ const PrivacyPolicy = () => {
         </div>
       </header>
 
+      <header className="bg-navy pt-32 pb-20">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <p className="text-primary font-semibold text-lg tracking-wide uppercase mb-4">
+            Legal
+          </p>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy-foreground leading-tight">
+            Privacy Policy
+          </h1>
+        </div>
+      </header>
+
       {/* Content */}
       <main className="container mx-auto px-6 py-12 max-w-4xl">
-        <h1 className="text-4xl font-bold text-navy mb-2">Privacy Policy</h1>
         <p className="text-muted-foreground mb-8">Last updated: January 2026</p>
 
         <div className="prose prose-slate max-w-none space-y-6">

@@ -31,7 +31,20 @@ const BlogPost = () => {
       <Navbar onOpenConsultationDialog={() => setConsultationOpen(true)} />
       <ConsultationDialog open={consultationOpen} onOpenChange={setConsultationOpen} />
 
-      <main className="container mx-auto px-6 md:px-8 max-w-3xl pt-32 pb-20">
+      {!loading && post && (
+        <header className="bg-navy pt-32 pb-20">
+          <div className="container mx-auto px-6 md:px-8 max-w-3xl">
+            <p className="text-primary font-semibold text-lg tracking-wide uppercase mb-4">
+              Blog
+            </p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy-foreground leading-tight">
+              {post.title}
+            </h1>
+          </div>
+        </header>
+      )}
+
+      <main className={`container mx-auto px-6 md:px-8 max-w-3xl pb-20 ${post && !loading ? 'pt-12' : 'pt-32'}`}>
         <button
           onClick={() => navigate("/blog")}
           className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium mb-8 transition-colors"
@@ -50,7 +63,8 @@ const BlogPost = () => {
           </div>
         ) : !post ? (
           <div className="text-center py-20">
-            <h1 className="text-2xl font-bold text-foreground mb-2">Post Not Found</h1>
+            <p className="text-primary font-semibold text-lg tracking-wide uppercase mb-4">Error</p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-2 leading-tight">Post Not Found</h1>
             <p className="text-muted-foreground">The blog post you're looking for doesn't exist.</p>
           </div>
         ) : (
@@ -72,9 +86,6 @@ const BlogPost = () => {
                 }),
               }}
             />
-            <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4 leading-tight">
-              {post.title}
-            </h1>
             <div className="flex items-center gap-3 text-muted-foreground mb-10 border-b border-border pb-6">
               <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary">
                 <User size={16} />

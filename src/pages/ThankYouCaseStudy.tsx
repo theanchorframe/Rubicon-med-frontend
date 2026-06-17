@@ -54,7 +54,10 @@ const ThankYouCaseStudy = () => {
         </div>
 
         <div className="relative z-10 container mx-auto px-6 text-center max-w-4xl">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+          <p className="text-primary font-semibold text-lg tracking-wide uppercase mb-4">
+            Success
+          </p>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
             Your EPD Case Study is Ready!
           </h1>
           

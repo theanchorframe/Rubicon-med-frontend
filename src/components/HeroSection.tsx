@@ -26,12 +26,19 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
           className="text-center space-y-6"
         >
           <div className="space-y-4">
+            <motion.p
+              initial={mounted ? { opacity: 0, y: 20 } : false}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="text-primary font-semibold text-lg tracking-wide uppercase text-center"
+            >
+              MedTech Strategy Consulting
+            </motion.p>
             <motion.h1
               initial={mounted ? { opacity: 0, y: 20 } : false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="font-bold text-white text-center"
-              style={{ fontSize: "clamp(1.875rem, 4vw, 3.5rem)", lineHeight: "1.3" }}
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center leading-tight"
             >
               Fueling Positive Patient Outcomes and Revenue Growth
             </motion.h1>
