@@ -137,8 +137,8 @@ const Services = () => {
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 whitespace-normal leading-tight"
           >
             <span className="block">Validate early. Launch with confidence.</span>
-            <span className="block mt-8">Expert MedTech strategy backed by market</span>
-            <span className="block">and clinical intelligence</span>
+            <span className="block mt-8 text-slate-300 font-normal">Expert MedTech strategy backed by market</span>
+            <span className="block text-slate-300 font-normal">and clinical intelligence</span>
           </motion.h1>
           <motion.p
             initial={mounted ? { opacity: 0, y: 20 } : false}
