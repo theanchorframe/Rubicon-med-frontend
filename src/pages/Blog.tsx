@@ -29,9 +29,12 @@ const Blog = () => {
       <ConsultationDialog open={consultationOpen} onOpenChange={setConsultationOpen} />
 
       {/* Header */}
-      <header className="bg-navy pt-40 pb-16">
+      <header className="bg-navy pt-32 pb-20">
         <div className="container mx-auto px-6 md:px-8 max-w-5xl text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-navy-foreground mb-4">
+          <p className="text-primary font-semibold text-lg tracking-wide uppercase mb-4">
+            Blog
+          </p>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy-foreground mb-6 leading-tight">
             Intelligence From the Field
           </h1>
           <p className="text-navy-foreground mx-auto" style={{ fontSize: '1.1rem', opacity: 0.85, maxWidth: '650px', lineHeight: '1.7' }}>

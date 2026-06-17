@@ -125,14 +125,16 @@ const Services = () => {
       <Navbar onOpenConsultationDialog={() => setIsConsultationDialogOpen(true)} />
 
       {/* Hero */}
-      <header className="bg-navy pt-40 pb-20">
+      <header className="bg-navy pt-32 pb-20">
         <div className="container mx-auto px-6 md:px-8 max-w-6xl text-center">
+          <p className="text-primary font-semibold text-lg tracking-wide uppercase mb-4">
+            Services
+          </p>
           <motion.h1
             initial={mounted ? { opacity: 0, y: 20 } : false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 whitespace-normal"
-            style={{ lineHeight: "1.2" }}
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 whitespace-normal leading-tight"
           >
             <span className="block">Validate early. Launch with confidence.</span>
             <span className="block">Expert MedTech strategy backed by market</span>
