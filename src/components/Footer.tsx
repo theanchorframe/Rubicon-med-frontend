@@ -43,7 +43,7 @@ const Footer = () => {
               loading="lazy"
               decoding="async"
             />
-            <p className="text-sm text-navy-foreground/80 italic">
+            <p className="text-sm text-navy-foreground/80 italic font-bold">
               Know your evidence. Know your clinician. Know your market.
             </p>
           </div>
