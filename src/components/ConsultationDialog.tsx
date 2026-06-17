@@ -32,9 +32,9 @@ const formSchema = z.object({
   fullName: z.string().trim().min(1, "Full name is required").max(120),
   email: z.string().trim().email("Enter a valid email").max(255),
   title: z.string().trim().min(1, "Corporate title is required").max(150),
-  phase: z.string().min(1, "Select a phase"),
+  phase: z.string().optional(),
   phaseOther: z.string().trim().max(500).optional(),
-  challenge: z.string().min(1, "Select a challenge"),
+  challenge: z.string().optional(),
   challengeOther: z.string().trim().max(500).optional(),
 });
 
@@ -82,8 +82,8 @@ const ConsultationDialog = ({ open, onOpenChange }: ConsultationDialogProps) => 
     }
 
     setSubmitting(true);
-    const phaseFinal = form.phase === "Other" ? `Other — ${form.phaseOther}` : form.phase;
-    const challengeFinal = form.challenge === "Other" ? `Other — ${form.challengeOther}` : form.challenge;
+    const phaseFinal = form.phase === "Other" ? `Other — ${form.phaseOther}` : (form.phase || "Not provided");
+    const challengeFinal = form.challenge === "Other" ? `Other — ${form.challengeOther}` : (form.challenge || "Not provided");
 
     const subject = `Strategic Briefing Request — ${form.fullName}`;
     const body = [
@@ -121,7 +121,9 @@ const ConsultationDialog = ({ open, onOpenChange }: ConsultationDialogProps) => 
 
         <form onSubmit={handleSubmit} className="px-8 pb-10 pt-6 space-y-6">
           <div className="space-y-2">
-            <Label htmlFor="fullName" className="text-sm font-medium text-navy">Full Name</Label>
+            <Label htmlFor="fullName" className="text-sm font-medium text-navy">
+              Full Name <span className="text-red-500">*</span>
+            </Label>
             <Input
               id="fullName"
               value={form.fullName}
@@ -135,7 +137,9 @@ const ConsultationDialog = ({ open, onOpenChange }: ConsultationDialogProps) => 
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="email" className="text-sm font-medium text-navy">Company Email</Label>
+            <Label htmlFor="email" className="text-sm font-medium text-navy">
+              Your Company Email <span className="text-red-500">*</span>
+            </Label>
             <Input
               id="email"
               type="email"
@@ -150,7 +154,9 @@ const ConsultationDialog = ({ open, onOpenChange }: ConsultationDialogProps) => 
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="title" className="text-sm font-medium text-navy">Corporate Title</Label>
+            <Label htmlFor="title" className="text-sm font-medium text-navy">
+              Corporate Title <span className="text-red-500">*</span>
+            </Label>
             <Input
               id="title"
               value={form.title}
