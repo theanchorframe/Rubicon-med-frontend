@@ -65,9 +65,14 @@ const ThankYouConsultation = () => {
               loading="lazy"
               decoding="async"
             />
-            <span className="font-bold text-primary leading-tight text-sm sm:text-base md:text-lg text-left">
-              Rubicon Medical Marketing &<br />Strategy Consultants
-            </span>
+            <div>
+              <span className="block font-bold text-primary leading-[1.05] text-sm sm:text-base md:text-lg text-left">
+                Rubicon Medical Marketing &<br />Strategy Consultants
+              </span>
+              <span className="block text-primary/80 italic text-xs sm:text-sm md:text-base text-left">
+                Know your clinician. Know your market.
+              </span>
+            </div>
           </Link>
           <Button variant="ghost" size="sm" className="gap-2" onClick={handleBackToHome}>
             <ArrowLeft size={16} />
