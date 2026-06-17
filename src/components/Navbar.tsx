@@ -56,7 +56,7 @@ const Navbar = ({ onOpenConsultationDialog }: NavbarProps) => {
         isScrolled ? "shadow-lg" : "shadow-md"
       }`}>
         <div className="container mx-auto px-6 md:px-8">
-          <div className={`flex items-center justify-between transition-all duration-300 ${
+          <div className={`flex items-center justify-between w-full transition-all duration-300 ${
             isScrolled ? "h-20" : "h-24"
           }`}>
             <button 
@@ -87,37 +87,30 @@ const Navbar = ({ onOpenConsultationDialog }: NavbarProps) => {
             </button>
 
             {isSubPage ? (
-              /* Simplified navbar for blog/about pages - only page links */
-              <div className="hidden lg:flex items-center gap-4 ml-8">
+              <div className="hidden lg:flex items-center gap-8">
                 <button onClick={handleLogoClick} className="nav-link text-foreground hover:text-primary transition-colors font-medium text-base">Home</button>
                 <button onClick={() => navigate("/blog")} className="nav-link text-foreground hover:text-primary transition-colors font-medium text-base">Blog</button>
                 <button onClick={() => navigate("/about")} className="nav-link text-foreground hover:text-primary transition-colors font-medium text-base">About</button>
                 <button onClick={() => navigate("/services")} className="nav-link text-foreground hover:text-primary transition-colors font-medium text-base">Services</button>
-                <Button className="shine-effect text-lg px-8 py-4 h-auto bg-primary hover:bg-primary/90" onClick={() => onOpenConsultationDialog()}>Request a Consult</Button>
               </div>
             ) : (
-              <>
-                <div className="hidden lg:flex items-center gap-4 ml-8">
-                  <button onClick={handleLogoClick} className="nav-link text-foreground hover:text-primary transition-colors font-medium text-base">Home</button>
-                  <button onClick={() => navigate("/blog")} className="nav-link text-foreground hover:text-primary transition-colors font-medium text-base">Blog</button>
-                  <button onClick={() => navigate("/about")} className="nav-link text-foreground hover:text-primary transition-colors font-medium text-base">About</button>
-                  <button onClick={() => navigate("/services")} className="nav-link text-foreground hover:text-primary transition-colors font-medium text-base">Services</button>
-                  <button onClick={() => handleNavClick("case-study")} className="nav-link text-foreground hover:text-primary transition-colors font-medium text-base">EPD Case Study</button>
-                  <button onClick={() => handleNavClick("faq")} className="nav-link text-foreground hover:text-primary transition-colors font-medium text-base">FAQ</button>
-                  <Button className="shine-effect text-lg px-8 py-4 h-auto bg-primary hover:bg-primary/90" onClick={() => onOpenConsultationDialog()}>Request a Consult</Button>
-                </div>
-
-                <button className="lg:hidden text-foreground" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-                  {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-                </button>
-              </>
+              <div className="hidden lg:flex items-center gap-8">
+                <button onClick={handleLogoClick} className="nav-link text-foreground hover:text-primary transition-colors font-medium text-base">Home</button>
+                <button onClick={() => navigate("/blog")} className="nav-link text-foreground hover:text-primary transition-colors font-medium text-base">Blog</button>
+                <button onClick={() => navigate("/about")} className="nav-link text-foreground hover:text-primary transition-colors font-medium text-base">About</button>
+                <button onClick={() => navigate("/services")} className="nav-link text-foreground hover:text-primary transition-colors font-medium text-base">Services</button>
+                <button onClick={() => handleNavClick("case-study")} className="nav-link text-foreground hover:text-primary transition-colors font-medium text-base">EPD Case Study</button>
+                <button onClick={() => handleNavClick("faq")} className="nav-link text-foreground hover:text-primary transition-colors font-medium text-base">FAQ</button>
+              </div>
             )}
 
-            {isSubPage && (
-              <button className="lg:hidden text-foreground" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-                {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-              </button>
-            )}
+            <div className="hidden lg:flex">
+              <Button className="shine-effect text-lg px-8 py-4 h-auto bg-primary hover:bg-primary/90" onClick={() => onOpenConsultationDialog()}>Request a Consult</Button>
+            </div>
+
+            <button className="lg:hidden text-foreground" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+              {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
           </div>
         </div>
 
