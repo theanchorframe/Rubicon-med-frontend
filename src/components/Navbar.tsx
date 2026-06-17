@@ -73,10 +73,15 @@ const Navbar = ({ onOpenConsultationDialog }: NavbarProps) => {
                 decoding="async"
               />
               <div>
-                <span className={`block font-bold text-foreground leading-tight transition-all duration-300 text-left ${
+                <span className={`block font-bold text-foreground leading-[1.05] transition-all duration-300 text-left ${
                   isScrolled ? "text-sm md:text-base" : "text-base md:text-lg"
                 }`}>
                   Rubicon Medical Marketing &<br />Strategy Consultants
+                </span>
+                <span className={`block text-foreground/80 italic transition-all duration-300 text-left ${
+                  isScrolled ? "text-xs md:text-sm" : "text-sm md:text-base"
+                }`}>
+                  Know your clinician. Know your market.
                 </span>
               </div>
             </button>
