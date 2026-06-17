@@ -32,8 +32,8 @@ const ThankYouCaseStudy = () => {
               <span className="block font-bold text-primary leading-[1.05] text-sm sm:text-base md:text-lg text-left">
                 Rubicon Medical Marketing & Strategy Consultants
               </span>
-              <span className="block text-primary/80 italic text-xs sm:text-sm md:text-base text-center">
-                Know your clinician. Know your market.
+              <span className="block text-primary/80 text-[10px] sm:text-xs md:text-sm text-center tracking-widest">
+                Know your evidence. Know your clinician. Know your market.
               </span>
             </div>
           </Link>
