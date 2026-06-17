@@ -30,7 +30,7 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
               initial={mounted ? { opacity: 0, y: 20 } : false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-primary font-semibold text-lg tracking-wide uppercase text-center"
+              className="text-primary font-semibold text-lg tracking-wide uppercase text-center mb-6"
             >
               MedTech Strategy Consulting
             </motion.p>
@@ -38,7 +38,7 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
               initial={mounted ? { opacity: 0, y: 20 } : false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center leading-tight"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center leading-tight my-8"
             >
               Fueling Positive Patient Outcomes and Revenue Growth
             </motion.h1>
@@ -47,7 +47,7 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
               initial={mounted ? { opacity: 0 } : false}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
-              className="mx-auto font-medium text-center"
+              className="mx-auto font-medium text-center mb-10"
               style={{
                 color: "rgba(255,255,255,0.9)",
                 fontSize: "clamp(1rem, 1.5vw, 1.2rem)",
@@ -79,11 +79,11 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
               initial={mounted ? { opacity: 0, y: 20 } : false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
-              className="pt-4 flex flex-col items-center gap-4"
+              className="pt-10 flex flex-col items-center gap-4"
             >
               <div
                 className="text-center md:flex md:justify-center md:gap-2"
-                style={{ fontSize: "clamp(0.85rem, 1.2vw, 1rem)", color: "rgba(255,255,255,0.85)", marginTop: "16px" }}
+                style={{ fontSize: "clamp(0.85rem, 1.2vw, 1rem)", color: "rgba(255,255,255,0.85)" }}
               >
                 <p className="hidden md:flex md:items-center md:gap-2">
                   ✓ 100+ KOL Engagements Across Specialties&nbsp;&nbsp;|&nbsp;&nbsp;✓ $2M+ Protected From Non-Viable
