@@ -26,7 +26,7 @@ const CTABanner = ({ onOpenCaseStudyPopup }: CTABannerProps) => {
               <h3 className="text-3xl md:text-4xl font-bold text-foreground leading-tight">
                 How One MedTech Team Unlocked $35M in Co-Development Funding
               </h3>
-              <p className="text-muted-foreground mx-auto" style={{ fontSize: '1.1rem', maxWidth: '620px', lineHeight: '1.7' }}>
+              <p className="text-foreground mx-auto" style={{ fontSize: '1.1rem', maxWidth: '620px', lineHeight: '1.7' }}>
                 When clinical evidence alone isn't enough to move an executive team, you need market validation, KOL strategy, and financial modeling that makes the decision obvious. Here's exactly how that process worked — and what it produced.
               </p>
               <Button
@@ -46,7 +46,7 @@ const CTABanner = ({ onOpenCaseStudyPopup }: CTABannerProps) => {
               <h3 className="text-4xl xl:text-5xl font-bold text-foreground leading-tight">
                 How One MedTech Team Unlocked $35M in Co-Development Funding
               </h3>
-              <p className="text-muted-foreground" style={{ fontSize: '1.1rem', maxWidth: '620px', lineHeight: '1.7' }}>
+              <p className="text-foreground" style={{ fontSize: '1.1rem', maxWidth: '620px', lineHeight: '1.7' }}>
                 When clinical evidence alone isn't enough to move an executive team, you need market validation, KOL strategy, and financial modeling that makes the decision obvious. Here's exactly how that process worked — and what it produced.
               </p>
               <Button

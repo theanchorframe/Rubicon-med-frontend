@@ -32,7 +32,7 @@ const specializations = [
     stat: "20+",
     statLabel: "Markets Sized",
     description:
-      "Every investment decision backed by evidence, not assumptions. Drive confident product investment through clinical, research & development, and market triangulation. We leverage expert consultations and comprehensive database analytics to distill complex evidence into an actionable roadmap – eliminating market ambiguity and securing your path to success.",
+      "Every investment decision backed by evidence, not assumptions. Drive confident product investment through Clinical, Research & Development, and market triangulation. We leverage expert consultations and comprehensive database analytics to distill complex evidence into an actionable roadmap – eliminating market ambiguity and securing your path to success.",
   },
   {
     icon: Users,
@@ -99,7 +99,7 @@ const About = () => {
                 at <strong>Abbott, Medtronic, 3M, and Integer</strong> — helping teams
                 decide which ideas are worth funding and which ones are not.
               </p>
-              <p className="text-lg text-navy-foreground/75 leading-relaxed">
+              <p className="text-xl text-navy-foreground/85 leading-relaxed">
                 His work focuses on one thing: turning clinical promise into growth.
                 Rob partners with C-Suite, Marketing VP's, and R&D leaders to clarify
                 the real-world problem, pressure test the value story with KOLs, and
