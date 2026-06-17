@@ -26,7 +26,7 @@ const TestimonialsSection = () => {
       title: "Director of Product Management at Integer Holdings Corporation",
     },
     {
-      headline: "A Natural at Drawing Out the Voice of Customer Intelligence That Drives New Product Development",
+      headline: "Expert VoC Engagement for New Product Development and Market Success",
       text: "Rob is a strong contributor with deep insights which have helped us greatly. In working closely with him, I have witnessed how well he is able to draw valuable voice of customer...",
       fullText:
         "Rob is a strong contributor with deep insights which have helped us greatly. In working closely with him, I have witnessed how well he is able to draw valuable voice of customer feedback from the marketplace; both online and in person. He is a natural in terms of getting people to open up and share details which are key in any new product development effort.",
@@ -95,7 +95,7 @@ const TestimonialsSection = () => {
                   />
                 ))}
               </div>
-              <h3 className={`text-navy font-bold text-lg mb-3 ${index === 2 ? "bg-yellow-300" : ""}`}>{testimonial.headline}</h3>
+              <h3 className="text-navy font-bold text-lg mb-3">{testimonial.headline}</h3>
               <p className="text-foreground/90 italic mb-4">
                 {expandedCard === index ? testimonial.fullText : testimonial.text}
               </p>
