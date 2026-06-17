@@ -95,7 +95,10 @@ const ThankYouConsultation = () => {
             <CheckCircle className="w-20 h-20 text-primary" />
           </div>
           
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+          <p className="text-primary font-semibold text-lg tracking-wide uppercase mb-4">
+            Thank You
+          </p>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
             Thank You for Reaching Out!
           </h1>
           
