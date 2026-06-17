@@ -24,7 +24,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
     },
     {
       image: clinicalInsightImage,
-      title: "Turn Clinical Evidence Into Market Leadership",
+      title: "Enter the Market With a Defensible Competitive Advantage",
       description:
         "We identify your highest-value segments, translate clinical evidence into targeted positioning, and develop messaging that drives adoption and stands up to scrutiny.",
       overlayText:
