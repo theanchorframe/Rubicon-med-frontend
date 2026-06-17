@@ -43,8 +43,8 @@ const Footer = () => {
               loading="lazy"
               decoding="async"
             />
-            <p className="text-sm text-navy-foreground/80">
-              Expert MedTech consulting for product strategy and market success.
+            <p className="text-sm text-navy-foreground/80 italic">
+              Know your evidence. Know your clinician. Know your market.
             </p>
           </div>
 
