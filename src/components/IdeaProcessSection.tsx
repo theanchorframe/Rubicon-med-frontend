@@ -155,13 +155,15 @@ const IdeaProcessSection = () => {
             >
               {(
                 [
-                  { letter: "I" as const, label: "Phase 1: ", rest: "Immersion" },
-                  { letter: "D" as const, label: "Phase 2: ", rest: "Delineate" },
-                  { letter: "E" as const, label: "Phase 3: ", rest: "Engage" },
-                  { letter: "A" as const, label: "Phase 4: ", rest: "Action" },
+                  { letter: "I" as const, label: "I | Phase 1: Immersion" },
+                  { letter: "D" as const, label: "D | Phase 2: Delineate" },
+                  { letter: "E" as const, label: "E | Phase 3: Engage" },
+                  { letter: "A" as const, label: "A | Phase 4: Action" },
                 ] as const
-              ).map(({ letter, label, rest }) => {
+              ).map(({ letter, label }) => {
                 const isActive = activeIdea === letter;
+                const prefix = label.charAt(0);
+                const rest = label.slice(1);
                 return (
                   <button
                     key={letter}
@@ -176,20 +178,8 @@ const IdeaProcessSection = () => {
                         : "bg-secondary border-border text-foreground/80 hover:bg-secondary/80 hover:border-primary/40"
                     }`}
                   >
-                    <span className="md:hidden text-2xl font-extrabold text-primary mr-3">
-                      {letter}
-                    </span>
-                    <span>
-                      {label}
-                      <span className="inline-flex items-baseline">
-                        <span className="text-3xl font-extrabold text-primary leading-none mr-[1px]">
-                          {rest.charAt(0)}
-                        </span>
-                        <span className="text-sm md:text-base font-semibold">
-                          {rest.slice(1)}
-                        </span>
-                      </span>
-                    </span>
+                    <span className="text-primary font-bold">{prefix}</span>
+                    <span>{rest}</span>
                   </button>
                 );
               })}
