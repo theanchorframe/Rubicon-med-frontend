@@ -206,7 +206,7 @@ const IdeaProcessSection = () => {
               aria-labelledby={`idea-tab-${activeIdea}`}
               className="bg-secondary/50 border border-border rounded-xl p-6 lg:p-8 space-y-6"
             >
-              <h3 className="text-xl md:text-2xl font-bold text-foreground">
+              <h3 className="text-2xl md:text-3xl font-bold text-primary">
                 Phase {activeIdea === "I" ? "1" : activeIdea === "D" ? "2" : activeIdea === "E" ? "3" : "4"}: {activeContent.title} {activeContent.subtitle}
               </h3>
 
@@ -218,7 +218,7 @@ const IdeaProcessSection = () => {
                 {activeContent.sections.map((section, sectionIndex) => (
                   <div key={sectionIndex} className="space-y-3">
                     {section.label && (
-                      <h4 className="text-sm font-semibold text-primary uppercase tracking-wide">
+                      <h4 className="text-sm font-semibold text-foreground uppercase tracking-wide">
                         {section.label}
                       </h4>
                     )}
