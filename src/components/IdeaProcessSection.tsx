@@ -170,18 +170,13 @@ const IdeaProcessSection = () => {
                     aria-controls={`idea-panel-${letter}`}
                     id={`idea-tab-${letter}`}
                     onClick={() => setActiveIdea(letter)}
-                    className={`flex-1 flex flex-col items-center justify-center px-4 py-4 md:py-5 rounded-lg md:rounded-none md:rounded-t-lg border transition-all duration-300 ${
+                    className={`flex-1 flex items-center justify-center px-4 py-4 md:py-5 rounded-lg md:rounded-none md:rounded-t-lg border transition-all duration-300 text-sm md:text-base text-slate-600 ${
                       isActive
-                        ? "bg-primary/10 border-primary shadow-sm"
+                        ? "bg-primary/10 border-primary shadow-sm font-medium"
                         : "bg-secondary border-border hover:bg-secondary/80 hover:border-primary/40"
                     }`}
                   >
-                    <span className="text-2xl md:text-3xl font-bold text-primary leading-none">
-                      {letter}
-                    </span>
-                    <span className="text-sm md:text-base text-slate-600 mt-1">
-                      {phase}
-                    </span>
+                    {phase}
                   </button>
                 );
               })}
