@@ -99,9 +99,9 @@ const servicesData = [
     description:
       "Enable executive decision-making with rigorous financial modeling. We translate market dynamics and value-based pricing into accurate revenue projections that hold up under institutional scrutiny. Our models provide the clarity needed to synchronize AOP targets with actual clinical and commercial scalability.",
     deliverables: [
-      "Market share projections with CAGR",
+      "Market share projections",
       "Competitive ASP analysis & pricing strategy",
-      "Volume and revenue forecasting with CAGR and regression models",
+      "Volume and revenue forecasting and regression models",
       "High, Medium, and Low financial scenarios",
       "C-suite presentation decks with executive summaries",
     ],
