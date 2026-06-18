@@ -155,15 +155,13 @@ const IdeaProcessSection = () => {
             >
               {(
                 [
-                  { letter: "I" as const, label: "I Phase 1: Immersion" },
-                  { letter: "D" as const, label: "D Phase 2: Delineate" },
-                  { letter: "E" as const, label: "E Phase 3: Engage" },
-                  { letter: "A" as const, label: "A Phase 4: Action" },
+                  { letter: "I" as const, phase: "Phase 1: Immersion" },
+                  { letter: "D" as const, phase: "Phase 2: Delineate" },
+                  { letter: "E" as const, phase: "Phase 3: Engage" },
+                  { letter: "A" as const, phase: "Phase 4: Action" },
                 ] as const
-              ).map(({ letter, label }) => {
+              ).map(({ letter, phase }) => {
                 const isActive = activeIdea === letter;
-                const prefix = label.charAt(0);
-                const rest = label.slice(1);
                 return (
                   <button
                     key={letter}
@@ -172,14 +170,18 @@ const IdeaProcessSection = () => {
                     aria-controls={`idea-panel-${letter}`}
                     id={`idea-tab-${letter}`}
                     onClick={() => setActiveIdea(letter)}
-                    className={`flex-1 text-left md:text-center px-4 py-4 md:py-5 rounded-lg md:rounded-none md:rounded-t-lg border transition-all duration-300 text-sm md:text-base font-semibold ${
+                    className={`flex-1 flex flex-col items-center justify-center px-4 py-4 md:py-5 rounded-lg md:rounded-none md:rounded-t-lg border transition-all duration-300 ${
                       isActive
                         ? "bg-primary/10 border-primary shadow-sm"
                         : "bg-secondary border-border hover:bg-secondary/80 hover:border-primary/40"
                     }`}
                   >
-                    <span className="text-primary font-bold">{prefix}</span>
-                    <span className="text-slate-600">{rest}</span>
+                    <span className="text-2xl md:text-3xl font-bold text-primary leading-none">
+                      {letter}
+                    </span>
+                    <span className="text-sm md:text-base text-slate-600 mt-1">
+                      {phase}
+                    </span>
                   </button>
                 );
               })}
