@@ -18,7 +18,7 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
       ></div>
       <div className="absolute inset-0" style={{ backgroundColor: "rgba(0, 0, 0, 0.55)" }}></div>
 
-      <div className="relative z-10 container mx-auto px-6 pt-28 pb-24 md:pt-36 md:pb-32 max-w-6xl">
+      <div className="relative z-10 container mx-auto px-6 py-32 md:py-40 max-w-6xl">
         <motion.div
           initial={mounted ? { opacity: 0, y: 20 } : false}
           animate={{ opacity: 1, y: 0 }}
