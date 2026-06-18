@@ -162,6 +162,7 @@ const IdeaProcessSection = () => {
                 ] as const
               ).map(({ letter, phase }) => {
                 const isActive = activeIdea === letter;
+                const [prefix, word] = phase.split(": ");
                 return (
                   <button
                     key={letter}
@@ -170,13 +171,15 @@ const IdeaProcessSection = () => {
                     aria-controls={`idea-panel-${letter}`}
                     id={`idea-tab-${letter}`}
                     onClick={() => setActiveIdea(letter)}
-                    className={`flex-1 flex items-center justify-center px-4 py-4 md:py-5 rounded-lg md:rounded-none md:rounded-t-lg border transition-all duration-300 text-sm md:text-base text-slate-600 ${
+                    className={`flex-1 flex items-center justify-center text-center px-4 py-4 md:py-5 rounded-lg md:rounded-none md:rounded-t-lg border transition-all duration-300 text-sm md:text-base text-slate-600 ${
                       isActive
                         ? "bg-primary/10 border-primary shadow-sm font-medium"
                         : "bg-secondary border-border hover:bg-secondary/80 hover:border-primary/40"
                     }`}
                   >
-                    {phase}
+                    <span>{prefix}: </span>
+                    <span className="font-bold text-primary">{word.charAt(0)}</span>
+                    <span>{word.slice(1)}</span>
                   </button>
                 );
               })}
@@ -194,7 +197,7 @@ const IdeaProcessSection = () => {
               className="bg-secondary/50 border border-border rounded-xl p-6 lg:p-8 space-y-6"
             >
               <h3 className="text-2xl md:text-3xl text-primary">
-                Phase {activeIdea === "I" ? "1" : activeIdea === "D" ? "2" : activeIdea === "E" ? "3" : "4"}: <span className="font-black text-foreground">{activeContent.title.charAt(0)}</span>{activeContent.title.slice(1)} {activeContent.subtitle}
+                Phase {activeIdea === "I" ? "1" : activeIdea === "D" ? "2" : activeIdea === "E" ? "3" : "4"}: {activeContent.title} {activeContent.subtitle}
               </h3>
 
               <p className="text-base lg:text-lg text-foreground leading-relaxed font-bold">
