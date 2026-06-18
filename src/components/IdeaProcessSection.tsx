@@ -17,7 +17,7 @@ interface IdeaContent {
 }
 
 const IdeaProcessSection = () => {
-  const [activeIdea, setActiveIdea] = useState<IdeaLetter>("I");
+  const [activeIdea, setActiveIdea] = useState<IdeaLetter | null>(null);
   const mounted = useMounted();
 
   const ideaContent: Record<IdeaLetter, IdeaContent> = {
@@ -123,7 +123,7 @@ const IdeaProcessSection = () => {
     },
   };
 
-  const activeContent = ideaContent[activeIdea];
+  const activeContent = activeIdea ? ideaContent[activeIdea] : null;
 
   return (
     <section className="py-20 bg-background relative overflow-hidden">
@@ -178,7 +178,7 @@ const IdeaProcessSection = () => {
                     }`}
                   >
                     <span>{prefix}: </span>
-                    <span className="font-bold text-primary">{word.charAt(0)}</span>
+                    <span className="font-black">{word.charAt(0)}</span>
                     <span>{word.slice(1)}</span>
                   </button>
                 );
@@ -186,66 +186,72 @@ const IdeaProcessSection = () => {
             </div>
 
             {/* Content Panel */}
-            <motion.div
-              key={activeIdea}
-              initial={mounted ? { opacity: 0, y: 12 } : false}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.35 }}
-              role="tabpanel"
-              id={`idea-panel-${activeIdea}`}
-              aria-labelledby={`idea-tab-${activeIdea}`}
-              className="bg-secondary/50 border border-border rounded-xl p-6 lg:p-8 space-y-6"
-            >
-              <h3 className="text-2xl md:text-3xl text-primary">
-                Phase {activeIdea === "I" ? "1" : activeIdea === "D" ? "2" : activeIdea === "E" ? "3" : "4"}: {activeContent.title} {activeContent.subtitle}
-              </h3>
+            {activeContent ? (
+              <motion.div
+                key={activeIdea}
+                initial={mounted ? { opacity: 0, y: 12 } : false}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.35 }}
+                role="tabpanel"
+                id={`idea-panel-${activeIdea}`}
+                aria-labelledby={`idea-tab-${activeIdea}`}
+                className="bg-secondary/50 border border-border rounded-xl p-6 lg:p-8 space-y-6"
+              >
+                <h3 className="text-2xl md:text-3xl text-primary">
+                  Phase {activeIdea === "I" ? "1" : activeIdea === "D" ? "2" : activeIdea === "E" ? "3" : "4"}: {activeContent.title} {activeContent.subtitle}
+                </h3>
 
-              <p className="text-base lg:text-lg text-foreground leading-relaxed font-bold">
-                {activeContent.summary}
-              </p>
+                <p className="text-base lg:text-lg text-foreground leading-relaxed font-bold">
+                  {activeContent.summary}
+                </p>
 
-              <div className="space-y-6">
-                {activeContent.sections.map((section, sectionIndex) => (
-                  <div key={sectionIndex} className="space-y-3">
-                    {section.label && (
-                      <h4 className="text-sm font-semibold text-foreground uppercase tracking-wide">
-                        {section.label}
-                      </h4>
-                    )}
-                    <ul className="space-y-2">
-                      {section.bullets.map((bullet, bulletIndex) => (
-                        <li
-                          key={bulletIndex}
-                          className="flex gap-3 text-foreground/90 leading-relaxed text-sm lg:text-base"
-                        >
-                          <span className="text-primary flex-shrink-0 leading-relaxed text-sm lg:text-base">
-                            &bull;
-                          </span>
-                          <span>{bullet}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    {section.deliverable && (
-                      <div className="pt-2 border-t border-border mt-2">
-                        <p className="text-foreground text-sm lg:text-base">
-                          <span className="font-bold text-primary">Deliverable:</span>{" "}
-                          {section.deliverable}
-                        </p>
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-
-              {activeContent.deliverable && (
-                <div className="pt-4 border-t border-border">
-                  <p className="text-foreground text-sm lg:text-base">
-                    <span className="font-bold text-primary">Deliverable:</span>{" "}
-                    {activeContent.deliverable}
-                  </p>
+                <div className="space-y-6">
+                  {activeContent.sections.map((section, sectionIndex) => (
+                    <div key={sectionIndex} className="space-y-3">
+                      {section.label && (
+                        <h4 className="text-sm font-semibold text-foreground uppercase tracking-wide">
+                          {section.label}
+                        </h4>
+                      )}
+                      <ul className="space-y-2">
+                        {section.bullets.map((bullet, bulletIndex) => (
+                          <li
+                            key={bulletIndex}
+                            className="flex gap-3 text-foreground/90 leading-relaxed text-sm lg:text-base"
+                          >
+                            <span className="text-primary flex-shrink-0 leading-relaxed text-sm lg:text-base">
+                              &bull;
+                            </span>
+                            <span>{bullet}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      {section.deliverable && (
+                        <div className="pt-2 border-t border-border mt-2">
+                          <p className="text-foreground text-sm lg:text-base">
+                            <span className="font-bold text-primary">Deliverable:</span>{" "}
+                            {section.deliverable}
+                          </p>
+                        </div>
+                      )}
+                    </div>
+                  ))}
                 </div>
-              )}
-            </motion.div>
+
+                {activeContent.deliverable && (
+                  <div className="pt-4 border-t border-border">
+                    <p className="text-foreground text-sm lg:text-base">
+                      <span className="font-bold text-primary">Deliverable:</span>{" "}
+                      {activeContent.deliverable}
+                    </p>
+                  </div>
+                )}
+              </motion.div>
+            ) : (
+              <div className="bg-secondary/50 border border-border rounded-xl p-6 lg:p-8 text-center text-muted-foreground text-lg">
+                Select a phase above to explore our commercialization process.
+              </div>
+            )}
           </div>
         </motion.div>
       </div>
