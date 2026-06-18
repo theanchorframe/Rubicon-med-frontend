@@ -18,7 +18,7 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
       ></div>
       <div className="absolute inset-0" style={{ backgroundColor: "rgba(0, 0, 0, 0.55)" }}></div>
 
-      <div className="relative z-10 container mx-auto px-6 pt-32 pb-20 max-w-6xl">
+      <div className="relative z-10 container mx-auto px-6 py-24 md:py-32 max-w-6xl">
         <motion.div
           initial={mounted ? { opacity: 0, y: 20 } : false}
           animate={{ opacity: 1, y: 0 }}
@@ -38,7 +38,7 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
               initial={mounted ? { opacity: 0, y: 20 } : false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center leading-tight my-8"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center leading-relaxed my-8"
             >
               Fueling Positive Patient Outcomes and Revenue Growth
             </motion.h1>
@@ -47,12 +47,10 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
               initial={mounted ? { opacity: 0 } : false}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
-              className="mx-auto font-medium text-center mb-10"
+              className="mx-auto font-medium text-center mb-10 max-w-3xl leading-relaxed"
               style={{
                 color: "rgba(255,255,255,0.9)",
                 fontSize: "clamp(1rem, 1.5vw, 1.2rem)",
-                lineHeight: "1.7",
-                maxWidth: "900px",
               }}
             >
               Rubicon equips <span className="font-semibold">C-Suite, Marketing VP's, and R&D leaders</span> with
