@@ -37,7 +37,8 @@ const IdeaProcessSection = () => {
           ],
         },
       ],
-      deliverable: "Every engagement begins with a deep-dive into your real-world environment and project constraints, and to guide the IDEA process, we deliver a Statement of Understanding and a Statement of Work, a clear-eyed blueprint that transforms high-level goals into a validated, executable plan for your project.",
+      deliverable:
+        "Every engagement begins with a deep-dive into your real-world environment and project constraints, and to guide the IDEA process, we deliver a Statement of Understanding and a Statement of Work, a clear-eyed blueprint that transforms high-level goals into a validated, executable plan for your project.",
     },
     D: {
       title: "Delineate Project Roadmap",
@@ -54,7 +55,8 @@ const IdeaProcessSection = () => {
           ],
         },
       ],
-      deliverable: "A reviewed and finalized plan with the executive sponsor and your core team that spells out what we need to know and how we will learn it.",
+      deliverable:
+        "A reviewed and finalized plan with the executive sponsor and your core team that spells out what we need to know and how we will learn it.",
     },
     E: {
       title: "Engage Full Team for Plan Execution",
@@ -116,20 +118,23 @@ const IdeaProcessSection = () => {
           ],
         },
       ],
-      deliverable: "A full concept report and presentation that links every recommendation back to the evidence gathered in the IDEA process.",
+      deliverable:
+        "A full concept report and presentation that links every recommendation back to the evidence gathered in the IDEA process.",
     },
   };
 
+  const activeContent = ideaContent[activeIdea];
+
   return (
     <section className="py-20 bg-background relative overflow-hidden">
-      <div className="mx-auto px-5">
+      <div className="mx-auto px-5 max-w-7xl">
         <motion.div
           id="process"
           initial={mounted ? { opacity: 0, y: 30 } : false}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
-          className="space-y-8 scroll-mt-24 max-w-7xl mx-auto"
+          className="space-y-8 scroll-mt-24"
         >
           {/* IDEA Section Header */}
           <div className="text-center space-y-4">
@@ -141,13 +146,12 @@ const IdeaProcessSection = () => {
             </p>
           </div>
 
-          {/* IDEA Tabs */}
-          <div className="max-w-5xl mx-auto">
-            {/* Tab triggers */}
+          {/* Mobile Tabs (horizontal) */}
+          <div className="md:hidden max-w-5xl mx-auto">
             <div
               role="tablist"
               aria-label="IDEA Process Phases"
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-3 mb-6 md:mb-8"
+              className="grid grid-cols-2 gap-2 md:gap-3 mb-6"
             >
               {(["I", "D", "E", "A"] as const).map((letter) => {
                 const isActive = activeIdea === letter;
@@ -159,54 +163,51 @@ const IdeaProcessSection = () => {
                     aria-controls={`idea-panel-${letter}`}
                     id={`idea-tab-${letter}`}
                     onClick={() => setActiveIdea(letter)}
-                    className={`group relative flex items-center gap-3 text-left px-4 py-4 md:py-5 rounded-lg border transition-all duration-300 ${
+                    className={`group relative flex items-center gap-3 text-left px-4 py-4 rounded-lg border transition-all duration-300 ${
                       isActive
                         ? "bg-primary/10 border-primary text-foreground shadow-sm"
                         : "bg-secondary border-border text-foreground/80 hover:bg-secondary/80 hover:border-primary/40"
                     }`}
                   >
                     <span
-                      className={`text-4xl md:text-5xl font-extrabold leading-none transition-colors duration-300 ${
+                      className={`text-4xl font-extrabold leading-none transition-colors duration-300 ${
                         isActive ? "text-primary" : "text-primary/70"
                       }`}
                     >
                       {letter}
                     </span>
                     <span className="flex flex-col">
-                      <span className="text-sm md:text-base font-semibold leading-tight">
+                      <span className="text-sm font-semibold leading-tight">
                         {ideaContent[letter].title}
                       </span>
                       <span className="text-xs text-muted-foreground mt-0.5">
                         {ideaContent[letter].subtitle}
                       </span>
                     </span>
-                    {isActive && (
-                      <span
-                        aria-hidden="true"
-                        className="hidden lg:block absolute -bottom-[9px] left-1/2 -translate-x-1/2 w-3 h-3 rotate-45 bg-primary/10 border-r border-b border-primary"
-                      />
-                    )}
                   </button>
                 );
               })}
             </div>
 
-            {/* Tab panel */}
+            {/* Mobile Content Panel */}
             <motion.div
               key={activeIdea}
               initial={mounted ? { opacity: 0, y: 12 } : false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.35 }}
               role="tabpanel"
-              id={`idea-panel-${activeIdea}`}
+              id={`idea-panel-mobile-${activeIdea}`}
               aria-labelledby={`idea-tab-${activeIdea}`}
-              className="bg-secondary/50 border border-border rounded-xl p-5 md:p-8 space-y-4"
+              className="bg-secondary/50 border border-border rounded-xl p-5 space-y-4"
             >
-              <p className="text-base md:text-lg text-foreground leading-relaxed font-bold">
-                {ideaContent[activeIdea].summary}
+              <h3 className="text-xl font-bold text-foreground">
+                Phase {activeIdea === "I" ? "1" : activeIdea === "D" ? "2" : activeIdea === "E" ? "3" : "4"}: {activeContent.title} {activeContent.subtitle}
+              </h3>
+              <p className="text-base text-foreground leading-relaxed font-bold">
+                {activeContent.summary}
               </p>
               <div className="space-y-4">
-                {ideaContent[activeIdea].sections.map((section, sectionIndex) => (
+                {activeContent.sections.map((section, sectionIndex) => (
                   <div key={sectionIndex} className="space-y-2">
                     {section.label && (
                       <h4 className="text-sm font-semibold text-primary uppercase tracking-wide">
@@ -217,16 +218,18 @@ const IdeaProcessSection = () => {
                       {section.bullets.map((bullet, bulletIndex) => (
                         <li
                           key={bulletIndex}
-                          className="flex gap-3 text-foreground/90 leading-relaxed text-sm md:text-base"
+                          className="flex gap-3 text-foreground/90 leading-relaxed text-sm"
                         >
-                          <span className="text-primary flex-shrink-0 leading-relaxed text-sm md:text-base">•</span>
+                          <span className="text-primary flex-shrink-0 leading-relaxed text-sm">
+                            &bull;
+                          </span>
                           <span>{bullet}</span>
                         </li>
                       ))}
                     </ul>
                     {section.deliverable && (
                       <div className="pt-2 border-t border-border mt-2">
-                        <p className="text-foreground text-sm md:text-base">
+                        <p className="text-foreground text-sm">
                           <span className="font-bold text-primary">Deliverable:</span>{" "}
                           {section.deliverable}
                         </p>
@@ -235,11 +238,127 @@ const IdeaProcessSection = () => {
                   </div>
                 ))}
               </div>
-              {ideaContent[activeIdea].deliverable && (
+              {activeContent.deliverable && (
                 <div className="pt-4 border-t border-border">
-                  <p className="text-foreground text-sm md:text-base">
+                  <p className="text-foreground text-sm">
                     <span className="font-bold text-primary">Deliverable:</span>{" "}
-                    {ideaContent[activeIdea].deliverable}
+                    {activeContent.deliverable}
+                  </p>
+                </div>
+              )}
+            </motion.div>
+          </div>
+
+          {/* Desktop Layout (vertical tabs + content) */}
+          <div className="hidden md:grid md:grid-cols-[180px_1fr] gap-8 max-w-6xl mx-auto">
+            {/* Vertical Tabs */}
+            <div
+              role="tablist"
+              aria-label="IDEA Process Phases"
+              className="flex flex-col gap-2"
+            >
+              {(["I", "D", "E", "A"] as const).map((letter) => {
+                const isActive = activeIdea === letter;
+                const content = ideaContent[letter];
+                return (
+                  <button
+                    key={letter}
+                    role="tab"
+                    aria-selected={isActive}
+                    aria-controls={`idea-panel-desktop-${letter}`}
+                    id={`idea-tab-desktop-${letter}`}
+                    onClick={() => setActiveIdea(letter)}
+                    className={`group relative text-left px-4 py-3 rounded-lg border transition-all duration-300 ${
+                      isActive
+                        ? "bg-primary/10 border-primary text-foreground shadow-sm"
+                        : "bg-secondary border-border text-foreground/80 hover:bg-secondary/80 hover:border-primary/40"
+                    }`}
+                  >
+                    <div className="flex items-center gap-3">
+                      <span
+                        className={`text-3xl font-extrabold leading-none transition-colors duration-300 ${
+                          isActive ? "text-primary" : "text-primary/70"
+                        }`}
+                      >
+                        {letter}
+                      </span>
+                      <span className="flex flex-col">
+                        <span className="text-sm font-semibold leading-tight">
+                          {content.title}
+                        </span>
+                        <span className="text-xs text-muted-foreground mt-0.5">
+                          {content.subtitle}
+                        </span>
+                      </span>
+                    </div>
+                    {isActive && (
+                      <span
+                        aria-hidden="true"
+                        className="absolute -right-[9px] top-1/2 -translate-y-1/2 w-3 h-3 rotate-45 bg-primary/10 border-r border-t border-primary hidden lg:block"
+                      />
+                    )}
+                  </button>
+                );
+              })}
+            </div>
+
+            {/* Desktop Content Panel */}
+            <motion.div
+              key={activeIdea}
+              initial={mounted ? { opacity: 0, x: 12 } : false}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.35 }}
+              role="tabpanel"
+              id={`idea-panel-desktop-${activeIdea}`}
+              aria-labelledby={`idea-tab-desktop-${activeIdea}`}
+              className="bg-secondary/50 border border-border rounded-xl p-6 lg:p-8 space-y-6"
+            >
+              <h3 className="text-2xl font-bold text-foreground">
+                Phase {activeIdea === "I" ? "1" : activeIdea === "D" ? "2" : activeIdea === "E" ? "3" : "4"}: {activeContent.title} {activeContent.subtitle}
+              </h3>
+
+              <p className="text-base lg:text-lg text-foreground leading-relaxed font-bold">
+                {activeContent.summary}
+              </p>
+
+              <div className="space-y-6">
+                {activeContent.sections.map((section, sectionIndex) => (
+                  <div key={sectionIndex} className="space-y-3">
+                    {section.label && (
+                      <h4 className="text-sm font-semibold text-primary uppercase tracking-wide">
+                        {section.label}
+                      </h4>
+                    )}
+                    <ul className="space-y-2">
+                      {section.bullets.map((bullet, bulletIndex) => (
+                        <li
+                          key={bulletIndex}
+                          className="flex gap-3 text-foreground/90 leading-relaxed text-sm lg:text-base"
+                        >
+                          <span className="text-primary flex-shrink-0 leading-relaxed text-sm lg:text-base">
+                            &bull;
+                          </span>
+                          <span>{bullet}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    {section.deliverable && (
+                      <div className="pt-2 border-t border-border mt-2">
+                        <p className="text-foreground text-sm lg:text-base">
+                          <span className="font-bold text-primary">Deliverable:</span>{" "}
+                          {section.deliverable}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+
+              {activeContent.deliverable && (
+                <div className="pt-4 border-t border-border">
+                  <p className="text-foreground text-sm lg:text-base">
+                    <span className="font-bold text-primary">Deliverable:</span>{" "}
+                    {activeContent.deliverable}
                   </p>
                 </div>
               )}
