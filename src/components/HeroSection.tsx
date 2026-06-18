@@ -47,22 +47,22 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
               initial={mounted ? { opacity: 0 } : false}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
-              className="mx-auto font-medium text-center mb-12 max-w-3xl leading-relaxed"
+              className="mx-auto font-medium text-center mb-20 max-w-3xl leading-relaxed"
               style={{
                 color: "rgba(255,255,255,0.9)",
                 fontSize: "clamp(1rem, 1.5vw, 1.2rem)",
               }}
             >
               Rubicon equips <span className="font-semibold">C-Suite, Marketing VP's, and R&D leaders</span> with
-              KOL-validated market intelligence, rigorous segmentation, and board-ready financial models through
-              fractional and traditional consulting.
+              KOL-validated market intelligence, rigorous segmentation, and board-ready financial models
+              <br className="hidden md:block" /> through fractional and traditional consulting
             </motion.p>
 
             <motion.div
               initial={mounted ? { opacity: 0, y: 20 } : false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
-              className="pt-2 flex justify-center"
+              className="pt-6 flex justify-center"
             >
               <Button
                 size="lg"

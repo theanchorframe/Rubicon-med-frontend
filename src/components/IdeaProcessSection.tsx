@@ -146,14 +146,21 @@ const IdeaProcessSection = () => {
             </p>
           </div>
 
-          {/* Mobile Tabs (horizontal) */}
-          <div className="md:hidden max-w-5xl mx-auto">
+          {/* Unified Tab Bar */}
+          <div className="max-w-6xl mx-auto">
             <div
               role="tablist"
               aria-label="IDEA Process Phases"
-              className="grid grid-cols-2 gap-2 md:gap-3 mb-6"
+              className="flex flex-col md:flex-row gap-2 md:gap-0 mb-8"
             >
-              {(["I", "D", "E", "A"] as const).map((letter) => {
+              {(
+                [
+                  { letter: "I" as const, label: "Phase 1: Immersion" },
+                  { letter: "D" as const, label: "Phase 2: Delineate" },
+                  { letter: "E" as const, label: "Phase 3: Engage" },
+                  { letter: "A" as const, label: "Phase 4: Action" },
+                ] as const
+              ).map(({ letter, label }) => {
                 const isActive = activeIdea === letter;
                 return (
                   <button
@@ -163,157 +170,33 @@ const IdeaProcessSection = () => {
                     aria-controls={`idea-panel-${letter}`}
                     id={`idea-tab-${letter}`}
                     onClick={() => setActiveIdea(letter)}
-                    className={`group relative flex items-center gap-3 text-left px-4 py-4 rounded-lg border transition-all duration-300 ${
+                    className={`flex-1 text-left md:text-center px-4 py-4 md:py-5 rounded-lg md:rounded-none md:rounded-t-lg border transition-all duration-300 text-sm md:text-base font-semibold ${
                       isActive
                         ? "bg-primary/10 border-primary text-foreground shadow-sm"
                         : "bg-secondary border-border text-foreground/80 hover:bg-secondary/80 hover:border-primary/40"
                     }`}
                   >
-                    <span
-                      className={`text-4xl font-extrabold leading-none transition-colors duration-300 ${
-                        isActive ? "text-primary" : "text-primary/70"
-                      }`}
-                    >
+                    <span className="md:hidden text-2xl font-extrabold text-primary mr-3">
                       {letter}
                     </span>
-                    <span className="flex flex-col">
-                      <span className="text-sm font-semibold leading-tight">
-                        {ideaContent[letter].title}
-                      </span>
-                      <span className="text-xs text-muted-foreground mt-0.5">
-                        {ideaContent[letter].subtitle}
-                      </span>
-                    </span>
+                    {label}
                   </button>
                 );
               })}
             </div>
 
-            {/* Mobile Content Panel */}
+            {/* Content Panel */}
             <motion.div
               key={activeIdea}
               initial={mounted ? { opacity: 0, y: 12 } : false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.35 }}
               role="tabpanel"
-              id={`idea-panel-mobile-${activeIdea}`}
+              id={`idea-panel-${activeIdea}`}
               aria-labelledby={`idea-tab-${activeIdea}`}
-              className="bg-secondary/50 border border-border rounded-xl p-5 space-y-4"
-            >
-              <h3 className="text-xl font-bold text-foreground">
-                Phase {activeIdea === "I" ? "1" : activeIdea === "D" ? "2" : activeIdea === "E" ? "3" : "4"}: {activeContent.title} {activeContent.subtitle}
-              </h3>
-              <p className="text-base text-foreground leading-relaxed font-bold">
-                {activeContent.summary}
-              </p>
-              <div className="space-y-4">
-                {activeContent.sections.map((section, sectionIndex) => (
-                  <div key={sectionIndex} className="space-y-2">
-                    {section.label && (
-                      <h4 className="text-sm font-semibold text-primary uppercase tracking-wide">
-                        {section.label}
-                      </h4>
-                    )}
-                    <ul className="space-y-2">
-                      {section.bullets.map((bullet, bulletIndex) => (
-                        <li
-                          key={bulletIndex}
-                          className="flex gap-3 text-foreground/90 leading-relaxed text-sm"
-                        >
-                          <span className="text-primary flex-shrink-0 leading-relaxed text-sm">
-                            &bull;
-                          </span>
-                          <span>{bullet}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    {section.deliverable && (
-                      <div className="pt-2 border-t border-border mt-2">
-                        <p className="text-foreground text-sm">
-                          <span className="font-bold text-primary">Deliverable:</span>{" "}
-                          {section.deliverable}
-                        </p>
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-              {activeContent.deliverable && (
-                <div className="pt-4 border-t border-border">
-                  <p className="text-foreground text-sm">
-                    <span className="font-bold text-primary">Deliverable:</span>{" "}
-                    {activeContent.deliverable}
-                  </p>
-                </div>
-              )}
-            </motion.div>
-          </div>
-
-          {/* Desktop Layout (vertical tabs + content) */}
-          <div className="hidden md:grid md:grid-cols-[180px_1fr] gap-8 max-w-6xl mx-auto">
-            {/* Vertical Tabs */}
-            <div
-              role="tablist"
-              aria-label="IDEA Process Phases"
-              className="flex flex-col gap-2"
-            >
-              {(["I", "D", "E", "A"] as const).map((letter) => {
-                const isActive = activeIdea === letter;
-                const content = ideaContent[letter];
-                return (
-                  <button
-                    key={letter}
-                    role="tab"
-                    aria-selected={isActive}
-                    aria-controls={`idea-panel-desktop-${letter}`}
-                    id={`idea-tab-desktop-${letter}`}
-                    onClick={() => setActiveIdea(letter)}
-                    className={`group relative text-left px-4 py-3 rounded-lg border transition-all duration-300 ${
-                      isActive
-                        ? "bg-primary/10 border-primary text-foreground shadow-sm"
-                        : "bg-secondary border-border text-foreground/80 hover:bg-secondary/80 hover:border-primary/40"
-                    }`}
-                  >
-                    <div className="flex items-center gap-3">
-                      <span
-                        className={`text-3xl font-extrabold leading-none transition-colors duration-300 ${
-                          isActive ? "text-primary" : "text-primary/70"
-                        }`}
-                      >
-                        {letter}
-                      </span>
-                      <span className="flex flex-col">
-                        <span className="text-sm font-semibold leading-tight">
-                          {content.title}
-                        </span>
-                        <span className="text-xs text-muted-foreground mt-0.5">
-                          {content.subtitle}
-                        </span>
-                      </span>
-                    </div>
-                    {isActive && (
-                      <span
-                        aria-hidden="true"
-                        className="absolute -right-[9px] top-1/2 -translate-y-1/2 w-3 h-3 rotate-45 bg-primary/10 border-r border-t border-primary hidden lg:block"
-                      />
-                    )}
-                  </button>
-                );
-              })}
-            </div>
-
-            {/* Desktop Content Panel */}
-            <motion.div
-              key={activeIdea}
-              initial={mounted ? { opacity: 0, x: 12 } : false}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.35 }}
-              role="tabpanel"
-              id={`idea-panel-desktop-${activeIdea}`}
-              aria-labelledby={`idea-tab-desktop-${activeIdea}`}
               className="bg-secondary/50 border border-border rounded-xl p-6 lg:p-8 space-y-6"
             >
-              <h3 className="text-2xl font-bold text-foreground">
+              <h3 className="text-xl md:text-2xl font-bold text-foreground">
                 Phase {activeIdea === "I" ? "1" : activeIdea === "D" ? "2" : activeIdea === "E" ? "3" : "4"}: {activeContent.title} {activeContent.subtitle}
               </h3>
 
