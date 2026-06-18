@@ -155,12 +155,12 @@ const IdeaProcessSection = () => {
             >
               {(
                 [
-                  { letter: "I" as const, label: "Phase 1: Immersion" },
-                  { letter: "D" as const, label: "Phase 2: Delineate" },
-                  { letter: "E" as const, label: "Phase 3: Engage" },
-                  { letter: "A" as const, label: "Phase 4: Action" },
+                  { letter: "I" as const, label: "Phase 1: ", rest: "Immersion" },
+                  { letter: "D" as const, label: "Phase 2: ", rest: "Delineate" },
+                  { letter: "E" as const, label: "Phase 3: ", rest: "Engage" },
+                  { letter: "A" as const, label: "Phase 4: ", rest: "Action" },
                 ] as const
-              ).map(({ letter, label }) => {
+              ).map(({ letter, label, rest }) => {
                 const isActive = activeIdea === letter;
                 return (
                   <button
@@ -179,7 +179,17 @@ const IdeaProcessSection = () => {
                     <span className="md:hidden text-2xl font-extrabold text-primary mr-3">
                       {letter}
                     </span>
-                    {label}
+                    <span>
+                      {label}
+                      <span className="inline-flex items-baseline">
+                        <span className="text-3xl font-extrabold text-primary leading-none mr-[1px]">
+                          {rest.charAt(0)}
+                        </span>
+                        <span className="text-sm md:text-base font-semibold">
+                          {rest.slice(1)}
+                        </span>
+                      </span>
+                    </span>
                   </button>
                 );
               })}
