@@ -155,10 +155,10 @@ const IdeaProcessSection = () => {
             >
               {(
                 [
-                  { letter: "I" as const, label: "I | Phase 1: Immersion" },
-                  { letter: "D" as const, label: "D | Phase 2: Delineate" },
-                  { letter: "E" as const, label: "E | Phase 3: Engage" },
-                  { letter: "A" as const, label: "A | Phase 4: Action" },
+                  { letter: "I" as const, label: "I Phase 1: Immersion" },
+                  { letter: "D" as const, label: "D Phase 2: Delineate" },
+                  { letter: "E" as const, label: "E Phase 3: Engage" },
+                  { letter: "A" as const, label: "A Phase 4: Action" },
                 ] as const
               ).map(({ letter, label }) => {
                 const isActive = activeIdea === letter;
@@ -174,12 +174,12 @@ const IdeaProcessSection = () => {
                     onClick={() => setActiveIdea(letter)}
                     className={`flex-1 text-left md:text-center px-4 py-4 md:py-5 rounded-lg md:rounded-none md:rounded-t-lg border transition-all duration-300 text-sm md:text-base font-semibold ${
                       isActive
-                        ? "bg-primary/10 border-primary text-foreground shadow-sm"
-                        : "bg-secondary border-border text-foreground/80 hover:bg-secondary/80 hover:border-primary/40"
+                        ? "bg-primary/10 border-primary shadow-sm"
+                        : "bg-secondary border-border hover:bg-secondary/80 hover:border-primary/40"
                     }`}
                   >
                     <span className="text-primary font-bold">{prefix}</span>
-                    <span>{rest}</span>
+                    <span className="text-slate-600">{rest}</span>
                   </button>
                 );
               })}
