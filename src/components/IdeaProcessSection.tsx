@@ -144,6 +144,9 @@ const IdeaProcessSection = () => {
             <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
               Our four-stage framework ensures strategic consensus, landscape transparency, and data-driven discovery to provide board-ready outcomes grounded in market reality.
             </p>
+            <p className="text-base md:text-lg text-muted-foreground/80 max-w-4xl mx-auto leading-relaxed">
+              Select a phase below to explore each step in our project lifecycle and strategic roadmap.
+            </p>
           </div>
 
           {/* Unified Tab Bar */}
@@ -183,7 +186,7 @@ const IdeaProcessSection = () => {
             </div>
 
             {/* Content Panel */}
-            {activeContent ? (
+            {activeContent && (
               <motion.div
                 key={activeIdea}
                 initial={mounted ? { opacity: 0, y: 12 } : false}
@@ -244,10 +247,6 @@ const IdeaProcessSection = () => {
                   </div>
                 )}
               </motion.div>
-            ) : (
-              <div className="bg-secondary/50 border border-border rounded-xl p-6 lg:p-8 text-center text-muted-foreground text-lg">
-                Select a phase above to explore each step in our project lifecycle and strategic roadmap.
-              </div>
             )}
           </div>
         </motion.div>

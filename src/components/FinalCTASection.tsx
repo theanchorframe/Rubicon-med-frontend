@@ -32,7 +32,7 @@ const FinalCTASection = ({ onOpenConsultationDialog }: FinalCTASectionProps) => 
               <Button
                 size="lg"
                 onClick={onOpenConsultationDialog}
-                className="shine-effect text-lg sm:text-xl px-6 sm:px-12 py-6 sm:py-8 h-auto bg-white text-navy hover:bg-white/90 whitespace-normal text-center leading-tight max-w-full font-bold"
+                className="shine-effect text-lg sm:text-xl px-6 sm:px-12 py-6 sm:py-8 h-auto bg-white text-navy hover:bg-white/90 whitespace-normal text-center leading-tight max-w-full"
               >
                 Request a Complimentary Consultation
               </Button>
