@@ -40,7 +40,7 @@ const CTABanner = ({ onOpenCaseStudyPopup }: CTABannerProps) => {
           </div>
 
           {/* Desktop: Two columns */}
-          <div className="hidden lg:grid lg:grid-cols-2 gap-12 items-center">
+          <div className="hidden lg:grid lg:grid-cols-2 gap-12 items-start">
             {/* Left: Headline + subheadline + button */}
             <div className="space-y-6">
               <h3 className="text-4xl xl:text-5xl font-bold text-foreground leading-tight">
@@ -59,7 +59,7 @@ const CTABanner = ({ onOpenCaseStudyPopup }: CTABannerProps) => {
             </div>
 
             {/* Right: Chart */}
-            <div className="flex items-center justify-center">
+            <div>
               <StatsChart />
             </div>
           </div>

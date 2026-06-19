@@ -104,7 +104,7 @@ const TestimonialsSection = () => {
                   onClick={() =>
                     setExpandedCard(expandedCard === index ? null : index)
                   }
-                  className="text-primary font-semibold hover:underline mb-4"
+                  className="text-primary font-semibold hover:underline py-2 px-2 -mx-2 mb-2"
                 >
                   {expandedCard === index ? "Read less" : "Read more"}
                 </button>
