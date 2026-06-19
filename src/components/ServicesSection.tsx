@@ -111,7 +111,7 @@ const ServicesSection = ({ onOpenConsultationDialog }: ServicesSectionProps) => 
 
 
         </motion.h2>
-        <div className="max-w-7xl mx-auto mt-12 flex flex-col lg:flex-row gap-8">
+        <div className="max-w-7xl mx-auto mt-8 flex flex-col lg:flex-row gap-8">
           {/* Column 1 */}
           <div className="flex-1 flex flex-col gap-8">
             {[0, 3].map((index) => {
