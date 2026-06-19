@@ -144,6 +144,9 @@ const IdeaProcessSection = () => {
             <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
               Our four-stage framework ensures strategic consensus, landscape transparency, and data-driven discovery to provide board-ready outcomes grounded in market reality.
             </p>
+            <p className="text-base md:text-lg text-muted-foreground/80 max-w-4xl mx-auto leading-relaxed">
+              Select a phase below to explore each step in our project lifecycle and strategic roadmap.
+            </p>
           </div>
 
           {/* Unified Tab Bar */}
