@@ -186,7 +186,7 @@ const IdeaProcessSection = () => {
             </div>
 
             {/* Content Panel */}
-            {activeContent ? (
+            {activeContent && (
               <motion.div
                 key={activeIdea}
                 initial={mounted ? { opacity: 0, y: 12 } : false}
@@ -247,10 +247,6 @@ const IdeaProcessSection = () => {
                   </div>
                 )}
               </motion.div>
-            ) : (
-              <div className="bg-secondary/50 border border-border rounded-xl p-6 lg:p-8 text-center text-muted-foreground text-lg">
-                Select a phase above to explore each step in our project lifecycle and strategic roadmap.
-              </div>
             )}
           </div>
         </motion.div>
