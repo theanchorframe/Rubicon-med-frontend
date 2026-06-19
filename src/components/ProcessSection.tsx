@@ -35,7 +35,7 @@ const ProcessSection = () => {
           className="space-y-12 max-w-7xl mx-auto"
         >
           {/* Two Column Layout: Stats Left, Content Right */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-14">
             {/* Left Column - Statistics */}
             <div className="space-y-6">
               <motion.h2
@@ -43,7 +43,7 @@ const ProcessSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="sm:text-4xl lg:text-5xl font-bold text-foreground text-4xl"
+                className="sm:text-4xl lg:text-5xl font-bold text-foreground text-4xl max-w-[480px] lg:max-w-[580px] leading-tight"
               >
                 Convert Clinical Insight into <span className="text-primary">Market Traction</span>
               </motion.h2>
@@ -74,7 +74,7 @@ const ProcessSection = () => {
                 viewport={{ once: true }}
                 className="font-bold text-foreground text-4xl"
               >
-                <span className="text-primary">Rob Miraglia</span>: Your Partner in MedTech Growth.
+                <span className="text-primary">Rob Miraglia</span>: Your Partner in MedTech Growth
               </motion.h2>
               <motion.p
                 initial={mounted ? { opacity: 0, y: 20 } : false}
@@ -99,7 +99,7 @@ const ProcessSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
                 viewport={{ once: true }}
-                className="flex justify-center pt-4"
+                className="flex justify-center pt-6"
               >
                 <img
                   src={robHeadshot}
