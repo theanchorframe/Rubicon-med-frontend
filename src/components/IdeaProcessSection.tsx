@@ -162,7 +162,6 @@ const IdeaProcessSection = () => {
                 ] as const
               ).map(({ letter, phase }) => {
                 const isActive = activeIdea === letter;
-                const [prefix, word] = phase.split(": ");
                 return (
                   <button
                     key={letter}
@@ -177,9 +176,7 @@ const IdeaProcessSection = () => {
                         : "bg-secondary border-border hover:bg-secondary/80 hover:border-primary/40"
                     }`}
                   >
-                    <span>{prefix}: </span>
-                    <span className="font-black">{word.charAt(0)}</span>
-                    <span>{word.slice(1)}</span>
+                    <span>{letter} &bull; {phase}</span>
                   </button>
                 );
               })}
