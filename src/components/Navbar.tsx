@@ -91,7 +91,7 @@ const Navbar = ({ onOpenConsultationDialog }: NavbarProps) => {
             </div>
 
             <div className="hidden lg:flex">
-              <Button className="shine-effect text-lg px-8 py-4 h-auto bg-primary hover:bg-primary/90" onClick={() => onOpenConsultationDialog()}>Request a Complimentary Consultation</Button>
+              <Button className="shine-effect text-lg px-8 py-4 h-auto bg-primary hover:bg-primary/90" onClick={() => onOpenConsultationDialog()}>Request a Consult</Button>
             </div>
 
             <button className="lg:hidden text-foreground" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
@@ -113,7 +113,7 @@ const Navbar = ({ onOpenConsultationDialog }: NavbarProps) => {
             <button onClick={() => { navigate("/services"); setIsMobileMenuOpen(false); }} className="nav-link block w-full text-left py-2 text-foreground hover:text-primary transition-colors font-medium text-base">Services</button>
             <button onClick={() => handleNavClick("case-study")} className="nav-link block w-full text-left py-2 text-foreground hover:text-primary transition-colors font-medium text-base">EPD Case Study</button>
             <button onClick={() => handleNavClick("faq")} className="nav-link block w-full text-left py-2 text-foreground hover:text-primary transition-colors font-medium text-base">FAQ</button>
-            <Button className="w-full shine-effect text-lg px-8 py-4 h-auto bg-primary hover:bg-primary/90" onClick={() => { onOpenConsultationDialog(); setIsMobileMenuOpen(false); }}>Request a Complimentary Consultation</Button>
+            <Button className="w-full shine-effect text-lg px-8 py-4 h-auto bg-primary hover:bg-primary/90" onClick={() => { onOpenConsultationDialog(); setIsMobileMenuOpen(false); }}>Request a Consult</Button>
           </div>
         </div>
       </nav>
