@@ -53,7 +53,7 @@ const HeroSection = ({ onOpenConsultation }: HeroSectionProps) => {
                 fontSize: "clamp(1rem, 1.5vw, 1.2rem)",
               }}
             >
-              Rubicon equips <span className="font-semibold">C-Suite, Marketing VP's, and R&D leaders</span> with
+              Rubicon equips <span className="font-semibold">C-Suite, Marketing VPs, and R&D leaders</span> with
               KOL-validated market intelligence, rigorous segmentation, and board-ready financial models
               <br className="hidden md:block" /> through fractional and traditional consulting
             </motion.p>
