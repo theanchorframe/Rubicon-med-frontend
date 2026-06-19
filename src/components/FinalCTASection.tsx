@@ -26,7 +26,7 @@ const FinalCTASection = ({ onOpenConsultationDialog }: FinalCTASectionProps) => 
               Every Major Market Decision Is a Rubicon Moment
             </h2>
             <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed" style={{ color: "rgba(255,255,255,0.85)" }}>
-              When Julius Caesar crossed the Rubicon, it was a point of no return -- a commitment to move forward with absolute clarity and decisive action. Rubicon ensures you cross with confidence, not assumption.
+              When Julius Caesar crossed the Rubicon, it was a point of no return—a commitment to move forward with absolute clarity and decisive action. Rubicon ensures you cross with confidence, not assumption.
             </p>
             <div className="pt-4">
               <Button
