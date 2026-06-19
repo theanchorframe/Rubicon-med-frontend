@@ -162,7 +162,6 @@ const IdeaProcessSection = () => {
                 ] as const
               ).map(({ letter, phase }) => {
                 const isActive = activeIdea === letter;
-                const [prefix, word] = phase.split(": ");
                 return (
                   <button
                     key={letter}
@@ -177,9 +176,7 @@ const IdeaProcessSection = () => {
                         : "bg-secondary border-border hover:bg-secondary/80 hover:border-primary/40"
                     }`}
                   >
-                    <span>{prefix}: </span>
-                    <span className="font-black">{word.charAt(0)}</span>
-                    <span>{word.slice(1)}</span>
+                    <span>{letter} &bull; {phase}</span>
                   </button>
                 );
               })}
@@ -249,7 +246,7 @@ const IdeaProcessSection = () => {
               </motion.div>
             ) : (
               <div className="bg-secondary/50 border border-border rounded-xl p-6 lg:p-8 text-center text-muted-foreground text-lg">
-                Select a phase above to explore our commercialization process.
+                Select a phase above to explore each step in our project lifecycle and strategic roadmap.
               </div>
             )}
           </div>
