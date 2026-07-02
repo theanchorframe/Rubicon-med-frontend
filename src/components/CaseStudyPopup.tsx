@@ -78,13 +78,6 @@ const CaseStudyPopup = ({ isOpen, onClose }: CaseStudyPopupProps) => {
                   />
                 </div>
                 
-                <button
-                  type="button"
-                  onClick={onClose}
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors -mt-2"
-                >
-                  Maybe Later
-                </button>
               </div>
             </motion.div>
           </div>
