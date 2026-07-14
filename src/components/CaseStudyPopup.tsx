@@ -1,89 +1,256 @@
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X } from "lucide-react";
+import { X, CheckCircle2, Loader2 } from "lucide-react";
+import { z } from "zod";
 import caseStudyBanner from "@/assets/epd-case-study.webp";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
+import ConsultationDialog from "@/components/ConsultationDialog";
 
 interface CaseStudyPopupProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
+const formSchema = z.object({
+  fullName: z.string().trim().min(1, "Full name is required").max(120),
+  email: z.string().trim().email("Enter a valid email").max(255),
+  wantsConsultation: z.boolean(),
+});
+
+type FieldErrors = Partial<Record<"fullName" | "email", string>>;
+
+// TODO: replace with the hosted PDF or /case-study route once provided
+const CASE_STUDY_VIEW_URL = "#";
+
 const CaseStudyPopup = ({ isOpen, onClose }: CaseStudyPopupProps) => {
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [wantsConsultation, setWantsConsultation] = useState(false);
+  const [errors, setErrors] = useState<FieldErrors>({});
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [consultationOpen, setConsultationOpen] = useState(false);
+
+  const resetAndClose = () => {
+    onClose();
+    // brief delay so the fade-out finishes before we reset visible state
+    setTimeout(() => {
+      setFullName("");
+      setEmail("");
+      setWantsConsultation(false);
+      setErrors({});
+      setSubmitting(false);
+      setSubmitted(false);
+    }, 300);
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const parsed = formSchema.safeParse({ fullName, email, wantsConsultation });
+    if (!parsed.success) {
+      const flat = parsed.error.flatten().fieldErrors;
+      setErrors({
+        fullName: flat.fullName?.[0],
+        email: flat.email?.[0],
+      });
+      return;
+    }
+    setErrors({});
+    setSubmitting(true);
+    try {
+      const { data, error } = await supabase.functions.invoke("submit-case-study-lead", {
+        body: parsed.data,
+      });
+      if (error || !data?.ok) {
+        throw new Error(error?.message || "Submission failed");
+      }
+      setSubmitted(true);
+    } catch (err) {
+      console.error(err);
+      toast.error("Something went wrong. Please try again in a moment.");
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
   return (
-    <AnimatePresence>
-      {isOpen && (
-        <>
-          {/* Backdrop */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="fixed inset-0 bg-black/50 z-50"
-            onClick={onClose}
-          />
-          
-          {/* Popup Container */}
-          <div className="fixed inset-0 z-50 flex items-center justify-center pointer-events-none p-4">
+    <>
+      <AnimatePresence>
+        {isOpen && (
+          <>
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ duration: 0.4, ease: "easeOut" }}
-              className="w-[95%] max-w-lg bg-background rounded-xl shadow-2xl overflow-hidden pointer-events-auto relative max-h-[90vh] overflow-y-auto"
-            >
-              {/* Close button */}
-              <button
-                onClick={onClose}
-                className="absolute top-3 right-3 z-10 p-2 rounded-full bg-background/80 hover:bg-background transition-colors"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="fixed inset-0 bg-black/50 z-50"
+              onClick={resetAndClose}
+            />
+
+            <div className="fixed inset-0 z-50 flex items-center justify-center pointer-events-none p-4">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
+                className="w-[95%] max-w-lg bg-background rounded-xl shadow-2xl pointer-events-auto relative max-h-[92vh] overflow-y-auto"
               >
-                <X className="h-5 w-5 text-foreground" />
-              </button>
+                <button
+                  onClick={resetAndClose}
+                  aria-label="Close"
+                  className="absolute top-3 right-3 z-10 p-2 rounded-full bg-background/80 hover:bg-background transition-colors"
+                >
+                  <X className="h-5 w-5 text-foreground" />
+                </button>
 
-              {/* Banner image */}
-              <div className="w-full h-40 md:h-48 overflow-hidden bg-background flex items-center justify-center">
-                <img
-                  src={caseStudyBanner}
-                  alt="EPD Case Study"
-                  className="w-full h-full object-contain"
-                />
-              </div>
+                <div className="px-5 pt-6 pb-5 md:px-7 md:pt-7 md:pb-6 space-y-4">
+                  {/* Header */}
+                  <div className="space-y-1 text-center">
+                    <h3 className="text-navy font-bold text-xl md:text-2xl leading-tight">
+                      Get Our Complimentary EPD Case Study
+                    </h3>
+                    <p className="hidden md:block text-sm text-navy/70">
+                      How one MedTech team unlocked $35M in co-development funding.
+                    </p>
+                  </div>
 
-              {/* Content */}
-              <div className="p-4 md:p-6 space-y-3 text-center">
-                <h3 className="text-navy font-bold text-2xl md:text-3xl">
-                  Get Our Complimentary EPD Case Study
-                </h3>
-                <p className="text-base md:text-lg text-navy/80 leading-relaxed">
-                  How one MedTech team unlocked $35M in co-development funding.
-                </p>
-                
-                {/* GHL Form */}
-                <div className="w-full min-h-[280px] rounded-lg overflow-hidden">
-                  <iframe
-                    src="https://link.anchorframe.com/widget/form/RSwk9c8PsfVO57gzIn2m"
-                    style={{ width: "100%", height: "280px", border: "none", borderRadius: "8px" }}
-                    id="popup-case-study-RSwk9c8PsfVO57gzIn2m" 
-                    data-layout="{'id':'INLINE'}"
-                    data-trigger-type="alwaysShow"
-                    data-trigger-value=""
-                    data-activation-type="alwaysActivated"
-                    data-activation-value=""
-                    data-deactivation-type="neverDeactivate"
-                    data-deactivation-value=""
-                    data-form-name="EPD Case Study Popup"
-                    data-height="280"
-                    data-layout-iframe-id="popup-case-study-RSwk9c8PsfVO57gzIn2m"
-                    data-form-id="RSwk9c8PsfVO57gzIn2m"
-                    title="EPD Case Study Popup"
-                  />
+                  {/* Banner */}
+                  <div className="w-full h-16 md:h-28 overflow-hidden flex items-center justify-center">
+                    <img
+                      src={caseStudyBanner}
+                      alt="EPD Case Study"
+                      className="h-full w-auto object-contain"
+                    />
+                  </div>
+
+                  {submitted ? (
+                    <div className="space-y-4 text-center">
+                      <CheckCircle2 className="mx-auto h-10 w-10 text-navy" />
+                      {wantsConsultation ? (
+                        <>
+                          <h4 className="text-navy font-bold text-lg md:text-xl">
+                            You're all set — and we've been notified.
+                          </h4>
+                          <p className="text-sm md:text-base text-navy/80 leading-relaxed">
+                            The EPD case study is on its way to <span className="font-medium">{email}</span>. Want to move faster? Pick a time now so you don't have to wait for us to reach out.
+                          </p>
+                          <div className="flex flex-col gap-2 pt-1">
+                            <Button
+                              onClick={() => {
+                                setConsultationOpen(true);
+                              }}
+                              className="w-full h-12 bg-[#003B6F] text-white hover:bg-[#003B6F]/90"
+                            >
+                              Pick a time now
+                            </Button>
+                            <a
+                              href={CASE_STUDY_VIEW_URL}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-sm text-navy/70 hover:text-navy underline underline-offset-4"
+                            >
+                              View the case study now
+                            </a>
+                          </div>
+                        </>
+                      ) : (
+                        <>
+                          <h4 className="text-navy font-bold text-lg md:text-xl">
+                            You're all set.
+                          </h4>
+                          <p className="text-sm md:text-base text-navy/80 leading-relaxed">
+                            We just emailed the EPD case study to <span className="font-medium">{email}</span>. Didn't get it in a couple of minutes? Check spam — or view it now below.
+                          </p>
+                          <div className="flex flex-col gap-2 pt-1">
+                            <a
+                              href={CASE_STUDY_VIEW_URL}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center justify-center w-full h-12 rounded-md bg-[#003B6F] text-white font-medium hover:bg-[#003B6F]/90 transition-colors"
+                            >
+                              View the case study now
+                            </a>
+                          </div>
+                        </>
+                      )}
+                    </div>
+                  ) : (
+                    <form onSubmit={handleSubmit} className="space-y-3" noValidate>
+                      <div className="space-y-1.5">
+                        <Label htmlFor="cs-fullname" className="text-navy">Full Name</Label>
+                        <Input
+                          id="cs-fullname"
+                          value={fullName}
+                          onChange={(e) => setFullName(e.target.value)}
+                          placeholder="Jane Doe"
+                          className="h-11"
+                          autoComplete="name"
+                          maxLength={120}
+                        />
+                        {errors.fullName && (
+                          <p className="text-xs text-destructive">{errors.fullName}</p>
+                        )}
+                      </div>
+
+                      <div className="space-y-1.5">
+                        <Label htmlFor="cs-email" className="text-navy">Company Email</Label>
+                        <Input
+                          id="cs-email"
+                          type="email"
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
+                          placeholder="jane@company.com"
+                          className="h-11"
+                          autoComplete="email"
+                          maxLength={255}
+                        />
+                        {errors.email && (
+                          <p className="text-xs text-destructive">{errors.email}</p>
+                        )}
+                      </div>
+
+                      <label className="flex items-start gap-3 pt-1 cursor-pointer select-none">
+                        <Checkbox
+                          id="cs-consult"
+                          checked={wantsConsultation}
+                          onCheckedChange={(v) => setWantsConsultation(v === true)}
+                          className="mt-0.5"
+                        />
+                        <span className="text-sm text-navy/85 leading-snug">
+                          Please contact me to schedule a complimentary consultation
+                        </span>
+                      </label>
+
+                      <Button
+                        type="submit"
+                        disabled={submitting}
+                        className="w-full h-12 bg-[#003B6F] text-white hover:bg-[#003B6F]/90 mt-1"
+                      >
+                        {submitting ? (
+                          <>
+                            <Loader2 className="h-4 w-4 animate-spin mr-2" />
+                            Sending…
+                          </>
+                        ) : (
+                          "Send me the case study"
+                        )}
+                      </Button>
+                    </form>
+                  )}
                 </div>
-                
-              </div>
-            </motion.div>
-          </div>
-        </>
-      )}
-    </AnimatePresence>
+              </motion.div>
+            </div>
+          </>
+        )}
+      </AnimatePresence>
+
+      <ConsultationDialog open={consultationOpen} onOpenChange={setConsultationOpen} />
+    </>
   );
 };
 
