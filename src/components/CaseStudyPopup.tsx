@@ -137,7 +137,7 @@ const CaseStudyPopup = ({ isOpen, onClose }: CaseStudyPopupProps) => {
                             You're all set — and we've been notified.
                           </h4>
                           <p className="text-sm md:text-base text-navy/80 leading-relaxed">
-                            The EPD case study is on its way to <span className="font-medium">{email}</span>. Want to move faster? Pick a time now so you don't have to wait for us to reach out.
+                            The EPD case study is on its way to <span className="font-medium">{email}</span>. Share a bit more about what you'd like to discuss and we'll come to the conversation ready to talk specifics.
                           </p>
                           <div className="flex flex-col gap-2 pt-1">
                             <Button
@@ -146,7 +146,7 @@ const CaseStudyPopup = ({ isOpen, onClose }: CaseStudyPopupProps) => {
                               }}
                               className="w-full h-12 bg-[#003B6F] text-white hover:bg-[#003B6F]/90"
                             >
-                              Pick a time now
+                              Tell us more about your project
                             </Button>
                             <a
                               href={CASE_STUDY_VIEW_URL}
