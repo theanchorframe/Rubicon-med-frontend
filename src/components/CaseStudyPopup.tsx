@@ -182,7 +182,7 @@ const CaseStudyPopup = ({ isOpen, onClose }: CaseStudyPopupProps) => {
                   ) : (
                     <form onSubmit={handleSubmit} className="space-y-3" noValidate>
                       <div className="space-y-1.5">
-                        <Label htmlFor="cs-fullname" className="text-navy">Full Name</Label>
+                        <Label htmlFor="cs-fullname" className="text-navy">Full Name <span className="text-destructive">*</span></Label>
                         <Input
                           id="cs-fullname"
                           value={fullName}
@@ -198,7 +198,7 @@ const CaseStudyPopup = ({ isOpen, onClose }: CaseStudyPopupProps) => {
                       </div>
 
                       <div className="space-y-1.5">
-                        <Label htmlFor="cs-email" className="text-navy">Company Email</Label>
+                        <Label htmlFor="cs-email" className="text-navy">Company Email <span className="text-destructive">*</span></Label>
                         <Input
                           id="cs-email"
                           type="email"
