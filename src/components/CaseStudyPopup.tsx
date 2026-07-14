@@ -214,18 +214,6 @@ const CaseStudyPopup = ({ isOpen, onClose }: CaseStudyPopupProps) => {
                         )}
                       </div>
 
-                      <label className="flex items-start gap-3 pt-1 cursor-pointer select-none">
-                        <Checkbox
-                          id="cs-consult"
-                          checked={wantsConsultation}
-                          onCheckedChange={(v) => setWantsConsultation(v === true)}
-                          className="mt-0.5"
-                        />
-                        <span className="text-sm text-navy/85 leading-snug">
-                          Please contact me to schedule a complimentary consultation
-                        </span>
-                      </label>
-
                       <Button
                         type="submit"
                         disabled={submitting}
@@ -240,6 +228,18 @@ const CaseStudyPopup = ({ isOpen, onClose }: CaseStudyPopupProps) => {
                           "Send me the case study"
                         )}
                       </Button>
+
+                      <label className="flex items-start gap-3 pt-1 cursor-pointer select-none">
+                        <Checkbox
+                          id="cs-consult"
+                          checked={wantsConsultation}
+                          onCheckedChange={(v) => setWantsConsultation(v === true)}
+                          className="mt-0.5"
+                        />
+                        <span className="text-sm text-navy/85 leading-snug">
+                          Please contact me to schedule a complimentary consultation
+                        </span>
+                      </label>
                     </form>
                   )}
                 </div>
