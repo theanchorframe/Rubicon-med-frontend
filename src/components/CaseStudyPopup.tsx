@@ -182,7 +182,7 @@ const CaseStudyPopup = ({ isOpen, onClose }: CaseStudyPopupProps) => {
                   ) : (
                     <form onSubmit={handleSubmit} className="space-y-3" noValidate>
                       <div className="space-y-1.5">
-                        <Label htmlFor="cs-fullname" className="text-navy">Full Name</Label>
+                        <Label htmlFor="cs-fullname" className="text-navy">Full Name <span className="text-destructive">*</span></Label>
                         <Input
                           id="cs-fullname"
                           value={fullName}
@@ -198,7 +198,7 @@ const CaseStudyPopup = ({ isOpen, onClose }: CaseStudyPopupProps) => {
                       </div>
 
                       <div className="space-y-1.5">
-                        <Label htmlFor="cs-email" className="text-navy">Company Email</Label>
+                        <Label htmlFor="cs-email" className="text-navy">Company Email <span className="text-destructive">*</span></Label>
                         <Input
                           id="cs-email"
                           type="email"
@@ -214,18 +214,6 @@ const CaseStudyPopup = ({ isOpen, onClose }: CaseStudyPopupProps) => {
                         )}
                       </div>
 
-                      <label className="flex items-start gap-3 pt-1 cursor-pointer select-none">
-                        <Checkbox
-                          id="cs-consult"
-                          checked={wantsConsultation}
-                          onCheckedChange={(v) => setWantsConsultation(v === true)}
-                          className="mt-0.5"
-                        />
-                        <span className="text-sm text-navy/85 leading-snug">
-                          Please contact me to schedule a complimentary consultation
-                        </span>
-                      </label>
-
                       <Button
                         type="submit"
                         disabled={submitting}
@@ -240,6 +228,18 @@ const CaseStudyPopup = ({ isOpen, onClose }: CaseStudyPopupProps) => {
                           "Send me the case study"
                         )}
                       </Button>
+
+                      <label className="flex items-start gap-3 pt-1 cursor-pointer select-none">
+                        <Checkbox
+                          id="cs-consult"
+                          checked={wantsConsultation}
+                          onCheckedChange={(v) => setWantsConsultation(v === true)}
+                          className="mt-0.5"
+                        />
+                        <span className="text-sm text-navy/85 leading-snug">
+                          Please contact me to schedule a complimentary consultation
+                        </span>
+                      </label>
                     </form>
                   )}
                 </div>
