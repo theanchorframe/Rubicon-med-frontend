@@ -164,18 +164,8 @@ const CaseStudyPopup = ({ isOpen, onClose }: CaseStudyPopupProps) => {
                             You're all set.
                           </h4>
                           <p className="text-sm md:text-base text-navy/80 leading-relaxed">
-                            We just emailed the EPD case study to <span className="font-medium">{email}</span>. Didn't get it in a couple of minutes? Check spam — or view it now below.
+                            We just emailed the EPD case study to <span className="font-medium">{email}</span>. If it's not in your Inbox within a few minutes, please check your spam folder and/or click <a href={CASE_STUDY_VIEW_URL} target="_blank" rel="noopener noreferrer" className="font-medium underline underline-offset-4 hover:text-navy">"View the case study now"</a>.
                           </p>
-                          <div className="flex flex-col gap-2 pt-1">
-                            <a
-                              href={CASE_STUDY_VIEW_URL}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="inline-flex items-center justify-center w-full h-12 rounded-md bg-[#003B6F] text-white font-medium hover:bg-[#003B6F]/90 transition-colors"
-                            >
-                              View the case study now
-                            </a>
-                          </div>
                         </>
                       )}
                     </div>
