@@ -134,7 +134,7 @@ const CaseStudyPopup = ({ isOpen, onClose }: CaseStudyPopupProps) => {
                       {wantsConsultation ? (
                         <>
                           <h4 className="text-navy font-bold text-lg md:text-xl">
-                            You're all set — and we've been notified.
+                            You're all set.
                           </h4>
                           <p className="text-sm md:text-base text-navy/80 leading-relaxed">
                             The EPD case study is on its way to <span className="font-medium">{email}</span>. Share a bit more about what you'd like to discuss and we'll come to the conversation ready to talk specifics.
