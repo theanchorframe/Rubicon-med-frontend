@@ -180,7 +180,7 @@ const CaseStudyPopup = ({ isOpen, onClose }: CaseStudyPopupProps) => {
                       )}
                     </div>
                   ) : (
-                    <form onSubmit={handleSubmit} className="space-y-3" noValidate>
+                    <form onSubmit={handleSubmit} className="space-y-2" noValidate>
                       <div className="space-y-1.5">
                         <Label htmlFor="cs-fullname" className="text-navy">Full Name <span className="text-destructive">*</span></Label>
                         <Input
@@ -217,7 +217,7 @@ const CaseStudyPopup = ({ isOpen, onClose }: CaseStudyPopupProps) => {
                       <Button
                         type="submit"
                         disabled={submitting}
-                        className="w-full h-12 bg-[#003B6F] text-white hover:bg-[#003B6F]/90 mt-1"
+                        className="w-full h-12 bg-[#003B6F] text-white hover:bg-[#003B6F]/90"
                       >
                         {submitting ? (
                           <>
@@ -225,11 +225,11 @@ const CaseStudyPopup = ({ isOpen, onClose }: CaseStudyPopupProps) => {
                             Sending…
                           </>
                         ) : (
-                          "Send me the case study"
+                          "Send Me the Case Study"
                         )}
                       </Button>
 
-                      <label className="flex items-start gap-3 pt-1 cursor-pointer select-none">
+                      <label className="flex items-start gap-3 cursor-pointer select-none">
                         <Checkbox
                           id="cs-consult"
                           checked={wantsConsultation}

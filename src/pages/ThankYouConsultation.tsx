@@ -81,7 +81,7 @@ const ThankYouConsultation = () => {
           </h1>
           
           <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
-            We've received your consultation request and will be in touch within 24 hours to discuss how we can help accelerate your MedTech success.
+            We've received your consultation request and will be in touch within two business days to discuss how we can help accelerate your MedTech success.
           </p>
           
           <Button
