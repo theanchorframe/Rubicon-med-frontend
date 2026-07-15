@@ -109,6 +109,15 @@ const CaseStudyPopup = ({ isOpen, onClose }: CaseStudyPopupProps) => {
                 </button>
 
                 <div className="px-5 pt-6 pb-5 md:px-7 md:pt-7 md:pb-6 space-y-4">
+                  {/* Banner */}
+                  <div className="w-full h-16 md:h-28 overflow-hidden flex items-center justify-center">
+                    <img
+                      src={caseStudyBanner}
+                      alt="EPD Case Study"
+                      className="h-full w-auto object-contain"
+                    />
+                  </div>
+
                   {/* Header */}
                   <div className="space-y-1 text-center">
                     <h3 className="text-navy font-bold text-xl md:text-2xl leading-tight">
@@ -117,15 +126,6 @@ const CaseStudyPopup = ({ isOpen, onClose }: CaseStudyPopupProps) => {
                     <p className="hidden md:block text-sm text-navy/70">
                       How one MedTech team unlocked $35M in co-development funding.
                     </p>
-                  </div>
-
-                  {/* Banner */}
-                  <div className="w-full h-16 md:h-28 overflow-hidden flex items-center justify-center">
-                    <img
-                      src={caseStudyBanner}
-                      alt="EPD Case Study"
-                      className="h-full w-auto object-contain"
-                    />
                   </div>
 
                   {submitted ? (
