@@ -137,7 +137,7 @@ const CaseStudyPopup = ({ isOpen, onClose }: CaseStudyPopupProps) => {
                             You're all set.
                           </h4>
                           <p className="text-sm md:text-base text-navy/80 leading-relaxed">
-                            The EPD case study is on its way to <span className="font-medium">{email}</span>. Share a bit more about what you'd like to discuss and we'll come to the conversation ready to talk specifics.
+                            The EPD case study is on its way to <span className="font-medium">{email}</span>. If you don't see it in your inbox, please check your SPAM folder
                           </p>
                           <div className="flex flex-col gap-2 pt-1">
                             <Button
