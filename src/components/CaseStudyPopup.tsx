@@ -24,8 +24,7 @@ const formSchema = z.object({
 
 type FieldErrors = Partial<Record<"fullName" | "email", string>>;
 
-// TODO: replace with the hosted PDF or /case-study route once provided
-const CASE_STUDY_VIEW_URL = "#";
+const CASE_STUDY_VIEW_URL = "/thank-you-case-study";
 
 const CaseStudyPopup = ({ isOpen, onClose }: CaseStudyPopupProps) => {
   const [fullName, setFullName] = useState("");
