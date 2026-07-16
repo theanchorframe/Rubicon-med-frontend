@@ -28,7 +28,7 @@ const IdeaProcessSection = () => {
       sections: [
         {
           bullets: [
-            "Meet with the executive sponsor to align on goals, constraints, and how success will be measured.",
+            "Meet with the executive sponsor to align on goals, constraints, and how success will be measured",
             "Understand the landscape: therapeutic area, competitive set, and current market dynamics",
             "Map internal and external stakeholders, including KOLs, clinical users, and commercial teams",
             "Learn pain points, unanswered questions, and where your team feels least certain today",
