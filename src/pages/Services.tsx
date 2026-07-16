@@ -65,7 +65,7 @@ const servicesData = [
     icon: Rocket,
     hook: "Market entry strategies that sustain momentum long after launch",
     description:
-      "Turn insight into adoption at scale. We craft go-to-market strategies and playbooks, sales enablement, and messaging rooted in evidence, so your launch not only hits targets but sustains momentum long after market entry.",
+      "Turn insight into adoption at scale. We craft go-to-market strategies with playbooks, sales enablement, and messaging rooted in evidence, so your launch not only hits targets but sustains momentum long after market entry.",
     deliverables: [
       "Go-to-market strategy & playbooks",
       "Sales enablement, CRM optimization, and training",

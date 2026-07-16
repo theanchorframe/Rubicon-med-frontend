@@ -81,7 +81,7 @@ const ServicesSection = ({ onOpenConsultationDialog }: ServicesSectionProps) => 
     title: "Commercial Strategy & Launch",
     boldOpener: "Market entry strategies that sustain momentum long after launch",
     description:
-    "Turn insight into adoption at scale. We craft go-to-market strategies and playbooks, sales enablement, and messaging rooted in evidence, so your launch not only hits targets, but sustains momentum long after market entry."
+    "Turn insight into adoption at scale. We craft go-to-market strategies with playbooks, sales enablement, and messaging rooted in evidence, so your launch not only hits targets, but sustains momentum long after market entry."
   },
   {
     title: "Upstream Portfolio Strategy & Roadmapping",
