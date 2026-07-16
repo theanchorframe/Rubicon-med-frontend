@@ -24,7 +24,7 @@ const specializations = [
     stat: "40+",
     statLabel: "Projects Delivered",
     description:
-      "Your capital only goes to products with a validated path to market leadership. Our proven framework integrates multidimensional technical, clinical, and research and development due diligence with rigorous market modeling. We synthesize competitive intelligence and growth drivers to ensure capital is deployed only into assets with a validated path to market leadership.",
+      "Your capital only goes to products with a validated path to market leadership. Our proven framework integrates multidimensional technical, clinical, and R&D due diligence with rigorous market modeling. We synthesize competitive intelligence and growth drivers to ensure capital is deployed only into assets with a validated path to market leadership.",
   },
   {
     icon: Target,
