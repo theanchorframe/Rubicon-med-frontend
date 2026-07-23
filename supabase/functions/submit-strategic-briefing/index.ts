@@ -7,6 +7,7 @@ const BodySchema = z.object({
   title: z.string().trim().min(1).max(150),
   phase: z.string().trim().max(500).optional().default(''),
   challenge: z.string().trim().max(500).optional().default(''),
+  consent: z.boolean(),
 });
 
 Deno.serve(async (req) => {
@@ -21,9 +22,9 @@ Deno.serve(async (req) => {
     });
   }
 
-  const webhookUrl = Deno.env.get('GHL_STRATEGIC_BRIEFING_WEBHOOK_URL');
+  const webhookUrl = Deno.env.get('GHL_CONSULTATION_WEBHOOK_URL');
   if (!webhookUrl) {
-    console.error('GHL_STRATEGIC_BRIEFING_WEBHOOK_URL is not configured');
+    console.error('GHL_CONSULTATION_WEBHOOK_URL is not configured');
     return new Response(JSON.stringify({ ok: false, error: 'Server misconfigured' }), {
       status: 500,
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
@@ -48,7 +49,7 @@ Deno.serve(async (req) => {
     );
   }
 
-  const { fullName, email, title, phase, challenge } = parsed.data;
+  const { fullName, email, title, phase, challenge, consent } = parsed.data;
 
   try {
     const ghlRes = await fetch(webhookUrl, {
@@ -61,6 +62,7 @@ Deno.serve(async (req) => {
         corporate_title: title,
         current_asset_phase: phase || 'Not provided',
         primary_strategic_challenge: challenge || 'Not provided',
+        consent_to_contact: consent,
         submitted_at: new Date().toISOString(),
       }),
     });
