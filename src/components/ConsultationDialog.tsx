@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -37,6 +38,9 @@ const formSchema = z.object({
   phaseOther: z.string().trim().max(500).optional(),
   challenge: z.string().optional(),
   challengeOther: z.string().trim().max(500).optional(),
+  consent: z.literal(true, {
+    errorMap: () => ({ message: "Please agree so we can contact you" }),
+  }),
 });
 
 type FormState = {
@@ -47,6 +51,7 @@ type FormState = {
   phaseOther: string;
   challenge: string;
   challengeOther: string;
+  consent: boolean;
 };
 
 const initialState: FormState = {
@@ -57,6 +62,7 @@ const initialState: FormState = {
   phaseOther: "",
   challenge: "",
   challengeOther: "",
+  consent: false,
 };
 
 const ConsultationDialog = ({ open, onOpenChange }: ConsultationDialogProps) => {
@@ -94,6 +100,7 @@ const ConsultationDialog = ({ open, onOpenChange }: ConsultationDialogProps) => 
           title: form.title,
           phase: phaseFinal,
           challenge: challengeFinal,
+          consent: form.consent,
         },
       });
       if (error || !data?.ok) {
