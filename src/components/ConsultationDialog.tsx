@@ -235,6 +235,18 @@ const ConsultationDialog = ({ open, onOpenChange }: ConsultationDialogProps) => 
           >
             {submitting ? "Sending..." : "Schedule Strategic Briefing"}
           </Button>
+
+          <label className="flex items-start gap-3 cursor-pointer select-none pt-1">
+            <Checkbox
+              id="briefing-consent"
+              checked={form.consent}
+              onCheckedChange={(v) => update("consent", v === true)}
+              className="mt-0.5"
+            />
+            <span className="text-xs text-navy/75 leading-snug">
+              I agree to be contacted by Rubicon regarding this request. Rubicon will not share my information with third parties. <span className="text-red-500">*</span>
+            </span>
+          </label>
         </form>
       </DialogContent>
     </Dialog>
