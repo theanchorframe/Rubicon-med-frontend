@@ -21,9 +21,9 @@ Deno.serve(async (req) => {
     });
   }
 
-  const webhookUrl = Deno.env.get('GHL_STRATEGIC_BRIEFING_WEBHOOK_URL');
+  const webhookUrl = Deno.env.get('GHL_CONSULTATION_WEBHOOK_URL');
   if (!webhookUrl) {
-    console.error('GHL_STRATEGIC_BRIEFING_WEBHOOK_URL is not configured');
+    console.error('GHL_CONSULTATION_WEBHOOK_URL is not configured');
     return new Response(JSON.stringify({ ok: false, error: 'Server misconfigured' }), {
       status: 500,
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
