@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 
 interface ConsultationDialogProps {
   open: boolean;
@@ -65,7 +66,7 @@ const ConsultationDialog = ({ open, onOpenChange }: ConsultationDialogProps) => 
   const update = <K extends keyof FormState>(key: K, value: FormState[K]) =>
     setForm((prev) => ({ ...prev, [key]: value }));
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const result = formSchema.safeParse(form);
     if (!result.success) {
@@ -85,23 +86,28 @@ const ConsultationDialog = ({ open, onOpenChange }: ConsultationDialogProps) => 
     const phaseFinal = form.phase === "Other" ? `Other — ${form.phaseOther}` : (form.phase || "Not provided");
     const challengeFinal = form.challenge === "Other" ? `Other — ${form.challengeOther}` : (form.challenge || "Not provided");
 
-    const subject = `Strategic Briefing Request — ${form.fullName}`;
-    const body = [
-      `Full Name: ${form.fullName}`,
-      `Company Email: ${form.email}`,
-      `Corporate Title: ${form.title}`,
-      `Current Asset Phase: ${phaseFinal}`,
-      `Primary Strategic Challenge: ${challengeFinal}`,
-    ].join("\n");
-
-    window.location.href = `mailto:rob@rubiconmed.us?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-    toast.success("Opening your email client to confirm your briefing request.");
-    setTimeout(() => {
-      setSubmitting(false);
+    try {
+      const { data, error } = await supabase.functions.invoke("submit-strategic-briefing", {
+        body: {
+          fullName: form.fullName,
+          email: form.email,
+          title: form.title,
+          phase: phaseFinal,
+          challenge: challengeFinal,
+        },
+      });
+      if (error || !data?.ok) {
+        throw new Error(error?.message || "Submission failed");
+      }
+      toast.success("Your briefing request has been sent. We'll be in touch within two business days.");
       setForm(initialState);
       onOpenChange(false);
-    }, 400);
+    } catch (err) {
+      console.error(err);
+      toast.error("Something went wrong. Please try again in a moment.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
