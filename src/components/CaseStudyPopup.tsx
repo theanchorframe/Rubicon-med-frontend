@@ -9,7 +9,6 @@ import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
-import ConsultationDialog from "@/components/ConsultationDialog";
 import caseStudyPdf from "@/assets/Rubicon_EPD_Case_Study.pdf.asset.json";
 
 interface CaseStudyPopupProps {
