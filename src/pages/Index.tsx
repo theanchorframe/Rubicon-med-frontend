@@ -19,6 +19,14 @@ import CaseStudyPopup from "@/components/CaseStudyPopup";
 const Index = () => {
   const [isConsultationDialogOpen, setIsConsultationDialogOpen] = useState(false);
   const [isCaseStudyPopupOpen, setIsCaseStudyPopupOpen] = useState(false);
+  const [consultationPrefill, setConsultationPrefill] = useState<{ fullName?: string; email?: string } | undefined>(undefined);
+  const [consultationNotice, setConsultationNotice] = useState<string | undefined>(undefined);
+
+  const openConsultation = (opts?: { prefill?: { fullName: string; email: string }; notice?: string }) => {
+    setConsultationPrefill(opts?.prefill);
+    setConsultationNotice(opts?.notice);
+    setIsConsultationDialogOpen(true);
+  };
 
   return (
     <div className="min-h-screen">
@@ -34,16 +42,29 @@ const Index = () => {
       <FAQSection onOpenConsultationDialog={() => setIsConsultationDialogOpen(true)} />
       <FinalCTASection onOpenConsultationDialog={() => setIsConsultationDialogOpen(true)} />
       <Footer />
-      <ConsultationDialog 
-        open={isConsultationDialogOpen} 
-        onOpenChange={setIsConsultationDialogOpen} 
+      <ConsultationDialog
+        open={isConsultationDialogOpen}
+        onOpenChange={(open) => {
+          setIsConsultationDialogOpen(open);
+          if (!open) {
+            setConsultationPrefill(undefined);
+            setConsultationNotice(undefined);
+          }
+        }}
+        prefill={consultationPrefill}
+        notice={consultationNotice}
       />
       <ClientOnly>
         <MobileBottomNav onOpenDialog={() => setIsConsultationDialogOpen(true)} />
         <CaseStudyPopup
           isOpen={isCaseStudyPopupOpen}
           onClose={() => setIsCaseStudyPopupOpen(false)}
-          onOpenConsultation={() => setIsConsultationDialogOpen(true)}
+          onOpenConsultation={(prefill) =>
+            openConsultation({
+              prefill: prefill && { fullName: prefill.fullName, email: prefill.email },
+              notice: prefill?.notice,
+            })
+          }
         />
       </ClientOnly>
     </div>
