@@ -20,7 +20,7 @@ const CaseStudiesSection = ({ onOpenConsultationDialog }: CaseStudiesSectionProp
       description:
         "In the high-stakes environment of MedTech development, the most expensive mistake companies make is funding a product that the market doesn't want, the clinical data don't support, or the geometries and construction are insufficient. We serve as the strategic \"gate\" between an idea and a multi-million dollar investment",
       overlayText:
-        "Precision before investment. We use VoC and predictive modeling to quantify market demand and identify barriers, allowing you to cut low-ROI projects and invest in only winners.",
+        "Precision before investment. We use VoC and predictive modeling to quantify market demand and identify barriers, allowing you to cut low-ROI projects and invest only in winners.",
     },
     {
       image: clinicalInsightImage,
