@@ -14,6 +14,7 @@ import caseStudyPdf from "@/assets/Rubicon_EPD_Case_Study.pdf.asset.json";
 interface CaseStudyPopupProps {
   isOpen: boolean;
   onClose: () => void;
+  onOpenConsultation?: () => void;
 }
 
 const formSchema = z.object({
@@ -26,7 +27,7 @@ type FieldErrors = Partial<Record<"fullName" | "email", string>>;
 
 const CASE_STUDY_VIEW_URL = caseStudyPdf.url;
 
-const CaseStudyPopup = ({ isOpen, onClose }: CaseStudyPopupProps) => {
+const CaseStudyPopup = ({ isOpen, onClose, onOpenConsultation }: CaseStudyPopupProps) => {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [wantsConsultation, setWantsConsultation] = useState(false);
@@ -148,6 +149,18 @@ const CaseStudyPopup = ({ isOpen, onClose }: CaseStudyPopupProps) => {
                       >
                         Download
                       </a>
+                      {onOpenConsultation && (
+                        <button
+                          type="button"
+                          onClick={() => {
+                            resetAndClose();
+                            setTimeout(() => onOpenConsultation(), 320);
+                          }}
+                          className="text-sm text-navy underline underline-offset-4 hover:text-navy/80 transition-colors"
+                        >
+                          Please contact me to schedule a complimentary consultation
+                        </button>
+                      )}
                     </div>
                   ) : (
                     <form onSubmit={handleSubmit} className="space-y-2" noValidate>
