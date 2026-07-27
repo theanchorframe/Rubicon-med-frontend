@@ -10,6 +10,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import ConsultationDialog from "@/components/ConsultationDialog";
+import caseStudyPdf from "@/assets/Rubicon_EPD_Case_Study.pdf.asset.json";
 
 interface CaseStudyPopupProps {
   isOpen: boolean;
@@ -24,7 +25,7 @@ const formSchema = z.object({
 
 type FieldErrors = Partial<Record<"fullName" | "email", string>>;
 
-const CASE_STUDY_VIEW_URL = "/thank-you-case-study";
+const CASE_STUDY_VIEW_URL = caseStudyPdf.url;
 
 const CaseStudyPopup = ({ isOpen, onClose }: CaseStudyPopupProps) => {
   const [fullName, setFullName] = useState("");
@@ -149,11 +150,12 @@ const CaseStudyPopup = ({ isOpen, onClose }: CaseStudyPopupProps) => {
                             </Button>
                             <a
                               href={CASE_STUDY_VIEW_URL}
+                              download="Rubicon_EPD_Case_Study.pdf"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="text-sm text-navy/70 hover:text-navy underline underline-offset-4"
                             >
-                              View the case study now
+                              Download the case study now
                             </a>
                           </div>
                         </>
@@ -168,11 +170,12 @@ const CaseStudyPopup = ({ isOpen, onClose }: CaseStudyPopupProps) => {
                           <div className="flex flex-col gap-2 pt-1">
                             <a
                               href={CASE_STUDY_VIEW_URL}
+                              download="Rubicon_EPD_Case_Study.pdf"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="inline-flex items-center justify-center w-full h-12 rounded-md bg-[#003B6F] text-white font-medium hover:bg-[#003B6F]/90 transition-colors"
                             >
-                              View the case study now
+                              Download the case study now
                             </a>
                           </div>
                         </>
