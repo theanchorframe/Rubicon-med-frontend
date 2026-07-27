@@ -9,7 +9,6 @@ import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
-import ConsultationDialog from "@/components/ConsultationDialog";
 import caseStudyPdf from "@/assets/Rubicon_EPD_Case_Study.pdf.asset.json";
 
 interface CaseStudyPopupProps {
@@ -34,7 +33,6 @@ const CaseStudyPopup = ({ isOpen, onClose }: CaseStudyPopupProps) => {
   const [errors, setErrors] = useState<FieldErrors>({});
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  const [consultationOpen, setConsultationOpen] = useState(false);
 
   const resetAndClose = () => {
     onClose();
@@ -109,77 +107,44 @@ const CaseStudyPopup = ({ isOpen, onClose }: CaseStudyPopupProps) => {
                 </button>
 
                 <div className="px-5 pt-6 pb-5 md:px-7 md:pt-7 md:pb-6 space-y-4">
-                  {/* Banner */}
-                  <div className="w-full h-16 md:h-28 overflow-hidden flex items-center justify-center">
-                    <img
-                      src={caseStudyBanner}
-                      alt="EPD Case Study"
-                      className="h-full w-auto object-contain"
-                    />
-                  </div>
+                  {!submitted && (
+                    <>
+                      {/* Banner */}
+                      <div className="w-full h-16 md:h-28 overflow-hidden flex items-center justify-center">
+                        <img
+                          src={caseStudyBanner}
+                          alt="EPD Case Study"
+                          className="h-full w-auto object-contain"
+                        />
+                      </div>
 
-                  {/* Header */}
-                  <div className="space-y-1 text-center">
-                    <h3 className="text-navy font-bold text-xl md:text-2xl leading-tight">
-                      Get Our Complimentary EPD Case Study
-                    </h3>
-                    <p className="hidden md:block text-sm text-navy/70">
-                      How one MedTech team unlocked $35M in co-development funding.
-                    </p>
-                  </div>
+                      {/* Header */}
+                      <div className="space-y-1 text-center">
+                        <h3 className="text-navy font-bold text-xl md:text-2xl leading-tight">
+                          Get Our Complimentary EPD Case Study
+                        </h3>
+                        <p className="hidden md:block text-sm text-navy/70">
+                          How one MedTech team unlocked $35M in co-development funding.
+                        </p>
+                      </div>
+                    </>
+                  )}
 
                   {submitted ? (
-                    <div className="space-y-4 text-center">
-                      <CheckCircle2 className="mx-auto h-10 w-10 text-navy" />
-                      {wantsConsultation ? (
-                        <>
-                          <h4 className="text-navy font-bold text-lg md:text-xl">
-                            You're all set.
-                          </h4>
-                          <p className="text-sm md:text-base text-navy/80 leading-relaxed">
-                            The EPD case study is on its way to <span className="font-medium">{email}</span>. If you don't see it in your inbox, please check your SPAM folder
-                          </p>
-                          <div className="flex flex-col gap-2 pt-1">
-                            <Button
-                              onClick={() => {
-                                setConsultationOpen(true);
-                              }}
-                              className="w-full h-12 bg-[#003B6F] text-white hover:bg-[#003B6F]/90"
-                            >
-                              Tell us more about your project
-                            </Button>
-                            <a
-                              href={CASE_STUDY_VIEW_URL}
-                              download="Rubicon_EPD_Case_Study.pdf"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-sm text-navy/70 hover:text-navy underline underline-offset-4"
-                            >
-                              Download the case study now
-                            </a>
-                          </div>
-                        </>
-                      ) : (
-                        <>
-                          <h4 className="text-navy font-bold text-lg md:text-xl">
-                            You're all set.
-                          </h4>
-                          <p className="text-sm md:text-base text-navy/80 leading-relaxed">
-                            We just emailed the EPD case study to <span className="font-medium">{email}</span>. If you don't see it in your inbox within a few minutes, please check your SPAM folder and/or click below to view it.
-                          </p>
-                          <div className="flex flex-col gap-2 pt-1">
-                            <a
-                              href={CASE_STUDY_VIEW_URL}
-                              download="Rubicon_EPD_Case_Study.pdf"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="inline-flex items-center justify-center w-full h-12 rounded-md bg-[#003B6F] text-white font-medium hover:bg-[#003B6F]/90 transition-colors"
-                            >
-                              Download the case study now
-                            </a>
-                          </div>
-                        </>
-                      )}
+                    <div className="space-y-5 text-center py-4">
+                      <CheckCircle2 className="mx-auto h-12 w-12 text-navy" />
+                      <h4 className="text-navy font-bold text-xl md:text-2xl">
+                        You're all set.
+                      </h4>
+                      <a
+                        href={CASE_STUDY_VIEW_URL}
+                        download="Rubicon_EPD_Case_Study.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center w-full h-12 rounded-md bg-[#003B6F] text-white font-medium hover:bg-[#003B6F]/90 transition-colors"
+                      >
+                        Download the case study now
+                      </a>
                     </div>
                   ) : (
                     <form onSubmit={handleSubmit} className="space-y-2" noValidate>
@@ -250,8 +215,6 @@ const CaseStudyPopup = ({ isOpen, onClose }: CaseStudyPopupProps) => {
           </>
         )}
       </AnimatePresence>
-
-      <ConsultationDialog open={consultationOpen} onOpenChange={setConsultationOpen} />
     </>
   );
 };
