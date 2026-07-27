@@ -14,7 +14,7 @@ import caseStudyPdf from "@/assets/Rubicon_EPD_Case_Study.pdf.asset.json";
 interface CaseStudyPopupProps {
   isOpen: boolean;
   onClose: () => void;
-  onOpenConsultation?: () => void;
+  onOpenConsultation?: (prefill?: { fullName: string; email: string; notice?: string }) => void;
 }
 
 const formSchema = z.object({
@@ -67,6 +67,15 @@ const CaseStudyPopup = ({ isOpen, onClose, onOpenConsultation }: CaseStudyPopupP
       });
       if (error || !data?.ok) {
         throw new Error(error?.message || "Submission failed");
+      }
+      if (parsed.data.wantsConsultation && onOpenConsultation) {
+        onOpenConsultation({
+          fullName: parsed.data.fullName,
+          email: parsed.data.email,
+          notice: "We've sent the case study to your email. Fill in the rest below to schedule your consultation.",
+        });
+        resetAndClose();
+        return;
       }
       setSubmitted(true);
     } catch (err) {
@@ -153,8 +162,9 @@ const CaseStudyPopup = ({ isOpen, onClose, onOpenConsultation }: CaseStudyPopupP
                         <button
                           type="button"
                           onClick={() => {
+                            const prefill = { fullName, email };
                             resetAndClose();
-                            setTimeout(() => onOpenConsultation(), 320);
+                            setTimeout(() => onOpenConsultation(prefill), 320);
                           }}
                           className="text-sm text-navy underline underline-offset-4 hover:text-navy/80 transition-colors"
                         >
