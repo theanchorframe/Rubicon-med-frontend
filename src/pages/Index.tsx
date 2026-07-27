@@ -40,7 +40,11 @@ const Index = () => {
       />
       <ClientOnly>
         <MobileBottomNav onOpenDialog={() => setIsConsultationDialogOpen(true)} />
-        <CaseStudyPopup isOpen={isCaseStudyPopupOpen} onClose={() => setIsCaseStudyPopupOpen(false)} />
+        <CaseStudyPopup
+          isOpen={isCaseStudyPopupOpen}
+          onClose={() => setIsCaseStudyPopupOpen(false)}
+          onOpenConsultation={() => setIsConsultationDialogOpen(true)}
+        />
       </ClientOnly>
     </div>
   );
