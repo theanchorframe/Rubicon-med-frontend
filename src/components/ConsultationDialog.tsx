@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { z } from "zod";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
@@ -12,6 +12,8 @@ import { supabase } from "@/integrations/supabase/client";
 interface ConsultationDialogProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
+  prefill?: { fullName?: string; email?: string };
+  notice?: string;
 }
 
 const phaseOptions = [
@@ -65,9 +67,19 @@ const initialState: FormState = {
   consent: false,
 };
 
-const ConsultationDialog = ({ open, onOpenChange }: ConsultationDialogProps) => {
+const ConsultationDialog = ({ open, onOpenChange, prefill, notice }: ConsultationDialogProps) => {
   const [form, setForm] = useState<FormState>(initialState);
   const [submitting, setSubmitting] = useState(false);
+
+  useEffect(() => {
+    if (open && prefill) {
+      setForm((prev) => ({
+        ...prev,
+        fullName: prefill.fullName ?? prev.fullName,
+        email: prefill.email ?? prev.email,
+      }));
+    }
+  }, [open, prefill]);
 
   const update = <K extends keyof FormState>(key: K, value: FormState[K]) =>
     setForm((prev) => ({ ...prev, [key]: value }));
@@ -133,6 +145,11 @@ const ConsultationDialog = ({ open, onOpenChange }: ConsultationDialogProps) => 
         </DialogHeader>
 
         <form onSubmit={handleSubmit} className="px-8 pb-10 pt-6 space-y-6">
+          {notice && (
+            <div className="rounded-md border border-navy/15 bg-navy/5 px-4 py-3 text-sm text-navy">
+              {notice}
+            </div>
+          )}
           <div className="space-y-2">
             <Label htmlFor="fullName" className="text-sm font-medium text-navy">
               Full Name <span className="text-red-500">*</span>
