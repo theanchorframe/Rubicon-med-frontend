@@ -68,6 +68,19 @@ const CaseStudyPopup = ({ isOpen, onClose }: CaseStudyPopupProps) => {
         throw new Error(error?.message || "Submission failed");
       }
       setSubmitted(true);
+      // Trigger instant PDF download
+      try {
+        const link = document.createElement("a");
+        link.href = CASE_STUDY_VIEW_URL;
+        link.download = "Rubicon_EPD_Case_Study.pdf";
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      } catch (dlErr) {
+        console.error("Auto-download failed", dlErr);
+      }
     } catch (err) {
       console.error(err);
       toast.error("Something went wrong. Please try again in a moment.");
@@ -136,6 +149,9 @@ const CaseStudyPopup = ({ isOpen, onClose }: CaseStudyPopupProps) => {
                       <h4 className="text-navy font-bold text-xl md:text-2xl">
                         You're all set.
                       </h4>
+                      <p className="text-sm text-navy/70">
+                        Your download should start automatically. If it doesn't, click below.
+                      </p>
                       <a
                         href={CASE_STUDY_VIEW_URL}
                         download="Rubicon_EPD_Case_Study.pdf"
