@@ -33,7 +33,6 @@ const CaseStudyPopup = ({ isOpen, onClose }: CaseStudyPopupProps) => {
   const [errors, setErrors] = useState<FieldErrors>({});
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  const [consultationOpen, setConsultationOpen] = useState(false);
 
   const resetAndClose = () => {
     onClose();
