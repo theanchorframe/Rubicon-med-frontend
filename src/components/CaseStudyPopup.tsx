@@ -137,7 +137,7 @@ const CaseStudyPopup = ({ isOpen, onClose }: CaseStudyPopupProps) => {
                         You're all set.
                       </h4>
                       <p className="text-sm text-navy/70">
-                        Your download should start automatically. If it doesn't, click below.
+                        We've sent the case study to your email. You can also download it below.
                       </p>
                       <a
                         href={CASE_STUDY_VIEW_URL}
@@ -146,7 +146,7 @@ const CaseStudyPopup = ({ isOpen, onClose }: CaseStudyPopupProps) => {
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center w-full h-12 rounded-md bg-[#003B6F] text-white font-medium hover:bg-[#003B6F]/90 transition-colors"
                       >
-                        Download the case study now
+                        Or download the case study now
                       </a>
                     </div>
                   ) : (
