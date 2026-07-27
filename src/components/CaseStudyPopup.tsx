@@ -215,8 +215,6 @@ const CaseStudyPopup = ({ isOpen, onClose }: CaseStudyPopupProps) => {
           </>
         )}
       </AnimatePresence>
-
-      <ConsultationDialog open={consultationOpen} onOpenChange={setConsultationOpen} />
     </>
   );
 };
