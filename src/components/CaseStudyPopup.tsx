@@ -146,7 +146,7 @@ const CaseStudyPopup = ({ isOpen, onClose }: CaseStudyPopupProps) => {
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center w-full h-12 rounded-md bg-[#003B6F] text-white font-medium hover:bg-[#003B6F]/90 transition-colors"
                       >
-                        Or download the case study now
+                        Download
                       </a>
                     </div>
                   ) : (
