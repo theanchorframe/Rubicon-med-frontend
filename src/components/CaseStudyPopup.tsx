@@ -137,7 +137,7 @@ const CaseStudyPopup = ({ isOpen, onClose }: CaseStudyPopupProps) => {
                         You're all set.
                       </h4>
                       <p className="text-sm text-navy/70">
-                        We've sent the case study to your email. You can also download it below.
+                        You're all set. We've sent the case study to your email ({email}). In addition, you can also download it below.
                       </p>
                       <a
                         href={CASE_STUDY_VIEW_URL}
