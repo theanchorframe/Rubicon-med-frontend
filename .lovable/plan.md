@@ -1,33 +1,25 @@
-## Goal
+# HighLevel field types for the consultation form
 
-When someone submits the EPD case study popup with the "Please contact me to schedule a complimentary consultation" checkbox checked, also fire a separate HighLevel webhook so it can be mapped to its own workflow in HighLevel. The existing case-study webhook keeps firing exactly as it does today.
+## Outcome
+No code changes are needed. The consultation webhook already sends both answers as plain text strings, so single-line text fields in HighLevel will capture every possible value.
 
-## Behavior
+## What gets sent
+For "Current Asset Phase" and "Primary Strategic Challenge", the value is one of:
+- The selected option, e.g. `Clinical Trials`
+- `Other — <whatever they typed>` when they choose Other (keeping this format, as confirmed)
+- `Not provided` when left blank
 
-- Every submission continues to POST to `GHL_CASE_STUDY_WEBHOOK_URL` (unchanged payload).
-- If `wantsConsultation === true`, the edge function additionally POSTs to a new webhook, `GHL_CONSULTATION_WEBHOOK_URL`, with the same lead fields plus `source: "epd-case-study-consultation"` so you can distinguish it in HighLevel.
-- Both requests fire in parallel. If the consultation webhook fails, we log it but still return `{ ok: true }` to the browser as long as the primary case-study webhook succeeded — the user experience is unchanged.
+## Recommended HighLevel setup
+| Webhook key | Field name | Type |
+| --- | --- | --- |
+| `current_asset_phase` | Current Asset Phase | Single line text |
+| `primary_strategic_challenge` | Primary Strategic Challenge | Single line text |
+| `corporate_title` | Corporate Title | Single line text |
+| `consent_to_contact` | Consent to Contact | Single line text / checkbox |
+| `case_study_requested` | Case Study Requested | Single line text / checkbox |
+| `lead_source` | Lead Source | Single line text |
 
-## Sample consultation payload
+Single line text is safer than a HighLevel dropdown, because a dropdown rejects incoming values that do not exactly match its option list — which would drop every `Other — ...` answer.
 
-```json
-{
-  "source": "epd-case-study-consultation",
-  "full_name": "Jane Doe",
-  "email": "jane@company.com",
-  "wants_consultation": true,
-  "submitted_at": "2026-07-23T..."
-}
-```
-
-## Files touched
-
-- `supabase/functions/submit-case-study-lead/index.ts` — after validation, when `wantsConsultation` is true, also POST to `GHL_CONSULTATION_WEBHOOK_URL` alongside the existing case-study webhook.
-
-## Secret to add
-
-- `GHL_CONSULTATION_WEBHOOK_URL` — the new HighLevel inbound webhook URL for consultation requests. Requested via the secure form; no changes to the existing `GHL_CASE_STUDY_WEBHOOK_URL`.
-
-## Verify
-
-After the secret is saved, send a test submission with `wantsConsultation: true` via the edge function and confirm both webhooks receive it in HighLevel.
+## Next step
+Set those fields to single line text in HighLevel and map them to the keys above. Nothing needs to change in the site code.
