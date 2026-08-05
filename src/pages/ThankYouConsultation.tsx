@@ -16,6 +16,7 @@ const ThankYouConsultation = () => {
   useEffect(() => {
     if (typeof window !== "undefined" && sessionStorage.getItem("rubicon_case_study_requested") === "1") {
       setShowCaseStudyDownload(true);
+      sessionStorage.removeItem("rubicon_case_study_requested");
     }
   }, []);
 
