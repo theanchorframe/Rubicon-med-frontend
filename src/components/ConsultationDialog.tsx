@@ -71,6 +71,7 @@ const initialState: FormState = {
 const ConsultationDialog = ({ open, onOpenChange, prefill, notice }: ConsultationDialogProps) => {
   const [form, setForm] = useState<FormState>(initialState);
   const [submitting, setSubmitting] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (open && prefill) {
