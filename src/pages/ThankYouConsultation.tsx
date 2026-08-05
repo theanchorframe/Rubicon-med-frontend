@@ -5,11 +5,20 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import ConsultationDialog from "@/components/ConsultationDialog";
 import consultationBanner from "@/assets/thank-you-consultation-banner.jpg";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import caseStudyPdf from "@/assets/Rubicon_EPD_Case_Study.pdf.asset.json";
 
 const ThankYouConsultation = () => {
   const navigate = useNavigate();
   const [isConsultationDialogOpen, setIsConsultationDialogOpen] = useState(false);
+  const [showCaseStudyDownload, setShowCaseStudyDownload] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && sessionStorage.getItem("rubicon_case_study_requested") === "1") {
+      setShowCaseStudyDownload(true);
+      sessionStorage.removeItem("rubicon_case_study_requested");
+    }
+  }, []);
 
   const handleBackToHome = () => {
     navigate("/");
@@ -95,6 +104,26 @@ const ThankYouConsultation = () => {
       </section>
 
       {/* What Happens Next - IDEA Process */}
+      {showCaseStudyDownload && (
+        <section className="py-12 bg-background">
+          <div className="container mx-auto px-6 max-w-3xl text-center">
+            <h2 className="text-2xl md:text-3xl font-bold text-navy mb-3">Your EPD Case Study</h2>
+            <p className="text-foreground/80 mb-6">
+              We've emailed you a copy. You can also download it right here.
+            </p>
+            <a
+              href={caseStudyPdf.url}
+              download="Rubicon_EPD_Case_Study.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center h-12 px-8 rounded-md bg-[#003B6F] text-white font-medium hover:bg-[#003B6F]/90 transition-colors"
+            >
+              Download the Case Study
+            </a>
+          </div>
+        </section>
+      )}
+
       <section className="py-16 bg-background">
         <div className="container mx-auto px-6 max-w-5xl">
           <div className="text-center mb-12">

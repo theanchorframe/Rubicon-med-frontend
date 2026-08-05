@@ -69,12 +69,20 @@ const CaseStudyPopup = ({ isOpen, onClose, onOpenConsultation }: CaseStudyPopupP
         throw new Error(error?.message || "Submission failed");
       }
       if (parsed.data.wantsConsultation && onOpenConsultation) {
-        onOpenConsultation({
-          fullName: parsed.data.fullName,
-          email: parsed.data.email,
-          notice: "We've sent the case study to your email. Fill in the rest below to schedule your consultation.",
-        });
-        resetAndClose();
+        if (typeof window !== "undefined") {
+          sessionStorage.setItem("rubicon_case_study_requested", "1");
+        }
+        setSubmitted(true);
+        setTimeout(
+          () =>
+            onOpenConsultation({
+              fullName: parsed.data.fullName,
+              email: parsed.data.email,
+              notice:
+                "We've sent the case study to your email. Please fill in the rest below to schedule your complimentary consultation.",
+            }),
+          400,
+        );
         return;
       }
       setSubmitted(true);
