@@ -57,36 +57,14 @@ Deno.serve(async (req) => {
       submitted_at: submittedAt,
     };
 
-    const caseStudyReq = fetch(webhookUrl, {
+    const ghlRes = await fetch(webhookUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ source: 'epd-case-study-popup', ...basePayload }),
     });
 
-    const consultationWebhookUrl = Deno.env.get('GHL_CONSULTATION_WEBHOOK_URL');
-    const consultationReq =
-      wantsConsultation && consultationWebhookUrl
-        ? fetch(consultationWebhookUrl, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              source: 'epd-case-study-consultation',
-              ...basePayload,
-            }),
-          })
-        : null;
-
-    const [ghlRes, consultationRes] = await Promise.all([
-      caseStudyReq,
-      consultationReq ?? Promise.resolve(null),
-    ]);
-
-    if (consultationRes && !consultationRes.ok) {
-      const text = await consultationRes.text();
-      console.error('Consultation webhook failed', consultationRes.status, text);
-    } else if (wantsConsultation && !consultationWebhookUrl) {
-      console.warn('wantsConsultation true but GHL_CONSULTATION_WEBHOOK_URL not set');
-    }
+    // NOTE: the consultation webhook is intentionally NOT fired here.
+    // It only fires once the user actually completes the Strategic Briefing form.
 
     if (!ghlRes.ok) {
       const responseText = await ghlRes.text();
