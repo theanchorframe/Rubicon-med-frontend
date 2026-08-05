@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { z } from "zod";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
@@ -121,6 +122,7 @@ const ConsultationDialog = ({ open, onOpenChange, prefill, notice }: Consultatio
       toast.success("Your briefing request has been sent. We'll be in touch within two business days.");
       setForm(initialState);
       onOpenChange(false);
+      navigate("/thank-you-consultation");
     } catch (err) {
       console.error(err);
       toast.error("Something went wrong. Please try again in a moment.");
