@@ -115,6 +115,9 @@ const ConsultationDialog = ({ open, onOpenChange, prefill, notice }: Consultatio
           phase: phaseFinal,
           challenge: challengeFinal,
           consent: form.consent,
+          caseStudyRequested:
+            typeof window !== "undefined" &&
+            sessionStorage.getItem("rubicon_case_study_requested") === "1",
         },
       });
       if (error || !data?.ok) {

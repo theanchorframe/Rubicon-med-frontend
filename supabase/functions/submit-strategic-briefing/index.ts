@@ -8,6 +8,7 @@ const BodySchema = z.object({
   phase: z.string().trim().max(500).optional().default(''),
   challenge: z.string().trim().max(500).optional().default(''),
   consent: z.boolean(),
+  caseStudyRequested: z.boolean().optional().default(false),
 });
 
 Deno.serve(async (req) => {
@@ -49,7 +50,7 @@ Deno.serve(async (req) => {
     );
   }
 
-  const { fullName, email, title, phase, challenge, consent } = parsed.data;
+  const { fullName, email, title, phase, challenge, consent, caseStudyRequested } = parsed.data;
 
   try {
     const ghlRes = await fetch(webhookUrl, {
@@ -63,6 +64,8 @@ Deno.serve(async (req) => {
         current_asset_phase: phase || 'Not provided',
         primary_strategic_challenge: challenge || 'Not provided',
         consent_to_contact: consent,
+        case_study_requested: caseStudyRequested,
+        lead_source: caseStudyRequested ? 'EPD Case Study Popup' : 'Website Consultation Form',
         submitted_at: new Date().toISOString(),
       }),
     });
