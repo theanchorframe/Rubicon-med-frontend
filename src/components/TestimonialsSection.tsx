@@ -15,7 +15,7 @@ const TestimonialsSection = () => {
       fullText:
         " Equipping innovators in MedTech and Life Science to win the launch, accelerate adoption, and sustain advantage. Rob oversaw the launch of a strategic product for our company. The product, a premium drug delivery technology for pain management, required Rob to work across the organization to 1) train 200+ sales professionals and 2) appropriately position the technology for rapid adoption across the targeted clinic base, 5,000 Physical Therapy clinics. Rob's efforts, combined with a motivated sales force, resulted in EMPI penetrating the target clinic goal within 10 months post launch, while also exceeding the sales and contribution goals for the product in year 1. Rob displayed great tactical discipline, teamwork, and a deep understanding of his market throughout the launch phase.",
       author: "Barry R. Hix",
-      title: "MBA, MPH",
+      title: "MBA, MPH, Worked with Rob when EVP at EMPI",
     },
     {
       headline: "Built a Best-in-Class Clinical Stakeholder Network That Drove Business Opportunities",
