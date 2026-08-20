@@ -30,8 +30,8 @@ const TestimonialsSection = () => {
       text: "Rob is a strong contributor with deep insights which have helped us greatly. In working closely with him, I have witnessed how well he is able to draw valuable voice of customer...",
       fullText:
         "Rob is a strong contributor with deep insights which have helped us greatly. In working closely with him, I have witnessed how well he is able to draw valuable voice of customer feedback from the marketplace; both online and in person. He is a natural in terms of getting people to open up and share details which are key in any new product development effort.",
-      author: "Rick Kirchner",
-      title: "R&D Executive",
+      author: "Rick Kirchner, VP, Colder Products Company",
+      title: "",
     },
     {
       headline: "Operates With a Strong Sense of Ownership — Hard-Working, Engaged, and Well-Liked",
